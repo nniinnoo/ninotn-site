@@ -2,29 +2,55 @@
   "name": "ninotn.com",
   "version": "1.0.0",
   "private": true,
-  "description": "ninotn.com",
-  "author": "nniinnoo",
-  "keywords": [
-    "gatsby"
-  ],
+  "description": "Raw Thought by Nino Tannio (Built in August 2021, during Covid-19 pandemic)",
+  "author": "Nino Tannio <me@ninotn.com> (ninotn.com)",
+  "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint:direct": "./node_modules/.bin/eslint",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:fix": "eslint --fix --ext .js,.jsx --ignore-pattern public ."
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "eslint-plugin-import": "^2.24.0",
     "gatsby": "^3.11.0",
+    "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-google-analytics": "^3.11.0",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-manifest": "^3.11.0",
     "gatsby-plugin-react-helmet": "^4.11.0",
     "gatsby-plugin-sharp": "^3.11.0",
+    "gatsby-remark-autolink-headers": "^4.10.0",
+    "gatsby-remark-copy-linked-files": "^4.10.0",
+    "gatsby-remark-images": "^5.10.0",
+    "gatsby-remark-katex": "^5.10.0",
+    "gatsby-remark-prismjs": "^5.10.0",
+    "gatsby-remark-smartypants": "^4.11.0",
     "gatsby-source-filesystem": "^3.11.0",
+    "gatsby-transformer-remark": "^4.10.0",
     "gatsby-transformer-sharp": "^3.11.0",
+    "katex": "^0.13.18",
+    "lodash": "^4.17.21",
+    "prismjs": "^1.24.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "rehype-katex": "^6.0.1",
+    "remark-math": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "^2.3.2"
   }
 }
