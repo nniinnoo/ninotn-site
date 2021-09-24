@@ -69,7 +69,7 @@ body {
   padding: 0;
 
   line-height: 1.825;
-  letter-spacing: 0.0375rem;
+  letter-spacing: 0.0275rem;
 
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -194,10 +194,10 @@ tbody tr:nth-child(odd) {
 
 .blog__content-left {
   width: 70%;
+  margin-right: var(--medium);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: var(--medium);
 }
 
 /* 
@@ -391,7 +391,7 @@ tbody tr:nth-child(odd) {
   font-family: "Tajawal", sans-serif;
   font-weight: 400;
   /* font-size: 1.25rem; */
-  font-size: 1.575rem;
+  font-size: 1.425rem;
   margin-top: var(--xxx-large);
   word-break: break-word;
   hyphens: auto;
@@ -483,6 +483,34 @@ blockquote {
   padding: 0;
   font-style: italic;
   text-align: left;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.pagination__prev > a,
+.pagination__next > a {
+  display: flex;
+  align-items: center;
+  background-color: var(--subtle-dark-1);
+  border-radius: 100%;
+  color: var(--dark-1);
+}
+
+.pagination .MuiSvgIcon-root {
+  width: 28px;
+  height: 28px;
+}
+
+.pagination__number {
+  font-size: var(--medium);
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 6px;
+  /* background-color: lightgray; */
 }
 
 @media (max-width: 600px) {

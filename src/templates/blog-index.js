@@ -45,6 +45,7 @@ const BlogIndex = ({ data, pageContext }) => {
                 </div>
               )
           )}
+          <Pagination pageCount={pageCount} currentPage={currentPage} />
         </div>
         <div className="blog__content-right">
           {/* <input type="text" placeholder="Search Blog.." /> */}
@@ -83,7 +84,6 @@ const BlogIndex = ({ data, pageContext }) => {
               <p>Short-Story</p>
             </div>
           </div>
-          <Pagination pageCount={pageCount} currentPage={currentPage} />
         </div>
       </div>
     </Layout>
