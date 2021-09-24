@@ -193,11 +193,20 @@ tbody tr:nth-child(odd) {
 }
 
 .blog__content-left {
-  width: 70%;
-  margin-right: var(--medium);
+  width: 20%;
+}
+
+.blog__content-center {
+  width: 55%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+}
+
+.blog__list-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 
@@ -211,7 +220,6 @@ tbody tr:nth-child(odd) {
 } */
 
 .blog__list {
-  width: 65%;
   padding: var(--small);
   border-bottom: 3px solid var(--subtle-dark-1);
   line-height: 1.65;

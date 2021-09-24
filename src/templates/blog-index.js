@@ -22,29 +22,32 @@ const BlogIndex = ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="blog__container">
-        <div className="blog__content-left">
-          {posts.edges.map(
-            (edge) =>
-              edge.node.frontmatter.published && (
-                <div className="blog__list" key={edge.node.id}>
-                  <Link to={`/${edge.node.frontmatter.slug}`}>
-                    <h1 className="blog__list-title">
-                      {edge.node.frontmatter.title}
-                    </h1>
-                    <div className="blog__list-title-details">
-                      <p>{edge.node.frontmatter.description}</p>
-                      <p>
-                        <span>{edge.node.frontmatter.date}</span>{" "}
-                        <span>{edge.node.timeToRead} min read</span>{" "}
-                        <span>{edge.node.wordCount.words} words</span>{" "}
-                        <span>{edge.node.frontmatter.categories}</span>{" "}
-                        <span>no-{edge.node.frontmatter.no}</span>{" "}
-                      </p>
-                    </div>
-                  </Link>
-                </div>
-              )
-          )}
+        <div className="blog__content-left" />
+        <div className="blog__content-center">
+          <div className="blog__list-container">
+            {posts.edges.map(
+              (edge) =>
+                edge.node.frontmatter.published && (
+                  <div className="blog__list" key={edge.node.id}>
+                    <Link to={`/${edge.node.frontmatter.slug}`}>
+                      <h1 className="blog__list-title">
+                        {edge.node.frontmatter.title}
+                      </h1>
+                      <div className="blog__list-title-details">
+                        <p>{edge.node.frontmatter.description}</p>
+                        <p>
+                          <span>{edge.node.frontmatter.date}</span>{" "}
+                          <span>{edge.node.timeToRead} min read</span>{" "}
+                          <span>{edge.node.wordCount.words} words</span>{" "}
+                          <span>{edge.node.frontmatter.categories}</span>{" "}
+                          <span>no-{edge.node.frontmatter.no}</span>{" "}
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
+                )
+            )}
+          </div>
           <Pagination pageCount={pageCount} currentPage={currentPage} />
         </div>
         <div className="blog__content-right">
