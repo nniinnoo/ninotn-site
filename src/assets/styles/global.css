@@ -69,7 +69,7 @@ body {
   padding: 0;
 
   line-height: 1.825;
-  letter-spacing: 0.0275rem;
+  letter-spacing: 0.0375rem;
 
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -172,7 +172,7 @@ tbody tr:nth-child(odd) {
   margin: var(--x-small);
   padding: var(--x-small);
 
-  /* box-shadow: 3px 3px var(--subtle-dark-2); */
+  box-shadow: 3px 3px var(--subtle-dark-2);
 }
 
 .nav__right a:hover,
@@ -508,6 +508,12 @@ blockquote {
   color: var(--dark-1);
 }
 
+.pagination__prev-inactive,
+.pagination__next-inactive {
+  color: rgba(105, 105, 105, 0.884) !important;
+  background-color: rgba(153, 151, 151, 0.247) !important;
+}
+
 .pagination .MuiSvgIcon-root {
   width: 28px;
   height: 28px;
@@ -547,10 +553,11 @@ blockquote {
 .footer {
   position: fixed;
   bottom: 0;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   text-align: right;
   padding-right: 20px;
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.418);
 }
 
 pre[data-line] {

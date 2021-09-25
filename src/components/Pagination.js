@@ -7,16 +7,16 @@ const Pagination = ({ currentPage, pageCount, base }) => {
   return (
     <div className="pagination">
       <div className="pagination__prev">
-        {currentPage > 1 ? (
-          <Link
-            title="Go to previous page"
-            to={currentPage === 2 ? "/" : `/page/${currentPage - 1}`}
-          >
-            <ArrowLeftIcon />
-          </Link>
-        ) : (
-          <span />
-        )}
+        <Link
+          style={{
+            pointerEvents: currentPage <= 1 && "none",
+          }}
+          className={currentPage <= 1 && "pagination__prev-inactive"}
+          title="Previous page"
+          to={currentPage === 2 ? "/" : `/page/${currentPage - 1}`}
+        >
+          <ArrowLeftIcon />
+        </Link>
       </div>
       <div className="pagination__number">
         <p>
@@ -24,13 +24,16 @@ const Pagination = ({ currentPage, pageCount, base }) => {
         </p>
       </div>
       <div className="pagination__next">
-        {currentPage < pageCount ? (
-          <Link title="Go to the next page" to={`/page/${currentPage + 1}`}>
-            <ArrowRightIcon />
-          </Link>
-        ) : (
-          <span />
-        )}
+        <Link
+          style={{
+            pointerEvents: currentPage >= pageCount && "none",
+          }}
+          className={currentPage >= pageCount && "pagination__next-inactive"}
+          title="Next page"
+          to={`/page/${currentPage + 1}`}
+        >
+          <ArrowRightIcon />
+        </Link>
       </div>
     </div>
   );
