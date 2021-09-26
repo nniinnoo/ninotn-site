@@ -6,7 +6,11 @@ const gallery = () => {
   return (
     <Layout>
       <center>
-        <StaticImage alt="#" src="../assets/ai.jpeg" width="900" />
+        <StaticImage
+          alt="#"
+          src="../assets/abu-simble-1867-by-edward-lier.jpg"
+          width="900"
+        />
       </center>
     </Layout>
   );

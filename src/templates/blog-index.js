@@ -40,7 +40,6 @@ const BlogIndex = ({ data, pageContext }) => {
                           <span>{edge.node.timeToRead} min read</span>{" "}
                           <span>{edge.node.wordCount.words} words</span>{" "}
                           <span>{edge.node.frontmatter.categories}</span>{" "}
-                          <span>no-{edge.node.frontmatter.no}</span>{" "}
                         </p>
                       </div>
                     </Link>
