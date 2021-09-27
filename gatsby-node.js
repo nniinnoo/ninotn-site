@@ -42,6 +42,12 @@ exports.createPages = async ({ actions, graphql }) => {
         component: path.resolve(`src/templates/post.js`),
         context: { slug: edge.node.frontmatter.slug },
       });
+    } else if (_.get(edge, "node.frontmatter.template") === "page") {
+      createPage({
+        path: edge.node.frontmatter.slug,
+        component: path.resolve(`src/templates/page.js`),
+        context: { slug: edge.node.frontmatter.slug },
+      });
     }
   });
 
