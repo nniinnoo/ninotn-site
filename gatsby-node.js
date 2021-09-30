@@ -74,20 +74,4 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       });
     }
   }
-
-  //   const fileNode = getNode(node.parent);
-  //   const parsedFilePath = path.parse(fileNode.relativePath);
-
-  //   if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")) {
-  //     slug = `/${node.frontmatter.slug}/`;
-  //   } else {
-  //     slug = `/${parsedFilePath.dir}/`;
-  //   }
-
-  //   createNodeField({
-  //     name: "slug",
-  //     node,
-  //     value: slug,
-  //   });
-  // }
 };
