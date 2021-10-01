@@ -1,9 +1,13 @@
+.gatsby-highlight {
+  display: flex;
+  justify-content: center;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: #6ba5f2;
-  font-family: "Source Code Pro", "Jet Brain Code", "Roboto Mono", "Ubuntu Mono",
-    monospace;
-  font-size: 1em;
+  font-family: "Source Code Pro", "Ubuntu Mono", monospace;
+  font-size: 1rem;
   text-align: left;
   white-space: pre-wrap;
   word-spacing: normal;
@@ -17,6 +21,7 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  width: 90%;
 }
 
 /* Code blocks */
@@ -137,8 +142,11 @@ pre[class*="language-"] {
 }
 
 .filename {
+  display: flex;
   align-items: center;
-  background: #3f473f;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: #404040;
   border-left: 1px solid var(--black);
   border-right: 1px solid var(--black);
   border-top: 1px solid var(--black);
@@ -151,6 +159,7 @@ pre[class*="language-"] {
   border-top-right-radius: 0.3em;
   border-top-left-radius: 0.3em;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  width: 90%;
 }
 
 pre[class*="language-"].line-numbers {
