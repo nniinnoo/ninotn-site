@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 
-const Project = () => {
+const Fragments = () => {
   return (
     <Layout>
       <center>
@@ -17,4 +17,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Fragments;
