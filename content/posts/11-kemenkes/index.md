@@ -4,7 +4,7 @@ title: "Vaccinastic Beasts and Where to Find Them"
 slug: 11-kemenkes
 published: true
 date: 2021-02-25T11:30:50.334Z
-description: petualangan pemerintah memburu vaksin di hutan belantara
+description: petualangan memburu vaksin di hutan belantara
 categories: ["Sci-Math"]
 tags:
   - Herd Immunity

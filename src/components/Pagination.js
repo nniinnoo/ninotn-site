@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import ArrowRightIcon from "@material-ui/icons/KeyboardArrowRightRounded";
-import ArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeftRounded";
+import ArrowRightIcon from "@mui/icons-material/KeyboardArrowRightRounded";
+import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 
 const Pagination = ({ currentPage, pageCount, base }) => {
   return (

@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { graphql, navigate } from "gatsby";
 import PropTypes from "prop-types";
-import DateIcon from "@material-ui/icons/TodayRounded";
-import ReadingTimeIcon from "@material-ui/icons/TimerRounded";
-import BackIcon from "@material-ui/icons/ArrowBackIosRounded";
-import CategoryIcon from "@material-ui/icons/CategoryRounded";
+import BackIcon from "@mui/icons-material/ArrowBackIosNewRounded";
+import DateIcon from "@mui/icons-material/TodayOutlined";
+import ReadingTimeIcon from "@mui/icons-material/TimerRounded";
+import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
+import CategoryIcon from "@mui/icons-material/CategoryOutlined";
 
 export default function PostTemplate({ data }) {
   // useEffect(() => {
@@ -17,29 +18,33 @@ export default function PostTemplate({ data }) {
   const post = data.markdownRemark;
   return (
     <div className="blog__post-container">
-      <div className="blog__post-content">
-        <h1 className="blog__post-title">{post.frontmatter.title}</h1>
-        <p className="blog__post-title-details">
-          <span>
-            <DateIcon />
-            <p>{post.frontmatter.date}</p>
-          </span>
-          <span>
-            <ReadingTimeIcon />
-            <p>15 min read</p>
-          </span>
-          <span>
-            <CategoryIcon />
-            <p>{post.frontmatter.categories}</p>
-          </span>
-          <span>
-            <p>#</p>
-            <p>{post.frontmatter.no}</p>
-          </span>
-        </p>
-        <div className="blog__post-body">
-          <div id={post.id} dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
+      <div className="blog__post-content-center">
+        <article>
+          <h1 className="blog__post-title">{post.frontmatter.title}</h1>
+          <div className="blog__post-title-details">
+            <span>
+              <DateIcon />
+              <p>{post.frontmatter.date}</p>
+            </span>
+            <span>
+              <ReadingTimeIcon />
+              <p>{post.timeToRead} min read</p>
+            </span>
+            <span>
+              <CoffeeMakerIcon />
+              <p>{post.wordCount.words} words</p>
+            </span>
+            <span>
+              <CategoryIcon />
+              <p>{post.frontmatter.categories}</p>
+            </span>
+          </div>
+          <div
+            className="blog__post-body"
+            id={post.id}
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        </article>
       </div>
       <button
         type="button"
@@ -68,6 +73,7 @@ export const query = graphql`
         categories
         no
       }
+      timeToRead
       wordCount {
         words
       }

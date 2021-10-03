@@ -3,8 +3,13 @@ import { useState } from "react";
 import Layout from "@components/Layout";
 
 import { Link, graphql } from "gatsby";
-import SortByIcon from "@material-ui/icons/SwapHoriz";
-import DropDownIcon from "@material-ui/icons/ArrowDropDown";
+import SortByIcon from "@mui/icons-material/SwapHoriz";
+import DropDownIcon from "@mui/icons-material/ArrowDropDown";
+import DateIcon from "@mui/icons-material/TodayOutlined";
+import ReadingTimeIcon from "@mui/icons-material/TimerRounded";
+import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
+import CategoryIcon from "@mui/icons-material/CategoryOutlined";
+
 import PropTypes from "prop-types";
 
 import Pagination from "@components/Pagination";
@@ -35,12 +40,24 @@ const BlogIndex = ({ data, pageContext }) => {
                       </h1>
                       <div className="blog__list-title-details">
                         <p>{edge.node.frontmatter.description}</p>
-                        <p>
-                          <span>{edge.node.frontmatter.date}</span>{" "}
-                          <span>{edge.node.timeToRead} min read</span>{" "}
-                          <span>{edge.node.wordCount.words} words</span>{" "}
-                          <span>{edge.node.frontmatter.categories}</span>{" "}
-                        </p>
+                        <div>
+                          <span>
+                            <DateIcon />
+                            <p>{edge.node.frontmatter.date}</p>
+                          </span>
+                          <span>
+                            <ReadingTimeIcon />
+                            <p>{edge.node.timeToRead} min read</p>
+                          </span>
+                          <span>
+                            <CoffeeMakerIcon />
+                            <p>{edge.node.wordCount.words} words</p>
+                          </span>
+                          <span>
+                            <CategoryIcon />
+                            <p>{edge.node.frontmatter.categories}</p>
+                          </span>
+                        </div>
                       </div>
                     </Link>
                   </div>
