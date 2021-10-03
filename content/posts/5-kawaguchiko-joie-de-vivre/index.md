@@ -4,7 +4,7 @@ title: "Kawaguchiko: Joie de Vivre"
 slug: 5-kawaguchiko-joie-de-vivre
 published: true
 date: 2019-11-17T11:30:50.334Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: just another short tale from mount fuji
 categories: ["Journal"]
 tags:
   - Japan

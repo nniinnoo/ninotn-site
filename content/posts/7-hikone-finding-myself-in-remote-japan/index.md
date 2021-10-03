@@ -1,10 +1,10 @@
 ---
 template: post
 title: "Hikone: Finding Myself in Remote Japan"
-slug: 6-hikone-finding-myself-in-remote-japan
+slug: 7-hikone-finding-myself-in-remote-japan
 published: true
 date: 2019-11-19T11:30:50.334Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: how to become a samurai in 2 days
 categories: ["Journal"]
 tags:
   - Japan
@@ -12,7 +12,7 @@ tags:
   - Omihachiman
   - Lake Biwa
   - Castle
-no: 6
+no: 7
 language: en
 ---
 

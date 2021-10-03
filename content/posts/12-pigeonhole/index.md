@@ -4,7 +4,7 @@ title: "Pigeonhole & Herd Immunity"
 slug: 12-pigeonhole
 published: true
 date: 2021-02-25T11:45:50.334Z
-description: Bagaimana sangkar burung merpati dapat begitu menginspirasi?
+description: mencari ruang imunitas optimal dalam sarang burung merpati
 categories: ["Sci-Math"]
 tags:
   - Herd Immunity
@@ -23,11 +23,13 @@ Minggu pagi lalu, saat sedang joging, saya berpapasan dengan seorang remaja berm
 
 [_Pigeonhole principle_](https://en.wikipedia.org/wiki/Pigeonhole_principle) yang lebih umum dikenal dengan nama _Dirichlet's box principle_, adalah sebuah prinsip matematika yang terinspirasi dari sarang burung merpati di mana jika sejumlah **_n_** burung diletakkan ke dalam **_m_** kontainer di mana **_n_** > **_m_**, maka sedikitnya satu kontainer harus berisi lebih dari satu item. Ide dasar prinsip ini memang sesederhana itu namun impelementasinya bisa beragam, mulai dari algoritma untuk optimasi pergerakan, hingga algoritma kompresi.
 
-![Pigeonhole Principle](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/TooManyPigeons.jpg/350px-TooManyPigeons.jpg) 10 merpati dalam 9 lubang
+![Pigeonhole Principle](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/TooManyPigeons.jpg/350px-TooManyPigeons.jpg)
+
+<figcaption align = "center">10 merpati dalam 9 lubang</figcaption>
 
 <center>• • • • •</center>
 
-Jika konsep di atas kita bayangkan dalam kerangka _Herd Immunity_ (kekebalan kelompok) sebagai contoh sederhana terhadap orang yang divaksin 🟥 (merah) dan tidak divaksin ⬜ (putih), lalu dipetakan kedua kelompok tersebut ke dalam kotak 3×3 dengan proporsi $^6/_9$ maka akan diperoleh variasi best case dan worst case seperti gambar di bawah, yang berarti 3 orang yang tidak divaksin pada kasus terbaiknya akan memperoleh perlindungan hingga 66% dari 6 orang yang divaksin.
+Jika konsep di atas kita bayangkan dalam kerangka _Herd Immunity_ (kekebalan kelompok) sebagai contoh sederhana terhadap orang yang divaksin (merah) dan tidak divaksin (putih), lalu dipetakan kedua kelompok tersebut ke dalam kotak 3×3 dengan proporsi $^6/_9$ maka akan diperoleh variasi best case dan worst case seperti gambar di bawah, yang berarti 3 orang yang tidak divaksin pada kasus terbaiknya akan memperoleh perlindungan hingga 66% dari 6 orang yang divaksin.
 
 ![](images/sixpernine.png)
 
@@ -35,7 +37,7 @@ Lebih lanjut jika kita menginginkan imunitas kelompok yang lebih optimal dengan 
 
 ![](images/eightpernine.png)
 
-Dengan pemahaman dari kotak 3×3 atau 1×9 di atas, secara intuitif harusnya kita dapat menemukan pengali yang dapat kita gunakan untuk mendapatkan jumlah kotak optimal pada kotak berdimensi lain. contoh:
+Dengan pemahaman dari kotak 3×3 atau 1×9 di atas, secara intuitif harusnya kita sudah dapat menemukan pengali untuk memperoleh jumlah kotak optimal pada kotak berdimensi lain. contoh:
 
 ![](images/contohintuitif.png)
 
@@ -55,9 +57,14 @@ Pada kondisi (I) di mana x=3 dan x=4 jumlah orang yang divaksin sama sehingga da
 
 Pada kondisi (II) di mana x=5 jumlah orang yang divaksin adalah 2 orang dari 3 kelompok pertama ditambah 1 dari 2 kelompok kedua sehingga dapat kita rumuskan bahwa ketika $^x/_3$ sisanya > 1 maka banyaknya orang yang divaksin adalah 1 + hasil bagi $^x/_3$ kali 2.
 
-Rumusan selengkapnya seperti ditunjukkan fungsi g(x) di bawah.
+Rumusan selengkapnya seperti ditunjukkan fungsi g(x) berikut
 
-![](images/gx.png)
+$$
+g(x) = \begin{cases}
+\frac{x}{3} \cdot 2 & \text{jika  \ x mod 3 = 0 || x mod 3 = 1} \\
+1 + \frac{x}{3} \cdot 2 & \text{jika \ x mod 3 > 1}
+\end{cases}
+$$
 
 <center>• • • • •</center>
 
@@ -67,9 +74,15 @@ Sejauh ini kita sudah mempunyai ide untuk mendapatkan jumlah orang yang harus di
 
 Dengan melihat sekilas pada baris dan kolom pertama pada gambar di atas, terdapat 3 orang yang tidak divaksin pada baris pertama, dan 2 orang yang tidak divaksin pada kolom pertama yang jika kita refleksikan akan menghasilkan jumlah keseluruhan orang yang tidak divaksin, dengan kata lain keseluruhan jumlah orang yang tidak divaksin adalah perkalian antara jumlah orang yang tidak divaksin pada baris dan kolom pertama, demikian kita mendapatkan jumlah orang yang divaksin dengan mengurangkan perkalian baris kolom keseluruhan dengan hasil perkalian baris kolom orang yang tidak divaksin, di mana untuk mendapatkan jumlah orang yang tidak divaksin kita dapat mengurangkan masing-masing baris/kolom dengan hasil dari fungsi g(x).
 
-Rumusan selengkapnya seperti ditunjukkan fungsi f di bawah.
+Rumusan selengkapnya seperti ditunjukkan fungsi f berikut
 
-![](images/fx.png)
+$$
+f(baris(b), kolom(k)) = \begin{cases}
+0 & \text{jika \ $b\cdot k = 1$}\\
+g(b\cdot k) & \text{jika \ $b=1$ atau $k=1$} \\
+b\cdot k - ((b-g(b))\cdot (k-g(k))) & \text {jika \ $b \cdot k$ $>$ $1$}
+\end{cases}
+$$
 
 <center>• • • • •</center>
 <br />
@@ -85,8 +98,8 @@ Agar lebih interaktif, pada program sederhana di bawah telah saya implementasika
 
 Sebagai contoh sederhana jika kita ambil contoh dari populasi penduduk Indonesia tahun 2020 -- sebanyak 273.523.615, lalu kita ujikan dalam 2 skenario berbeda di mana:
 
-- Penduduk dijejerkan dalam satu baris (1×273.523.615) **A**
-- Penduduk dipetakan dalam bidang simetris 16538×16538 (√ dari 273.523.615) **B**
+- **A** : Penduduk dijejerkan dalam satu baris (1×273.523.615)
+- **B** : Penduduk dipetakan dalam bidang simetris 16538×16538 (√ 273.523.615)
 
 Maka akan didapat hasil masing-masing:
 
@@ -94,13 +107,20 @@ Maka akan didapat hasil masing-masing:
 - 243.112.275 orang (89% populasi) pada percobaan B
 - Dengan rataan A & B sebesar 212.730.675 orang (78% populasi)
 
+<center>• • • • •</center>
+
+<div class="filename">full code</div>
+
 ```js
 function calculate_bk(x) {
   let result;
   let chunkRes = x % 3;
 
-  if (chunkRes == 0 || chunkRes == 1) result = Math.floor(x / 3) * 2;
-  else result = 1 + Math.floor(x / 3) * 2;
+  if (chunkRes == 0 || chunkRes == 1) {
+    result = Math.floor(x / 3) * 2;
+  } else {
+    result = 1 + Math.floor(x / 3) * 2;
+  }
 
   return result;
 }
@@ -111,10 +131,15 @@ function process(b, k) {
   let fk = calculate_bk(k);
   let dimension = b * k;
 
-  if (dimension == 1) count = 0;
-  else if (b == 1) count = fk;
-  else if (k == 1) count = fb;
-  else count = dimension - (b - fb) * (k - fk);
+  if (dimension == 1) {
+    count = 0;
+  } else if (b == 1) {
+    count = fk;
+  } else if (k == 1) {
+    count = fb;
+  } else {
+    count = dimension - (b - fb) * (k - fk);
+  }
 
   return count;
 }

@@ -4,7 +4,7 @@ title: "Merriam Webster Time Traveller"
 slug: 1-merriam-webster-time-traveller
 published: true
 date: 2018-12-31T10:59:21.918Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: an invisible tie between words and childhood memories
 categories: ["Journal"]
 tags:
   - childhood

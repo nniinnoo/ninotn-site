@@ -4,7 +4,7 @@ title: "Murakami's Jazz Playlist"
 slug: 10-murakami-jazz-playlist
 published: true
 date: 2020-10-05T11:30:50.334Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: stopover place for a jazz lover
 categories: ["Music"]
 tags:
   - Haruki Murakami

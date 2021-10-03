@@ -4,7 +4,7 @@ title: "Tokyo: Reminiscence"
 slug: 4-tokyo-reminiscence
 published: true
 date: 2019-11-16T11:30:50.334Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: when tomorrow is just a myth
 categories: ["Journal"]
 tags:
   - Japan

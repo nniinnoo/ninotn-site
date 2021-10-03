@@ -4,7 +4,7 @@ title: "Tokyo: Neon & Six Dimension"
 slug: 3-tokyo-neon-six-dimension
 published: true
 date: 2019-11-15T11:30:50.334Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: how to negate bad luck?
 categories: ["Journal"]
 tags:
   - Japan

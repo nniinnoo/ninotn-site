@@ -4,7 +4,7 @@ title: "Kyoto: The Locals"
 slug: 8-kyoto-the-locals
 published: true
 date: 2019-11-20T11:30:50.334Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: this city will freeze your memory, even before you leave
 categories: ["Journal"]
 tags:
   - Japan
@@ -151,7 +151,8 @@ Sakura season has passed, it's the verdant turn that enlivens. Since I started m
 
 <center>• • • • •</center>
 
-Kyoto is a kind of place that will give you acute homesickness even before you leave. Every time I see rivers here I find myself petrified and imagining a moment that I want to watch in slow motion
+Kyoto is a kind of place that will give you acute homesickness even before you leave.
+Every time I see rivers here I find myself petrified and imagining a moment that I want to watch in slow motion
 
 <center>• • • • •</center>
 

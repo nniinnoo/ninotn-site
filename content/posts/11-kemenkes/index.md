@@ -4,7 +4,7 @@ title: "Vaccinastic Beasts and Where to Find Them"
 slug: 11-kemenkes
 published: true
 date: 2021-02-25T11:30:50.334Z
-description: Jika vaksin adalah sebuah binatang liar kemana kita harus mencarinya?
+description: petualangan pemerintah memburu vaksin di hutan belantara
 categories: ["Sci-Math"]
 tags:
   - Herd Immunity
@@ -28,10 +28,12 @@ Jika ingin menelan data ini mentah-mentah tentu pahit rasanya melihat durasi sel
 
 Pada awal tahun Kemenkes sebenarnya sudah mengeluarkan panduan vaksinasi hingga Maret 2022, dengan target 181.5 juta jiwa (± 66% penduduk Indonesia) di mana dosis hariannya belum saya ketahui jumlahnya. Jika kita ambil total hari hingga akhir Maret 2022 sebesar 454 maka jumlah rata-rata dosis harian Kemenkes saat ini seharusnya sebesar:
 
-![Indonesia Brazil](images/equation.png)
+$$
+454 \ hari = \frac{181.500.000}{x/2} = 799.599 \ dosis
+$$
 
 ![Indonesia Brazil](images/Kemenkes.png)
 
-Jika data vaksinasi harian Bloomberg diperoleh dari otoritas resmi di Indonesia, artinya dosis harian Indonesia saat ini 13 kali lebih sedikit dari rata-rata vaksin harian yang seharusnya. Dengan demikian dapatlah dikatakan bahwa rencana Kemenkes di atas tidak realistis, dengan pengecualian jika sewaktu-waktu ada jutaan vaksin dan vaksinator yang tersedia di tengah jalan untuk menambal kekurangan sebelumnya.
+Jika data vaksinasi harian Bloomberg diperoleh dari otoritas resmi di Indonesia, artinya dosis harian Indonesia saat ini 13 kali lebih sedikit dari rata-rata vaksin harian yang seharusnya. Dengan demikian dapatlah dikatakan bahwa rencana Kemenkes di atas kurang realistis, dengan pengecualian jika sewaktu-waktu ada jutaan vaksin dan vaksinator yang tersedia di tengah jalan untuk menambal kekurangan sebelumnya.
 
 <br />

@@ -4,7 +4,7 @@ title: "Tokyo: Passive-Aggressive"
 slug: 2-tokyo-passive-aggressive
 published: true
 date: 2019-11-11T11:30:50.334Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: there is something lost more than in translation
 categories: ["Journal"]
 tags:
   - Japan

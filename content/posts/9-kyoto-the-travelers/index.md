@@ -4,12 +4,12 @@ title: "Kyoto-Osaka: The Travelers"
 slug: 9-kyoto-the-travelers
 published: true
 date: 2019-11-21T11:30:50.334Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: if you travel from the north, then sento is a perfect finale
 categories: ["Journal"]
 tags:
   - Japan
   - Kyoto
-  - Osaka
+  - Osakahhh
   - Nara
   - Todai-ji Temple
   - Dotombori

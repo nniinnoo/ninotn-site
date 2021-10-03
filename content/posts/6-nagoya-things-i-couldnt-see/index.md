@@ -1,16 +1,16 @@
 ---
 template: post
 title: "Nagoya: Things I Couldn't See"
-slug: 7-nagoya-things-i-couldnt-see
+slug: 6-nagoya-things-i-couldnt-see
 published: true
 date: 2019-11-18T11:30:50.334Z
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+description: a day without any clear plan
 categories: ["Journal"]
 tags:
   - Japan
   - Nagoya
   - Man Only Hostle
-no: 7
+no: 6
 language: en
 ---
 
