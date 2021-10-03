@@ -16,8 +16,10 @@
     "lint:fix": "eslint --fix --ext .js,.jsx --ignore-pattern public ."
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/material": "^5.0.2",
     "eslint-plugin-import": "^2.24.0",
     "gatsby": "^3.11.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
