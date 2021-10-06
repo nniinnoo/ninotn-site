@@ -7,6 +7,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "G-03JHFY9B3R",
+        head: true,
+      },
+    },
+    "gatsby-plugin-netlify",
+    {
       /// ALIAS IMPORTS
       // aliasing import statements from this '/../../components/' to this '@components'
       resolve: "gatsby-plugin-alias-imports",
@@ -35,7 +43,7 @@ module.exports = {
     "gatsby-plugin-image",
 
     // REACT-HELMET
-    "gatsby-plugin-react-helmet", // to control document head, important for SEO
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
