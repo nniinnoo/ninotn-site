@@ -180,7 +180,7 @@
 @font-face {
   font-family: "Mada";
   font-display: swap;
-  src: url(../font-files/Mada/Mada-bold.ttf) format("truetype");
+  src: url(../font-files/Mada/Mada-Bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
 }
