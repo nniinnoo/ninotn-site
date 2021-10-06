@@ -14,8 +14,6 @@ import PropTypes from "prop-types";
 
 import Pagination from "@components/Pagination";
 
-import test from "../assets/cat.gif";
-
 const BlogIndex = ({ data, pageContext }) => {
   // const siteTitle = data.site.siteMetadata.title;
 
@@ -100,9 +98,7 @@ const BlogIndex = ({ data, pageContext }) => {
             </button>
             <div className="blog__dropdown-list">
               <p>Journal</p>
-              <p>Sci-fi</p>
-              <p>Project</p>
-              <p>Short-Story</p>
+              <p>Sci-Math</p>
             </div>
           </div>
         </div>

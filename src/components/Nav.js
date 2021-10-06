@@ -9,10 +9,10 @@ const Nav = () => {
         <div className="nav__left">
           <Link to="/">
             <div style={{ paddingRight: "6px" }}>
-              <StaticImage alt="#" src="../assets/pre7.png" width={60} />
+              <StaticImage alt="#" src="../assets/firemaking.png" width={60} />
             </div>
             <div>
-              <h1>Raw Thought</h1>
+              <h1>Raw Fire</h1>
               <h2>by Nino Tannio</h2>
             </div>
           </Link>

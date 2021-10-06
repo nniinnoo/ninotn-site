@@ -8,7 +8,7 @@ const Fragments = () => {
       <center>
         <StaticImage
           alt="#"
-          src="../assets/abu-simble-1867-by-edward-lier.jpg"
+          src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
           width="720"
         />
         <h2>Under Construction :)</h2>

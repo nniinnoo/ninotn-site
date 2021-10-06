@@ -118,7 +118,7 @@ const About = () => (
               <StaticImage
                 alt="#"
                 src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
-                width="500"
+                width="600"
               />
             </p>
           </div>
