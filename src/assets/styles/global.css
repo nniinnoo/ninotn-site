@@ -3,24 +3,25 @@
 @import url(katex/katex.min.css);
 
 :root {
-  --bg: #eae1d0; /*#FAF4E6 or #EDE4D5*/
+  --bg: #eae1d0; /* alt: #FAF4E6 or #EDE4D5*/
   --light-1: #f9f9f9;
   --dark-1: #404040;
   --subtle-dark-1: rgba(0, 0, 0, 0.2);
   --subtle-dark-2: rgba(0, 0, 0, 0.5);
 
-  --font-family: "Mada", sans-serif;
+  --font-family-text: "Mada", sans-serif;
+  --font-family-title: "Fira", sans-serif;
 
-  /* note: 1px = 0.0625rem */
-  --xxx-small: 0.375rem; /* 6px */
-  --xx-small: 0.5rem; /* 8px */
-  --x-small: 0.75rem; /* 12px */
-  --small: 0.875rem; /* 14px */
-  --medium: 1.125rem; /* 18px */
-  --large: 1.5rem; /* 24px */
-  --x-large: 1.875rem; /* 30px */
-  --xx-large: 2.25rem; /* 36px */
-  --xxx-large: 2.625rem; /* 42px */
+  --px1: 0.0625rem;
+  --px6: 0.375rem; /* 6px */
+  --px8: 0.5rem; /* 8px */
+  --px12: 0.75rem; /* 12px */
+  --px14: 0.875rem; /* 14px */
+  --px18: 1.125rem; /* 18px */
+  --px24: 1.5rem; /* 24px */
+  --px30: 1.875rem; /* 30px */
+  --px36: 2.25rem; /* 36px */
+  --px42: 2.625rem; /* 42px */
 }
 
 /* ===== Reset ===== */
@@ -34,8 +35,8 @@
 /* ===== Scaffolding ===== */
 
 html {
-  font-family: var(--font-family);
-  font-size: var(--small);
+  font-family: var(--font-family-text);
+  font-size: var(--px14);
   scroll-behavior: smooth;
 }
 
@@ -71,7 +72,7 @@ a:hover {
 
 h1,
 h2 {
-  font-family: "Fira", sans-serif;
+  font-family: var(--font-family-title);
 }
 
 table {
@@ -81,7 +82,7 @@ table {
   width: 100%;
   max-width: 100%;
   overflow-x: auto;
-  margin: var(--small);
+  margin: var(--px14);
 }
 
 thead,
@@ -104,7 +105,7 @@ td {
 th,
 td {
   text-align: left;
-  padding: var(--x-small) !important;
+  padding: var(--px12) !important;
   hyphens: auto;
   word-break: break-word;
 }
@@ -119,8 +120,8 @@ tbody tr:nth-child(odd) {
 .navbar {
   width: 100%;
   /* background-color: yellow; */
-  /* margin-bottom: var(--x-small); */
-  margin-top: var(--small);
+  /* margin-bottom: var(--px12); */
+  margin-top: var(--px14);
 }
 
 .navbar__container {
@@ -132,9 +133,9 @@ tbody tr:nth-child(odd) {
 }
 
 .nav__left {
-  font-family: "Fira", sans-serif;
+  font-family: var(--font-family-title);
   line-height: 0;
-  padding-top: var(--medium);
+  padding-top: var(--px18);
 }
 
 .nav__left a {
@@ -142,16 +143,16 @@ tbody tr:nth-child(odd) {
   color: var(--dark-1);
   display: flex;
   align-items: center;
-  margin-bottom: var(--large);
+  margin-bottom: var(--px24);
 }
 
 .nav__left h1 {
   font-weight: 900;
-  font-size: var(--xx-large);
+  font-size: var(--px36);
 }
 
 .nav__left h2 {
-  font-size: var(--medium);
+  font-size: var(--px18);
   font-weight: 300;
   margin-top: 24px;
 }
@@ -162,9 +163,9 @@ tbody tr:nth-child(odd) {
 }
 
 .nav__right a {
-  font-family: "Fira", sans-serif;
+  font-family: var(--font-family-title);
   font-weight: 400;
-  font-size: var(--medium);
+  font-size: var(--px18);
   color: var(--dark-1);
   text-decoration: none;
 
@@ -172,8 +173,8 @@ tbody tr:nth-child(odd) {
   border: 1px solid var(--subtle-dark-1);
   border-radius: 3px;
 
-  margin: var(--xx-small);
-  padding: var(--xxx-small) var(--x-small);
+  margin: var(--px8);
+  padding: var(--px6) var(--px12);
 
   box-shadow: 3px 3px var(--subtle-dark-2);
 }
@@ -194,7 +195,7 @@ tbody tr:nth-child(odd) {
   margin-left: auto;
   margin-right: auto;
   max-width: 48rem;
-  padding: var(--large);
+  padding: var(--px24);
 }
 
 .about__container,
@@ -212,7 +213,7 @@ tbody tr:nth-child(odd) {
   margin-left: auto;
   margin-right: auto;
   max-width: 55rem;
-  padding: var(--large);
+  padding: var(--px24);
 }
 
 .about__container p,
@@ -231,10 +232,10 @@ pre {
   font-family: "Source Code Pro", monospace;
   background: #1d1f21;
   white-space: pre-wrap;
-  padding: var(--small);
+  padding: var(--px14);
   border-radius: 6px;
   color: #96cbfe;
-  font-size: var(--medium);
+  font-size: var(--px18);
 }
 
 /* ===== Blog: Post-List ===== */
@@ -244,8 +245,8 @@ pre {
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: var(--large);
-  margin-bottom: var(--xxx-large);
+  margin-top: var(--px24);
+  margin-bottom: var(--px42);
 }
 
 .blog__content-left {
@@ -267,7 +268,7 @@ pre {
 }
 
 .blog__list {
-  padding: var(--medium);
+  padding: var(--px18);
   border-bottom: 3px solid var(--subtle-dark-1);
   line-height: 1.65;
 }
@@ -295,7 +296,7 @@ pre {
   font-size: 1.25rem;
   font-weight: 400;
   color: var(--dark-1);
-  margin-bottom: var(--xxx-small);
+  margin-bottom: var(--px6);
 }
 
 .blog__list-title-details div {
@@ -313,16 +314,16 @@ pre {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: var(--xx-small);
+  margin-right: var(--px8);
 }
 
 .blog__list-title-details div span p {
-  font-size: var(--small);
+  font-size: var(--px14);
   font-weight: normal;
 }
 .blog__list-title-details .MuiSvgIcon-root {
   font-size: small;
-  margin-right: var(--xxx-small);
+  margin-right: var(--px6);
 }
 
 /* ===== Filter: Category ===== */
@@ -337,8 +338,8 @@ pre {
 .blog__content-right button {
   color: var(--dark-1);
   width: 50%;
-  margin-top: var(--small);
-  padding: var(--xxx-small);
+  margin-top: var(--px14);
+  padding: var(--px6);
   letter-spacing: 0.065rem;
   background: transparent;
   border: none;
@@ -347,26 +348,26 @@ pre {
 
 .blog__sortby-btn .MuiSvgIcon-root,
 .blog__post-content .MuiSvgIcon-root {
-  font-size: var(--small);
+  font-size: var(--px14);
 }
 
 #sortby-btn-newest {
   background-color: #9c9c9c;
-  padding: var(--xx-small);
+  padding: var(--px8);
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
 #sortby-btn-to {
   background-color: #c09c6f;
-  padding: var(--xx-small);
+  padding: var(--px8);
   align-self: center;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
 #sortby-btn-oldest {
   background: #bf7c2a;
-  padding: var(--xx-small);
+  padding: var(--px8);
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
@@ -378,7 +379,7 @@ pre {
 
 .blog__dropdown button {
   background-color: #978c27d7;
-  padding: var(--xxx-small);
+  padding: var(--px6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -389,7 +390,7 @@ pre {
 
 .blog__dropdown-list {
   background-color: #f1f1f1;
-  padding: var(--xxx-small);
+  padding: var(--px6);
   display: none;
   position: absolute;
   min-width: 160px;
@@ -413,8 +414,8 @@ pre {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: var(--xxx-large);
-  margin-bottom: var(--xxx-large);
+  margin-top: var(--px42);
+  margin-bottom: var(--px42);
 }
 
 .blog__post-content-center {
@@ -422,15 +423,15 @@ pre {
   margin-left: auto;
   margin-right: auto;
   max-width: 48rem;
-  padding: var(--large);
+  padding: var(--px24);
 }
 
 .blog__post-title {
   font-family: "Fira";
   font-weight: 800;
-  font-size: var(--xxx-large);
+  font-size: var(--px42);
   color: var(--dark-1);
-  margin-bottom: var(--small);
+  margin-bottom: var(--px14);
   line-height: 1.25;
 }
 
@@ -441,14 +442,14 @@ pre {
 }
 
 .blog__post-title-details span {
-  font-size: var(--small);
+  font-size: var(--px14);
   color: var(--dark-1);
   background-color: rgba(97, 97, 97, 0.09);
   border-radius: 3px;
 
   padding: 4px 6px;
   /* top right bottom left TRBL*/
-  margin-right: var(--xxx-small);
+  margin-right: var(--px6);
 
   display: flex;
   flex-direction: row;
@@ -457,13 +458,13 @@ pre {
 
 .blog__post-content-center .MuiSvgIcon-root {
   font-size: small;
-  margin-right: var(--xx-small);
+  margin-right: var(--px8);
 }
 
 .blog__post-body {
   font-family: "Mada", sans-serif;
   font-size: 18px;
-  margin-top: var(--xxx-large);
+  margin-top: var(--px42);
 }
 
 .blog__post-body p {
@@ -471,13 +472,13 @@ pre {
 }
 
 .gatsby-resp-image-wrapper {
-  margin: var(--x-large);
+  margin: var(--px30);
 }
 
 .blog__post-body img {
-  /* border: var(--x-small) solid var(--light-1); */
+  /* border: var(--px12) solid var(--light-1); */
   /* outline: var(--subtle-dark-2) solid 2px; */
-  border-radius: var(--xxx-small);
+  border-radius: var(--px6);
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   display: block;
   margin-left: auto;
@@ -489,14 +490,14 @@ pre {
   background-color: #bdbf73;
 
   border: none;
-  border-radius: var(--medium);
+  border-radius: var(--px18);
 
-  margin: var(--x-small);
-  padding: var(--x-small);
+  margin: var(--px12);
+  padding: var(--px12);
 
   position: fixed;
-  top: var(--xxx-large);
-  right: var(--xxx-large);
+  top: var(--px42);
+  right: var(--px42);
 
   display: flex;
   justify-content: center;
@@ -510,7 +511,7 @@ pre {
 
 .blog__post-back-btn .MuiSvgIcon-root {
   font-size: small;
-  margin-right: var(--xxx-small);
+  margin-right: var(--px6);
 }
 
 .blog__post-content a:hover {
@@ -518,12 +519,12 @@ pre {
 }
 
 center {
-  margin-top: var(--small);
-  margin-bottom: var(--small);
+  margin-top: var(--px14);
+  margin-bottom: var(--px14);
 }
 
 blockquote {
-  font-size: var(--medium);
+  font-size: var(--px18);
   padding: 0;
   font-style: italic;
   text-align: left;
@@ -559,7 +560,7 @@ blockquote {
 }
 
 .pagination__number {
-  font-size: var(--medium);
+  font-size: var(--px18);
   padding-left: 6px;
   padding-right: 6px;
   border-radius: 6px;
@@ -601,7 +602,7 @@ blockquote {
     background: none;
     border: none;
     box-shadow: none;
-    font-size: var(--x-large);
+    font-size: var(--px30);
     font-weight: 800;
     text-shadow: 1px 0px 2px rgba(133, 131, 131, 0.367),
       -1px 0px 2px rgba(133, 131, 131, 0.367),
@@ -650,9 +651,3 @@ blockquote {
 .katex {
   font-size: 18px !important;
 }
-
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Varta:wght@400;500;600&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap"); */
