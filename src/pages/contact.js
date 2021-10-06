@@ -1,18 +1,45 @@
 import React from "react";
 import Layout from "@components/Layout";
 
-const contact = () => {
+const Contact = () => {
   return (
-    <Layout>
-      <p>
-        If you have any questions, comments, ideas, critiques, or you just want
-        to say hi, don’t hesitate to email me@ninotn.com Additionally, for
-        end-to-end encryption email you can contact me through: Public Key
-        Fingerprint: CC33 6E13 0820 BB53 6D3B 62B4 F867 B33F 6F9B D3FD Expiry:
-        12/21/2023 PGP Signature: Keybase
-      </p>
+    <Layout pageTitle="contact">
+      <div className="contact__container">
+        <div className="contact__left" />
+        <div className="contact__center">
+          <div>
+            <h1>Contact</h1>
+            <p>
+              If you have any questions, comments, ideas, critiques, or you just
+              want to say hi, don’t hesitate to email{" "}
+              <a href="mailto:me@ninotn.com"> me@ninotn.com</a>
+              <br />
+              <br />
+              Additionally, for end-to-end encrypted email you can contact me
+              with:
+              <br />
+              <pre>
+                <code>
+                  PGP Public Key:{" "}
+                  <a
+                    href="/src/assets/general-files/me@ninotn.com-0xF867B33F6F9BD3FD-pub.asc"
+                    download
+                  >
+                    Download
+                  </a>
+                  <br />
+                  Fingerprint: CC33 6E13 0820 BB53 6D3B 62B4 F867 B33F 6F9B D3FD
+                  <br />
+                  Expiry: 12/21/2023
+                </code>
+              </pre>
+            </p>
+          </div>
+        </div>
+        <div className="contact__right" />
+      </div>
     </Layout>
   );
 };
 
-export default contact;
+export default Contact;

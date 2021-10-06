@@ -1,24 +1,131 @@
 import React from "react";
 import Layout from "@components/layout";
+import { StaticImage } from "gatsby-plugin-image";
 
-const about = () => (
-  <Layout pageTitle="About Me">
-    <p>
-      I write here about thoughts I have, experiences, stuff I’ve read and
-      heard, something I’m working on, and so on. I shall write whenever there
-      is something crossing in my head. Basically, I built this blog for me, to
-      build my writing habit, to test my reflection, practicing and
-      experimenting to express ideas, capturing some experiences; to hear yours
-      too. Hope you enjoy it anyway.
-      <br />
-      🇫🇷 J’écris ici des pensées que j’ai, des expériences, tout ce que j’ai lu
-      et entendu, les choses sur lesquelles je travaille, etc. J’écrirai quand
-      quelque chose me traversera l’esprit. Au fond, j’ai créer ce blog pour
-      moi, pour développer mon habitude d’écrire, tester ma réflexion,
-      s’entraîner et expérimenter pour exprimer des idées, capturer certaines
-      expériences; entendre les tiens aussi. J’espère que ça te plairas.
-    </p>
+import profilePic from "../assets/profile-pic.jpg";
+
+const About = () => (
+  <Layout pageTitle="about">
+    <div className="about__container">
+      <div className="about__center">
+        <div>
+          <h1>Site Note</h1>
+          <p>
+            I developed this website with{" "}
+            <a
+              target="_blank"
+              href="https://www.gatsbyjs.org/"
+              rel="noreferrer"
+            >
+              Gatsby Framework
+            </a>
+            , hosted on
+            <a target="_blank" href="https://www.netlify.com/" rel="noreferrer">
+              {" "}
+              Netlify
+            </a>
+            , and I've put the entire code on{" "}
+            <a
+              target="_blank"
+              href="https://github.com/nniinnoo"
+              rel="noreferrer"
+            >
+              Github
+            </a>
+            . Feel free to clone or contribute (if you have any questions or
+            specific request don't hesitate to ask)
+          </p>
+        </div>
+        <div>
+          <h1>What is this?</h1>
+          <p>
+            This blog is an attempt to project and organize my thoughts; a sort
+            of documentation of the past and the present memories; a place where
+            I can practice expressing ideas, capture my own inquiry and thinking
+            process, reflect on spontaneous firsthand experiences, tell the
+            story of how i felt towards stuff I've read and heard, what I've
+            discovered and I'm working on; and the last but not least, a place
+            to wait any adventerous mind out there to share oneself in a
+            slepless dialogue
+          </p>
+        </div>
+        <div>
+          <h1>About Me</h1>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img
+              alt="#"
+              src={profilePic}
+              height="200"
+              style={{
+                marginRight: "24px",
+                borderRadius: "3px",
+                marginTop: "12px",
+              }}
+            />
+            <p>
+              I grew up in a sleepy little town in North Sumatera, it's
+              surrounded by mountains and the sea-facing Indian Ocean. After
+              high school, I took the sail to the capital to study computer
+              science, I would prefer to say mathematics in disguise. I began my
+              profesional career as software engineer in Jakarta. These days I
+              mostly write code around JavaScript & TypeScript for work,
+              sometimes in C++ and Python for recreational
+            </p>
+          </div>
+        </div>
+        <div>
+          <h1>Credit</h1>
+          <div>
+            <p>
+              Title font : Fira Sans-serif by{" "}
+              <a
+                target="_blank"
+                href="https://en.wikipedia.org/wiki/Erik_Spiekermann"
+                rel="noreferrer"
+              >
+                Erik Spiekermann
+              </a>
+              <br />
+              Text font : Mada Sans-serif by{" "}
+              <a
+                target="_blank"
+                href="https://github.com/khaledhosny"
+                rel="noreferrer"
+              >
+                Khaled Hosny
+              </a>
+              <br />
+              Design principle : Less but better by{" "}
+              <a
+                target="_blank"
+                href="https://en.wikipedia.org/wiki/Dieter_Rams"
+                rel="noreferrer"
+              >
+                Dieter Ram
+              </a>{" "}
+              (thanks to Nora for the insight)
+              <br />
+              <p>
+                Mini-screen background: Moonlit Night 1878 by{" "}
+                <a
+                  target="_blank"
+                  href="https://en.wikipedia.org/wiki/Ivan_Aivazovsky"
+                  rel="noreferrer"
+                >
+                  Ivan Aivazovsky
+                </a>
+              </p>
+              <StaticImage
+                alt="#"
+                src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
+                width="500"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </Layout>
 );
 
-export default about;
+export default About;
