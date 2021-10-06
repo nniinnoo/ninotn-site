@@ -27,7 +27,7 @@ const About = () => (
             , and I've put the entire code on{" "}
             <a
               target="_blank"
-              href="https://github.com/nniinnoo"
+              href="https://github.com/nniinnoo/ninotn-site"
               rel="noreferrer"
             >
               Github

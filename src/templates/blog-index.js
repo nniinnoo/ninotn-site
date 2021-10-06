@@ -14,6 +14,8 @@ import PropTypes from "prop-types";
 
 import Pagination from "@components/Pagination";
 
+import test from "../assets/cat.gif";
+
 const BlogIndex = ({ data, pageContext }) => {
   // const siteTitle = data.site.siteMetadata.title;
 
