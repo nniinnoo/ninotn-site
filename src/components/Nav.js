@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import logo from "../assets/firemaking.png";
 
 const Nav = () => {
   return (
@@ -9,7 +9,7 @@ const Nav = () => {
         <div className="nav__left">
           <Link to="/">
             <div style={{ paddingRight: "6px" }}>
-              <StaticImage alt="#" src="../assets/firemaking.png" width={60} />
+              <img alt="#" src={logo} width={70} />
             </div>
             <div>
               <h1>Raw Fire</h1>

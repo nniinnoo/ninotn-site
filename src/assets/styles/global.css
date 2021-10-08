@@ -8,6 +8,7 @@
   --dark-1: #404040;
   --subtle-dark-1: rgba(0, 0, 0, 0.2);
   --subtle-dark-2: rgba(0, 0, 0, 0.5);
+  --subtle-dark-3: rgba(0, 0, 0, 0.7);
 
   --font-family-text: "Mada", sans-serif;
   --font-family-title: "Fira", sans-serif;
@@ -295,7 +296,7 @@ pre {
 .blog__list-title-details > p {
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--dark-1);
+  color: var(--subtle-dark-3);
   margin-bottom: var(--px6);
 }
 
@@ -306,7 +307,7 @@ pre {
 }
 
 .blog__list-title-details span {
-  color: var(--dark-1);
+  color: var(--subtle-dark-3);
   background-color: rgba(97, 97, 97, 0.09);
   border-radius: 3px;
   padding: 4px 6px;
@@ -443,7 +444,7 @@ pre {
 
 .blog__post-title-details span {
   font-size: var(--px14);
-  color: var(--dark-1);
+  color: var(--subtle-dark-3);
   background-color: rgba(97, 97, 97, 0.09);
   border-radius: 3px;
 
