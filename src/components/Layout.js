@@ -7,14 +7,9 @@ import Footer from "@components/Footer";
 
 import "@assets/styles/global.css";
 
-const Layout = ({ siteTitle, children }) => {
+const Layout = ({ children }) => {
   return (
     <>
-      <Helmet>
-        <title>{siteTitle}</title>
-        <meta property="og:site_name" content={siteTitle} />
-      </Helmet>
-      <title>{siteTitle}</title>
       <Nav />
       <main>{children}</main>
       <Footer />
@@ -23,12 +18,7 @@ const Layout = ({ siteTitle, children }) => {
 };
 
 Layout.propTypes = {
-  siteTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
-};
-
-Layout.defaultProps = {
-  siteTitle: "Raw Thought",
 };
 
 export default Layout;

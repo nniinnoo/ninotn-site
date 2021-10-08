@@ -2,8 +2,10 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "ninotn.com",
+    siteUrl: "https://www.ninotn.com",
+    siteTitle: "ninotn.com",
+    siteLogo: "src/assets/favicon.png",
+    description: "Personal blog by Nino Tannio",
   },
   plugins: [
     {
