@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
-import logo from "../assets/firemaking.png";
+import FireOn from "../assets/firemaking.png";
+import FireOff from "../assets/firesmoke.png";
 
 const Nav = () => {
+  const [firemaking, setFire] = useState(true);
+
   return (
     <div className="navbar">
       <div className="navbar__container">
         <div className="nav__left">
           <Link to="/">
-            <div style={{ paddingRight: "6px" }}>
-              <img alt="#" src={logo} width={70} />
+            <div
+              style={{ paddingRight: "6px" }}
+              onClick={() => {
+                setFire(!firemaking);
+              }}
+              aria-hidden="true"
+            >
+              <img alt="#" src={firemaking ? FireOff : FireOn} width={70} />
             </div>
             <div>
               <h1>Raw Fire</h1>
