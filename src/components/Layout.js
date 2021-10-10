@@ -11,14 +11,15 @@ const Layout = ({ children }) => {
   const windowGlobal = typeof window !== "undefined" && window;
 
   const defaultTheme = "light";
-  const currentTheme = windowGlobal.localStorage.getItem("theme");
+  let currentTheme = "";
 
   useEffect(() => {
-    if (currentTheme === null) {
+    if (windowGlobal.localStorage.getItem("theme") === null) {
       windowGlobal.localStorage.setItem("theme", defaultTheme);
       document.body.classList.add(defaultTheme);
       setTheme(defaultTheme);
     } else {
+      currentTheme = windowGlobal.localStorage.getItem("theme");
       document.body.classList.add(currentTheme);
       setTheme(currentTheme);
     }
