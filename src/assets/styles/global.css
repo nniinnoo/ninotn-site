@@ -3,13 +3,6 @@
 @import url(katex/katex.min.css);
 
 :root {
-  --bg: #eae1d0; /* alt: #FAF4E6 or #EDE4D5*/
-  --light-1: #f9f9f9;
-  --dark-1: #404040;
-  --subtle-dark-1: rgba(0, 0, 0, 0.2);
-  --subtle-dark-2: rgba(0, 0, 0, 0.5);
-  --subtle-dark-3: rgba(0, 0, 0, 0.7);
-
   --font-family-text: "Mada", sans-serif;
   --font-family-title: "Fira", sans-serif;
 
@@ -42,9 +35,6 @@ html {
 }
 
 body {
-  color: var(--dark-1);
-  background: var(--bg);
-
   margin: 0;
   padding: 0;
 
@@ -56,6 +46,45 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.light {
+  --bg: #eae1d0; /* alt: #FAF4E6 or #EDE4D5*/
+  --light-1: #f9f9f9;
+  --dark-1: #404040;
+  --subtle-dark-1: rgba(0, 0, 0, 0.2);
+  --subtle-dark-2: rgba(0, 0, 0, 0.5);
+  --subtle-dark-3: rgba(0, 0, 0, 0.7);
+  --hover-1: #bdbf73;
+  --hover-2: #d1d9b5;
+  --navbar-span: rgba(255, 255, 255, 0.418);
+  --footer: rgba(255, 255, 255, 0.137);
+
+  --sort-newest: #9c9c9c;
+  --sort-to: #c09c6f;
+  --sort-oldest: #bf7c2a;
+
+  color: var(--dark-1);
+  background: var(--bg);
+}
+
+body.dark {
+  --bg: #282c35;
+  --light-1: #f9f9f9;
+  --dark-1: #afadad;
+  --subtle-dark-1: rgba(0, 0, 0, 0.2);
+  --subtle-dark-2: rgba(0, 0, 0, 0.5);
+  --subtle-dark-3: rgba(182, 181, 180, 0.7);
+  --hover-1: #452858;
+  --hover-2: #806692;
+  --navbar-span: rgba(122, 122, 122, 0.418);
+  --footer: rgba(59, 59, 59, 0.137);
+  --sort-newest: #a76c24;
+  --sort-to: #636362;
+  --sort-oldest: #5f503e;
+
+  color: rgb(199, 199, 199);
+  background: var(--bg);
 }
 
 p {
@@ -122,7 +151,7 @@ tbody tr:nth-child(odd) {
   width: 100%;
   /* background-color: yellow; */
   /* margin-bottom: var(--px12); */
-  margin-top: var(--px14);
+  margin-top: var(--px18);
 }
 
 .navbar__container {
@@ -170,7 +199,7 @@ tbody tr:nth-child(odd) {
   color: var(--dark-1);
   text-decoration: none;
 
-  background-color: rgba(255, 255, 255, 0.418);
+  background-color: var(--navbar-span);
   border: 1px solid var(--subtle-dark-1);
   border-radius: 3px;
 
@@ -183,7 +212,7 @@ tbody tr:nth-child(odd) {
 .nav__right a:hover,
 .nav__right a:hover:active,
 .nav__right a:hover:focus {
-  background: #d1d9b5;
+  background: var(--hover-2);
   /* box-shadow: 4px 4px #d1d9b5; */
   transition: box-shadow 200ms ease, transform 200ms ease;
 }
@@ -279,7 +308,7 @@ pre {
 }
 
 .blog__list:hover {
-  background-color: #bdbf73;
+  background-color: var(--hover-1); /*#bdbf73;*/
   transition: 0.5s;
 }
 
@@ -351,25 +380,23 @@ pre {
 .blog__post-content .MuiSvgIcon-root {
   font-size: var(--px14);
 }
-
+/* #9c9c9c #c09c6f #bf7c2a */
 #sortby-btn-newest {
-  background-color: #9c9c9c;
+  background-color: var(--sort-newest);
   padding: var(--px8);
-  border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
 #sortby-btn-to {
-  background-color: #c09c6f;
+  background-color: var(--sort-to);
   padding: var(--px8);
   align-self: center;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
 #sortby-btn-oldest {
-  background: #bf7c2a;
+  background: var(--sort-oldest);
   padding: var(--px8);
-  border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
@@ -643,7 +670,7 @@ blockquote {
   text-align: right;
   padding-right: 20px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.137);
+  background-color: var(--footer);
 }
 
 /* === Katex === */

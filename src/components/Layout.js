@@ -1,5 +1,4 @@
-import React from "react";
-import { Helmet } from "react-helmet";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import Nav from "@components/Nav";
@@ -8,9 +7,46 @@ import Footer from "@components/Footer";
 import "@assets/styles/global.css";
 
 const Layout = ({ children }) => {
+  const [theme, setTheme] = useState("light");
+  const defaultTheme = "light";
+  const currentTheme = localStorage.getItem("theme");
+
+  useEffect(() => {
+    if (currentTheme === undefined) {
+      localStorage.setItem("theme", defaultTheme);
+      document.body.classList.add(defaultTheme);
+      setTheme(defaultTheme);
+    } else {
+      document.body.classList.add(currentTheme);
+      setTheme(currentTheme);
+    }
+  });
+
+  const setDarkTheme = () => {
+    document.body.classList.remove(currentTheme);
+    document.body.classList.add("dark");
+    setTheme("dark");
+    localStorage.setItem("theme", "dark");
+  };
+
+  const setLightTheme = () => {
+    document.body.classList.remove(currentTheme);
+    document.body.classList.add("light");
+    setTheme("light");
+    localStorage.setItem("theme", "light");
+  };
+
+  const onUpdateTheme = () => {
+    if (currentTheme === "light") {
+      setDarkTheme();
+    } else {
+      setLightTheme();
+    }
+  };
+
   return (
     <>
-      <Nav />
+      <Nav onUpdateTheme={() => onUpdateTheme()} theme={theme} />
       <main>{children}</main>
       <Footer />
     </>

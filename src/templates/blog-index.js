@@ -99,8 +99,7 @@ const BlogIndex = ({ data, pageContext }) => {
                 <DropDownIcon />
               </button>
               <div className="blog__dropdown-list">
-                <p>Journal</p>
-                <p>Sci-Math</p>
+                <p>under reconstruction</p>
               </div>
             </div>
           </div>

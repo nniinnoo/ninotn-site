@@ -3,9 +3,7 @@ import { Link } from "gatsby";
 import FireOn from "../assets/firemaking.png";
 import FireOff from "../assets/firesmoke.png";
 
-const Nav = () => {
-  const [firemaking, setFire] = useState(true);
-
+const Nav = ({ onUpdateTheme, theme }) => {
   return (
     <div className="navbar">
       <div className="navbar__container">
@@ -13,12 +11,14 @@ const Nav = () => {
           <Link to="/">
             <div
               style={{ paddingRight: "6px" }}
-              onClick={() => {
-                setFire(!firemaking);
-              }}
+              onClick={onUpdateTheme}
               aria-hidden="true"
             >
-              <img alt="#" src={firemaking ? FireOff : FireOn} width={70} />
+              <img
+                alt="#"
+                src={theme === "dark" ? FireOn : FireOff}
+                width={70}
+              />
             </div>
             <div>
               <h1>Raw Fire</h1>
