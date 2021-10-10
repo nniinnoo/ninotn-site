@@ -8,12 +8,14 @@ import "@assets/styles/global.css";
 
 const Layout = ({ children }) => {
   const [theme, setTheme] = useState("light");
+  const windowGlobal = typeof window !== "undefined" && window;
+
   const defaultTheme = "light";
-  const currentTheme = localStorage.getItem("theme");
+  const currentTheme = windowGlobal.localStorage.getItem("theme");
 
   useEffect(() => {
     if (currentTheme === undefined) {
-      localStorage.setItem("theme", defaultTheme);
+      windowGlobal.localStorage.setItem("theme", defaultTheme);
       document.body.classList.add(defaultTheme);
       setTheme(defaultTheme);
     } else {
@@ -26,14 +28,14 @@ const Layout = ({ children }) => {
     document.body.classList.remove(currentTheme);
     document.body.classList.add("dark");
     setTheme("dark");
-    localStorage.setItem("theme", "dark");
+    windowGlobal.localStorage.setItem("theme", "dark");
   };
 
   const setLightTheme = () => {
     document.body.classList.remove(currentTheme);
     document.body.classList.add("light");
     setTheme("light");
-    localStorage.setItem("theme", "light");
+    windowGlobal.localStorage.setItem("theme", "light");
   };
 
   const onUpdateTheme = () => {
