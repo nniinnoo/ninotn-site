@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
   const currentTheme = windowGlobal.localStorage.getItem("theme");
 
   useEffect(() => {
-    if (currentTheme === undefined) {
+    if (currentTheme === null) {
       windowGlobal.localStorage.setItem("theme", defaultTheme);
       document.body.classList.add(defaultTheme);
       setTheme(defaultTheme);
