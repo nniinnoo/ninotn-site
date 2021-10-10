@@ -22,9 +22,9 @@ I wonder what kind of the day or the moment looked like when Sir Tim Berners cam
 
 Today is the last day of 2018 when I checked Merriam Webster Time Traveller, I haven’t found updated words after 2016. I suspect there really isn’t any or they’d stopped to update the database. How exactly they decided and defined the year when each word first used? here is their answer:
 
-The date may not represent the very oldest sense of the word. Many obsolete, archaic, and uncommon senses have been excluded from this dictionary, and such senses have not been taken into consideration in determining the date.The date most often does not mark the very first time that the word was used in English. Many words were in spoken use for decades or even longer before they passed into the written language. The date is for the earliest written or printed use that the editors have been able to discover.
-
-The date is subject to change. Many of the dates provided will undoubtedly be updated as evidence of still earlier use emerges.
+<blockquote>
+The date may not represent the very oldest sense of the word. Many obsolete, archaic, and uncommon senses have been excluded from this dictionary, and such senses have not been taken into consideration in determining the date.The date most often does not mark the very first time that the word was used in English. Many words were in spoken use for decades or even longer before they passed into the written language. The date is for the earliest written or printed use that the editors have been able to discover. The date is subject to change. Many of the dates provided will undoubtedly be updated as evidence of still earlier use emerges.
+</blockquote>
 
 Well, it’s still a pleasure to know about the early used of those words — how a word become obsolete, how an archaic word survived by modernity, and how the anachronism occurred with those words.
 
