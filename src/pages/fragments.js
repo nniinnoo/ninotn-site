@@ -1,18 +1,43 @@
 import React from "react";
 import Layout from "@components/Layout";
-import { StaticImage } from "gatsby-plugin-image";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Fragments = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(
+        filter: { frontmatter: { template: { eq: "fragment" } } }
+        sort: { order: DESC, fields: id }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              slug
+            }
+            html
+          }
+        }
+      }
+    }
+  `);
+
+  const fragments = data.allMarkdownRemark;
+
   return (
     <Layout>
-      <center>
-        <StaticImage
-          alt="#"
-          src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
-          width="720"
-        />
-        <h2>Under Construction :)</h2>
-      </center>
+      <div className="fragment__container">
+        {fragments.edges.map((edge) => (
+          <div className="fragment__content">
+            <p>Fragments {edge.node.frontmatter.title}</p>
+            <div
+              className="grid"
+              dangerouslySetInnerHTML={{ __html: edge.node.html }}
+            />
+          </div>
+        ))}
+      </div>
     </Layout>
   );
 };

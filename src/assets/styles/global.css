@@ -166,6 +166,7 @@ tbody tr:nth-child(odd) {
   font-family: var(--font-family-title);
   line-height: 0;
   padding-top: var(--px18);
+  display: flex;
 }
 
 .nav__left a {
@@ -677,4 +678,44 @@ blockquote {
 
 .katex {
   font-size: 18px !important;
+}
+
+/* === Katex === */
+/* ============= */
+
+.fragment__container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--px36);
+  margin-bottom: var(--px24);
+}
+
+.fragment__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: var(--px14);
+  margin-right: var(--px14);
+}
+
+.fragment__content > p {
+  font-size: var(--px24);
+  margin-bottom: var(--px14);
+  font-weight: 800;
+}
+
+.fragment__content > div {
+  width: 100%;
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fragment__item {
+  background: var(--navbar-span);
+  border: 1px solid var(--subtle-dark-1);
+  padding: var(--px18);
+  margin-bottom: var(--px24);
 }

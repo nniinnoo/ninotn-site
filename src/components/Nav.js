@@ -8,18 +8,14 @@ const Nav = ({ onUpdateTheme, theme }) => {
     <div className="navbar">
       <div className="navbar__container">
         <div className="nav__left">
+          <div
+            style={{ paddingRight: "6px" }}
+            onClick={onUpdateTheme}
+            aria-hidden="true"
+          >
+            <img alt="#" src={theme === "dark" ? FireOn : FireOff} width={70} />
+          </div>
           <Link to="/">
-            <div
-              style={{ paddingRight: "6px" }}
-              onClick={onUpdateTheme}
-              aria-hidden="true"
-            >
-              <img
-                alt="#"
-                src={theme === "dark" ? FireOn : FireOff}
-                width={70}
-              />
-            </div>
             <div>
               <h1>Raw Fire</h1>
               <h2>by Nino Tannio</h2>
