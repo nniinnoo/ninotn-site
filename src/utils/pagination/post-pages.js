@@ -7,7 +7,7 @@ module.exports = async (graphql, actions) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { frontmatter: { template: { eq: "post" } } }) {
         edges {
           node {
             frontmatter {
