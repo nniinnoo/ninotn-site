@@ -7,7 +7,7 @@ const Fragments = () => {
     query {
       allMarkdownRemark(
         filter: { frontmatter: { template: { eq: "fragment" } } }
-        sort: { order: DESC, fields: id }
+        sort: { order: DESC, fields: frontmatter___no }
       ) {
         edges {
           node {
@@ -15,6 +15,7 @@ const Fragments = () => {
             frontmatter {
               title
               slug
+              no
             }
             html
           }
