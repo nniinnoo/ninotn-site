@@ -7,7 +7,10 @@ module.exports = {
     siteLogo: "src/assets/favicon.png",
     description: "Personal blog by Nino Tannio",
   },
+
   plugins: [
+    // ANALYTICS
+    // =========
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -15,10 +18,11 @@ module.exports = {
         head: true,
       },
     },
-    "gatsby-plugin-netlify",
+
+    // ALIAS IMPORTS
+    // =============
+    // Aliasing import -> '/../../components/' to this '@components'
     {
-      /// ALIAS IMPORTS
-      // aliasing import statements from this '/../../components/' to this '@components'
       resolve: "gatsby-plugin-alias-imports",
       options: {
         alias: {
@@ -29,33 +33,37 @@ module.exports = {
           "@pages": path.resolve(__dirname, "src/pages"),
           "@templates": path.resolve(__dirname, "src/templates"),
         },
-        extensions: ["js", "css", "md", "jsx"], // to omit extensions when importing files
+        extensions: ["js", "css", "md", "jsx"],
+        // to omit extensions when importing files
       },
     },
-    /// TYPESCRIPT
-    {
-      resolve: "gatsby-plugin-typescript",
-      options: {
-        isTSX: true,
-        jsxPragma: "jsx",
-        allExtensions: true,
-      },
-    },
-    /// IMAGE
+
+    // HELMET
+    // ======
+    "gatsby-plugin-react-helmet",
+
+    // IMAGE
+    // =====
     "gatsby-plugin-image",
 
-    // REACT-HELMET
-    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/assets/favicon.png",
       },
     },
-    /// SHARP
+
+    // NETLIFY
+    // =======
+    "gatsby-plugin-netlify",
+
+    // SHARP
+    // =====
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    /// SOURCE FILESYSTEM
+
+    // SOURCE FILESYSTEM
+    // =================
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -109,6 +117,66 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+
+    // SEARCH
+    // ======
+    {
+      resolve: "gatsby-plugin-local-search",
+      options: {
+        name: "pages",
+        engine: "flexsearch",
+        engineOptions: {
+          encode: "icase",
+          tokenize: "forward",
+          async: false,
+        },
+        query: `{
+             allMarkdownRemark(
+             filter: {frontmatter: {template: {eq: "post"}, published: {eq: true}}}) {
+                edges {
+                  node {
+                    frontmatter {
+                      date(formatString: "MMMM D, YYYY")
+                      title
+                      published
+                      slug
+                      tags
+                      categories
+                      no
+                      description
+                    }
+                    id
+                    rawMarkdownBody
+                  }
+                }
+              }
+        }`,
+        ref: "id",
+        index: ["title", "body", "description", "tags"],
+        store: ["id", "slug", "title", "categories", "date", "tags"],
+        normalizer: ({ data }) =>
+          data.allMarkdownRemark.edges.map((edge) => ({
+            id: edge.node.id,
+            slug: `/${edge.node.frontmatter.slug}`,
+            title: edge.node.frontmatter.title,
+            body: edge.node.rawMarkdownBody,
+            categories: edge.node.frontmatter.categories,
+            date: edge.node.frontmatter.date,
+            tags: edge.node.frontmatter.tags,
+          })),
+      },
+    },
+
+    // TYPESCRIPT
+    // ==========
+    {
+      resolve: "gatsby-plugin-typescript",
+      options: {
+        isTSX: true,
+        jsxPragma: "jsx",
+        allExtensions: true,
       },
     },
   ],

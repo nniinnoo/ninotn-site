@@ -16,6 +16,7 @@ module.exports = {
   },
   plugins: ["prettier"],
   rules: {
+    "no-nested-ternary": "off",
     "import/no-unresolved": "off",
     "prettier/prettier": ["error"],
     "react/jsx-filename-extension": ["warn", { extensions: [".js", ".jsx"] }],

@@ -1,18 +1,14 @@
 import React from "react";
 import Layout from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
+import Search from "@components/Search";
 
 const Archive = () => {
   return (
     <Layout>
-      <center>
-        <StaticImage
-          alt="#"
-          src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
-          width="720"
-        />
-        <h2>Under Construction :)</h2>
-      </center>
+      <div className="archive__container">
+        <Search />
+      </div>
     </Layout>
   );
 };
