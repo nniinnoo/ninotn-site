@@ -753,6 +753,7 @@ blockquote {
   border: 1px solid var(--subtle-dark-1);
   width: 70%;
   outline: none;
+  font-family: var(--font-family-text);
 }
 
 .search__result {

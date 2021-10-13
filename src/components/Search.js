@@ -55,7 +55,7 @@ const Search = () => {
           onChange={(e) => {
             setQuery(e.target.value);
           }}
-          placeholder="Find articles by title, context, category, tag, or year"
+          placeholder="Search articles by title or specific context..."
         />
         <SearchIcon />
       </div>
