@@ -31,7 +31,7 @@ const Fragments = () => {
       <div className="fragment__container">
         {fragments.edges.map((edge) => (
           <div className="fragment__content">
-            <p>Fragments {edge.node.frontmatter.title}</p>
+            <h2>Fragments {edge.node.frontmatter.title}</h2>
             <div
               className="grid"
               dangerouslySetInnerHTML={{ __html: edge.node.html }}

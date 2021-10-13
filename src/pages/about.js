@@ -65,7 +65,7 @@ const About = () => (
             <p>
               I grew up in a sleepy little town in North Sumatera, it's
               surrounded by mountains and the sea-facing Indian Ocean. After
-              high school, I took the sail to the capital to study computer
+              high school, I took my first sail to the capital to study computer
               science, I would prefer to say mathematics in disguise. I began my
               profesional career as software engineer in Jakarta. These days I
               mostly write code around JavaScript & TypeScript for work,
@@ -94,16 +94,6 @@ const About = () => (
               >
                 Khaled Hosny
               </a>
-              <br />
-              Design principle : Less but better by{" "}
-              <a
-                target="_blank"
-                href="https://en.wikipedia.org/wiki/Dieter_Rams"
-                rel="noreferrer"
-              >
-                Dieter Ram
-              </a>{" "}
-              (thanks to Nora for the insight)
               <br />
               <p>
                 Mini-screen background: Moonlit Night 1878 by{" "}
