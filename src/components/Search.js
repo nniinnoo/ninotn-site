@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useFlexSearch } from "react-use-flexsearch";
 import { useStaticQuery, graphql } from "gatsby";
-// import { useLocation, navigate } from "@reach/router";
+import { useLocation, navigate } from "@reach/router";
 
 import Corpus from "@components/Corpus";
 import SearchIcon from "@mui/icons-material/SailingRounded";
@@ -9,7 +9,6 @@ import SearchIcon from "@mui/icons-material/SailingRounded";
 const Search = () => {
   // const { location } = useLocation();
   // const search = new URLSearchParams(location).get("");
-
   const searchRef = useRef(null);
   const [query, setQuery] = useState("");
 

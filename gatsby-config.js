@@ -159,7 +159,7 @@ module.exports = {
         normalizer: ({ data }) =>
           data.allMarkdownRemark.edges.map((edge) => ({
             id: edge.node.id,
-            slug: `/${edge.node.frontmatter.slug}`,
+            slug: edge.node.frontmatter.slug,
             title: edge.node.frontmatter.title,
             body: edge.node.rawMarkdownBody,
             categories: edge.node.frontmatter.categories,
