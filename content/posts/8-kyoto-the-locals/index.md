@@ -4,7 +4,7 @@ title: "Kyoto: The Locals"
 slug: 8-kyoto-the-locals
 published: true
 date: 2019-11-20T11:30:50.334Z
-description: this city will freeze your memory, even before you leave
+description: a constant longing before i leave
 categories: ["Journal"]
 tags:
   - Japan

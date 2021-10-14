@@ -4,7 +4,7 @@ title: "Pigeonhole & Herd Immunity"
 slug: 12-pigeonhole
 published: true
 date: 2021-02-25T11:45:50.334Z
-description: mencari ruang imunitas optimal dalam sarang burung merpati
+description: mencari ruang imunitas optimal dalam sarang merpati
 categories: ["Sci-Math"]
 tags:
   - Herd Immunity
