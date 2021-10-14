@@ -7,6 +7,7 @@
   --font-family-title: "Fira", sans-serif;
 
   --px1: 0.0625rem;
+  --px3: 0.1875rem;
   --px6: 0.375rem;
   --px8: 0.5rem;
   --px12: 0.75rem;
@@ -32,7 +33,6 @@
 html {
   font-family: var(--font-family-text);
   font-size: var(--px14);
-  scroll-behavior: smooth;
 }
 
 body {
@@ -52,6 +52,7 @@ body {
 
 body.light {
   --bg: #eae1d0; /* alt: #FAF4E6 or #EDE4D5*/
+  --bg-2: rgba(255, 255, 255, 0.418);
   --light-1: #f9f9f9;
   --dark-1: #404040;
   --subtle-dark-1: rgba(0, 0, 0, 0.2);
@@ -59,7 +60,6 @@ body.light {
   --subtle-dark-3: rgba(0, 0, 0, 0.7);
   --hover-1: #bdbf73;
   --hover-2: #d1d9b5;
-  --navbar-span: rgba(255, 255, 255, 0.418);
   --footer: rgba(255, 255, 255, 0.137);
 
   --sort-newest: #9c9c9c;
@@ -79,7 +79,7 @@ body.dark {
   --subtle-dark-3: rgba(182, 181, 180, 0.7);
   --hover-1: #452858;
   --hover-2: #806692;
-  --navbar-span: rgba(122, 122, 122, 0.418);
+  --bg-2: rgba(122, 122, 122, 0.418);
   --footer: rgba(59, 59, 59, 0.137);
   --sort-newest: #a76c24;
   --sort-to: #636362;
@@ -94,8 +94,7 @@ p {
 }
 a {
   color: #92315e;
-  text-decoration-color: var(--subtle-dark-1);
-  text-decoration-thickness: 2px;
+  text-decoration: none;
 }
 
 a:hover {
@@ -151,13 +150,10 @@ tbody tr:nth-child(odd) {
 
 .navbar {
   width: 100%;
-  /* background-color: yellow; */
-  /* margin-bottom: var(--px12); */
   margin-top: var(--px18);
 }
 
 .navbar__container {
-  /* background-color: yellowgreen; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -202,7 +198,7 @@ tbody tr:nth-child(odd) {
   color: var(--dark-1);
   text-decoration: none;
 
-  background-color: var(--navbar-span);
+  background-color: var(--bg-2);
   border: 1px solid var(--subtle-dark-1);
   border-radius: 3px;
 
@@ -222,14 +218,6 @@ tbody tr:nth-child(odd) {
 
 /* ===== About & Contact ===== */
 /* =========================== */
-
-.blog__post-content-center {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 48rem;
-  padding: var(--px24);
-}
 
 .about__container,
 .contact__container {
@@ -278,7 +266,7 @@ pre {
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: var(--px24);
+  margin-top: var(--px36);
   margin-bottom: var(--px42);
 }
 
@@ -366,40 +354,52 @@ pre {
   flex-grow: 1.5;
   display: flex;
   flex-direction: column;
+  margin-top: var(--px12);
+}
+
+.blog__content-right-container {
+  width: 150px;
 }
 
 .blog__content-right button {
+  width: 150px;
   color: var(--dark-1);
-  width: 50%;
   margin-top: var(--px14);
   padding: var(--px6);
   letter-spacing: 0.065rem;
   background: transparent;
   border: none;
-  display: flex;
 }
 
-.blog__sortby-btn .MuiSvgIcon-root,
+.blog__sortby > div {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.blog__sortby .MuiSvgIcon-root,
 .blog__post-content .MuiSvgIcon-root {
   font-size: var(--px14);
 }
-/* #9c9c9c #c09c6f #bf7c2a */
-#sortby-btn-newest {
+
+#sortby-newest {
+  width: 65px;
+  padding: var(--px3);
   background-color: var(--sort-newest);
-  padding: var(--px8);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
-#sortby-btn-to {
+#sortby-to {
+  width: 20px;
+  padding: var(--px3);
   background-color: var(--sort-to);
-  padding: var(--px8);
-  align-self: center;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
-#sortby-btn-oldest {
+#sortby-oldest {
+  width: 65px;
+  padding: var(--px3);
   background: var(--sort-oldest);
-  padding: var(--px8);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
@@ -414,8 +414,6 @@ pre {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
@@ -596,73 +594,6 @@ blockquote {
   border-radius: 6px;
 }
 
-/* ===Media Query=== */
-/* ================= */
-
-@media (max-width: 800px) {
-  .navbar {
-    background-image: linear-gradient(
-        rgba(129, 128, 128, 0.036),
-        rgba(0, 0, 0, 0.023)
-      ),
-      url(@assets/moonlit-nights-1878-by-ivan-aivazovsky-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 100vh;
-    margin-top: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .navbar__container,
-  .nav__left,
-  .nav__right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .nav__right a,
-  .nav__left a {
-    text-align: center;
-    background: none;
-    border: none;
-    box-shadow: none;
-    font-size: var(--px30);
-    font-weight: 800;
-    text-shadow: 1px 0px 2px rgba(133, 131, 131, 0.367),
-      -1px 0px 2px rgba(133, 131, 131, 0.367),
-      0px 2px 2px rgba(133, 131, 131, 0.367);
-    color: var(--light-1);
-  }
-
-  .nav__right a:hover {
-    background: none;
-    color: #bdbf73;
-  }
-
-  .blog__container {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .blog__content-center {
-    margin: 0;
-  }
-
-  .blog__list-container {
-    width: 95%;
-  }
-
-  .blog__content-right {
-    display: none;
-  }
-}
-
 /* === Footer === */
 /* ============== */
 
@@ -715,7 +646,7 @@ blockquote {
 }
 
 .fragment__item {
-  background: var(--navbar-span);
+  background: var(--bg-2);
   border: 1px solid var(--subtle-dark-1);
   padding: var(--px18);
   margin-bottom: var(--px24);
@@ -781,4 +712,157 @@ blockquote {
   margin-left: var(--px12);
   font-size: var(--px36);
   color: var(--dark-1);
+}
+
+/* === Gallery === */
+/* ================ */
+
+.gallery__container {
+  width: 100%;
+  margin-right: auto;
+  margin-top: var(--px24);
+}
+
+.gallery__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.gallery__content > img {
+  width: 780px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.gallery__content > div {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--px24);
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__content figcaption {
+  width: 180px;
+  height: fit-content;
+  background-color: var(--bg-2);
+  padding: var(--px12);
+  border-left: var(--px6) solid var(--subtle-dark-1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  margin-bottom: var(--px24);
+}
+
+.gallery__skip {
+  display: flex;
+}
+
+.gallery__next-active,
+.gallery__prev-active,
+.gallery__prev-inactive,
+.gallery__next-inactive {
+  margin-left: var(--px6);
+  margin-right: var(--px6);
+}
+
+.gallery__next-active .MuiSvgIcon-root,
+.gallery__prev-active .MuiSvgIcon-root {
+  width: 28px;
+  height: 28px;
+  background-color: var(--subtle-dark-1);
+  border-radius: 100%;
+}
+
+.gallery__prev-inactive .MuiSvgIcon-root,
+.gallery__next-inactive .MuiSvgIcon-root {
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  color: rgba(105, 105, 105, 0.884) !important;
+  background-color: rgba(153, 151, 151, 0.247) !important;
+}
+
+/* ===Media Query=== */
+/* ================= */
+
+@media (max-width: 800px) {
+  .navbar {
+    background-image: linear-gradient(
+        rgba(129, 128, 128, 0.036),
+        rgba(0, 0, 0, 0.023)
+      ),
+      url(@assets/moonlit-nights-1878-by-ivan-aivazovsky-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+    margin-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar__container,
+  .nav__left,
+  .nav__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .nav__right a,
+  .nav__left a {
+    text-align: center;
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-size: var(--px30);
+    font-weight: 800;
+    text-shadow: 1px 0px 2px rgba(133, 131, 131, 0.367),
+      -1px 0px 2px rgba(133, 131, 131, 0.367),
+      0px 2px 2px rgba(133, 131, 131, 0.367);
+    color: var(--light-1);
+  }
+
+  .nav__right a:hover {
+    background: none;
+    color: #bdbf73;
+  }
+
+  .blog__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .blog__content-center {
+    margin: 0;
+  }
+
+  .blog__list-container {
+    width: 95%;
+  }
+
+  .blog__content-right {
+    display: none;
+  }
+
+  .gallery__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .gallery__content > img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: var(--px12);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  }
 }
