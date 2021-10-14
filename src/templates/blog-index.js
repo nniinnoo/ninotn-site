@@ -69,37 +69,38 @@ const BlogIndex = ({ data, pageContext }) => {
             <Pagination pageCount={pageCount} currentPage={currentPage} />
           </div>
           <div className="blog__content-right">
-            {/* <input type="text" placeholder="Search Blog.." /> */}
-            <button
-              type="button"
-              className="blog__sortby-btn"
-              onClick={() => setSortindex(!sortIndex)}
-            >
-              {sortIndex ? (
-                <p>
-                  <span id="sortby-btn-newest">{sortType[0]}</span>
-                  <span id="sortby-btn-to">
-                    <SortByIcon />
-                  </span>
-                  <span id="sortby-btn-oldest">{sortType[1]}</span>
-                </p>
-              ) : (
-                <p>
-                  <span id="sortby-btn-oldest">{sortType[1]}</span>
-                  <span id="sortby-btn-to">
-                    <SortByIcon />
-                  </span>
-                  <span id="sortby-btn-newest">{sortType[0]}</span>
-                </p>
-              )}
-            </button>
-            <div className="blog__dropdown">
-              <button type="button" className="blog__dropdown-btn">
-                Category
-                <DropDownIcon />
-              </button>
-              <div className="blog__dropdown-list">
-                <p>under reconstruction</p>
+            <div className="blog__content-right-container">
+              <div
+                className="blog__sortby"
+                onClick={() => setSortindex(!sortIndex)}
+                aria-hidden="true"
+              >
+                {sortIndex ? (
+                  <div>
+                    <span id="sortby-newest">{sortType[0]}</span>
+                    <span id="sortby-to">
+                      <SortByIcon />
+                    </span>
+                    <span id="sortby-oldest">{sortType[1]}</span>
+                  </div>
+                ) : (
+                  <div>
+                    <span id="sortby-oldest">{sortType[1]}</span>
+                    <span id="sortby-to">
+                      <SortByIcon />
+                    </span>
+                    <span id="sortby-newest">{sortType[0]}</span>
+                  </div>
+                )}
+              </div>
+              <div className="blog__dropdown">
+                <button type="button" className="blog__dropdown-btn">
+                  Category
+                  <DropDownIcon />
+                </button>
+                <div className="blog__dropdown-list">
+                  <p>under reconstruction</p>
+                </div>
               </div>
             </div>
           </div>
