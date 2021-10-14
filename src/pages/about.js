@@ -107,6 +107,7 @@ const About = () => (
               </p>
               <StaticImage
                 alt="#"
+                quality={100}
                 src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
                 width="600"
               />

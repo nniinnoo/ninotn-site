@@ -24,9 +24,9 @@ const Nav = ({ onUpdateTheme, theme }) => {
         </div>
         <div className="nav__right">
           <Link to="/about">What's this?</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/fragments">Fragments</Link>
           <Link to="/archive">Wayback</Link>
+          <Link to="/fragments">Fragments</Link>
+          <Link to="/gallery">Gallery</Link>
           <Link to="/projects">Project</Link>
           <Link to="/contact">Contact</Link>
         </div>

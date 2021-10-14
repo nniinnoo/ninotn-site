@@ -7,11 +7,12 @@ const Project = () => {
     <Layout>
       <center>
         <StaticImage
+          quality={100}
           alt="#"
           src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
-          width="720"
+          width="640"
         />
-        <h2>Under Construction :)</h2>
+        <h2>Under Construction =)</h2>
       </center>
     </Layout>
   );
