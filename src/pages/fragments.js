@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "@components/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 
+import SEO from "@components/SEO";
+
 const Fragments = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -25,19 +27,22 @@ const Fragments = () => {
   const fragments = data.allMarkdownRemark;
 
   return (
-    <Layout>
-      <div className="fragment__container">
-        {fragments.nodes.map((node) => (
-          <div className="fragment__content">
-            <h2>Fragments {node.frontmatter.title}</h2>
-            <div
-              className="grid"
-              dangerouslySetInnerHTML={{ __html: node.html }}
-            />
-          </div>
-        ))}
-      </div>
-    </Layout>
+    <>
+      <SEO />
+      <Layout>
+        <div className="fragment__container">
+          {fragments.nodes.map((node) => (
+            <div className="fragment__content">
+              <h2>Fragments {node.frontmatter.title}</h2>
+              <div
+                className="grid"
+                dangerouslySetInnerHTML={{ __html: node.html }}
+              />
+            </div>
+          ))}
+        </div>
+      </Layout>
+    </>
   );
 };
 

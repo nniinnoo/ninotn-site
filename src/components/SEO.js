@@ -74,7 +74,8 @@ const SEO = ({ postTitle, postSlug, postSEO, customDescription }) => {
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
 
-      <meta property="og:url" />
+      <meta property="og:url" content={postSEO ? postURL : siteUrl} />
+      {postSEO && <meta property="og:type" content="article" />}
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={siteLogo} />
