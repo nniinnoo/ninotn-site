@@ -135,21 +135,19 @@ module.exports = {
         query: `{
              allMarkdownRemark(
              filter: {frontmatter: {template: {eq: "post"}, published: {eq: true}}}) {
-                edges {
-                  node {
-                    frontmatter {
-                      date(formatString: "MMMM D, YYYY")
-                      title
-                      published
-                      slug
-                      tags
-                      categories
-                      no
-                      description
-                    }
-                    id
-                    rawMarkdownBody
+                nodes {
+                  frontmatter {
+                    date(formatString: "MMMM D, YYYY")
+                    title
+                    published
+                    slug
+                    tags
+                    categories
+                    no
+                    description
                   }
+                  id
+                  rawMarkdownBody
                 }
               }
         }`,
@@ -157,14 +155,14 @@ module.exports = {
         index: ["title", "body", "description", "tags"],
         store: ["id", "slug", "title", "categories", "date", "tags"],
         normalizer: ({ data }) =>
-          data.allMarkdownRemark.edges.map((edge) => ({
-            id: edge.node.id,
-            slug: edge.node.frontmatter.slug,
-            title: edge.node.frontmatter.title,
-            body: edge.node.rawMarkdownBody,
-            categories: edge.node.frontmatter.categories,
-            date: edge.node.frontmatter.date,
-            tags: edge.node.frontmatter.tags,
+          data.allMarkdownRemark.nodes.map((node) => ({
+            id: node.id,
+            slug: node.frontmatter.slug,
+            title: node.frontmatter.title,
+            body: node.rawMarkdownBody,
+            categories: node.frontmatter.categories,
+            date: node.frontmatter.date,
+            tags: node.frontmatter.tags,
           })),
       },
     },

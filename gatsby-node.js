@@ -10,20 +10,18 @@ exports.createPages = async ({ actions, graphql }) => {
   const result = await graphql(`
     {
       allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              date(formatString: "MMMM D, YYYY")
-              title
-              published
-              slug
-              tags
-              categories
-              no
-              template
-            }
-            id
+        nodes {
+          frontmatter {
+            date(formatString: "MMMM D, YYYY")
+            title
+            published
+            slug
+            tags
+            categories
+            no
+            template
           }
+          id
         }
       }
     }
@@ -33,20 +31,14 @@ exports.createPages = async ({ actions, graphql }) => {
   //   throw result.errors;
   // }
 
-  const { edges } = result.data.allMarkdownRemark;
+  const { nodes } = result.data.allMarkdownRemark;
 
-  _.each(edges, (edge) => {
-    if (_.get(edge, "node.frontmatter.template") === "post") {
+  _.each(nodes, (node) => {
+    if (_.get(node, "frontmatter.template") === "post") {
       createPage({
-        path: edge.node.frontmatter.slug,
+        path: node.frontmatter.slug,
         component: path.resolve(`src/templates/post.js`),
-        context: { slug: edge.node.frontmatter.slug },
-      });
-    } else if (_.get(edge, "node.frontmatter.template") === "page") {
-      createPage({
-        path: edge.node.frontmatter.slug,
-        component: path.resolve(`src/templates/page.js`),
-        context: { slug: edge.node.frontmatter.slug },
+        context: { slug: node.frontmatter.slug },
       });
     }
   });

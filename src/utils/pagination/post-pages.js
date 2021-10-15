@@ -8,20 +8,18 @@ module.exports = async (graphql, actions) => {
   const result = await graphql(`
     {
       allMarkdownRemark(filter: { frontmatter: { template: { eq: "post" } } }) {
-        edges {
-          node {
-            frontmatter {
-              date(formatString: "MMMM D, YYYY")
-              title
-              published
-              slug
-              tags
-              categories
-              no
-              template
-            }
-            id
+        nodes {
+          frontmatter {
+            date(formatString: "MMMM D, YYYY")
+            title
+            published
+            slug
+            tags
+            categories
+            no
+            template
           }
+          id
         }
         totalCount
       }

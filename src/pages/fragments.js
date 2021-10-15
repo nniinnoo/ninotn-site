@@ -9,16 +9,14 @@ const Fragments = () => {
         filter: { frontmatter: { template: { eq: "fragment" } } }
         sort: { order: DESC, fields: frontmatter___no }
       ) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              slug
-              no
-            }
-            html
+        nodes {
+          id
+          frontmatter {
+            title
+            slug
+            no
           }
+          html
         }
       }
     }
@@ -29,12 +27,12 @@ const Fragments = () => {
   return (
     <Layout>
       <div className="fragment__container">
-        {fragments.edges.map((edge) => (
+        {fragments.nodes.map((node) => (
           <div className="fragment__content">
-            <h2>Fragments {edge.node.frontmatter.title}</h2>
+            <h2>Fragments {node.frontmatter.title}</h2>
             <div
               className="grid"
-              dangerouslySetInnerHTML={{ __html: edge.node.html }}
+              dangerouslySetInnerHTML={{ __html: node.html }}
             />
           </div>
         ))}
