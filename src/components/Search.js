@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useFlexSearch } from "react-use-flexsearch";
 import { useStaticQuery, graphql } from "gatsby";
-import { useLocation, navigate } from "@reach/router";
 
 import Corpus from "@components/Corpus";
 import SearchIcon from "@mui/icons-material/SailingRounded";

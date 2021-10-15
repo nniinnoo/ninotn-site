@@ -16,7 +16,9 @@ module.exports = {
   },
   plugins: ["prettier"],
   rules: {
+    "react/no-danger": "off",
     "no-nested-ternary": "off",
+    "react/no-unescaped-entities": "off",
     "import/no-unresolved": "off",
     "prettier/prettier": ["error"],
     "react/jsx-filename-extension": ["warn", { extensions: [".js", ".jsx"] }],

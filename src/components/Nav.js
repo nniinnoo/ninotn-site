@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
+
 import { Link } from "gatsby";
 import FireOn from "../assets/firemaking.png";
 import FireOff from "../assets/firesmoke.png";
@@ -33,6 +35,15 @@ const Nav = ({ onUpdateTheme, theme }) => {
       </div>
     </div>
   );
+};
+
+Nav.propTypes = {
+  onUpdateTheme: PropTypes.func.isRequired,
+  theme: PropTypes.string,
+};
+
+Nav.defaultProps = {
+  theme: "light",
 };
 
 export default Nav;

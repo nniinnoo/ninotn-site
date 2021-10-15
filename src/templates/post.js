@@ -11,7 +11,7 @@ import CategoryIcon from "@mui/icons-material/CategoryOutlined";
 
 import SEO from "@components/SEO";
 
-export default function PostTemplate({ data }) {
+export default function PostTemplate({ data = [] }) {
   const post = data.markdownRemark;
   return (
     <>
@@ -86,10 +86,10 @@ export const query = graphql`
   }
 `;
 
-// PostTemplate.propTypes = {
-//   data: PropTypes.node,
-// };
+PostTemplate.propTypes = {
+  data: PropTypes.node,
+};
 
-// PostTemplate.defaultProps = {
-//   data: undefined,
-// };
+PostTemplate.defaultProps = {
+  data: undefined,
+};

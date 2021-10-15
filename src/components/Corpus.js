@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 const Corpus = ({ data = [], query }) => {
@@ -63,6 +64,16 @@ const Corpus = ({ data = [], query }) => {
       ))}
     </div>
   );
+};
+
+Corpus.propTypes = {
+  data: PropTypes.arrayOf,
+  query: PropTypes.string,
+};
+
+Corpus.defaultProps = {
+  data: [],
+  query: "",
 };
 
 export default Corpus;

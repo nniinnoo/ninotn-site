@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Nav onUpdateTheme={() => onUpdateTheme()} theme={theme} />
+      <Nav onUpdateTheme={onUpdateTheme} theme={theme} />
       <main>{children}</main>
       <Footer />
     </>
