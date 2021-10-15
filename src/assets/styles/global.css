@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  background: #eae1d0;
   margin: 0;
   padding: 0;
   margin-bottom: 10rem;
@@ -43,9 +44,9 @@ body {
   line-height: 1.925;
   letter-spacing: 0.0425rem;
 
+  text-rendering: optimizeLegibility;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -53,11 +54,14 @@ body {
 body.light {
   --bg: #eae1d0; /* alt: #FAF4E6 or #EDE4D5*/
   --bg-2: rgba(255, 255, 255, 0.418);
+
   --light-1: #f9f9f9;
   --dark-1: #404040;
+
   --subtle-dark-1: rgba(0, 0, 0, 0.2);
   --subtle-dark-2: rgba(0, 0, 0, 0.5);
   --subtle-dark-3: rgba(0, 0, 0, 0.7);
+
   --hover-1: #bdbf73;
   --hover-2: #d1d9b5;
   --footer: rgba(255, 255, 255, 0.137);
@@ -72,20 +76,24 @@ body.light {
 
 body.dark {
   --bg: #282c35;
+  --bg-2: rgba(122, 122, 122, 0.418);
+
   --light-1: #f9f9f9;
-  --dark-1: #afadad;
+  --dark-1: rgb(199, 199, 199);
+
   --subtle-dark-1: rgba(0, 0, 0, 0.2);
   --subtle-dark-2: rgba(0, 0, 0, 0.5);
   --subtle-dark-3: rgba(182, 181, 180, 0.7);
+
   --hover-1: #452858;
   --hover-2: #806692;
-  --bg-2: rgba(122, 122, 122, 0.418);
   --footer: rgba(59, 59, 59, 0.137);
+
   --sort-newest: #a76c24;
   --sort-to: #636362;
   --sort-oldest: #5f503e;
 
-  color: rgb(199, 199, 199);
+  color: var(--dark-1);
   background: var(--bg);
 }
 
@@ -735,6 +743,7 @@ blockquote {
   height: auto;
   object-fit: contain;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  image-rendering: optimizeSpeed;
 }
 
 .gallery__content > div {
