@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Nav from "@components/Nav";
 import Footer from "@components/Footer";
+import SEO from "@components/SEO";
 
 import "@assets/styles/global.css";
 
@@ -49,6 +50,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <SEO />
       <Nav onUpdateTheme={onUpdateTheme} theme={theme} />
       <main>{children}</main>
       <Footer />

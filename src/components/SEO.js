@@ -20,20 +20,20 @@ const SEO = ({ postTitle, postSlug, postSEO, customDescription }) => {
   const { siteTitle, description, siteUrl, siteLogo } = data.site.siteMetadata;
 
   let postURL;
-  let schemaOrgJSONLD;
+  let schemaOrgJSONLD = [];
+
+  schemaOrgJSONLD = [
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      url: siteUrl,
+      name: siteTitle,
+      alternateName: siteTitle,
+    },
+  ];
 
   if (postSEO) {
     postURL = `${siteUrl}${postSlug}`;
-
-    schemaOrgJSONLD = [
-      {
-        "@context": "http://schema.org",
-        "@type": "Website",
-        url: siteUrl,
-        name: siteTitle,
-        alternateName: siteTitle,
-      },
-    ];
 
     schemaOrgJSONLD.push(
       {
@@ -56,6 +56,8 @@ const SEO = ({ postTitle, postSlug, postSEO, customDescription }) => {
         "@type": "BlogPosting",
         url: siteUrl,
         name: siteTitle,
+        alternateName: siteTitle,
+        headline: siteTitle,
         image: {
           "@type": "ImageObject",
           url: siteLogo,
@@ -86,7 +88,7 @@ const SEO = ({ postTitle, postSlug, postSEO, customDescription }) => {
 SEO.defaultProps = {
   postTitle: "",
   postSlug: "",
-  postSEO: "",
+  postSEO: false,
   customDescription: "",
 };
 
