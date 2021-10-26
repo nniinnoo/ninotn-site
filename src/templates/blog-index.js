@@ -73,8 +73,8 @@ const BlogIndex = ({ data, pageContext }) => {
 };
 
 BlogIndex.propTypes = {
-  data: PropTypes.node,
-  pageContext: PropTypes.objectOf,
+  data: PropTypes.objectOf(PropTypes.any),
+  pageContext: PropTypes.objectOf(PropTypes.any),
 };
 
 BlogIndex.defaultProps = {
