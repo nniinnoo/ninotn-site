@@ -16,7 +16,7 @@ no: 8
 language: en
 ---
 
-In the morning, I say goodbye to Hajime-san and her wife Noriko-san. I write my impression on the second edition of their guest book on the kitchen table, I wonder about all of the guests who have written their short stopover here; how they ended up here, and how is their life continue. As for me, I wonder if this journey becomes the last or only once in a lifetime experience; for a moment, I suspended in time
+In the morning, I say goodbye to Hajime-san and his wife Noriko-san. I write my impression on the second edition of their guest book on the kitchen table, I wonder about all of the guests who have written their short stopover here; how they ended up here, and how is their life continue. As for me, I wonder if this journey becomes the last or only once in a lifetime experience; for a moment, I suspended in time
 
 <center>• • • • •</center>
 

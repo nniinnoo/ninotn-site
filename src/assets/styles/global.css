@@ -428,17 +428,22 @@ pre {
 }
 
 .blog__dropdown-list {
-  background-color: #f1f1f1;
+  background-color: var(--bg-2);
   padding: var(--px6);
   display: none;
   position: absolute;
-  min-width: 160px;
+  width: 150px;
   box-shadow: 4px 4px var(--subtle-dark-2);
   z-index: 1;
 }
 
+.blog__dropdown-list p {
+  color: var(--dark-1);
+  padding-left: var(--px6);
+}
+
 .blog__dropdown-list p:hover {
-  background-color: seagreen;
+  background-color: var(--hover-2);
 }
 
 .blog__dropdown:hover .blog__dropdown-list {
