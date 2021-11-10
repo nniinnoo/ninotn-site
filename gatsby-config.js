@@ -12,10 +12,12 @@ module.exports = {
     // ANALYTICS
     // =========
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: "G-03JHFY9B3R",
-        head: true,
+        trackingIds: ["G-03JHFY9B3R"],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
 

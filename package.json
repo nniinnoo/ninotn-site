@@ -23,7 +23,7 @@
     "eslint-plugin-import": "^2.24.0",
     "gatsby": "^3.11.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
-    "gatsby-plugin-google-analytics": "^3.11.0",
+    "gatsby-plugin-google-gtag": "^4.1.0",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-local-search": "^2.0.1",
     "gatsby-plugin-manifest": "^3.11.0",
