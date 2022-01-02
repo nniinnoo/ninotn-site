@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@components/Layout";
 
 import SEO from "@components/SEO";
+import SocialMedia from "@components/SocialMedia";
 
 const Contact = () => {
   return (
@@ -40,6 +41,8 @@ const Contact = () => {
                 </pre>
               </p>
             </div>
+            <h1>Miscellaneous</h1>
+            <SocialMedia size="large" />
           </div>
           <div className="contact__right" />
         </div>
