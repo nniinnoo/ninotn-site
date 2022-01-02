@@ -42,7 +42,7 @@ const BlogIndex = ({ data, pageContext }) => {
                             </span>
                             <span>
                               <ReadingTimeIcon />
-                              <p>{post.timeToRead} min read</p>
+                              <p>{post.timeToRead} min</p>
                             </span>
                             <span>
                               <CoffeeMakerIcon />
@@ -92,7 +92,7 @@ export const query = graphql`
     ) {
       nodes {
         frontmatter {
-          date(formatString: "MMMM D, YYYY")
+          date(formatString: "MMM D, YYYY")
           title
           published
           slug

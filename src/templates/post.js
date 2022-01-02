@@ -33,7 +33,7 @@ export default function PostTemplate({ data = [] }) {
               </span>
               <span>
                 <ReadingTimeIcon />
-                <p>{post.timeToRead} min read</p>
+                <p>{post.timeToRead} min</p>
               </span>
               <span>
                 <CoffeeMakerIcon />
