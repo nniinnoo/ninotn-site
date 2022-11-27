@@ -3,7 +3,7 @@
 @import url(katex/katex.min.css);
 
 :root {
-  --font-family-text: "Mada", sans-serif;
+  --font-family-text: "Atlas Grotesk", sans-serif;
   --font-family-title: "Fira", sans-serif;
 
   --px1: 0.0625rem;
@@ -43,7 +43,7 @@ body {
   margin-bottom: 10rem;
 
   line-height: 1.925;
-  letter-spacing: 0.0425rem;
+  letter-spacing: 0.0175rem;
 
   text-rendering: optimizeLegibility;
   -ms-text-size-adjust: 100%;
@@ -191,9 +191,10 @@ tbody tr:nth-child(odd) {
 }
 
 .nav__left h2 {
+  font-family: var(--font-family-text);
   font-size: var(--px18);
-  font-weight: 300;
-  margin-top: 24px;
+  font-weight: 400;
+  margin-top: 26px;
 }
 
 .nav__right {
@@ -249,7 +250,7 @@ tbody tr:nth-child(odd) {
 
 .about__container p,
 .contact__center p {
-  font-size: 18px;
+  font-size: 1.25rem;
   margin-bottom: 24px;
 }
 
@@ -324,7 +325,7 @@ pre {
 }
 
 .blog__list-title-details > p {
-  font-size: 1.25rem;
+  font-size: var(--px20);
   font-weight: 400;
   color: var(--subtle-dark-3);
   margin-bottom: var(--px6);
@@ -389,7 +390,7 @@ pre {
 
 .blog__sortby .MuiSvgIcon-root,
 .blog__post-content .MuiSvgIcon-root {
-  font-size: var(--px14);
+  font-size: var(--px18);
 }
 
 #sortby-newest {
@@ -400,7 +401,7 @@ pre {
 }
 
 #sortby-to {
-  width: 20px;
+  width: 25px;
   padding: var(--px3);
   background-color: var(--sort-to);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
@@ -471,7 +472,7 @@ pre {
 }
 
 .blog__post-title {
-  font-family: "Fira";
+  font-family: var(--font-family-title);
   font-weight: 800;
   font-size: var(--px42);
   color: var(--dark-1);
@@ -506,8 +507,8 @@ pre {
 }
 
 .blog__post-body {
-  font-family: "Mada", sans-serif;
-  font-size: 18px;
+  font-family: var(--font-family-text);
+  font-size: 1.175rem;
   margin-top: var(--px42);
 }
 
@@ -639,7 +640,7 @@ blockquote {
 /* ============= */
 
 .katex {
-  font-size: 18px !important;
+  font-size: 1.275rem !important;
 }
 
 /* === Fragment === */
@@ -660,15 +661,11 @@ blockquote {
   margin-right: var(--px14);
 }
 
-.fragment__content > p {
-  font-size: var(--px24);
-  margin-bottom: var(--px14);
-  font-weight: 800;
-}
 
 .fragment__content > div {
   width: 100%;
-  max-width: 35rem;
+  font-size: 1.125rem;
+  max-width: 45rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -679,6 +676,12 @@ blockquote {
   border: 1px solid var(--subtle-dark-1);
   padding: var(--px18);
   margin-bottom: var(--px24);
+}
+
+.fragment__item__title {
+  font-weight: 700;
+  font-size: var(--px18);
+  margin-bottom: var(--px14);
 }
 
 /* === Archive === */

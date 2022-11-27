@@ -213,3 +213,61 @@
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
+
+
+/* === ATLAS GROTESK === */
+/* ===================== */
+
+@font-face {
+  font-family: 'Atlas Grotesk';
+  src: url(../font-files/Atlas/AtlasGrotesk-Light.otf)
+    format("opentype");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atlas Grotesk';
+  src: url(../font-files/Atlas/AtlasGrotesk-LightItalic.otf)
+  format("opentype");
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atlas Grotesk';
+  src: url(../font-files/Atlas/AtlasGrotesk-RegularItalic-Web.eot);
+  src: url(../font-files/Atlas/AtlasGrotesk-RegularItalic-Web.eot#iefix) format("embedded-opentype"), url(../font-files/Atlas/AtlasGrotesk-RegularItalic-Web.woff2) format("woff2"), url(../font-files/Atlas/AtlasGrotesk-RegularItalic-Web.woff) format("woff");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atlas Grotesk';
+  src: url(../font-files/Atlas/AtlasGrotesk-Regular-Web.eot);
+  src: url(../font-files/Atlas/AtlasGrotesk-Regular-Web.eot#iefix) format("embedded-opentype"), url(../font-files/Atlas/AtlasGrotesk-Regular-Web.woff2) format("woff2"), url(../font-files/Atlas/AtlasGrotesk-Regular-Web.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atlas Grotesk';
+  src: url(../font-files/Atlas/AtlasGrotesk-Bold-Web.eot);
+  src: url(../font-files/Atlas/AtlasGrotesk-Bold-Web.eot#iefix) format("embedded-opentype"), url(../font-files/Atlas/AtlasGrotesk-Bold-Web.woff2) format("woff2"), url(../font-files/Atlas/AtlasGrotesk-Bold-Web.woff) format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atlas Typewriter';
+  src: url(../font-files/Atlas/AtlasTypewriter-Regular-Web.eot);
+  src: url(../font-files/Atlas/AtlasTypewriter-Regular-Web.eot#iefix) format("embedded-opentype"), url(../font-files/Atlas/AtlasTypewriter-Regular-Web.woff2) format("woff2"), url(../font-files/Atlas/AtlasTypewriter-Regular-Web.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

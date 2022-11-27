@@ -94,13 +94,13 @@ const About = () => (
                   Erik Spiekermann
                 </a>
                 <br />
-                Text font : Mada Sans-serif by{" "}
+                Text font : Atlas Grotesk by{" "}
                 <a
                   target="_blank"
-                  href="https://github.com/khaledhosny"
+                  href="https://commercialtype.com/uploads/1100011/1433556561761/Atlas_Grotesk-family.pdf"
                   rel="noreferrer"
                 >
-                  Khaled Hosny
+                  K. Bernau, S. Carvalho and C. Schwartz
                 </a>
                 <br />
                 <p>
