@@ -59,12 +59,14 @@ const About = () => (
           </div>
           <div>
             <h1>About Me</h1>
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div className="about__me">
               <img
                 alt="#"
                 src={profilePic}
-                height="200"
+                width="180"
+                height="220"
                 style={{
+                  float: "left",
                   marginRight: "24px",
                   borderRadius: "3px",
                   marginTop: "12px",
@@ -74,10 +76,10 @@ const About = () => (
                 I grew up in a sleepy little town in North Sumatera, it's
                 surrounded by mountains and the sea-facing Indian Ocean. After
                 high school, I took my first sail to the capital to study
-                computer science, I would prefer to say mathematics in disguise.
-                I began my profesional career as software engineer in Jakarta.
-                These days I mostly write code around JavaScript & TypeScript
-                for work, sometimes in C++ and Python for recreational
+                computer science and mathematics in disguise. I began my
+                profesional career as software engineer in Jakarta. These days I
+                mostly write code around JavaScript & TypeScript for work,
+                sometimes in C++ and Python for recreational
               </p>
             </div>
           </div>

@@ -39,10 +39,10 @@ export default function PostTemplate({ data = [] }) {
                 <CoffeeMakerIcon />
                 <p>{post.wordCount.words} words</p>
               </span>
-              <span>
+              {/* <span>
                 <CategoryIcon />
                 <p>{post.frontmatter.categories}</p>
-              </span>
+              </span> */}
             </div>
             <div
               className="blog__post-body"
@@ -72,7 +72,7 @@ export const query = graphql`
       timeToRead
       frontmatter {
         title
-        date(formatString: "MMMM D, YYYY")
+        date(formatString: "MMM D, YYYY")
         tags
         categories
         no

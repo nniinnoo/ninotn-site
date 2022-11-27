@@ -44,10 +44,10 @@ const BlogIndex = ({ data, pageContext }) => {
                               <ReadingTimeIcon />
                               <p>{post.timeToRead} min</p>
                             </span>
-                            <span>
+                            {/* <span>
                               <CoffeeMakerIcon />
                               <p>{post.wordCount.words} words</p>
-                            </span>
+                            </span> */}
                             <span>
                               <CategoryIcon />
                               <p>{post.frontmatter.categories}</p>
