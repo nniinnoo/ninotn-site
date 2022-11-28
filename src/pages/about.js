@@ -96,13 +96,13 @@ const About = () => (
                   Erik Spiekermann
                 </a>
                 <br />
-                Text font : Atlas Grotesk by{" "}
+                Text font : Neue Haas Unica by{" "}
                 <a
                   target="_blank"
-                  href="https://commercialtype.com/uploads/1100011/1433556561761/Atlas_Grotesk-family.pdf"
+                  href="https://tosche.net/fonts"
                   rel="noreferrer"
                 >
-                  K. Bernau, S. Carvalho and C. Schwartz
+                  Toshi Omagari
                 </a>
                 <br />
                 <p>
