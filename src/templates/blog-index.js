@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
 import DateIcon from "@mui/icons-material/TodayOutlined";
-import ReadingTimeIcon from "@mui/icons-material/TimerRounded";
-import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
+import ReadingTimeIcon from "@mui/icons-material/TimerOutlined";
+// import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
 import CategoryIcon from "@mui/icons-material/CategoryOutlined";
 
 import Layout from "@components/Layout";
@@ -73,8 +73,8 @@ const BlogIndex = ({ data, pageContext }) => {
 };
 
 BlogIndex.propTypes = {
-  data: PropTypes.objectOf(PropTypes.any),
-  pageContext: PropTypes.objectOf(PropTypes.any),
+  data: PropTypes.objectOf(PropTypes),
+  pageContext: PropTypes.objectOf(PropTypes),
 };
 
 BlogIndex.defaultProps = {

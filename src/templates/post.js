@@ -5,9 +5,9 @@ import Helmet from "react-helmet";
 
 import BackIcon from "@mui/icons-material/ArrowBackIosNewRounded";
 import DateIcon from "@mui/icons-material/TodayOutlined";
-import ReadingTimeIcon from "@mui/icons-material/TimerRounded";
+import ReadingTimeIcon from "@mui/icons-material/TimerOutlined";
 import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
-import CategoryIcon from "@mui/icons-material/CategoryOutlined";
+// import CategoryIcon from "@mui/icons-material/CategoryOutlined";
 
 import SEO from "@components/SEO";
 
