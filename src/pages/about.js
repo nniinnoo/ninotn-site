@@ -15,7 +15,7 @@ const About = () => (
           <div>
             <h1>Site Note</h1>
             <p>
-              I developed this website with{" "}
+              I developed this website using{" "}
               <a
                 target="_blank"
                 href="https://www.gatsbyjs.org/"
@@ -48,36 +48,37 @@ const About = () => (
             <h1>What is this?</h1>
             <p>
               This blog is an attempt to project and organize my thoughts; a
-              sort of documentation of the past and the present memories; a
-              place where I can practice expressing ideas, capture my own
-              inquiry and thinking process, reflect on spontaneous firsthand
-              experiences, tell the story of how i felt towards stuff I've read
-              and heard, what I've discovered and I'm working on; and the last
-              but not least, a place to wait any adventerous mind out there to
-              share oneself in a slepless dialogue
+              sort of documentation of past and present memories; a place where
+              I can practice expressing ideas, capture my own inquiry and
+              thinking process, reflect on spontaneous firsthand experiences,
+              tell the story of how I felt towards stuff I've read and heard,
+              what I've discovered and what I'm working on; and a place to
+              invite any curious mind out there to share in a slepless dialogue
             </p>
           </div>
           <div>
             <h1>About Me</h1>
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div className="about__me">
               <img
                 alt="#"
                 src={profilePic}
-                height="200"
+                width="180"
+                height="220"
                 style={{
+                  float: "left",
                   marginRight: "24px",
                   borderRadius: "3px",
                   marginTop: "12px",
                 }}
               />
               <p>
-                I grew up in a sleepy little town in North Sumatera, it's
-                surrounded by mountains and the sea-facing Indian Ocean. After
-                high school, I took my first sail to the capital to study
-                computer science, I would prefer to say mathematics in disguise.
-                I began my profesional career as software engineer in Jakarta.
-                These days I mostly write code around JavaScript & TypeScript
-                for work, sometimes in C++ and Python for recreational
+                I grew up in a sleepy little town in North Sumatra, surrounded
+                by mountains and sea-facing Indian Ocean. After high school, I
+                took my first sail to study computer science and mathematics.
+                Later, I began my professional career as software engineer in
+                Jakarta. These days I mostly write code around JavaScript &
+                TypeScript for work, sometimes in C++ and Python for
+                recreational
               </p>
             </div>
           </div>
@@ -94,13 +95,13 @@ const About = () => (
                   Erik Spiekermann
                 </a>
                 <br />
-                Text font : Mada Sans-serif by{" "}
+                Text font : Neue Haas Unica by{" "}
                 <a
                   target="_blank"
-                  href="https://github.com/khaledhosny"
+                  href="https://tosche.net/fonts"
                   rel="noreferrer"
                 >
-                  Khaled Hosny
+                  Toshi Omagari
                 </a>
                 <br />
                 <p>

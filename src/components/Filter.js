@@ -17,17 +17,17 @@ const Filter = () => {
         {sortIndex ? (
           <div>
             <span id="sortby-newest">{sortType[0]}</span>
-            <span id="sortby-to">
+            {/* <span id="sortby-to">
               <SortByIcon />
-            </span>
+            </span> */}
             <span id="sortby-oldest">{sortType[1]}</span>
           </div>
         ) : (
           <div>
             <span id="sortby-oldest">{sortType[1]}</span>
-            <span id="sortby-to">
+            {/* <span id="sortby-to">
               <SortByIcon />
-            </span>
+            </span> */}
             <span id="sortby-newest">{sortType[0]}</span>
           </div>
         )}
