@@ -2,7 +2,7 @@
 template: post
 title: "Merriam Webster Time Traveller"
 slug: 1-merriam-webster-time-traveller
-published: true
+published: false
 date: 2018-12-31T10:59:21.918Z
 description: an invisible tie between words and childhood memories
 categories: ["Journal"]
