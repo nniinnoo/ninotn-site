@@ -94,7 +94,7 @@ As I hopped from one store to another like a frog, at one intersection I stop fo
 
 <center>• • • • •</center>
 
-A few blocs behind the toy stores I get stopped by a woman wearing an anime cosplay. This isn't the first time I've been approached by a cosplaying woman since I enetered this area. The previous woman offered me a food, and this one is offering companionship to hookah. I tell her that I can't speak Japanese, but she replies with "I can speak English." while following me slowly. I ask her what is that about, and she explains to me about the hookah and the cost. I say that I don't smoke then she stop following me
+A few blocs behind the toy stores I get stopped by a woman wearing an anime cosplay. This isn't the first time I've been approached by a cosplaying woman since I entered this area. The previous woman offered me a food, and this one is offering companionship to hookah. I tell her that I can't speak Japanese, but she replies with "I can speak English." while following me slowly. I ask her what is that about, and she explains to me about the hookah and the cost. I say that I don't smoke then she stop following me
 
 <center>• • • • •</center>
 
