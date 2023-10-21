@@ -27,7 +27,7 @@ const Nav = ({ onUpdateTheme, theme }) => {
         <div className="nav__right">
           <Link to="/about">What's this?</Link>
           <Link to="/fragments">Fragments</Link>
-          <Link to="/altitude">Altitude</Link>
+          {/* <Link to="/altitude">Altitude</Link> */}
           <Link to="/archive">Wayback</Link>
           {/* <Link to="/gallery">Gallery</Link> */}
           <Link to="/projects">Project</Link>

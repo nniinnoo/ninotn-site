@@ -1,5 +1,71 @@
 /* Font files are downloaded from Google Fonts */
 
+/* === ADA === */
+/* =========== */
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Black-Flat.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Black-Rounded.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Black.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Extra-Light.woff) format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* === FIRA SANS === */
 /* ================= */
 
