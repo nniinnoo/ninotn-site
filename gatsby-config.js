@@ -80,13 +80,13 @@ module.exports = {
         name: "fragments",
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/content/altitudes`,
-        name: "altitudes",
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     path: `${__dirname}/content/altitudes`,
+    //     name: "altitudes",
+    //   },
+    // },
     {
       resolve: "gatsby-transformer-remark",
       options: {
