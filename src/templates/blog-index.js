@@ -63,7 +63,7 @@ const BlogIndex = ({ data, pageContext }) => {
           </div>
           <div className="blog__content-right">
             <div className="blog__content-right-container">
-              <Filter />
+              {/* <Filter /> */}
             </div>
           </div>
         </div>
