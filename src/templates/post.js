@@ -32,12 +32,12 @@ export default function PostTemplate({ data = [] }) {
                 <p>{post.frontmatter.date}</p>
               </span>
               <span>
-                <ReadingTimeIcon />
-                <p>{post.timeToRead} min</p>
-              </span>
-              <span>
                 <CoffeeMakerIcon />
                 <p>{post.wordCount.words} words</p>
+              </span>
+              <span>
+                <ReadingTimeIcon />
+                <p>~{post.timeToRead} min</p>
               </span>
               {/* <span>
                 <CategoryIcon />

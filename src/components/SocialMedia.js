@@ -7,13 +7,13 @@ import CasinoIcon from "@mui/icons-material/CasinoOutlined";
 
 const SocialMedia = ({ size }) => (
   <div className="socmed">
-    <a href="https://github.com/nniinnoo">
+    <a href="https://github.com/nniinnoo" aria-label="GitHub">
       <GitHubIcon fontSize={size} />
     </a>
-    <a href="https://www.instagram.com/ninotannio/">
+    <a href="https://www.instagram.com/ninotannio/" aria-label="Instagram">
       <InstagramIcon fontSize={size} />
     </a>
-    <a href="https://www.chess.com/member/nino_saurus">
+    <a href="https://www.chess.com/member/nino_saurus" aria-label="Chess">
       <CasinoIcon fontSize={size} />
     </a>
   </div>

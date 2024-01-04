@@ -1,5 +1,24 @@
 /* Font files are downloaded from Google Fonts */
 
+
+/* === KLEE === */
+/* ============ */
+@font-face {
+  font-family: "Klee";
+  font-display: swap;
+  src: url(../font-files/Klee/KleeOne-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Klee";
+  font-display: swap;
+  src: url(../font-files/Klee/KleeOne-SemiBold.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* === ADA === */
 /* =========== */
 @font-face {

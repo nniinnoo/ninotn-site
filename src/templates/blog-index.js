@@ -4,12 +4,12 @@ import { Link, graphql } from "gatsby";
 
 import DateIcon from "@mui/icons-material/TodayOutlined";
 import ReadingTimeIcon from "@mui/icons-material/TimerOutlined";
-// import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
-import CategoryIcon from "@mui/icons-material/CategoryOutlined";
+import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
+// import CategoryIcon from "@mui/icons-material/CategoryOutlined";
 
 import Layout from "@components/Layout";
 import Pagination from "@components/Pagination";
-import Filter from "@components/Filter";
+// import Filter from "@components/Filter";
 import SEO from "@components/SEO";
 
 const BlogIndex = ({ data, pageContext }) => {
@@ -41,17 +41,17 @@ const BlogIndex = ({ data, pageContext }) => {
                               <p>{post.frontmatter.date}</p>
                             </span>
                             <span>
-                              <ReadingTimeIcon />
-                              <p>{post.timeToRead} min</p>
-                            </span>
-                            {/* <span>
                               <CoffeeMakerIcon />
                               <p>{post.wordCount.words} words</p>
-                            </span> */}
+                            </span>
                             <span>
+                              <ReadingTimeIcon />
+                              <p>~{post.timeToRead} min</p>
+                            </span>
+                            {/* <span>
                               <CategoryIcon />
                               <p>{post.frontmatter.categories}</p>
-                            </span>
+                            </span> */}
                           </div>
                         </div>
                       </Link>
