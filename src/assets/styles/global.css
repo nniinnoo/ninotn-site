@@ -54,10 +54,10 @@ body {
 }
 
 body.light {
-  --bg: #efe5d2; /* alt: #FAF4E6 or #EDE4D5*/
+  --bg: #efe5d2; /* Default: #efe5d2 alt: #FAF4E6 or #EDE4D5*/
   --bg-2: rgba(255, 255, 255, 0.418);
 
-  --light-1: #f9f9f9;
+  --light-1: #b9b4b4;
   --dark-1: #404040;
 
   --subtle-dark-1: rgba(0, 0, 0, 0.2);
@@ -83,7 +83,7 @@ body.dark {
   --light-1: #f9f9f9;
   --dark-1: rgb(199, 199, 199);
 
-  --subtle-dark-1: rgba(0, 0, 0, 0.1);
+  --subtle-dark-1: rgba(210, 207, 207, 0.1);
   --subtle-dark-2: rgba(0, 0, 0, 0.2);
   --subtle-dark-3: rgba(182, 181, 180, 0.7);
 
@@ -511,7 +511,7 @@ pre {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 45.12rem;
+  max-width: 43rem;
 }
 
 .blog__post-title {
@@ -558,6 +558,8 @@ pre {
   font-family: var(--font-family-text);
   font-size: 1.075rem;
   margin-top: var(--px42);
+  text-align: justify;
+  text-justify: distribute;
 }
 
 .blog__post-body p {
