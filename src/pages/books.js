@@ -185,7 +185,6 @@ const Books = () => {
     <>
       <SEO />
       <Layout pageTitle="books">
-        {/* // make title: library */}
         <div style={{ marginLeft: 100 }}>
           <h1 style={{ fontSize: "50px" }}>Library</h1>
           <p style={{ marginTop: -60, fontSize: "20px" }}>
@@ -196,7 +195,7 @@ const Books = () => {
           className="books__container"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
             marginLeft: "100px",
           }}
         >
