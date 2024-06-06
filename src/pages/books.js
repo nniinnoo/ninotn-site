@@ -131,22 +131,10 @@ const Books = () => {
         "https://m.media-amazon.com/images/I/81ESEnwKSXL._AC_UF1000,1000_QL80_.jpg",
     },
     {
-      title: "Mathematics can be Fun",
-      author: "Yakov Perelman",
-      image:
-        "https://m.media-amazon.com/images/I/71mxErlCByL._AC_UF1000,1000_QL80_.jpg",
-    },
-    {
       title: "When We Cease to Understand the World",
       author: "Benjamin Labatut",
       image:
         "https://m.media-amazon.com/images/I/614t1mU4FcL._AC_UF1000,1000_QL80_.jpg",
-    },
-    {
-      title: "Quantum Computing Since Democritus",
-      author: "Scott Aaronson",
-      image:
-        "https://m.media-amazon.com/images/I/61EEDwERxsL._AC_UF1000,1000_QL80_.jpg",
     },
     {
       title: "Godel, Escher, Bach",
