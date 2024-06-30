@@ -5,6 +5,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import SEO from "@components/SEO";
 
 import profilePic from "../assets/profile-pic.jpg";
+import fireMaking from "../assets/firemaking.png";
+import fireSmoke from "../assets/firesmoke.png";
 
 const About = () => (
   <>
@@ -13,15 +15,19 @@ const About = () => (
       <div className="about__container">
         <div className="about__center">
           <div>
-            <h1>Site Note</h1>
+            <h1>Note for programmer</h1>
             <p>
-              I developed this website using{" "}
+              I coded this website mainly using{" "}
               <a
                 target="_blank"
                 href="https://www.gatsbyjs.org/"
                 rel="noreferrer"
               >
-                Gatsby Framework
+                Gatsby JS
+              </a>
+              {" and "}
+              <a target="_blank" href="https://graphql.org/" rel="noreferrer">
+                GraphQL
               </a>
               , hosted on
               <a
@@ -39,9 +45,60 @@ const About = () => (
                 rel="noreferrer"
               >
                 Github
-              </a>
-              . Feel free to clone or contribute (if you have any questions or
-              specific request don't hesitate to ask)
+              </a>{" "}
+              under Creative Common BY-NC 4.0 License. Feel free to clone, use
+              and modify it for non-commercial purposes. If you have any
+              questions, don't hesitate to ask! :)
+            </p>
+          </div>
+          <div>
+            <h1>The Idea</h1>
+            <p>
+              I imagine this website animating primitive ingredients to capture
+              the hunter-gatherer lifestyle, like the excitement of discovering
+              fire, drawing on the cave walls, pointing our finger to the stars
+              or the joy of sharing stories around the campfire. <br />
+              <br />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "30px",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    src={fireSmoke}
+                    alt="profile-pic"
+                    width="100"
+                    height="100"
+                  />
+                  <p>Light Mode: Fire making!</p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    src={fireMaking}
+                    alt="profile-pic"
+                    width="100"
+                    height="100"
+                  />
+                  <p>Dark Mode: Fired up!</p>
+                </div>
+              </div>
             </p>
           </div>
           <div>
@@ -95,7 +152,7 @@ const About = () => (
                   Erik Spiekermann
                 </a>
                 <br />
-                Text font : Neue Haas Unica by{" "}
+                Text font : Neue Haas Unica, 29LT Ada by{" "}
                 <a
                   target="_blank"
                   href="https://tosche.net/fonts"
