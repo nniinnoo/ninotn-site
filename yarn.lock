@@ -1793,6 +1793,11 @@
     prop-types "^15.8.1"
     react-is "^18.2.0"
 
+"@next-tools/dynamic@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@next-tools/dynamic/-/dynamic-0.0.11.tgz#d16e4953c55b43c0f40877f340f47ca4808d733e"
+  integrity sha512-Pb5xJUCrB7cIt1MeoDIyWPRu0V4h+leNy2dLYHh3C7q+y03BCy1xeNhrRp8adEYWuiljMjSw2Q2h+hENm1/MDw==
+
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
   resolved "https://registry.yarnpkg.com/@nicolo-ribaudo/eslint-scope-5-internals/-/eslint-scope-5-internals-5.1.1-v1.tgz#dbf733a965ca47b1973177dc0bb6c889edcfb129"
