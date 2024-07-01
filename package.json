@@ -4,7 +4,7 @@
   "private": true,
   "description": "Raw Thought by Nino Tannio (Built in August 2021, during Covid-19 pandemic)",
   "author": "Nino Tannio <me@ninotn.com> (ninotn.com)",
-  "license": "MIT",
+  "license": "CC BY-NC 4.0",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",

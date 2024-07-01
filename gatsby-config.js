@@ -80,6 +80,13 @@ module.exports = {
         name: "fragments",
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/content/patterns`,
+        name: "patterns",
+      },
+    },
     // {
     //   resolve: "gatsby-source-filesystem",
     //   options: {
