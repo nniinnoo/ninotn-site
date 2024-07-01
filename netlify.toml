@@ -1,2 +1,18 @@
 [build]
   node_version = "14.14.0"
+  publish = "public" # or your build directory
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  NODE_VERSION = "14.14.0"
+
+[context.branch-deploy]
+  NODE_VERSION = "14.14.0"
+
+[context.deploy-preview.environment]
+  NODE_VERSION = "14.14.0"
+
+[context.branch-deploy.environment]
+  NODE_VERSION = "14.14.0"
