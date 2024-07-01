@@ -191,7 +191,8 @@ const Books = () => {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            marginLeft: "110px",
+            marginLeft: "100px",
+            marginRight: "100px",
           }}
         >
           {books.map((book) => (
