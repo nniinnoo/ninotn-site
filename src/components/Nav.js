@@ -29,9 +29,10 @@ const Nav = ({ onUpdateTheme, theme }) => {
           <Link to="/fragments">Fragments</Link>
           {/* <Link to="/altitude">Altitude</Link> */}
           <Link to="/books">Books</Link>
-          <Link to="/archive">Wayback</Link>
+          <Link to="/patterns">Patterns</Link>
           {/* <Link to="/gallery">Gallery</Link> */}
           <Link to="/projects">Project</Link>
+          <Link to="/archive">Wayback</Link>
           <Link to="/contact">Contact</Link>
         </div>
       </div>

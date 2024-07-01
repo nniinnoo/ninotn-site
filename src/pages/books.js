@@ -173,7 +173,14 @@ const Books = () => {
     <>
       <SEO />
       <Layout pageTitle="books">
-        <div style={{ marginLeft: 100 }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <h1 style={{ fontSize: "50px" }}>Library</h1>
           <p style={{ marginTop: -60, fontSize: "20px" }}>
             Books I've read and found worth recommending{" "}
@@ -184,7 +191,7 @@ const Books = () => {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            marginLeft: "100px",
+            marginLeft: "110px",
           }}
         >
           {books.map((book) => (
@@ -200,7 +207,7 @@ const Books = () => {
                 style={{
                   width: "280px",
                   height: "400px",
-                  borderRadius: "10px",
+                  borderRadius: "6px",
                 }}
               />
               <div style={{ marginTop: "24px" }}>
@@ -214,7 +221,7 @@ const Books = () => {
                 >
                   {book.title}
                 </h1>
-                <h3 className="book__author" style={{ marginTop: -5 }}>
+                <h3 className="book__author" style={{ marginTop: -10 }}>
                   {book.author}
                 </h3>
               </div>

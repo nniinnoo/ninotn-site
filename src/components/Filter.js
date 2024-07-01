@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-import SortByIcon from "@mui/icons-material/SwapHoriz";
 import DropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Filter = () => {
