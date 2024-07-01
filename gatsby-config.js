@@ -62,6 +62,12 @@ module.exports = {
     // SHARP
     // =====
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        checkSupportedExtensions: false,
+      },
+    },
     "gatsby-transformer-sharp",
 
     // SOURCE FILESYSTEM

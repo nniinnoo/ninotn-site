@@ -1,15 +1,8 @@
 import React from "react";
 import Layout from "@components/Layout";
 import SEO from "@components/SEO";
-import { graphql, navigate } from "gatsby";
-import BackIcon from "@mui/icons-material/ArrowBackIosNewRounded";
-import DateIcon from "@mui/icons-material/TodayOutlined";
-import ReadingTimeIcon from "@mui/icons-material/TimerOutlined";
-import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
-import PropTypes from "prop-types";
 
-export default function Projects({ data = [] }) {
-  const post = data.markdownRemark;
+export default function Projects() {
   const projects = [
     {
       title: "Better Work Indonesia",
@@ -54,46 +47,8 @@ export default function Projects({ data = [] }) {
         >
           <h1 style={{ fontSize: "50px" }}>Projects</h1>
         </div>
-        <div className="blog__post-container">
-          <div className="blog__post-content-center">
-            <article>
-              <h1 className="blog__post-title">{post.frontmatter.title}</h1>
-              <div className="blog__post-title-details">
-                <span>
-                  <DateIcon />
-                  <p>{post.frontmatter.date}</p>
-                </span>
-                <span>
-                  <CoffeeMakerIcon />
-                  <p>{post.wordCount.words} words</p>
-                </span>
-                <span>
-                  <ReadingTimeIcon />
-                  <p>~{post.timeToRead} min</p>
-                </span>
-                {/* <span>
-                <CategoryIcon />
-                <p>{post.frontmatter.categories}</p>
-              </span> */}
-              </div>
-              <div
-                className="blog__post-body"
-                id={post.id}
-                dangerouslySetInnerHTML={{ __html: post.html }}
-              />
-            </article>
-          </div>
-          <button
-            type="button"
-            className="blog__post-back-btn"
-            onClick={() => navigate(-1)}
-          >
-            <BackIcon />
-            <p>Back</p>
-          </button>
-        </div>
 
-        {/* <div
+        <div
           className="books__container"
           style={{
             display: "grid",
@@ -131,30 +86,8 @@ export default function Projects({ data = [] }) {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </Layout>
     </>
   );
 }
-
-export const query = graphql`
-  query ($slug: String) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      id
-      html
-      timeToRead
-      frontmatter {
-        title
-        date(formatString: "MMM D, YYYY")
-        tags
-        categories
-        no
-        slug
-      }
-      timeToRead
-      wordCount {
-        words
-      }
-    }
-  }
-`;

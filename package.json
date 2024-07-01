@@ -5,10 +5,6 @@
   "description": "Raw Thought by Nino Tannio (Built in August 2021, during Covid-19 pandemic)",
   "author": "Nino Tannio <me@ninotn.com> (ninotn.com)",
   "license": "CC BY-NC 4.0",
-  "engines": {
-    "node": ">=14.14.0",
-    "npm": ">=6.14.4"
-  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
