@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Layout from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import worldMill from "@react-jvectormap/world/worldMill.json";
@@ -23,10 +23,10 @@ const Europe = {
   FR: 1,
 };
 
-const VectorMap = React.lazy(
-  // @ts-ignore
-  () => import("@react-jvectormap/core").then((m) => m.VectorMap),
-  { ssr: false }
+const VectorMap = React.lazy(() =>
+  import("@react-jvectormap/core").then((module) => ({
+    default: module.VectorMap,
+  }))
 );
 
 const About = () => {
@@ -186,36 +186,38 @@ const About = () => {
                   padding: "12px",
                 }}
               >
-                <VectorMap
-                  map={worldMill}
-                  backgroundColor="transparent"
-                  containerStyle={{
-                    width: "100%",
-                    height: "100%",
-                  }}
-                  regionStyle={{
-                    initial: {
-                      fill: "#b9b4b4",
-                    },
-                    hover: {
-                      fill: "#1a1a1a",
-                    },
-                  }}
-                  series={{
-                    regions: [
-                      {
-                        values: Asia,
-                        scale: ["#0071A4"],
-                        normalizeFunction: "polynomial",
+                <Suspense fallback={<div>Loading...</div>}>
+                  <VectorMap
+                    map={worldMill}
+                    backgroundColor="transparent"
+                    containerStyle={{
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    regionStyle={{
+                      initial: {
+                        fill: "#b9b4b4",
                       },
-                      {
-                        values: Europe,
-                        scale: ["#64660E"],
-                        normalizeFunction: "polynomial",
+                      hover: {
+                        fill: "#1a1a1a",
                       },
-                    ],
-                  }}
-                />
+                    }}
+                    series={{
+                      regions: [
+                        {
+                          values: Asia,
+                          scale: ["#0071A4"],
+                          normalizeFunction: "polynomial",
+                        },
+                        {
+                          values: Europe,
+                          scale: ["#64660E"],
+                          normalizeFunction: "polynomial",
+                        },
+                      ],
+                    }}
+                  />
+                </Suspense>
               </div>
             </div>
             <div>
