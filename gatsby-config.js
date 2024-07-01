@@ -7,7 +7,9 @@ module.exports = {
     siteLogo: "src/assets/favicon.png",
     description: "Personal blog by Nino Tannio",
   },
-
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     // ANALYTICS
     // =========
