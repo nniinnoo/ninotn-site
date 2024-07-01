@@ -1,8 +1,7 @@
 import React from "react";
 import Layout from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
-import "jvectormap-next/jquery-jvectormap.css";
-import { worldMill } from "@react-jvectormap/world";
+import worldMill from "@react-jvectormap/world/worldMill.json";
 
 import SEO from "@components/SEO";
 
@@ -24,11 +23,10 @@ const Europe = {
   FR: 1,
 };
 
-// Dynamic import setup
-const VectorMap = React.lazy(() =>
-  import("@react-jvectormap/core").then((module) => ({
-    default: module.VectorMap,
-  }))
+const VectorMap = React.lazy(
+  // @ts-ignore
+  () => import("@react-jvectormap/core").then((m) => m.VectorMap),
+  { ssr: false }
 );
 
 const About = () => {
