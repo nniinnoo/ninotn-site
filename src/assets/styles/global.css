@@ -77,7 +77,7 @@ body.light {
 }
 
 body.dark {
-  --bg: #3e3e3e; /* 282c35 */
+  --bg: #3e3e3e; /* 282c35, 3e3e3e */
   --bg-2: rgba(122, 122, 122, 0.418);
 
   --light-1: #f9f9f9;
@@ -222,7 +222,7 @@ tbody tr:nth-child(odd) {
 }
 
 .nav__right a {
-  font-family: "Klee";
+  font-family: "Fira";
   font-size: var(--px14) + 1;
   color: var(--dark-1);
   text-decoration: none;
