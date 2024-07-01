@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import "jvectormap-next/jquery-jvectormap.css";
-import { VectorMap } from "@react-jvectormap/core";
 
 import SEO from "@components/SEO";
 
@@ -23,6 +22,12 @@ const Asia = {
 const Europe = {
   FR: 1,
 };
+
+let VectorMap;
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  VectorMap = require("@react-jvectormap/core").VectorMap;
+}
 
 const About = () => (
   <>
