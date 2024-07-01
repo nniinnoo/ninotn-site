@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import "jvectormap-next/jquery-jvectormap.css";
+import { VectorMap } from "@react-jvectormap/core";
 
 import SEO from "@components/SEO";
 
