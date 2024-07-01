@@ -1,12 +1,28 @@
 import React from "react";
 import Layout from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
+import "jvectormap-next/jquery-jvectormap.css";
+import { VectorMap } from "react-jvectormap";
 
 import SEO from "@components/SEO";
 
 import profilePic from "../assets/profile-pic.jpg";
 import fireMaking from "../assets/firemaking.png";
 import fireSmoke from "../assets/firesmoke.png";
+
+const Asia = {
+  ID: 1,
+  JP: 1,
+  SG: 1,
+  MY: 1,
+  TL: 1,
+  TH: 1,
+  CN: 1,
+};
+
+const Europe = {
+  FR: 1,
+};
 
 const About = () => (
   <>
@@ -23,7 +39,7 @@ const About = () => (
                 href="https://www.gatsbyjs.org/"
                 rel="noreferrer"
               >
-                Gatsby JS
+                GatsbyJS
               </a>
               {" and "}
               <a target="_blank" href="https://graphql.org/" rel="noreferrer">
@@ -53,11 +69,11 @@ const About = () => (
           </div>
           <div>
             <h1>The Idea</h1>
-            <p>
+            <p style={{ textAlign: "justify" }}>
               I imagine this website animating primitive ingredients to capture
               the hunter-gatherer lifestyle, like the excitement of discovering
-              fire, drawing on the cave walls, pointing our finger to the stars
-              or the joy of sharing stories around the campfire. <br />
+              fire, drawing on the cave walls, pointing finger to the stars or
+              the joy of sharing stories around the campfire. <br />
               <br />
               <div
                 style={{
@@ -103,7 +119,7 @@ const About = () => (
           </div>
           <div>
             <h1>What is this?</h1>
-            <p>
+            <p style={{ textAlign: "justify" }}>
               This blog is an attempt to project and organize my thoughts; a
               sort of documentation of past and present memories; a place where
               I can practice expressing ideas, capture my own inquiry and
@@ -128,16 +144,81 @@ const About = () => (
                   marginTop: "12px",
                 }}
               />
-              <p>
+              <p style={{ textAlign: "justify" }}>
                 I grew up in a sleepy little town in North Sumatra, surrounded
                 by mountains and sea-facing Indian Ocean. After high school, I
                 took my first sail to study computer science and mathematics.
                 Later, I began my professional career as software engineer in
                 Jakarta. These days I mostly write code around JavaScript &
-                TypeScript for work, sometimes in C++ and Python for
-                recreational
+                TypeScript for work, and in C++ and Python for fun. I also enjoy
+                juggling trick practice, chess, playing guitar/piano, drawing,
+                capture a moment, & searching for nature in spare time.
               </p>
             </div>
+          </div>
+          <div>
+            <h1>Travel</h1>
+            <p>
+              I made this visual map to keep track of the countries I've been so
+              far and encourage myself to explore more places I haven't yet
+              seen.
+            </p>
+            <p>
+              Asia (7): 🇮🇩, 🇹🇱, 🇸🇬, 🇲🇾, 🇹🇭, 🇯🇵, 🇨🇳
+              <br />
+              Europe (1): 🇫🇷
+            </p>
+            <div
+              style={{
+                width: "100%",
+                height: "400px",
+                border: "1px solid #b9b4b4",
+                borderRadius: "6px",
+                padding: "12px",
+              }}
+            >
+              <VectorMap
+                map="world_mill"
+                backgroundColor="transparent"
+                containerStyle={{
+                  width: "100%",
+                  height: "100%",
+                }}
+                regionStyle={{
+                  initial: {
+                    fill: "#b9b4b4",
+                  },
+                  hover: {
+                    fill: "#1a1a1a",
+                  },
+                }}
+                series={{
+                  regions: [
+                    {
+                      values: Asia,
+                      scale: ["#0071A4"],
+                      normalizeFunction: "polynomial",
+                    },
+                    {
+                      values: Europe,
+                      scale: ["#64660E"],
+                      normalizeFunction: "polynomial",
+                    },
+                  ],
+                }}
+              />
+            </div>
+          </div>
+          <div>
+            <h1>Tech & Gadget</h1>
+            <p>
+              Laptop: Macbook Pro M3 Pro 2023, 14", Dell Latitude 5420 <br />
+              Phone: iPhone 7 <br />
+              eReading: Kindle Paperwhite 2020 <br />
+              Earphone: Senheiser CX True Wireless <br />
+              Camera: Canon EOS 600D <br />
+              Game Console: Nintendo Switch Lite 2019 <br />
+            </p>
           </div>
           <div>
             <h1>Credit</h1>
