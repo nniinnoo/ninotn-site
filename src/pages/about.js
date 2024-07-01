@@ -1,7 +1,7 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Layout from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
-import worldMill from "@react-jvectormap/world/worldMill.json";
+import WorldMap from "react-svg-worldmap";
 
 import SEO from "@components/SEO";
 
@@ -9,25 +9,15 @@ import profilePic from "../assets/profile-pic.jpg";
 import fireMaking from "../assets/firemaking.png";
 import fireSmoke from "../assets/firesmoke.png";
 
-const Asia = {
-  ID: 1,
-  JP: 1,
-  SG: 1,
-  MY: 1,
-  TL: 1,
-  TH: 1,
-  CN: 1,
-};
-
-const Europe = {
-  FR: 1,
-};
-
-const VectorMap = React.lazy(() =>
-  import("@react-jvectormap/core").then((module) => ({
-    default: module.VectorMap,
-  }))
-);
+const data = [
+  { country: "id", value: ": Home" },
+  { country: "jp", value: ": 1x" },
+  { country: "sg", value: ": 1x" },
+  { country: "my", value: ": 2x airport transit" },
+  { country: "tl", value: ": 1x" },
+  { country: "cn", value: ": 1x airport transit" },
+  { country: "fr", value: ": Current resident" },
+];
 
 const About = () => {
   return (
@@ -180,44 +170,20 @@ const About = () => {
               <div
                 style={{
                   width: "100%",
-                  height: "400px",
                   border: "1px solid #b9b4b4",
                   borderRadius: "6px",
                   padding: "12px",
                 }}
               >
-                <Suspense fallback={<div>Loading...</div>}>
-                  <VectorMap
-                    map={worldMill}
-                    backgroundColor="transparent"
-                    containerStyle={{
-                      width: "100%",
-                      height: "100%",
-                    }}
-                    regionStyle={{
-                      initial: {
-                        fill: "#b9b4b4",
-                      },
-                      hover: {
-                        fill: "#1a1a1a",
-                      },
-                    }}
-                    series={{
-                      regions: [
-                        {
-                          values: Asia,
-                          scale: ["#0071A4"],
-                          normalizeFunction: "polynomial",
-                        },
-                        {
-                          values: Europe,
-                          scale: ["#64660E"],
-                          normalizeFunction: "polynomial",
-                        },
-                      ],
-                    }}
-                  />
-                </Suspense>
+                <WorldMap
+                  color="#556B2F"
+                  backgroundColor="transparent"
+                  value-suffix="people"
+                  size="lg"
+                  data={data}
+                  strokeOpacity={0.5}
+                  richInteraction
+                />
               </div>
             </div>
             <div>
