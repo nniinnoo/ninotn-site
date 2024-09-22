@@ -42,6 +42,14 @@ module.exports = {
       },
     },
 
+    // FOOTNOTES MARKDOWN
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: ["gatsby-remark-numbered-footnotes"],
+      },
+    },
+
     // HELMET
     // ======
     "gatsby-plugin-react-helmet",
