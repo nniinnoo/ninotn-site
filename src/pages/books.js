@@ -21,6 +21,11 @@ const Books = () => {
       image: "https://m.media-amazon.com/images/I/81j330zioGL._SL1500_.jpg",
     },
     {
+      title: "Sherlock Holmes",
+      author: "Arthur Conan Doyle",
+      image: "https://images.epagine.fr/704/9781853260704_1_75.jpg",
+    },
+    {
       title: "Beyond Good and Evil",
       author: "Friedrich Nietzsche",
       image:
@@ -41,7 +46,7 @@ const Books = () => {
       title: "Meditations on First Philosophy",
       author: "René Descartes",
       image:
-        "https://m.media-amazon.com/images/I/61qI-RzvYDL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/51LNF6nP5pL._AC_UF1000,1000_QL80_.jpg",
     },
     {
       title: "Melihat Api Bekerja",
@@ -63,12 +68,28 @@ const Books = () => {
         "https://m.media-amazon.com/images/I/81pKWG5QlaL._AC_UF1000,1000_QL80_.jpg",
     },
     {
+      title: "The Waves",
+      author: "Virginia Woolf",
+      image: "https://m.media-amazon.com/images/I/91Rt95OXdZL.jpg",
+    },
+    {
       title: "Plato Meno",
-      author: " a new translation by Robin Waterfield",
+      author: "translated by Robin Waterfield",
       image:
         "https://m.media-amazon.com/images/I/81eAcHvO9sL._AC_UF1000,1000_QL80_.jpg",
     },
-
+    {
+      title: "The Odyssey",
+      author: "translated by Robert Fagles",
+      image:
+        "https://m.media-amazon.com/images/I/81g0AATkO9L._AC_UF894,1000_QL80_.jpg",
+    },
+    {
+      title: "Moby Dick",
+      author: "Herman Melville",
+      image:
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNTCtQyLvSRT3xBptw1xC_SncofuhQ7uE2rR4GW5y-StyqsPnjyfVvZUWFltGV6-jmKTa0izIhFgMm16Ya-Tp5y6dnn9iPe87wetbBSwWxLPb_3JlJzCgsi4Sb8Rmy7Bt28VYEswiuXPE/s1600/mobydick_cover3_web.jpg",
+    },
     {
       title: "Against the Gods",
       author: "Peter L. Bernstein",
@@ -124,23 +145,17 @@ const Books = () => {
         "https://m.media-amazon.com/images/I/719GN8cNojL._AC_UF1000,1000_QL80_.jpg",
     },
     // the moscow puzzle
-    {
-      title: "The Moscow Puzzles",
-      author: "Boris A. Kordemsky",
-      image:
-        "https://m.media-amazon.com/images/I/81ESEnwKSXL._AC_UF1000,1000_QL80_.jpg",
-    },
+    // {
+    //   title: "The Moscow Puzzles",
+    //   author: "Boris A. Kordemsky",
+    //   image:
+    //     "https://m.media-amazon.com/images/I/81ESEnwKSXL._AC_UF1000,1000_QL80_.jpg",
+    // },
     {
       title: "When We Cease to Understand the World",
       author: "Benjamin Labatut",
       image:
         "https://m.media-amazon.com/images/I/614t1mU4FcL._AC_UF1000,1000_QL80_.jpg",
-    },
-    {
-      title: "Godel, Escher, Bach",
-      author: "Douglas Hofstadter",
-      image:
-        "https://m.media-amazon.com/images/I/51zU0Zk9zLL._AC_UF1000,1000_QL80_.jpg",
     },
     {
       title: "The Society of Mind",
@@ -165,6 +180,29 @@ const Books = () => {
       author: "Ludwig Wittgenstein",
       image:
         "https://m.media-amazon.com/images/I/61bfzvHWSvL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      title: "The Tunnel",
+      author: "Ernesto Sabato",
+      image:
+        "https://m.media-amazon.com/images/I/71-ed6kpyzL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      title: "Le Problème à Trois Corps (The Three-Body Problem)",
+      author: "Liu Cixin",
+      image:
+        "https://www.actes-sud.fr/sites/default/files/couvertures/9782330181055.jpg",
+    },
+    {
+      title: "Fermat's Last Theorem",
+      author: "Simon Singh",
+      image:
+        "https://m.media-amazon.com/images/I/81ssAUH2jLL._UF1000,1000_QL80_.jpg",
+    },
+    {
+      title: "The Dawn of Everything",
+      author: "David Graeber, David Wengrow",
+      image: "https://m.media-amazon.com/images/I/819UL7qQa5L.jpg",
     },
     // Add more books here
   ];

@@ -119,9 +119,10 @@ cite {
 }
 
 a {
-  color: #92315e;
+  color: #b74279;
   text-decoration: underline;
   text-decoration-style: dashed;
+  text-decoration-color: #8b8286;
 }
 
 a:hover {

@@ -19,7 +19,7 @@ const Nav = ({ onUpdateTheme, theme }) => {
           </div>
           <Link to="/">
             <div>
-              <h1>Raw Fire</h1>
+              <h1>forbidden fruit</h1>
               <h2>by Nino Tannio</h2>
             </div>
           </Link>
