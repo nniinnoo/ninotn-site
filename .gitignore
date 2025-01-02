@@ -1,3 +1,17 @@
 node_modules/
 .cache/
 public
+
+
+
+# public/*
+# content/
+# ninotn-content
+
+.DS_Store
+
+
+#Yarn
+yarn-error.log
+.pnp/
+.pnp.js
