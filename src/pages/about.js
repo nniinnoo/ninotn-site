@@ -27,7 +27,7 @@ const About = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 960) {
         setMapSize("md");
       } else {
         setMapSize("lg");
@@ -46,50 +46,7 @@ const About = () => {
       <Layout pageTitle="about">
         <div className="about__container">
           <div className="about__center">
-            <div>
-              <h1>Note for programmer</h1>
-              <p>
-                I coded this website mainly using{" "}
-                <a
-                  target="_blank"
-                  href="https://www.gatsbyjs.org/"
-                  rel="noreferrer"
-                >
-                  GatsbyJS
-                </a>
-                {" and "}
-                <a target="_blank" href="https://graphql.org/" rel="noreferrer">
-                  GraphQL
-                </a>
-                , hosted on
-                <a
-                  target="_blank"
-                  href="https://www.netlify.com/"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  Netlify
-                </a>
-                , and I've put the code on{" "}
-                <a
-                  target="_blank"
-                  href="https://github.com/nniinnoo/ninotn-site"
-                  rel="noreferrer"
-                >
-                  Github
-                </a>{" "}
-                under Creative Common BY-NC 4.0 License. Feel free to clone, use
-                and modify it for non-commercial purposes. If you have any
-                questions, don't hesitate to ask! :)
-              </p>
-            </div>
-            <hr
-              style={{
-                margin: "24px 0",
-                border: "0",
-                borderTop: "1px solid #b9b4b4",
-              }}
-            />
+            <h1>In the beginning.. </h1>
             <div>
               <img
                 src={forbiddenFruit}
@@ -97,88 +54,121 @@ const About = () => {
                 style={{
                   width: "100%",
                   height: "auto",
+                  borderRadius: "8px",
                 }}
               />
-              <p style={{ textAlign: "center", fontStyle: "italic" }}>
-                "La Chute" (1479) a painting by Hugo Van der Goes
+              <p style={{ textAlign: "center" }}>
+                <small>"La Chute" (1479) by Hugo Van der Goes</small>
               </p>
               <p style={{ textAlign: "justify" }}>
                 As a kid, the story of Genesis always fascinated me. I first
-                heard it from my grandmother, then the same repetition from
-                people around, with the same voice that the fruit eaten by Adam
-                and Eve was an actual forbidden fruit in the garden of Eden,
-                guarded by a random snake. It's a beautiful bedtime story for
-                something we don't know and have the explanation for. It made me
-                imagine how this fruit might look like, how it tastes, and
-                wondered if there could be a "blessed" fruit too. As I grew up,
-                I doubt it and distance myself from the fairytales and see it
-                from a different direction. My aim is not to make corrections
-                about the story, but to give it a new uniform. One night,
-                sitting by the campfire outside my tent, I imagined the snake’s
-                voice differently, like the voice that told us to discover fire,
-                to find a way to create something more intelligent than us, and
-                to lose once again in search of ourselves. Whether the snake is
-                wrong or not, it doesn't matter. It said we were gaining wisdom
-                out of it. But it forgot to tell us that it comes with a lot of
-                pain and suffering. And yet, despite everything, we still choose
-                to eat the same fruit.
+                heard it from my grandmother, "In the beginning.." she said,
+                then repeated by people around with the same enthusiasm that the
+                fruit eaten by Adam and Eve was an actual forbidden fruit,
+                guarded by an evil snake in a place called the Garden of Eden.
+                It gave the impression as if it really existed somewhere up
+                there, beyond the sky, and one day we could visit it during
+                holiday. I found it strange and beautiful as a bedtime story to
+                cover something we didn't have an explanation for. It made me
+                imagine how the fruit might look, how it tasted, and wonder if
+                there could be any other kind of fruit. As I grew up, I buried
+                most of those childhood fairytales, but I chose to spare this
+                one, as a souvenir, to remind me of that innocent time. So, in
+                order to not let it die uncovered, I try to give it a new
+                uniform and see it far from different dimensions.
+                <br />
+                <br />
+                <p>
+                  <blockquote
+                    style={{
+                      marginLeft: "20px",
+                      fontStyle: "italic",
+                      borderLeft: "4px solid #ccc",
+                      paddingLeft: "16px",
+                      textAlign: "justify",
+                    }}
+                  >
+                    Sitting by the campfire, I listen to the snake’s voice
+                    again. It is old and raspy without temptation; it feels like
+                    a call that once told us to discover ancient flame, to
+                    unveil something powerful in every breath that obeys the
+                    order and laws of number, to kiss the sun and steal the ring
+                    of Saturn, to fill the cosmos with our everlasting dreams,
+                    until we lost again in search of ourselves. “Eat the fruit
+                    slowly, bit by bit, digest it and you will understand," said
+                    the snake. Then I fall, flooded with a lot of pain and
+                    suffering. "Cross that border, go away to a place beyond
+                    your intuition, and never give up," the snake repeated. "Who
+                    are you?" I asked. "I am, your curiosity".
+                  </blockquote>
+                </p>
               </p>
             </div>
             <div>
               <h1>The Idea</h1>
               <p style={{ textAlign: "justify" }}>
-                I imagine this website animating primitive ingredients to
-                capture the hunter-gatherer lifestyle, like the excitement of
-                discovering fire, drawing on the cave walls, pointing fingers,
-                to the star patterns or the joy of sharing stories around the
-                campfire. <br />
+                I imagine this blog as a cave which animates primitive
+                ingredients to capture the hunter-gatherer lifestyle, like the
+                excitement of discovering fire, drawing on the walls, looking
+                for constellations of stars, or the joy of sharing stories
+                around the campfire. <br />
                 <br />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "30px",
-                  }}
-                >
+                <div>
                   <div
                     style={{
                       display: "flex",
-                      flexDirection: "column",
+                      flexDirection: "row",
+                      justifyContent: "center",
                       alignItems: "center",
+                      gap: "30px",
                     }}
                   >
-                    <img
-                      src={fireSmoke}
-                      alt="profile-pic"
+                    <div
                       style={{
-                        width: "100%",
-                        height: "auto",
-                        maxWidth: "100px",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
                       }}
-                    />
-                    <p>Light Mode: Fire making!</p>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src={fireMaking}
-                      alt="profile-pic"
+                    >
+                      <img
+                        src={fireSmoke}
+                        alt="profile-pic"
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          maxWidth: "100px",
+                        }}
+                      />
+                      <p>Light Mode: Fire making!</p>
+                    </div>
+                    <div
                       style={{
-                        width: "100%",
-                        height: "auto",
-                        maxWidth: "100px",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
                       }}
-                    />
-                    <p>Dark Mode: Fired up!</p>
+                    >
+                      <img
+                        src={fireMaking}
+                        alt="profile-pic"
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          maxWidth: "100px",
+                        }}
+                      />
+                      <p>Dark Mode: Fired up!</p>
+                    </div>
                   </div>
                 </div>
+                When I think about the design, I have in mind a kind of
+                aesthetic simplicity that's introduced by Dieter Ram (a
+                legendary German industrial designer). Though he never designed
+                a website, I try to imagine if he did. So, I steal his principle
+                and try to produce it in my own. I must admit, it.. is..
+                really.. hard. Even to this day, I still consider this blog
+                unfinished. After all, I decided to roam around and refine it
+                from time to time, but so far, I'm happy with the result.
               </p>
             </div>
             <div>
@@ -211,17 +201,28 @@ const About = () => {
                   }}
                 />
                 <p style={{ textAlign: "justify" }}>
-                  I grew up in a sleepy little town in Sumatra, surrounded by
-                  mountains and sea-facing Indian Ocean. After high school, I
-                  took my first sail to study computer science and mathematics.
-                  Later, I began my professional career as a software engineer
-                  in Jakarta. These days I mostly write code around JavaScript &
-                  TypeScript for work, and in C++ and Python for fun. I also
-                  enjoy juggling trick practice, chess, playing guitar/piano,
-                  drawing, capture a moment, & searching for nature in spare
-                  time.
+                  I grew up in a sleepy little town in North Sumatra, it's
+                  surrounded by the mountains and sea-facing the Indian Ocean.
+                  So, the hobbies that you’re likely to develop in a place like
+                  that are hiking, swimming, fishing and wondering what lies
+                  beyond the sea and the mountain. After high school, I took my
+                  first sail to study computer science and mathematics. Later, I
+                  began my professional career as a software engineer in
+                  Jakarta, mostly write code around C++, Java, JavaScript and
+                  TypeScript for work.
                 </p>
               </div>
+              <p style={{ textAlign: "justify" }}>
+                In the meantime, I decided to learn French. Then, after the
+                pandemic, I took another voyage and somehow ended up in Southern
+                France. I am currently a master's student at the Université de
+                Toulouse. Here, I find myself drowning in the rigorous study of
+                theorems and formal proofs in mathematics. I have many interests
+                that I still regularly do to this day: I enjoy cycling,
+                climbing, reading, juggling trick, chess, guitar/piano, drawing,
+                capturing moments, meditating, and searching for nature in spare
+                time.
+              </p>
             </div>
             <div>
               <h1>Travel</h1>
@@ -255,9 +256,326 @@ const About = () => {
               </div>
             </div>
             <div>
+              <h1>Languages</h1>
+              <blockquote
+                style={{
+                  marginLeft: "20px",
+                  fontStyle: "italic",
+                  borderLeft: "4px solid #ccc",
+                  paddingLeft: "16px",
+                  textAlign: "justify",
+                }}
+              >
+                <small>
+                  ( ! ) I will move this section to a separate page soon.
+                </small>
+              </blockquote>
+              <br />
+
+              <p style={{ textAlign: "justify" }}>
+                As a child, there was a moment when I didn't quite understand
+                why my parents spoke in different local languages with their
+                families, but used Bahasa with each other. I thought they had
+                their own secret language. Growing up, I took all of the
+                diversity for granted and never made any further effort to learn
+                them. I went to different schools and learned various extra
+                languages. Below are the languages I've learned so far:
+              </p>
+              <ol>
+                <h2 style={{ marginBottom: "-5px" }}>1. Bahasa Indonesia</h2>
+                <p style={{ textAlign: "justify" }}>
+                  My native language. I learned the theoretical aspect from
+                  elementary to high school. It's a phonetic language
+                  (pronounced as it is written) like Spanish or Italian, with
+                  simple grammar and without gendered nouns. The language has a
+                  lot of loanwords from Dutch, Portuguese, Sanskrit, Arabic, and
+                  Mandarin. Bahasa Indonesia is quite similar to Malay, so if
+                  you know Bahasa, or vice versa, you can quickly understand the
+                  other. If you're interested to "cek ombak" the language, using
+                  Duolingo, or GPT (with precaution) is a good start to grasp
+                  the basic idea. While I don't have any good theoretical
+                  resources to share, I can recommend books or movies to give a
+                  sense of the culture; feel free to ask me. For now, I will put
+                  here the list of popular Indonesian literature that you might
+                  find interesting (
+                  <a
+                    target="_blank"
+                    href="https://www.goodreads.com/shelf/show/indonesian-literature"
+                    rel="noreferrer"
+                  >
+                    Goodreads
+                  </a>
+                  ). If you're familiar with spaced repetition (
+                  <a
+                    target="_blank"
+                    href="https://en.wikipedia.org/wiki/Spaced_repetition"
+                    rel="noreferrer"
+                  >
+                    SRS
+                  </a>
+                  ) app like Anki, you can find Indonesian shared decks here (
+                  <a
+                    target="_blank"
+                    href="https://ankiweb.net/shared/decks?search=indonesian"
+                    rel="noreferrer"
+                  >
+                    Anki Decks
+                  </a>
+                  ). Once you're committed, consider finding a professional or
+                  community tutor through platforms like Italki.{" "}
+                  <small>
+                    [ * ]{" "}
+                    <i>cek ombak : testing the waters / waves (slang word) </i>
+                  </small>
+                </p>
+                <h2 style={{ marginBottom: "-5px" }}>2. English</h2>
+                <p style={{ textAlign: "justify" }}>
+                  Advanced (B2 - C1 level). The origin started around the age of
+                  9 because of an RPG game, "Final Fantasy VIII". I had to look
+                  up a thick dictionary every time the dialogues popped up and
+                  write them down on a piece of paper. Back then, it's almost
+                  impossible to find a game in Bahasa. The same habit continued
+                  with mostly video games and songs, but I never watched films
+                  with English subtitles because I hated rewinding them every
+                  time. For the most part, I learned it from regular English
+                  classes in school. Up until the end of high school, except for
+                  articles, I never really read any literature in English. The
+                  first book that I fully read in English was a very thin
+                  "Sherlock Holmes: Scandal in Bohemia" that I borrowed from the
+                  university library. Along the way I increased the difficulty
+                  by reading more challenging books, but I still struggled with
+                  my speaking articulation since I rarely practiced it, not
+                  until I started working in an international work environment
+                  where I interacted with colleagues from different countries.
+                  In an attempt to improve, I practiced monologues and used an
+                  association technique to describe lists of pictures within a
+                  time limit. I'm still maintaning English to this day, and
+                  there are still so many intersting thing that I pick up when I
+                  read or heard something. If you arrived at this point, it
+                  means you're curious enough (even if you used a translation
+                  tool). Takeaways: To study grammar I strongly recommend this
+                  book:{" "}
+                  <a
+                    target="_blank"
+                    href="https://www.amazon.fr/Understanding-English-Grammar-without-International/dp/0131930214"
+                    rel="noreferrer"
+                  >
+                    "Understanding and Using English Grammar" by Betty S. Azar.
+                  </a>{" "}
+                  It contains plenty of exercises and good grammatical ideas
+                  that you can easily digest. For the other aspects, I put in
+                  the footnotes, as I use similar ways to study other languages.
+                </p>
+                <h2 style={{ marginBottom: "-5px" }}>3. Mandarin</h2>
+                <p style={{ textAlign: "justify" }}>
+                  Very Basic. During junior high school, I attended a
+                  Buddhist-based school and learned Mandarin for 3 years. I
+                  didn't maintain it and almost completely forgot everything,
+                  though I still remember some characters, numbers, and phrases.
+                  For me, apart from the tricky aspects like tones and
+                  characters, the hardest part was finding the motivation to
+                  learn, it feels too dry and I didn't feel like their pop
+                  cultures hold me like the way Japanese or French does. But who
+                  knows, it was a long time ago, maybe I'll return someday if I
+                  have the time.
+                </p>
+                <h2 style={{ marginBottom: "-5px" }}>4. German</h2>
+                <p
+                  style={{
+                    textAlign: "justify",
+                  }}
+                >
+                  Basic (A1 level). I attended public senior high school and
+                  learned German for 2 years. If I had to pick one of my
+                  favorite class throughout my school years, it would be German.
+                  Not because it's easy, German is still impossible, too many
+                  arbitrary and complex grammar rules, but Frau Suzana made all
+                  of it unforgettable. What she taught us, was not just
+                  language, but enthusiasm and open mindedness. She literally
+                  made us sing, dance, and cry in class. She peacefully
+                  persuaded even the most timid or rebellious students to
+                  express their feelings towards people they liked or disliked,
+                  reconcile differences, and many more priceless things. I
+                  didn't know if she had read too much Freud or Jung, but I felt
+                  like she was a psychologist in disguise. Back to the language,
+                  after high school I didn't maintain it for many years, until
+                  about pandemic era, I decided to keep in touch with German via
+                  Duolingo and Youtube channel like{" "}
+                  <a href="https://www.youtube.com/@EasyGerman">Easy German</a>.
+                  Since I have a few German friends, sometimes it's fun to try
+                  to figure out what they're talking about with my limited
+                  vocabulary.
+                </p>
+                <h2 style={{ marginBottom: "-5px" }}>5. French</h2>
+                <p
+                  style={{
+                    textAlign: "justify",
+                  }}
+                >
+                  Intermediate (B2). Learning this language has been more like a
+                  self-discovery for me. The motivation I mentioned earlier, I
+                  found it in French through a series of events. It began to
+                  take shape in junior high school when I first read the story
+                  about Fermat's Last Theorem in a Japanese manga. During high
+                  school, I read Albert Camus's <i>The Stranger</i>. In
+                  university, I watched many French movies and read more books
+                  by French writers. When I opened my science and math
+                  textbooks, they were filled with French names (Pascal,
+                  Laplace, Fourier, Lagrange, Cauchy, Descartes, Fermat and, so
+                  on). I even used Laplacian and Fourier transform in my thesis.
+                  All of these are potential catalysts, but the final triggers
+                  happened when there were 2 visiting professors from France in
+                  our lab, and my advisor asked me to assist them during their
+                  stay.
+                </p>
+                <p
+                  style={{
+                    textIndent: "20px",
+                    marginTop: "-20px",
+                    textAlign: "justify",
+                  }}
+                >
+                  Later, after I had started working, I came across a blog
+                  article by Eka Kurniawan (an Indonesian author) that talked
+                  about his effort to read Marcel Proust's{" "}
+                  <i>In Search of Lost Time</i> in the original French{" "}
+                  <i>À la recherche du temps perdu</i>. "There was a feeling I
+                  can't describe when I read him in his own voice," said Eka.
+                  That day, I determined to learn French. "I'm going to read the
+                  first book that made me sad in its first and last paragraphs
+                  in his own voice," I said to myself. Since France is not fully
+                  a phonetic language, I thought it would be better to learn the
+                  pronunciation from a tutor right from the start rather than
+                  doubling my effort to fix it later. So, I took a French course
+                  every Saturday at one of the French institutes in Jakarta.
+                  Later, when I reached DELF A2, it was just at the beginning of
+                  the pandemic. I returned to my hometown and learned the rest
+                  of the level by myself. I spent about a week gathering
+                  reliable resources, methods and building my own framework.
+                </p>
+                <p
+                  style={{
+                    textIndent: "20px",
+                    marginTop: "-20px",
+                    textAlign: "justify",
+                  }}
+                >
+                  For grammar, I use{" "}
+                  <i>
+                    <a href="https://www.goodreads.com/book/show/6025919-easy-french-step-by-step">
+                      Easy French Step-by-Step
+                    </a>
+                  </i>{" "}
+                  by Myrna Bell, It is like Betty Azar's book, but for French,
+                  and
+                  <i>
+                    {" "}
+                    <a href="https://www.goodreads.com/book/show/558629.Advanced_French_Grammar?ref=nav_sb_ss_2_23">
+                      Advanced French Grammar
+                    </a>
+                  </i>{" "}
+                  by Monique L'Huiller. For vocabulary, I created my own lists
+                  from the books mentioned above,{" "}
+                  <i>
+                    <a href="https://www.goodreads.com/book/show/3707094-the-first-thousand-words-in-french?from_search=true&from_srp=true&qid=jd10SAnFOg&rank=1">
+                      The First 1000 words in French
+                    </a>
+                  </i>{" "}
+                  (I liked the visualization in this book), and words I
+                  encountered from various media as day to day practice. I
+                  compiled them both in Memrise and Anki, because Memrise have
+                  some interractive features (later I completely migrated
+                  everything to Anki, after Memrise stopped supporting community
+                  features).
+                </p>
+                <h2 style={{ marginBottom: "-5px" }}> Other Languages</h2>I have
+                a few other languages I'm interested in learning, like Greek,
+                Italian, Russian, and Japanese. Perhaps later, once I'm
+                proficient in French. I don't want to chase too many rabbits and
+                end up catching none, as every skill comes with a cost to
+                maintain.
+                <br />
+                <h2 style={{ marginBottom: "-5px" }}>Notes:</h2>
+                Resources are abundant out there; people say many things. Most
+                of them are good if you can implement, but some are harder to
+                follow, so we have to adapt them to our needs. For my part,
+                these have been quite effective habits, and I have faithfully
+                followed them until now:
+                <br />
+                <div
+                  style={{
+                    textAlign: "justify",
+                  }}
+                >
+                  <ol>
+                    1. I strongly encourage everyone to build their own SRS
+                    vocabulary with context (start simple, bit by bit so you
+                    don't feel overwhelmed); you can find some of the good
+                    examples in{" "}
+                    <a href="https://ankiweb.net/shared/decks?search=english">
+                      Anki's shared decks
+                    </a>
+                    . [ * ]{" "}
+                  </ol>
+                  <ol>
+                    2. Don't just review, try to recall as much as possible, and
+                    don't add more study if you can't recall 90% of the previous
+                    study.
+                  </ol>
+                  <ol>
+                    3. To practice speaking, prepare a list of pictures and
+                    describe them for 3-5 minutes without stopping, as if
+                    talking to someone. If a picture is difficult to describe,
+                    associate it with something familiar. If you're stuck on a
+                    word (but know how to say it in your native language), write
+                    it down and look it up later, then explain why it's hard to
+                    describe. Listen to your recording, and notice the words
+                    that you find hard to pronounce, and refine it (you can
+                    check on <a href="https://fr.forvo.com/">Forvo</a> or Google
+                    translate).
+                  </ol>
+                  <ol>
+                    4. To practice listening, podcast is a great start (find a
+                    topic that interests you and listen it MANY TIMES). I also
+                    often watch stand-up comedy, as they convey memorable
+                    punchlines and cultural references. And, don't forget about
+                    music, scrutinize the lyrics.
+                  </ol>
+                  <ol>
+                    5. Write a short diary about your day, invest on it
+                    consistenly. <br />
+                    <blockquote
+                      style={{
+                        marginLeft: "20px",
+                        fontStyle: "italic",
+                        borderLeft: "4px solid #ccc",
+                        paddingLeft: "16px",
+                        textAlign: "justify",
+                      }}
+                    >
+                      {" "}
+                      <i>
+                        <small>
+                          Reading and writing cannot be separated, reading is
+                          breathing in and writing is breathing out – The
+                          Language Nerd
+                        </small>
+                      </i>
+                    </blockquote>
+                  </ol>
+                  <ol>
+                    <i>
+                      [*] I will update soon for some other resources that I
+                      forget to mention here.
+                    </i>
+                  </ol>
+                </div>
+              </ol>
+            </div>
+            <div>
               <h1>Gadgetery</h1>
               <p>
-                Laptop : Macbook Pro M3 Pro 2023, 14", Dell Latitude 5420 <br />
+                Laptop : Macbook Pro M3 Pro 2023, 14" <br />
                 Phone : iPhone 7 <br />
                 eReading:{" "}
                 <a
@@ -306,6 +624,57 @@ const About = () => {
                 <br />
               </p>
             </div>
+            <hr
+              style={{
+                margin: "24px 0",
+                border: "0",
+                borderTop: "1px solid #b9b4b4",
+              }}
+            />
+            <div>
+              <h1>Note for programmer</h1>
+              <p>
+                This blog is built mainly using{" "}
+                <a
+                  target="_blank"
+                  href="https://www.gatsbyjs.org/"
+                  rel="noreferrer"
+                >
+                  GatsbyJS
+                </a>
+                {" and "}
+                <a target="_blank" href="https://graphql.org/" rel="noreferrer">
+                  GraphQL
+                </a>
+                , hosted on
+                <a
+                  target="_blank"
+                  href="https://www.netlify.com/"
+                  rel="noreferrer"
+                >
+                  {" "}
+                  Netlify
+                </a>
+                , and I've put the code on{" "}
+                <a
+                  target="_blank"
+                  href="https://github.com/nniinnoo/ninotn-site"
+                  rel="noreferrer"
+                >
+                  Github
+                </a>{" "}
+                under Creative Common BY-NC 4.0 License. Feel free to clone,
+                use, and modify it for non-commercial purposes. If you have any
+                questions or suggestion, don't hesitate to reach me out.
+              </p>
+            </div>
+            {/* <hr
+                style={{
+                  margin: "24px 0",
+                  border: "0",
+                  borderTop: "1px solid #b9b4b4",
+                }}
+              /> */}
             <div>
               <h1>Credit</h1>
               <div>
@@ -318,14 +687,23 @@ const About = () => {
                   >
                     Erik Spiekermann
                   </a>
-                  <br />
-                  Text font : Neue Haas Unica, 29LT Ada by{" "}
+                  {", "}
+                  29LT Ada by{" "}
                   <a
                     target="_blank"
                     href="https://tosche.net/fonts"
                     rel="noreferrer"
                   >
                     Toshi Omagari
+                  </a>
+                  <br />
+                  Text font : Klee-one by{" "}
+                  <a
+                    target="_blank"
+                    href="https://fonts.google.com/?query=Fontworks+Inc."
+                    rel="noreferrer"
+                  >
+                    Fontworks
                   </a>
                   <br />
                   <p>
