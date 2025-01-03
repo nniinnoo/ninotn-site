@@ -125,6 +125,12 @@ const Books = () => {
         "https://m.media-amazon.com/images/I/91u38lbOgpL._AC_UF1000,1000_QL80_.jpg",
     },
     {
+      title: "The Count of Monte Cristo",
+      author: "Alexandre Dumas",
+      image:
+        "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1724863997i/7126.jpg",
+    },
+    {
       title: "What I talk about when I talk about running",
       author: "Haruki Murakami",
       image:
