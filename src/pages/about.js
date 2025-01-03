@@ -64,17 +64,17 @@ const About = () => {
                 heard it from my grandmother, "In the beginning.." she said,
                 then repeated by people around with the same enthusiasm that the
                 fruit eaten by Adam and Eve was an actual forbidden fruit,
-                guarded by a random snake in a place called the Garden of Eden.
+                guarded by an evil snake in a place called the Garden of Eden.
                 It gave the impression as if it really existed somewhere up
                 there, beyond the sky, and one day we could visit it during
-                holiday. It was indeed, a beautiful bedtime story to cover
-                something we didn't have an explanation for. It made me imagine
-                how the fruit might look, how it tasted, and wonder if there
-                could be any other kind of fruit. As I grew up, I buried most of
-                those childhood fairytales, but I chose to spare this one, as a
-                souvenir, to remind me of that innocent time. So, in order to
-                not let it die uncovered, I try to give it a new uniform and see
-                it far from different dimensions.
+                holiday. I found it strange and beautiful as a bedtime story to
+                cover something we didn't have an explanation for. It made me
+                imagine how the fruit might look, how it tasted, and wonder if
+                there could be any other kind of fruit. As I grew up, I buried
+                most of those childhood fairytales, but I chose to spare this
+                one, as a souvenir, to remind me of that innocent time. So, in
+                order to not let it die uncovered, I try to give it a new
+                uniform and see it far from different dimensions.
                 <br />
                 <br />
                 <p>
