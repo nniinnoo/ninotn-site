@@ -46,50 +46,7 @@ const About = () => {
       <Layout pageTitle="about">
         <div className="about__container">
           <div className="about__center">
-            <div>
-              <h1>Note for programmer</h1>
-              <p>
-                I coded this website mainly using{" "}
-                <a
-                  target="_blank"
-                  href="https://www.gatsbyjs.org/"
-                  rel="noreferrer"
-                >
-                  GatsbyJS
-                </a>
-                {" and "}
-                <a target="_blank" href="https://graphql.org/" rel="noreferrer">
-                  GraphQL
-                </a>
-                , hosted on
-                <a
-                  target="_blank"
-                  href="https://www.netlify.com/"
-                  rel="noreferrer"
-                >
-                  {" "}
-                  Netlify
-                </a>
-                , and I've put the code on{" "}
-                <a
-                  target="_blank"
-                  href="https://github.com/nniinnoo/ninotn-site"
-                  rel="noreferrer"
-                >
-                  Github
-                </a>{" "}
-                under Creative Common BY-NC 4.0 License. Feel free to clone, use
-                and modify it for non-commercial purposes. If you have any
-                questions, don't hesitate to ask! :)
-              </p>
-            </div>
-            <hr
-              style={{
-                margin: "24px 0",
-                border: "0",
-                borderTop: "1px solid #b9b4b4",
-              }}
-            />
+            <h1>In the beginning.. </h1>
             <div>
               <img
                 src={forbiddenFruit}
@@ -104,81 +61,112 @@ const About = () => {
               </p>
               <p style={{ textAlign: "justify" }}>
                 As a kid, the story of Genesis always fascinated me. I first
-                heard it from my grandmother, then the same repetition from
-                people around, with the same voice that the fruit eaten by Adam
-                and Eve was an actual forbidden fruit in the garden of Eden,
-                guarded by a random snake. It's a beautiful bedtime story for
-                something we don't know and have the explanation for. It made me
-                imagine how this fruit might look like, how it tastes, and
-                wondered if there could be a "blessed" fruit too. As I grew up,
-                I doubt it and distance myself from the fairytales and see it
-                from a different direction. My aim is not to make corrections
-                about the story, but to give it a new uniform. One night,
-                sitting by the campfire outside my tent, I imagined the snake’s
-                voice differently, like the voice that told us to discover fire,
-                to find a way to create something more intelligent than us, and
-                to lose once again in search of ourselves. Whether the snake is
-                wrong or not, it doesn't matter. It said we were gaining wisdom
-                out of it. But it forgot to tell us that it comes with a lot of
-                pain and suffering. And yet, despite everything, we still choose
-                to eat the same fruit.
+                heard it from my grandmother, "In the beginning.." she said,
+                then repeated by people around with the same enthusiasm that the
+                fruit eaten by Adam and Eve was an actual forbidden fruit,
+                guarded by a random snake in a place called the Garden of Eden.
+                It gave the impression as if it really existed somewhere up
+                there, beyond the sky, and one day we could visit it during
+                holiday. It was indeed, a beautiful bedtime story to cover
+                something we didn't have an explanation for. It made me imagine
+                how the fruit might look, how it tasted, and wonder if there
+                could be any other kind of fruit. As I grew up, I buried most of
+                those childhood fairytales, but I chose to spare this one, as a
+                souvenir, to remind me of that innocent time. So, in order to
+                not let it die uncovered, I try to give it a new uniform and see
+                it far from different dimensions.
+                <br />
+                <br />
+                <p>
+                  <blockquote
+                    style={{
+                      marginLeft: "20px",
+                      fontStyle: "italic",
+                      borderLeft: "4px solid #ccc",
+                      paddingLeft: "16px",
+                      textAlign: "justify",
+                    }}
+                  >
+                    Sitting by the campfire, I listen to the snake’s voice
+                    again. It is old and raspy without temptation; it feels more
+                    like a call that once told us to discover ancient flame, to
+                    unveil something powerful, to kiss the sun, to steal ring of
+                    Saturn, to fill the cosmos with our everlasting dreams,
+                    until we lost again in search of ourselves. “Eat and digest
+                    the fruit bit by bit, and you will understand," said the
+                    snake. Then I fall, with a lot of pain and suffering. "Cross
+                    that line, go away to a place beyond your intuition, and
+                    never give up," the snake repeated. "Who are you?" I asked.
+                    "I am, your curiosity".
+                  </blockquote>
+                </p>
               </p>
             </div>
             <div>
               <h1>The Idea</h1>
               <p style={{ textAlign: "justify" }}>
-                I imagine this website animating primitive ingredients to
-                capture the hunter-gatherer lifestyle, like the excitement of
-                discovering fire, drawing on the cave walls, pointing fingers,
-                to the star patterns or the joy of sharing stories around the
-                campfire. <br />
+                I imagine this blog as a cave which animates primitive
+                ingredients to capture the hunter-gatherer lifestyle, like the
+                excitement of discovering fire, drawing on the walls, looking
+                for constellations of stars, or the joy of sharing stories
+                around the campfire. <br />
                 <br />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "30px",
-                  }}
-                >
+                <div>
                   <div
                     style={{
                       display: "flex",
-                      flexDirection: "column",
+                      flexDirection: "row",
+                      justifyContent: "center",
                       alignItems: "center",
+                      gap: "30px",
                     }}
                   >
-                    <img
-                      src={fireSmoke}
-                      alt="profile-pic"
+                    <div
                       style={{
-                        width: "100%",
-                        height: "auto",
-                        maxWidth: "100px",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
                       }}
-                    />
-                    <p>Light Mode: Fire making!</p>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src={fireMaking}
-                      alt="profile-pic"
+                    >
+                      <img
+                        src={fireSmoke}
+                        alt="profile-pic"
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          maxWidth: "100px",
+                        }}
+                      />
+                      <p>Light Mode: Fire making!</p>
+                    </div>
+                    <div
                       style={{
-                        width: "100%",
-                        height: "auto",
-                        maxWidth: "100px",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
                       }}
-                    />
-                    <p>Dark Mode: Fired up!</p>
+                    >
+                      <img
+                        src={fireMaking}
+                        alt="profile-pic"
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          maxWidth: "100px",
+                        }}
+                      />
+                      <p>Dark Mode: Fired up!</p>
+                    </div>
                   </div>
                 </div>
+                When I think about the design, I have in mind a kind of
+                aesthetic simplicity that's introduced by Dieter Ram (a
+                legendary German industrial designer). Though he never designed
+                a website, I try to imagine if he did. So, I steal his principle
+                and try to produce it in my own. I must admit, it.. is..
+                really.. hard. Even to this day, I still consider this blog
+                unfinished. After all, I decided to roam around and refine it
+                from time to time, but so far, I'm happy with the result.
               </p>
             </div>
             <div>
@@ -306,6 +294,57 @@ const About = () => {
                 <br />
               </p>
             </div>
+            <hr
+              style={{
+                margin: "24px 0",
+                border: "0",
+                borderTop: "1px solid #b9b4b4",
+              }}
+            />
+            <div>
+              <h1>Note for programmer</h1>
+              <p>
+                This blog is built mainly using{" "}
+                <a
+                  target="_blank"
+                  href="https://www.gatsbyjs.org/"
+                  rel="noreferrer"
+                >
+                  GatsbyJS
+                </a>
+                {" and "}
+                <a target="_blank" href="https://graphql.org/" rel="noreferrer">
+                  GraphQL
+                </a>
+                , hosted on
+                <a
+                  target="_blank"
+                  href="https://www.netlify.com/"
+                  rel="noreferrer"
+                >
+                  {" "}
+                  Netlify
+                </a>
+                , and I've put the code on{" "}
+                <a
+                  target="_blank"
+                  href="https://github.com/nniinnoo/ninotn-site"
+                  rel="noreferrer"
+                >
+                  Github
+                </a>{" "}
+                under Creative Common BY-NC 4.0 License. Feel free to clone,
+                use, and modify it for non-commercial purposes. If you have any
+                questions, don't hesitate to ask! <br />
+              </p>
+            </div>
+            {/* <hr
+              style={{
+                margin: "24px 0",
+                border: "0",
+                borderTop: "1px solid #b9b4b4",
+              }}
+            /> */}
             <div>
               <h1>Credit</h1>
               <div>
