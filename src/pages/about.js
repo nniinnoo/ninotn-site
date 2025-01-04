@@ -88,16 +88,17 @@ const About = () => {
                     }}
                   >
                     Sitting by the campfire, I listen to the snake’s voice
-                    again. It is old and raspy without temptation; it feels more
-                    like a call that once told us to discover ancient flame, to
-                    unveil something powerful, to kiss the sun, to steal ring of
-                    Saturn, to fill the cosmos with our everlasting dreams,
-                    until we lost again in search of ourselves. “Eat and digest
-                    the fruit bit by bit, and you will understand," said the
-                    snake. Then I fall, with a lot of pain and suffering. "Cross
-                    that line, go away to a place beyond your intuition, and
-                    never give up," the snake repeated. "Who are you?" I asked.
-                    "I am, your curiosity".
+                    again. It is old and raspy without temptation; it feels like
+                    a call that once told us to discover ancient flame, to
+                    unveil something powerful in every breath that obeys the
+                    order and laws of number, to kiss the sun and steal the ring
+                    of Saturn, to fill the cosmos with our everlasting dreams,
+                    until we lost again in search of ourselves. “Eat the fruit
+                    slowly, bit by bit, digest it and you will understand," said
+                    the snake. Then I fall, flooded with a lot of pain and
+                    suffering. "Cross that border, go away to a place beyond
+                    your intuition, and never give up," the snake repeated. "Who
+                    are you?" I asked. "I am, your curiosity".
                   </blockquote>
                 </p>
               </p>
