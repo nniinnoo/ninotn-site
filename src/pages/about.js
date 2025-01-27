@@ -166,9 +166,9 @@ const About = () => {
                 legendary German industrial designer). Though he never designed
                 a website, I try to imagine if he did. So, I steal his principle
                 and try to produce it in my own. I must admit, it.. is..
-                really.. hard. Even to this day, I still consider this blog
-                unfinished. After all, I decided to roam around and refine it
-                from time to time, but so far, I'm happy with the result.
+                really.. hard. I still consider this blog unfinished. After all,
+                I decided to roam around and refine it from time to time, but so
+                far, I'm happy with the result.
               </p>
             </div>
             <div>
@@ -291,7 +291,7 @@ const About = () => {
                   lot of loanwords from Dutch, Portuguese, Sanskrit, Arabic, and
                   Mandarin. Bahasa Indonesia is quite similar to Malay, so if
                   you know Bahasa, or vice versa, you can quickly understand the
-                  other. If you're interested to "cek ombak" the language, using
+                  other. If you're interested to learn the language, using
                   Duolingo, or GPT (with precaution) is a good start to grasp
                   the basic idea. While I don't have any good theoretical
                   resources to share, I can recommend books or movies to give a
@@ -323,10 +323,6 @@ const About = () => {
                   </a>
                   ). Once you're committed, consider finding a professional or
                   community tutor through platforms like Italki.{" "}
-                  <small>
-                    [ * ]{" "}
-                    <i>cek ombak : testing the waters / waves (slang word) </i>
-                  </small>
                 </p>
                 <h2 style={{ marginBottom: "-5px" }}>2. English</h2>
                 <p style={{ textAlign: "justify" }}>
@@ -351,10 +347,8 @@ const About = () => {
                   association technique to describe lists of pictures within a
                   time limit. I'm still maintaning English to this day, and
                   there are still so many intersting thing that I pick up when I
-                  read or heard something. If you arrived at this point, it
-                  means you're curious enough (even if you used a translation
-                  tool). Takeaways: To study grammar I strongly recommend this
-                  book:{" "}
+                  read or heard something. Takeaways: To study grammar I
+                  strongly recommend this book:{" "}
                   <a
                     target="_blank"
                     href="https://www.amazon.fr/Understanding-English-Grammar-without-International/dp/0131930214"
@@ -395,12 +389,12 @@ const About = () => {
                   made us sing, dance, and cry in class. She peacefully
                   persuaded even the most timid or rebellious students to
                   express their feelings towards people they liked or disliked,
-                  reconcile differences, and many more priceless things. I
-                  didn't know if she had read too much Freud or Jung, but I felt
-                  like she was a psychologist in disguise. Back to the language,
-                  after high school I didn't maintain it for many years, until
-                  about pandemic era, I decided to keep in touch with German via
-                  Duolingo and Youtube channel like{" "}
+                  and reconcile differences. I didn't know if she had read too
+                  much Freud or Jung, but I felt like she was a psychologist in
+                  disguise. Back to the language, after high school I didn't
+                  maintain it for many years, until about pandemic era, I
+                  decided to keep in touch with German via Duolingo and Youtube
+                  channel like{" "}
                   <a href="https://www.youtube.com/@EasyGerman">Easy German</a>.
                   Since I have a few German friends, sometimes it's fun to try
                   to figure out what they're talking about with my limited
@@ -441,17 +435,17 @@ const About = () => {
                   <i>In Search of Lost Time</i> in the original French{" "}
                   <i>À la recherche du temps perdu</i>. "There was a feeling I
                   can't describe when I read him in his own voice," said Eka.
-                  That day, I determined to learn French. "I'm going to read the
-                  first book that made me sad in its first and last paragraphs
-                  in his own voice," I said to myself. Since France is not fully
-                  a phonetic language, I thought it would be better to learn the
-                  pronunciation from a tutor right from the start rather than
-                  doubling my effort to fix it later. So, I took a French course
-                  every Saturday at one of the French institutes in Jakarta.
-                  Later, when I reached DELF A2, it was just at the beginning of
-                  the pandemic. I returned to my hometown and learned the rest
-                  of the level by myself. I spent about a week gathering
-                  reliable resources, methods and building my own framework.
+                  That day, I determined to learn French. "I'm going to read
+                  Camus in his own language" I said to myself. Since France is
+                  not fully a phonetic language, I thought it would be better to
+                  learn the pronunciation from a tutor right from the start
+                  rather than doubling my effort to fix it later. So, I took a
+                  French course every Saturday at one of the French institutes
+                  in Jakarta. Later, when I reached DELF A2, it was just at the
+                  beginning of the pandemic. I returned to my hometown and
+                  learned the rest of the level by myself. I spent about a week
+                  gathering reliable resources, methods and building my own
+                  framework.
                 </p>
                 <p
                   style={{
@@ -488,13 +482,18 @@ const About = () => {
                   everything to Anki, after Memrise stopped supporting community
                   features).
                 </p>
-                <h2 style={{ marginBottom: "-5px" }}> Other Languages</h2>I have
-                a few other languages I'm interested in learning, like Greek,
-                Italian, Russian, and Japanese. Perhaps later, once I'm
-                proficient in French. I don't want to chase too many rabbits and
-                end up catching none, as every skill comes with a cost to
-                maintain.
-                <br />
+                <h2 style={{ marginBottom: "-5px" }}> Other Languages</h2>
+                <p
+                  style={{
+                    textAlign: "justify",
+                  }}
+                >
+                  I have a few other languages I'm interested in learning, like
+                  Greek, Italian, Russian, and Japanese. Perhaps later, once I'm
+                  proficient in French. I don't want to chase too many rabbits
+                  and end up catching none, as every skill comes with a cost to
+                  maintain.
+                </p>
                 <h2 style={{ marginBottom: "-5px" }}>Notes:</h2>
                 Resources are abundant out there; people say many things. Most
                 of them are good if you can implement, but some are harder to
