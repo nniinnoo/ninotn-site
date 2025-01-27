@@ -17,6 +17,12 @@ const BlogIndex = ({ data, pageContext }) => {
 
   const { currentPage, pageCount } = pageContext;
 
+  const languageIcons = {
+    en: "🇬🇧",
+    id: "🇮🇩",
+    fr: "🇫🇷",
+  };
+
   return (
     <>
       <SEO />
@@ -52,6 +58,17 @@ const BlogIndex = ({ data, pageContext }) => {
                               <CategoryIcon />
                               <p>{post.frontmatter.categories}</p>
                             </span> */}
+
+                            {post.frontmatter.language
+                              .split(",")
+                              .map((lang) => (
+                                <span
+                                  key={lang.trim()}
+                                  style={{ fontSize: 14, marginRight: 5 }}
+                                >
+                                  {languageIcons[lang.trim()]}
+                                </span>
+                              ))}
                           </div>
                         </div>
                       </Link>

@@ -13,6 +13,13 @@ import SEO from "@components/SEO";
 
 export default function PostTemplate({ data = [] }) {
   const post = data.markdownRemark;
+
+  const languageIcons = {
+    en: "🇬🇧",
+    id: "🇮🇩",
+    fr: "🇫🇷",
+  };
+
   return (
     <>
       <Helmet title={post.frontmatter.title} />
@@ -43,6 +50,14 @@ export default function PostTemplate({ data = [] }) {
                 <CategoryIcon />
                 <p>{post.frontmatter.categories}</p>
               </span> */}
+              {post.frontmatter.language.split(",").map((lang) => (
+                <span
+                  key={lang.trim()}
+                  style={{ fontSize: 14, marginRight: 5 }}
+                >
+                  {languageIcons[lang.trim()]}
+                </span>
+              ))}
             </div>
             <div
               className="blog__post-body"
@@ -77,6 +92,7 @@ export const query = graphql`
         categories
         no
         slug
+        language
       }
       timeToRead
       wordCount {
