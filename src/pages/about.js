@@ -20,6 +20,7 @@ const data = [
   { country: "cn", value: ": 1x airport transit" },
   { country: "fr", value: ": Current resident" },
   { country: "es", value: ": 1x" },
+  { country: "it", value: ": 1x" },
 ];
 
 const About = () => {
@@ -234,7 +235,7 @@ const About = () => {
               <p>
                 Asia (7): 🇮🇩, 🇹🇱, 🇸🇬, 🇲🇾, 🇹🇭, 🇯🇵, 🇨🇳
                 <br />
-                Europe (2): 🇫🇷, 🇪🇸
+                Europe (2): 🇫🇷, 🇪🇸, 🇮🇹
               </p>
               <div
                 style={{
