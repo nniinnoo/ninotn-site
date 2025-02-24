@@ -83,7 +83,6 @@ const About = () => {
                   <blockquote
                     style={{
                       marginLeft: "20px",
-                      fontStyle: "italic",
                       borderLeft: "4px solid #ccc",
                       paddingLeft: "16px",
                       textAlign: "justify",
@@ -235,7 +234,7 @@ const About = () => {
               <p>
                 Asia (7): 🇮🇩, 🇹🇱, 🇸🇬, 🇲🇾, 🇹🇭, 🇯🇵, 🇨🇳
                 <br />
-                Europe (2): 🇫🇷, 🇪🇸, 🇮🇹
+                Europe (3): 🇫🇷, 🇪🇸, 🇮🇹
               </p>
               <div
                 style={{
@@ -261,7 +260,6 @@ const About = () => {
               <blockquote
                 style={{
                   marginLeft: "20px",
-                  fontStyle: "italic",
                   borderLeft: "4px solid #ccc",
                   paddingLeft: "16px",
                   textAlign: "justify",
@@ -679,31 +677,36 @@ const About = () => {
               <h1>Credit</h1>
               <div>
                 <p>
-                  Title font : Fira Sans-serif by{" "}
+                  Title font :
+                  <ul>
+                    <li>
+                      Fira Sans-serif by{" "}
+                      <a
+                        target="_blank"
+                        href="https://en.wikipedia.org/wiki/Erik_Spiekermann"
+                        rel="noreferrer"
+                      >
+                        Erik Spiekermann
+                      </a>
+                    </li>
+                    <li>
+                      29LT Ada by{" "}
+                      <a
+                        target="_blank"
+                        href="https://tosche.net/fonts"
+                        rel="noreferrer"
+                      >
+                        Toshi Omagari
+                      </a>
+                    </li>
+                  </ul>
+                  Text font : Atkinson Mono by{" "}
                   <a
                     target="_blank"
-                    href="https://en.wikipedia.org/wiki/Erik_Spiekermann"
+                    href="https://www.brailleinstitute.org/freefont/"
                     rel="noreferrer"
                   >
-                    Erik Spiekermann
-                  </a>
-                  {", "}
-                  29LT Ada by{" "}
-                  <a
-                    target="_blank"
-                    href="https://tosche.net/fonts"
-                    rel="noreferrer"
-                  >
-                    Toshi Omagari
-                  </a>
-                  <br />
-                  Text font : Klee-one by{" "}
-                  <a
-                    target="_blank"
-                    href="https://fonts.google.com/?query=Fontworks+Inc."
-                    rel="noreferrer"
-                  >
-                    Fontworks
+                    Braille Institute
                   </a>
                   <br />
                   <p>

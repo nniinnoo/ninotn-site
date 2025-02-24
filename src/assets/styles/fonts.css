@@ -1,6 +1,104 @@
 /* Font files are downloaded from Google Fonts */
 
 
+/* === Atkinson Mono === */
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-BoldItalic.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-ExtraBoldItalic.ttf) format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-ExtraLight.ttf) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-ExtraLightItalic.ttf) format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-LightItalic.ttf) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-MediumItalic.ttf) format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-RegularItalic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+
 /* === KLEE === */
 /* ============ */
 @font-face {
