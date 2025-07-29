@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Corpus from "@components/Corpus";
 import SearchIcon from "@mui/icons-material/SailingRounded";
 
-const Search = () => {
+function Search() {
   // const { location } = useLocation();
   // const search = new URLSearchParams(location).get("");
   const searchRef = useRef(null);
@@ -39,7 +39,7 @@ const Search = () => {
   const results = useFlexSearch(
     query,
     localSearchPages.index,
-    localSearchPages.store
+    localSearchPages.store,
   );
 
   return (
@@ -72,6 +72,6 @@ const Search = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Search;

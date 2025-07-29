@@ -4,7 +4,7 @@ import Layout from "@components/Layout";
 import SEO from "@components/SEO";
 import SocialMedia from "@components/SocialMedia";
 
-const Contact = () => {
+function Contact() {
   return (
     <>
       <SEO />
@@ -49,6 +49,6 @@ const Contact = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default Contact;

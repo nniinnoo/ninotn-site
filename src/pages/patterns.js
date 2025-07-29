@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Layout from "@components/Layout";
 import SEO from "@components/SEO";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import Masonry from "react-masonry-css";
 import crousMousse from "../../content/patterns/crous-mousse.jpg";
 import laPetitPrince from "../../content/patterns/la-petite-prince-collection.jpg";
@@ -10,7 +10,7 @@ import laRoseTheTunis from "../../content/patterns/la-rose-the-tunis-golden-rati
 import treeShadow from "../../content/patterns/tree-shadow.jpg";
 import theRoofHolder from "../../content/patterns/the-roof-holders.jpg";
 
-const Patterns = () => {
+function Patterns() {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
@@ -123,28 +123,21 @@ const Patterns = () => {
             ))}
           </Masonry>
         </div>
-        {isOpen && (
-          <Lightbox
-            mainSrc={patterns[photoIndex].image}
-            nextSrc={patterns[(photoIndex + 1) % patterns.length].image}
-            prevSrc={
-              patterns[(photoIndex + patterns.length - 1) % patterns.length]
-                .image
-            }
-            onCloseRequest={() => setIsOpen(false)}
-            onMovePrevRequest={() =>
-              setPhotoIndex(
-                (photoIndex + patterns.length - 1) % patterns.length
-              )
-            }
-            onMoveNextRequest={() =>
-              setPhotoIndex((photoIndex + 1) % patterns.length)
-            }
-          />
-        )}
+        <Lightbox
+          open={isOpen}
+          close={() => setIsOpen(false)}
+          slides={patterns.map((pattern) => ({
+            src: pattern.image,
+            alt: pattern.description,
+          }))}
+          index={photoIndex}
+          on={{
+            view: ({ index }) => setPhotoIndex(index),
+          }}
+        />
       </Layout>
     </>
   );
-};
+}
 
 export default Patterns;

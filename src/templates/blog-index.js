@@ -12,7 +12,7 @@ import Pagination from "@components/Pagination";
 // import Filter from "@components/Filter";
 import SEO from "@components/SEO";
 
-const BlogIndex = ({ data, pageContext }) => {
+function BlogIndex({ data, pageContext }) {
   const posts = data.allMarkdownRemark;
 
   const { currentPage, pageCount } = pageContext;
@@ -73,7 +73,7 @@ const BlogIndex = ({ data, pageContext }) => {
                         </div>
                       </Link>
                     </div>
-                  )
+                  ),
               )}
             </div>
             <Pagination pageCount={pageCount} currentPage={currentPage} />
@@ -87,7 +87,7 @@ const BlogIndex = ({ data, pageContext }) => {
       </Layout>
     </>
   );
-};
+}
 
 BlogIndex.propTypes = {
   data: PropTypes.objectOf(PropTypes),

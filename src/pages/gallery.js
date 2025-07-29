@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "@components/Layout";
 import ArrowRightIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
@@ -6,7 +6,7 @@ import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import imgList from "@assets/general-files/image-list";
 import SEO from "@components/SEO";
 
-const Gallery = () => {
+function Gallery() {
   const imgTotal = imgList.length - 1;
   const [imgIndex, setImgIndex] = useState(1);
 
@@ -22,41 +22,72 @@ const Gallery = () => {
     }
   };
 
+  // Add keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowLeft") {
+        setPrevImg();
+      } else if (event.key === "ArrowRight") {
+        setNextImg();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [imgIndex, imgTotal]);
+
   return (
     <>
       <SEO />
       <Layout>
         <div className="gallery__container">
           <div className="gallery__content">
-            <img alt="#" quality={100} src={imgList[imgIndex].url} />
+            <img
+              alt={imgList[imgIndex].caption || `Gallery image ${imgIndex}`}
+              src={imgList[imgIndex].url}
+            />
             <div>
               <figcaption>{imgList[imgIndex].caption}</figcaption>
               <div className="gallery__skip">
-                <div
+                <button
+                  type="button"
                   className={
                     imgIndex > 1
                       ? "gallery__prev-active"
                       : "gallery__prev-inactive"
                   }
                   onClick={setPrevImg}
-                  aria-hidden="true"
+                  disabled={imgIndex <= 1}
+                  aria-label="Previous image"
+                  style={{
+                    background: "transparent",
+                    border: "none",
+                    cursor: imgIndex > 1 ? "pointer" : "not-allowed",
+                  }}
                 >
                   <ArrowLeftIcon />
-                </div>
+                </button>
                 <p>
                   {imgIndex} | {imgTotal}
                 </p>
-                <div
+                <button
+                  type="button"
                   className={
                     imgIndex < imgTotal
                       ? "gallery__next-active"
                       : "gallery__next-inactive"
                   }
                   onClick={setNextImg}
-                  aria-hidden="true"
+                  disabled={imgIndex >= imgTotal}
+                  aria-label="Next image"
+                  style={{
+                    background: "transparent",
+                    border: "none",
+                    cursor: imgIndex < imgTotal ? "pointer" : "not-allowed",
+                  }}
                 >
                   <ArrowRightIcon />
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -64,6 +95,6 @@ const Gallery = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default Gallery;

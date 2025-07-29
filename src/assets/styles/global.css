@@ -130,6 +130,47 @@ a:hover {
   font-weight: 800;
 }
 
+/* ===== Focus Indicators ===== */
+/* ============================= */
+
+/* Focus styles for keyboard navigation only (not mouse clicks) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #9f3466;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Remove default outline for mouse clicks */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+[tabindex]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Enhanced focus for theme toggle button (keyboard only) */
+.nav__left button:focus-visible {
+  outline: 2px solid #9f3466;
+  outline-offset: 3px;
+}
+
+/* Focus styles for navigation links (keyboard only) */
+.nav__right a:focus-visible {
+  outline: 2px solid #9f3466;
+  outline-offset: 2px;
+  background: var(--hover-2);
+}
+
+/* Focus styles for gallery navigation buttons (keyboard only) */
+.gallery__next-active:focus-visible .MuiSvgIcon-root,
+.gallery__prev-active:focus-visible .MuiSvgIcon-root {
+  outline: 2px solid #9f3466;
+  outline-offset: 2px;
+}
+
 h1,
 h2 {
   font-family: var(--font-family-title);

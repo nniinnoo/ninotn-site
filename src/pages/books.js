@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "@components/Layout";
 import SEO from "@components/SEO";
 
-const Books = () => {
+function Books() {
   const books = [
     {
       title: "The Old Man and the Sea",
@@ -276,6 +276,6 @@ const Books = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default Books;

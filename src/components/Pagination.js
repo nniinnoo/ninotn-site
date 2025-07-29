@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import ArrowRightIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 
-const Pagination = ({ currentPage, pageCount }) => {
+function Pagination({ currentPage, pageCount }) {
   return (
     <div className="pagination">
       <div className="pagination__prev">
@@ -38,7 +38,7 @@ const Pagination = ({ currentPage, pageCount }) => {
       </div>
     </div>
   );
-};
+}
 
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,

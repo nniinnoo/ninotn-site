@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
-const Corpus = ({ data = [], query }) => {
+function Corpus({ data = [], query }) {
   const contentByYear = useMemo(() => {
     const collection = {};
     if (query) {
@@ -24,14 +24,14 @@ const Corpus = ({ data = [], query }) => {
 
   const yearArr = useMemo(
     () => Object.keys(contentByYear).reverse(),
-    [contentByYear]
+    [contentByYear],
   );
 
   const highlightWords = (words) => {
     if (query) {
       const regex = new RegExp(
         query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-        "i"
+        "i",
       );
       const highlightStartIndex = words.search(regex);
 
@@ -64,7 +64,7 @@ const Corpus = ({ data = [], query }) => {
       ))}
     </div>
   );
-};
+}
 
 Corpus.propTypes = {
   data: PropTypes.arrayOf,

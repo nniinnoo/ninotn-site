@@ -5,18 +5,40 @@ import { Link } from "gatsby";
 import FireOn from "../assets/firemaking.png";
 import FireOff from "../assets/firesmoke.png";
 
-const Nav = ({ onUpdateTheme, theme }) => {
+function Nav({ onUpdateTheme, theme }) {
   return (
     <div className="navbar">
       <div className="navbar__container">
         <div className="nav__left">
-          <div
-            style={{ paddingRight: "6px" }}
+          <button
+            type="button"
+            style={{
+              paddingRight: "6px",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              padding: "4px",
+            }}
             onClick={onUpdateTheme}
-            aria-hidden="true"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onUpdateTheme();
+              }
+            }}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
-            <img alt="#" src={theme === "dark" ? FireOn : FireOff} width={70} />
-          </div>
+            <img
+              alt={
+                theme === "dark"
+                  ? "Fire lit - dark mode active"
+                  : "Fire unlit - light mode active"
+              }
+              src={theme === "dark" ? FireOn : FireOff}
+              width={70}
+            />
+          </button>
           <Link to="/">
             <div>
               <h1>forbidden fruit</h1>
@@ -38,7 +60,7 @@ const Nav = ({ onUpdateTheme, theme }) => {
       </div>
     </div>
   );
-};
+}
 
 Nav.propTypes = {
   onUpdateTheme: PropTypes.func.isRequired,

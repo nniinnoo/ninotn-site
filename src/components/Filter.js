@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DropDownIcon from "@mui/icons-material/ArrowDropDown";
 
-const Filter = () => {
+function Filter() {
   const [sortIndex, setSortindex] = useState(0);
   const sortType = ["Newest", "Oldest"];
 
@@ -41,6 +41,6 @@ const Filter = () => {
       </div>
     </>
   );
-};
+}
 
 export default Filter;

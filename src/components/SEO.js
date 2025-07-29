@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 
-const SEO = ({ postTitle, postSlug, postSEO, customDescription }) => {
+function SEO({ postTitle, postSlug, postSEO, customDescription }) {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -63,7 +63,7 @@ const SEO = ({ postTitle, postSlug, postSEO, customDescription }) => {
           url: siteLogo,
         },
         description: customDescription || description,
-      }
+      },
     );
   }
 
@@ -83,7 +83,7 @@ const SEO = ({ postTitle, postSlug, postSEO, customDescription }) => {
       <meta property="og:image" content={siteLogo} />
     </Helmet>
   );
-};
+}
 
 SEO.defaultProps = {
   postTitle: "",

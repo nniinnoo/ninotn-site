@@ -23,7 +23,7 @@ const data = [
   { country: "it", value: ": 1x" },
 ];
 
-const About = () => {
+function About() {
   const [mapSize, setMapSize] = useState("md");
 
   useEffect(() => {
@@ -187,7 +187,7 @@ const About = () => {
               <h1>About Me</h1>
               <div className="about__me">
                 <img
-                  alt="#"
+                  alt="Profile of Nino Tannio"
                   src={profilePic}
                   style={{
                     width: "100%",
@@ -720,7 +720,7 @@ const About = () => {
                     </a>
                   </p>
                   <StaticImage
-                    alt="#"
+                    alt="Moonlit Night 1878 painting by Ivan Aivazovsky"
                     quality={100}
                     src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
                     style={{
@@ -736,6 +736,6 @@ const About = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default About;

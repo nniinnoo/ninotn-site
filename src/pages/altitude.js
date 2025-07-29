@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import SEO from "@components/SEO";
 
-const Altitudes = () => {
+function Altitudes() {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -44,6 +44,6 @@ const Altitudes = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default Altitudes;

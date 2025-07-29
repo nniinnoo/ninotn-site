@@ -7,7 +7,7 @@ import SEO from "@components/SEO";
 
 import "@assets/styles/global.css";
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
   const [theme, setTheme] = useState("light");
   const windowGlobal = typeof window !== "undefined" && window;
 
@@ -56,7 +56,7 @@ const Layout = ({ children }) => {
       <Footer />
     </>
   );
-};
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

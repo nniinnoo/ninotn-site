@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import SEO from "@components/SEO";
 
-const Fragments = () => {
+function Fragments() {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -44,6 +44,6 @@ const Fragments = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default Fragments;

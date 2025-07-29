@@ -4,7 +4,7 @@ import Search from "@components/Search";
 
 import SEO from "@components/SEO";
 
-const Archive = () => {
+function Archive() {
   return (
     <>
       <SEO />
@@ -15,6 +15,6 @@ const Archive = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default Archive;

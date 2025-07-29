@@ -2,7 +2,7 @@ import React from "react";
 
 import SocialMedia from "@components/SocialMedia";
 
-const Footer = () => {
+function Footer() {
   return (
     <div className="footer">
       <div className="footer__left">
@@ -13,6 +13,6 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Footer;

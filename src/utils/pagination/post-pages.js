@@ -27,7 +27,7 @@ module.exports = async (graphql, actions) => {
   `);
 
   const pageCount = Math.ceil(
-    result.data.allMarkdownRemark.totalCount / postPerPage
+    result.data.allMarkdownRemark.totalCount / postPerPage,
   );
 
   for (let i = 0; i < pageCount; i += 1) {
