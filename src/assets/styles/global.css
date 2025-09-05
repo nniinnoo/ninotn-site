@@ -928,6 +928,103 @@ blockquote {
   background-color: rgba(153, 151, 151, 0.247) !important;
 }
 
+/* === Sidebar === */
+/* ================ */
+
+.sidebar-toggle {
+  position: fixed;
+  top: var(--px20);
+  left: var(--px20);
+  z-index: 1001;
+  background: var(--bg-2);
+  border: 1px solid var(--subtle-dark-1);
+  border-radius: var(--px6);
+  padding: var(--px8);
+  cursor: pointer;
+  color: var(--dark-1);
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px var(--subtle-dark-2);
+}
+
+.sidebar-toggle:hover {
+  background: var(--hover-1);
+  transform: translateY(-1px);
+}
+
+.sidebar-toggle:focus-visible {
+  outline: 2px solid #9f3466;
+  outline-offset: 2px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background: var(--bg);
+  border-right: 1px solid var(--subtle-dark-1);
+  z-index: 1000;
+  transition: left 0.3s ease;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-open {
+  left: 0;
+}
+
+.sidebar-content {
+  padding: var(--px24);
+  padding-top: calc(var(--px24) + 60px); /* Account for toggle button */
+}
+
+.sidebar-content h3 {
+  font-family: var(--font-family-title);
+  font-size: var(--px24);
+  font-weight: 900;
+  color: var(--dark-1);
+  margin-bottom: var(--px20);
+}
+
+.sidebar-section {
+  margin-bottom: var(--px24);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: var(--px12);
+  padding: var(--px12);
+  margin-bottom: var(--px8);
+  color: var(--dark-1);
+  text-decoration: none;
+  border-radius: var(--px6);
+  transition: background-color 0.2s ease;
+  font-family: var(--font-family-text);
+  font-size: var(--px16);
+}
+
+.sidebar-link:hover {
+  background: var(--hover-1);
+  text-decoration: none;
+}
+
+.sidebar-link:focus-visible {
+  outline: 2px solid #9f3466;
+  outline-offset: 2px;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  cursor: pointer;
+}
+
 /* ===Media Query=== */
 /* ================= */
 
