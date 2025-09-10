@@ -95,11 +95,11 @@ function About() {
                     order and laws of number, to kiss the sun and steal the ring
                     of Saturn, to fill the cosmos with our everlasting dreams,
                     until we lost again in search of ourselves. “Eat the fruit
-                    slowly, bit by bit, digest it and you will understand," said
-                    the snake. Then I fall, flooded with a lot of pain and
-                    suffering. "Cross that border, go away to a place beyond
-                    your intuition, and never give up," the snake repeated. "Who
-                    are you?" I asked. "I am, your curiosity".
+                    slowly, bit by bit and you will understand," said the snake.
+                    Then I fall, flooded with a lot of pain and suffering.
+                    "Cross that border, go away to a place beyond your
+                    intuition, and never give up," the snake repeated. "Who are
+                    you?" I asked. "I am, your curiosity".
                   </blockquote>
                 </p>
               </p>
