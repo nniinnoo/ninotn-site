@@ -17,15 +17,15 @@ export default function Projects() {
     return undefined;
   }, [selectedProject]);
 
-  const projects = [
+   const projects = [
     {
       id: "fractiles",
       title: "Fractiles",
       description:
-        "Inspired by 2048, but with fractions. Four difficulty levels, from simple addition to complex equivalents.",
+        "Featuring 2048 Fractions (sliding puzzle with math), Mix Match (memory-based equivalents), and Foey de Foey (fast-paced leaf catching). ",
       icon: fractilesIcon,
       status: "Mobile App Live",
-      technologies: ["React Native", "TypeScript"],
+      technologies: ["React Native", "TypeScript", "Expo"],
       links: {
         privacy: "/fractiles-privacy-policy.html",
         appStore: "#",
