@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import Layout from "@components/Layout";
 import SEO from "@components/SEO";
 import fractilesIcon from "../assets/project-icons/fractiles-icon.png";
+import fractilesScreenshot1 from "../assets/fractile_ss1.png";
+import fractilesScreenshot2 from "../assets/fractile_ss2.png";
+import fractilesScreenshot3 from "../assets/fractile_ss3.png";
+import fractilesScreenshot4 from "../assets/fractile_ss4.png";
+import fractilesScreenshot5 from "../assets/fractile_ss5.png";
+import fractilesScreenshot6 from "../assets/fractile_ss6.png";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -17,7 +23,7 @@ export default function Projects() {
     return undefined;
   }, [selectedProject]);
 
-   const projects = [
+  const projects = [
     {
       id: "fractiles",
       title: "Fractiles",
@@ -26,13 +32,32 @@ export default function Projects() {
       icon: fractilesIcon,
       status: "Mobile App Live",
       technologies: ["React Native", "TypeScript", "Expo"],
+      screenshots: [
+        fractilesScreenshot1,
+        fractilesScreenshot2,
+        fractilesScreenshot3,
+        fractilesScreenshot4,
+        fractilesScreenshot5,
+        fractilesScreenshot6,
+      ],
       links: {
         privacy: "/fractiles-privacy-policy.html",
-        appStore: "#",
-        playStore: "#",
+        appStore: "https://apps.apple.com/fr/app/fractiles/id6751944887?l=en-GB",
+        playStore: "https://play.google.com/store/apps/details?id=com.wonderkid.fractiles",
       },
     },
   ];
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectParam = urlParams.get('project');
+    if (projectParam) {
+      const project = projects.find(p => p.id === projectParam);
+      if (project) {
+        setSelectedProject(project);
+      }
+    }
+  }, []);
 
   const projectCardStyles = {
     container: {
@@ -349,43 +374,119 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div>
+              <div style={{ marginBottom: "1.5rem" }}>
                 <h4
                   style={{
                     color: "var(--dark-1)",
                     marginBottom: "1rem",
                   }}
                 >
-                  Links:
+                  Download:
+                </h4>
+                <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+                  {selectedProject.links.appStore !== "#" && (
+                    <a
+                      href={selectedProject.links.appStore}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        ...modalStyles.linkButton,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                      }}
+                    >
+                      <span style={{ fontSize: "1.2rem" }}>🍎</span>
+                      iOS - App Store
+                    </a>
+                  )}
+                  {selectedProject.links.playStore !== "#" && (
+                    <a
+                      href={selectedProject.links.playStore}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        ...modalStyles.linkButton,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                      }}
+                    >
+                      <span style={{ fontSize: "1.2rem" }}>🤖</span>
+                      Android - Play Store
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              {selectedProject.screenshots && (
+                <div style={{ marginBottom: "1.5rem" }}>
+                  <h4
+                    style={{
+                      color: "var(--dark-1)",
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    Screenshots:
+                  </h4>
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+                      gap: "0.75rem",
+                      maxHeight: "300px",
+                      overflowY: "auto",
+                    }}
+                  >
+                    {selectedProject.screenshots.map((screenshot, index) => (
+                      <img
+                        key={index}
+                        src={screenshot}
+                        alt={`${selectedProject.title} screenshot ${index + 1}`}
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          borderRadius: "8px",
+                          border: "1px solid var(--subtle-dark-1)",
+                          cursor: "pointer",
+                          transition: "transform 0.2s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.transform = "scale(1.05)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.transform = "scale(1)";
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div>
+                <h4
+                  style={{
+                    color: "var(--dark-1)",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Legal:
                 </h4>
                 <a
                   href={selectedProject.links.privacy}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={modalStyles.linkButton}
+                  style={{
+                    ...modalStyles.linkButton,
+                    background: "transparent",
+                    color: "var(--dark-1)",
+                    border: "1px solid var(--subtle-dark-1)",
+                    padding: "0.5rem 1rem",
+                    fontSize: "0.9rem",
+                  }}
                 >
                   Privacy Policy
                 </a>
-                {selectedProject.links.appStore !== "#" && (
-                  <a
-                    href={selectedProject.links.appStore}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={modalStyles.linkButton}
-                  >
-                    App Store
-                  </a>
-                )}
-                {selectedProject.links.playStore !== "#" && (
-                  <a
-                    href={selectedProject.links.playStore}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={modalStyles.linkButton}
-                  >
-                    Play Store
-                  </a>
-                )}
               </div>
             </div>
           </>
