@@ -2,12 +2,23 @@ import React, { useState, useEffect } from "react";
 import Layout from "@components/Layout";
 import SEO from "@components/SEO";
 import fractilesIcon from "../assets/project-icons/fractiles-icon.png";
+import flashbackIcon from "../assets/project-icons/flashback-icon.png";
+import virvoileIcon from "../assets/project-icons/virvoile-icon.png";
+import oishiKenkoIcon from "../assets/project-icons/oishi-kenko.png";
+import foreIcon from "../assets/project-icons/fore-icon.png";
+import kompitIcon from "../assets/project-icons/kompit-icon.png";
 import fractilesScreenshot1 from "../assets/fractile_ss1.png";
 import fractilesScreenshot2 from "../assets/fractile_ss2.png";
 import fractilesScreenshot3 from "../assets/fractile_ss3.png";
 import fractilesScreenshot4 from "../assets/fractile_ss4.png";
 import fractilesScreenshot5 from "../assets/fractile_ss5.png";
 import fractilesScreenshot6 from "../assets/fractile_ss6.png";
+import oishiScreenshot1 from "../assets/project-icons/oishi-1.png";
+import oishiScreenshot2 from "../assets/project-icons/oishi-2.png";
+import oishiScreenshot3 from "../assets/project-icons/oishi-3.png";
+import kompitScreenshot1 from "../assets/project-icons/kompit-1.png";
+import kompitScreenshot2 from "../assets/project-icons/kompit-2.png";
+import kompitScreenshot3 from "../assets/project-icons/kompit-3.png";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -25,12 +36,29 @@ export default function Projects() {
 
   const projects = [
     {
+      id: "flashback",
+      title: "Flashback",
+      description:
+        "An analog camera app with vintage filters and film grain effects.",
+      icon: flashbackIcon,
+      status: "Coming Soon",
+      releaseDate: "TBA",
+      technologies: [],
+      screenshots: [],
+      links: {
+        privacy: "",
+        appStore: "#",
+        playStore: "#",
+      },
+    },
+    {
       id: "fractiles",
       title: "Fractiles",
       description:
-        "Featuring 2048 Fractions (sliding puzzle with math), Mix Match (memory-based equivalents), and Foey de Foey (fast-paced leaf catching). ",
+        "Featuring 2048 Fractions, Mix Match (fractions equivalents), and Foey de Foey (fast-paced leaf catching). ",
       icon: fractilesIcon,
       status: "Mobile App Live",
+      releaseDate: "17.09.2025",
       technologies: ["React Native", "TypeScript", "Expo"],
       screenshots: [
         fractilesScreenshot1,
@@ -44,6 +72,82 @@ export default function Projects() {
         privacy: "/fractiles-privacy-policy.html",
         appStore: "https://apps.apple.com/fr/app/fractiles/id6751944887?l=en-GB",
         playStore: "https://play.google.com/store/apps/details?id=com.wonderkid.fractiles",
+      },
+    },
+    {
+      id: "kompit",
+      title: "Kompit",
+      description:
+        "SuperApp for sports and competition management with score controller, ELO rating, match pairing, and statistical modeling.",
+      icon: kompitIcon,
+      status: "Senior Mobile Dev",
+      releaseDate: "02.02.2024",
+      technologies: ["iOS", "Android", "Web"],
+      screenshots: [
+        kompitScreenshot1,
+        kompitScreenshot2,
+        kompitScreenshot3,
+      ],
+      links: {
+        privacy: "",
+        appStore: "https://apps.apple.com/id/app/kompit/id6462844908",
+        playStore: "https://play.google.com/store/apps/details?id=com.kompit.android&pcampaignid=web_share",
+      },
+    },
+    {
+      id: "virvoile",
+      title: "Simulateur VirVoile",
+      description:
+        "A 3D sailing simulator with realistic physics, weather dynamics, and multiple vessel types.",
+      icon: virvoileIcon,
+      status: "Team Project",
+      releaseDate: "",
+      technologies: ["Unity", "C#"],
+      screenshots: [],
+      videos: [
+        "https://drive.google.com/file/d/1cUHW1uqwuc61-D3ZmcrQuqZfznHVMi51/preview",
+        "https://drive.google.com/file/d/1yK8yWbcr9I192H3KUxToa7M0W_N2o6SG/preview"
+      ],
+      links: {
+        privacy: "",
+        appStore: "#",
+        playStore: "#",
+      },
+    },
+    {
+      id: "oishi-kenko",
+      title: "Oishi-Kenko",
+      description:
+        "A health-focused meal planning app with personalized recipes for managing dietary conditions.",
+      icon: oishiKenkoIcon,
+      status: "Initial Prototype",
+      releaseDate: "",
+      technologies: ["Kotlin", "Android"],
+      screenshots: [
+        oishiScreenshot1,
+        oishiScreenshot2,
+        oishiScreenshot3,
+      ],
+      links: {
+        privacy: "",
+        appStore: "#",
+        playStore: "https://play.google.com/store/apps/details?id=com.oishikenko.android.kenko",
+      },
+    },
+    {
+      id: "fore-coffee",
+      title: "Fore Coffee",
+      description:
+        "Indonesia's leading coffee chain app for mobile ordering and seamless cafe experience.",
+      icon: foreIcon,
+      status: "First Developer",
+      releaseDate: "12.10.2018",
+      technologies: ["iOS", "Android"],
+      screenshots: [],
+      links: {
+        privacy: "",
+        appStore: "https://apps.apple.com/id/app/fore-coffee/id1438745141?l=id",
+        playStore: "https://play.google.com/store/search?q=fore%20coffee&c=apps&hl=en-ID",
       },
     },
   ];
@@ -62,7 +166,7 @@ export default function Projects() {
   const projectCardStyles = {
     container: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 320px))",
+      gridTemplateColumns: "repeat(auto-fit, minmax(320px, 380px))",
       gap: "1.5rem",
       maxWidth: "1000px",
       margin: "2rem auto",
@@ -70,13 +174,16 @@ export default function Projects() {
       justifyContent: "center",
     },
     card: {
-      background: "transparent",
+      background: "var(--bg-2)",
       border: "1px solid var(--subtle-dark-1)",
       borderRadius: "6px",
       padding: "1.25rem",
       cursor: "pointer",
       transition: "all 0.3s ease",
       boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 10px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
     },
     cardHover: {
       transform: "translateY(-2px)",
@@ -85,12 +192,12 @@ export default function Projects() {
     header: {
       display: "flex",
       alignItems: "center",
-      marginBottom: "0.75rem",
+      marginBottom: "0.5rem",
     },
     icon: {
-      width: "56px",
-      height: "56px",
-      marginRight: "0.75rem",
+      width: "100px",
+      height: "100px",
+      marginRight: "1rem",
       borderRadius: "6px",
       flexShrink: 0,
       background: "transparent",
@@ -114,6 +221,7 @@ export default function Projects() {
       gap: "0.5rem",
       flexWrap: "wrap",
       marginBottom: "0.5rem",
+      justifyContent: "flex-end",
     },
     badge: {
       background: "transparent",
@@ -153,10 +261,12 @@ export default function Projects() {
       background: "var(--bg)",
       borderRadius: "12px",
       padding: "2rem",
-      maxWidth: "500px",
+      maxWidth: "1200px",
       width: "100%",
-      maxHeight: "80vh",
+      maxHeight: "90vh",
       overflow: "auto",
+      scrollbarWidth: "none",
+      msOverflowStyle: "none",
       border: "1px solid var(--subtle-dark-1)",
       boxShadow: "rgba(0, 0, 0, 0.3) 0px 8px 32px",
     },
@@ -235,36 +345,69 @@ export default function Projects() {
                 onMouseLeave={(e) => {
                   const card = e.currentTarget;
                   card.style.transform = "translateY(0)";
-                  card.style.background = "transparent";
+                  card.style.background = "var(--bg-2)";
                 }}
               >
                 <div style={{
                   ...projectCardStyles.header,
-                  alignItems: "center",
+                  alignItems: "flex-start",
                 }}>
                   <img
                     src={project.icon}
                     alt={`${project.title} icon`}
                     style={projectCardStyles.icon}
                   />
-                  <h3 style={{
-                    ...projectCardStyles.title,
-                    fontSize: "2.2rem",
-                    margin: 0,
-                    marginLeft: "0.5rem",
-                    display: "flex",
-                    alignItems: "center",
-                  }}>{project.title}</h3>
+                  <div>
+                    <h3 style={{
+                      ...projectCardStyles.title,
+                      fontSize: "2.2rem",
+                      margin: 0,
+                      marginBottom: "0",
+                      lineHeight: "1",
+                    }}>{project.title}</h3>
+                    <p style={{
+                      ...projectCardStyles.description,
+                      margin: 0,
+                    }}>
+                      {project.description}
+                    </p>
+                  </div>
                 </div>
-                <p style={projectCardStyles.description}>
-                  {project.description}
-                </p>
-                <div style={projectCardStyles.meta}>
-                  <span style={projectCardStyles.badge}>iOS</span>
-                  <span style={projectCardStyles.badge}>Android</span>
-                  <span style={projectCardStyles.statusBadge}>
-                    {project.status}
-                  </span>
+                <div style={{...projectCardStyles.meta, marginTop: "auto", paddingTop: "1rem"}}>
+                  {project.id === "virvoile" ? (
+                    <>
+                      <span style={projectCardStyles.badge}>Desktop</span>
+                      <span style={projectCardStyles.badge}>Unity</span>
+                      <span style={projectCardStyles.badge}>{project.status}</span>
+                    </>
+                  ) : project.id === "oishi-kenko" ? (
+                    <>
+                      <span style={projectCardStyles.badge}>Android</span>
+                      <span style={projectCardStyles.badge}>Kotlin</span>
+                      <span style={projectCardStyles.badge}>{project.status}</span>
+                    </>
+                  ) : project.id === "fore-coffee" ? (
+                    <>
+                      <span style={projectCardStyles.badge}>iOS</span>
+                      <span style={projectCardStyles.badge}>Android</span>
+                      <span style={projectCardStyles.badge}>Released {project.releaseDate}</span>
+                    </>
+                  ) : project.id === "kompit" ? (
+                    <>
+                      <span style={projectCardStyles.badge}>iOS</span>
+                      <span style={projectCardStyles.badge}>Android</span>
+                      <span style={projectCardStyles.badge}>Web</span>
+                      <span style={projectCardStyles.badge}>Released {project.releaseDate}</span>
+                    </>
+                  ) : (
+                    <>
+                      <span style={projectCardStyles.badge}>iOS</span>
+                      <span style={projectCardStyles.badge}>Android</span>
+                      {project.releaseDate && (
+                        <span style={projectCardStyles.badge}>Released {project.releaseDate}</span>
+                      )}
+                    </>
+                  )}
                 </div>
               </div>
             ))}
@@ -274,7 +417,10 @@ export default function Projects() {
         {/* Modal */}
         {selectedProject && (
           <>
-            <div style={modalStyles.overlay} />
+            <div
+              style={modalStyles.overlay}
+              onClick={() => setSelectedProject(null)}
+            />
             <div
               role="dialog"
               aria-modal="true"
@@ -285,7 +431,9 @@ export default function Projects() {
                 left: "50%",
                 transform: "translate(-50%, -50%)",
                 zIndex: 1001,
+                WebkitScrollbar: { display: "none" },
               }}
+              className="modal-no-scrollbar"
             >
               <button
                 type="button"
@@ -326,7 +474,7 @@ export default function Projects() {
                       lineHeight: 1.1,
                     }}
                   >
-                    Mobile App
+                    {selectedProject.id === "virvoile" ? "Desktop App" : "Mobile App"}
                   </p>
                 </div>
               </div>
@@ -342,84 +490,151 @@ export default function Projects() {
               </p>
 
               <div style={{ marginBottom: "1.5rem" }}>
-                <h4
+                <p
                   style={{
                     color: "var(--dark-1)",
                     marginBottom: "0.5rem",
                   }}
                 >
-                  Technologies:
-                </h4>
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "0.5rem",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  {selectedProject.technologies.map((tech) => (
-                    <span
-                      key={tech}
+                  {selectedProject.id === "virvoile" ? (
+                    <>
+                      <strong>Team Developer:</strong> Nino Tannio | <strong>Client:</strong> G.Lepinard | <strong>License:</strong> Closed Source
+                    </>
+                  ) : selectedProject.id === "oishi-kenko" ? (
+                    <>
+                      <strong>Contributor:</strong> Nino Tannio | <strong>Year:</strong> 2020 | <strong>License:</strong> Closed Source
+                    </>
+                  ) : selectedProject.id === "fore-coffee" ? (
+                    <>
+                      <strong>Developer:</strong> Nino Tannio (First Dev | Senior Dev | 2018-2020) | <strong>First Released:</strong> 12.10.2018
+                    </>
+                  ) : selectedProject.id === "kompit" ? (
+                    <>
+                      <strong>Developer:</strong> Nino Tannio (Senior Mobile Dev | Early Programmer) | <strong>First Released:</strong> 02.02.2024
+                    </>
+                  ) : (
+                    <>
+                      <strong>Developer:</strong> Nino Tannio | <strong>First Released:</strong> 17.09.2025
+                    </>
+                  )}
+                </p>
+              </div>
+
+              <div style={{ display: "flex", gap: "2rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
+                <div style={{ flex: "1", minWidth: "200px" }}>
+                  <h4
+                    style={{
+                      color: "var(--dark-1)",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Technologies:
+                  </h4>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "0.5rem",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    {selectedProject.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        style={{
+                          background: "var(--subtle-dark-1)",
+                          padding: "0.25rem 0.5rem",
+                          borderRadius: "4px",
+                          fontSize: "0.9rem",
+                          color: "var(--dark-1)",
+                        }}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {selectedProject.id !== "virvoile" && (
+                  <div style={{ flex: "1", minWidth: "200px" }}>
+                    <h4
                       style={{
-                        background: "var(--subtle-dark-1)",
-                        padding: "0.25rem 0.5rem",
-                        borderRadius: "4px",
-                        fontSize: "0.9rem",
                         color: "var(--dark-1)",
+                        marginBottom: "0.5rem",
                       }}
                     >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                      Download:
+                    </h4>
+                    <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+                      {selectedProject.links.appStore !== "#" && (
+                        <a
+                          href={selectedProject.links.appStore}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            ...modalStyles.linkButton,
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "0.5rem",
+                          }}
+                        >
+                          <span style={{ fontSize: "1.2rem" }}>🍎</span>
+                          iOS - App Store
+                        </a>
+                      )}
+                      {selectedProject.links.playStore !== "#" && (
+                        <a
+                          href={selectedProject.links.playStore}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            ...modalStyles.linkButton,
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "0.5rem",
+                          }}
+                        >
+                          <span style={{ fontSize: "1.2rem" }}>🤖</span>
+                          Android - Play Store
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
 
-              <div style={{ marginBottom: "1.5rem" }}>
-                <h4
-                  style={{
-                    color: "var(--dark-1)",
-                    marginBottom: "1rem",
-                  }}
-                >
-                  Download:
-                </h4>
-                <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                  {selectedProject.links.appStore !== "#" && (
-                    <a
-                      href={selectedProject.links.appStore}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        ...modalStyles.linkButton,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.5rem",
-                      }}
-                    >
-                      <span style={{ fontSize: "1.2rem" }}>🍎</span>
-                      iOS - App Store
-                    </a>
-                  )}
-                  {selectedProject.links.playStore !== "#" && (
-                    <a
-                      href={selectedProject.links.playStore}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        ...modalStyles.linkButton,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.5rem",
-                      }}
-                    >
-                      <span style={{ fontSize: "1.2rem" }}>🤖</span>
-                      Android - Play Store
-                    </a>
-                  )}
-                </div>
-              </div>
 
-              {selectedProject.screenshots && (
+              {selectedProject.videos && selectedProject.videos.length > 0 && (
+                <div style={{ marginBottom: "1.5rem" }}>
+                  <h4
+                    style={{
+                      color: "var(--dark-1)",
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    Demo Videos:
+                  </h4>
+                  <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+                    {selectedProject.videos.map((videoUrl, index) => (
+                      <iframe
+                        key={index}
+                        src={videoUrl}
+                        width="48%"
+                        height="300"
+                        style={{
+                          border: "none",
+                          borderRadius: "8px",
+                          minWidth: "400px",
+                          maxWidth: "500px",
+                        }}
+                        allow="autoplay"
+                        title={`${selectedProject.title} demo video ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {selectedProject.screenshots && selectedProject.screenshots.length > 0 && (
                 <div style={{ marginBottom: "1.5rem" }}>
                   <h4
                     style={{
@@ -445,7 +660,8 @@ export default function Projects() {
                         alt={`${selectedProject.title} screenshot ${index + 1}`}
                         style={{
                           width: "100%",
-                          height: "auto",
+                          height: selectedProject.id === "oishi-kenko" || selectedProject.id === "kompit" ? "300px" : "auto",
+                          objectFit: selectedProject.id === "oishi-kenko" || selectedProject.id === "kompit" ? "contain" : "cover",
                           borderRadius: "8px",
                           border: "1px solid var(--subtle-dark-1)",
                           cursor: "pointer",
@@ -463,31 +679,33 @@ export default function Projects() {
                 </div>
               )}
 
-              <div>
-                <h4
-                  style={{
-                    color: "var(--dark-1)",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Legal:
-                </h4>
-                <a
-                  href={selectedProject.links.privacy}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    ...modalStyles.linkButton,
-                    background: "transparent",
-                    color: "var(--dark-1)",
-                    border: "1px solid var(--subtle-dark-1)",
-                    padding: "0.5rem 1rem",
-                    fontSize: "0.9rem",
-                  }}
-                >
-                  Privacy Policy
-                </a>
-              </div>
+              {selectedProject.id !== "virvoile" && (
+                <div>
+                  <h4
+                    style={{
+                      color: "var(--dark-1)",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Legal:
+                  </h4>
+                  <a
+                    href={selectedProject.links.privacy}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      ...modalStyles.linkButton,
+                      background: "transparent",
+                      color: "var(--dark-1)",
+                      border: "1px solid var(--subtle-dark-1)",
+                      padding: "0.5rem 1rem",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    Privacy Policy
+                  </a>
+                </div>
+              )}
             </div>
           </>
         )}
