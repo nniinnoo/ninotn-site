@@ -514,7 +514,7 @@ export default function Projects() {
                     </>
                   ) : (
                     <>
-                      <strong>Developer:</strong> Nino Tannio | <strong>First Released:</strong> 17.09.2025
+                      <strong>Developer:</strong> Nino Tannio (Solo Dev) | <strong>First Released:</strong> 17.09.2025
                     </>
                   )}
                 </p>
