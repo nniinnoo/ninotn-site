@@ -1072,6 +1072,24 @@ blockquote {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+  }
+
+  .navbar::before {
+    content: "\"As for me, I am tormented with an everlasting itch for things remote. I love to sail forbidden seas, and land on barbarous coasts.\"" "\A" "― Moby-Dick";
+    white-space: pre-wrap;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(220, 220, 220, 0.85);
+    font-style: italic;
+    padding: 1rem;
   }
 
   .navbar__container,
