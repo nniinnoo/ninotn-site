@@ -33,8 +33,8 @@ function Contact() {
                       Download
                     </a>
                     <br />
-                    Fingerprint: 2911 B458 CD9D 53D3 E3BD E71E 99DA 379F 8E58
-                    01DD
+                    Fingerprint: 3325 08DE 53A2 9CF5 A0AE 2F91 8268 74F8 0881
+                    6BAB
                     <br />
                     Expiry: 10/04/2028
                   </code>
