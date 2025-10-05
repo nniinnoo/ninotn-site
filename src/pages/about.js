@@ -94,12 +94,12 @@ function About() {
                     unveil something powerful in every breath that obeys the
                     order and laws of number, to kiss the sun and steal the ring
                     of Saturn, to fill the cosmos with our everlasting dreams,
-                    until we lost again in search of ourselves. “Eat the fruit
-                    slowly, bit by bit and you will understand," said the snake.
-                    Then I fall, flooded with a lot of pain and suffering.
-                    "Cross that border, go away to a place beyond your
-                    intuition, and never give up," the snake repeated. "Who are
-                    you?" I asked. "I am, your curiosity".
+                    until we were lost again in search of ourselves. "Eat the
+                    fruit slowly, bit by bit and you will understand," said the
+                    snake. Then I fall, flooded with pain and suffering. "Cross
+                    that border, go away to a place beyond your intuition, and
+                    never give up," the snake repeated. "Who are you?" I asked.
+                    "I am, your curiosity".
                   </blockquote>
                 </p>
               </p>
@@ -180,7 +180,7 @@ function About() {
                 and thinking process, reflect on spontaneous firsthand
                 experiences, tell the story of how I felt towards stuff I've
                 read and heard, what I've discovered and what I'm working on;
-                and to share a sleepless dialogue in within.
+                and to share a sleepless dialogue within.
               </p>
             </div>
             <div>
@@ -344,9 +344,9 @@ function About() {
                   where I interacted with colleagues from different countries.
                   In an attempt to improve, I practiced monologues and used an
                   association technique to describe lists of pictures within a
-                  time limit. I'm still maintaning English to this day, and
-                  there are still so many intersting thing that I pick up when I
-                  read or heard something. Takeaways: To study grammar I
+                  time limit. I'm still maintaining English to this day, and
+                  there are still so many interesting things that I pick up when
+                  I read or hear something. Takeaways: To study grammar I
                   strongly recommend this book:{" "}
                   <a
                     target="_blank"
@@ -380,20 +380,17 @@ function About() {
                 >
                   Basic (A1 level). I attended public senior high school and
                   learned German for 2 years. If I had to pick one of my
-                  favorite class throughout my school years, it would be German.
+                  favorite classes throughout my school years, it would be German.
                   Not because it's easy, German is still impossible, too many
-                  arbitrary and complex grammar rules, but Frau Suzana made all
-                  of it unforgettable. What she taught us, was not just
-                  language, but enthusiasm and open mindedness. She literally
-                  made us sing, dance, and cry in class. She peacefully
-                  persuaded even the most timid or rebellious students to
-                  express their feelings towards people they liked or disliked,
-                  and reconcile differences. I didn't know if she had read too
-                  much Freud or Jung, but I felt like she was a psychologist in
-                  disguise. Back to the language, after high school I didn't
-                  maintain it for many years, until about pandemic era, I
-                  decided to keep in touch with German via Duolingo and Youtube
-                  channel like{" "}
+                  arbitrary and complex grammar rules, but Frau Suzana made the
+                  whole experience really unforgettable. It was not just a
+                  language class, but also psychology. The enthusiasm and open-mindedness, that's the quality that inspires me more from a
+                  teacher. She made us sing, dance, and cry in the class. She
+                  made everyone from the shyest to the most rebellious students express their
+                  feelings towards each other and reconcile differences. Back to
+                  the language, after high school I didn't maintain it for many
+                  years, until about pandemic era, I decided to keep in touch
+                  with German via Duolingo and Youtube channel like{" "}
                   <a href="https://www.youtube.com/@EasyGerman">Easy German</a>.
                   Since I have a few German friends, sometimes it's fun to try
                   to figure out what they're talking about with my limited
@@ -412,14 +409,14 @@ function About() {
                   about Fermat's Last Theorem in a Japanese manga. During high
                   school, I read Albert Camus's <i>The Stranger</i>. In
                   university, I watched many French movies and read more books
-                  by French writers. When I opened my science and math
-                  textbooks, they were filled with French names (Pascal,
-                  Laplace, Fourier, Lagrange, Cauchy, Descartes, Fermat and, so
-                  on). I even used Laplacian and Fourier transform in my thesis.
-                  All of these are potential catalysts, but the final triggers
-                  happened when there were 2 visiting professors from France in
-                  our lab, and my advisor asked me to assist them during their
-                  stay.
+                  by French writers during the pandemic. When I opened my science
+                  and math textbooks, they were filled with French names
+                  (Pascal, Laplace, Fourier, Lagrange, Cauchy, Descartes, Fermat
+                  and, so on). I even used Laplacian and Fourier transform in my
+                  thesis. All of these are potential catalysts, but the final
+                  triggers happened when there were 2 visiting professors from
+                  France in our lab, and my advisor asked me to assist them
+                  during their stay.
                 </p>
                 <p
                   style={{
@@ -433,7 +430,7 @@ function About() {
                   about his effort to read Marcel Proust's{" "}
                   <i>In Search of Lost Time</i> in the original French{" "}
                   <i>À la recherche du temps perdu</i>. "There was a feeling I
-                  can't describe when I read him in his own voice," said Eka.
+                  can't describe when I read him in his own language," said Eka.
                   That day, I determined to learn French. "I'm going to read
                   Camus in his own language" I said to myself. Since France is
                   not fully a phonetic language, I thought it would be better to
@@ -574,7 +571,8 @@ function About() {
               <h1>Gadgetery</h1>
               <p>
                 Laptop : Macbook Pro M3 Pro 2023, 14" <br />
-                Phone : iPhone 7 <br />
+                Phone : iPhone 5 (retired), iPhone 7 (retired), iPhone 13
+                <br />
                 eReading:{" "}
                 <a
                   target="_blank"
@@ -590,7 +588,7 @@ function About() {
                   href="https://www.sennheiser-hearing.com/fr-FR/p/cx-true-wireless/ckyadwwbs0eut0b446x5vb8yw/"
                   rel="noreferrer"
                 >
-                  Senheiser CX True Wireless
+                  <s>Senheiser CX True (broken)</s>, Nothing Ear (a)
                 </a>{" "}
                 <br />
                 Camera :{" "}

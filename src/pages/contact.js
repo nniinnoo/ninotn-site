@@ -27,16 +27,16 @@ function Contact() {
                   <code>
                     PGP Public Key:{" "}
                     <a
-                      href="/src/assets/general-files/me@ninotn.com-0xF867B33F6F9BD3FD-pub.asc"
+                      href="/me@ninotn.com-pgp-public-key.asc"
                       download
                     >
                       Download
                     </a>
                     <br />
-                    Fingerprint: CC33 6E13 0820 BB53 6D3B 62B4 F867 B33F 6F9B
-                    D3FD
+                    Fingerprint: 2911 B458 CD9D 53D3 E3BD E71E 99DA 379F 8E58
+                    01DD
                     <br />
-                    Expiry: 12/21/2023
+                    Expiry: 10/04/2028
                   </code>
                 </pre>
               </p>

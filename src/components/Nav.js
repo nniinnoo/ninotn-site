@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import { Link } from "gatsby";
@@ -6,6 +6,22 @@ import FireOn from "../assets/firemaking.png";
 import FireOff from "../assets/firesmoke.png";
 
 function Nav({ onUpdateTheme, theme }) {
+  useEffect(() => {
+    // Scroll to main content after navigation on mobile
+    const handleScroll = () => {
+      if (window.innerWidth <= 800 && window.location.pathname !== "/") {
+        const mainContent = document.querySelector("main");
+        if (mainContent) {
+          setTimeout(() => {
+            mainContent.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 100);
+        }
+      }
+    };
+
+    handleScroll();
+  }, []);
+
   return (
     <div className="navbar">
       <div className="navbar__container">
@@ -41,7 +57,7 @@ function Nav({ onUpdateTheme, theme }) {
           </button>
           <Link to="/">
             <div>
-              <h1>forbidden fruit</h1>
+              <h1>Rising Fire</h1>
               <h2>by Nino Tannio</h2>
             </div>
           </Link>

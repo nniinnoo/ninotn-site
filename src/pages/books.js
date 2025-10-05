@@ -34,7 +34,7 @@ function Books() {
     {
       title: "Sophie's World",
       author: "Jostein Gaarder",
-      image: "https://www.le-livre.fr/photos/RO6/RO60110169.jpg",
+      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1343459906i/10959.jpg",
     },
     {
       title: "On the Genealogy of Morals",
@@ -223,52 +223,101 @@ function Books() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            padding: "0 2rem",
+            marginBottom: "4rem",
           }}
         >
-          <h1 style={{ fontSize: "50px" }}>Library</h1>
-          <p style={{ marginTop: -60, fontSize: "20px" }}>
-            Books I've read and found worth recommending{" "}
+          <h1 style={{
+            fontSize: "3.5rem",
+            marginBottom: "1rem",
+            fontWeight: "900",
+            letterSpacing: "-0.02em",
+          }}>Library</h1>
+          <p style={{
+            fontSize: "1.25rem",
+            marginTop: "0",
+            color: "var(--subtle-dark-3)",
+            maxWidth: "600px",
+            textAlign: "center",
+            lineHeight: "1.5",
+          }}>
+            Books I've read and found worth recommending
           </p>
         </div>
         <div
           className="books__container"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            marginLeft: "100px",
-            marginRight: "100px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 240px))",
+            gap: "3.5rem 2.5rem",
+            marginLeft: "auto",
+            marginRight: "auto",
+            maxWidth: "1200px",
+            padding: "0 2rem 4rem",
+            justifyContent: "center",
           }}
         >
           {books.map((book) => (
             <div
               key={book.title}
               className="book__item"
-              style={{ lineHeight: "0", marginTop: "36px" }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                maxWidth: "100%",
+                transition: "transform 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-8px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
             >
               <img
                 src={book.image}
                 alt={book.title}
                 className="book__image"
                 style={{
-                  width: "280px",
-                  height: "400px",
-                  borderRadius: "6px",
+                  width: "100%",
+                  maxWidth: "240px",
+                  height: "auto",
+                  aspectRatio: "2/3",
+                  objectFit: "cover",
+                  borderRadius: "4px",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+                  margin: "0 auto",
                 }}
               />
-              <div style={{ marginTop: "24px" }}>
-                <h1
+              <div style={{
+                marginTop: "1.25rem",
+                width: "100%",
+                maxWidth: "240px",
+                margin: "1.25rem auto 0",
+                textAlign: "center",
+              }}>
+                <h2
                   className="book__title"
                   style={{
-                    maxWidth: "280px",
-                    textWrap: "wrap",
-                    lineHeight: "0.8",
+                    width: "100%",
+                    lineHeight: "1.25",
+                    fontSize: "1.15rem",
+                    marginBottom: "0.5rem",
+                    fontWeight: "700",
+                    fontFamily: "var(--font-family-title)",
                   }}
                 >
                   {book.title}
-                </h1>
-                <h3 className="book__author" style={{ marginTop: -10 }}>
+                </h2>
+                <p className="book__author" style={{
+                  marginTop: "0",
+                  fontSize: "0.95rem",
+                  fontWeight: "400",
+                  color: "var(--subtle-dark-3)",
+                  lineHeight: "1.4",
+                }}>
                   {book.author}
-                </h3>
+                </p>
               </div>
             </div>
           ))}

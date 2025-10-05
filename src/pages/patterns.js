@@ -49,21 +49,22 @@ function Patterns() {
       width: "70%",
     },
     masonryGridColumn: {
-      paddingLeft: "1px", // small padding to offset any gap
+      paddingLeft: "12px", // small padding to offset any gap
       backgroundClip: "padding-box",
     },
     bookItem: {
       cursor: "pointer",
-      marginBottom: "1px", // small margin to offset any gap
+      marginBottom: "12px", // small margin to offset any gap
     },
     bookImage: {
       width: "95%",
       height: "auto",
       marginBottom: "18px",
       display: "block",
-      borderRadius: "6px",
-      // shadow inside the image (inward)
-      boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.1)",
+      borderRadius: "0",
+      border: "4px solid #000",
+      boxShadow: "4px 4px 0px 0px rgba(0, 0, 0, 0.3)",
+      transition: "all 0.2s ease",
     },
   };
 
@@ -77,17 +78,27 @@ function Patterns() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginBottom: "4rem",
           }}
         >
           <h1
             style={{
-              fontSize: "50px",
-              marginBottom: "-24px",
+              fontSize: "3.5rem",
+              marginBottom: "1rem",
+              fontWeight: "900",
+              letterSpacing: "-0.02em",
             }}
           >
             Patterns Gallery
           </h1>
-          <p style={{ fontSize: "20px" }}>A mosaic of captured moments</p>
+          <p style={{
+            fontSize: "1.25rem",
+            marginTop: "0",
+            color: "var(--subtle-dark-3)",
+            maxWidth: "600px",
+            textAlign: "center",
+            lineHeight: "1.5",
+          }}>A mosaic of captured moments</p>
         </div>
         <div
           style={{
@@ -118,6 +129,14 @@ function Patterns() {
                   alt={book.description}
                   className="book__image"
                   style={styles.bookImage}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translate(2px, 2px)";
+                    e.currentTarget.style.boxShadow = "2px 2px 0px 0px rgba(0, 0, 0, 0.3)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translate(0, 0)";
+                    e.currentTarget.style.boxShadow = "4px 4px 0px 0px rgba(0, 0, 0, 0.3)";
+                  }}
                 />
               </div>
             ))}

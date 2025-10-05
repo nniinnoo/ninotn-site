@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.ninotn.com",
-    siteTitle: "ninotn.com",
+    siteTitle: "Rising Fire",
     siteLogo: "src/assets/favicon.png",
     description: "Personal blog by Nino Tannio",
   },

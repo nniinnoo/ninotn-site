@@ -35,6 +35,8 @@
 html {
   font-family: var(--font-family-text);
   font-size: var(--px14);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,6 +45,9 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 10rem;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 
   line-height: 1.75;
   /* letter-spacing: 0.01rem; */
@@ -247,7 +252,7 @@ tbody tr:nth-child(odd) {
 
 .nav__left h1 {
   font-weight: 900;
-  font-size: 2.95rem;
+  font-size: 3.25rem;
   margin-bottom: 0;
 }
 
@@ -256,7 +261,8 @@ tbody tr:nth-child(odd) {
   font-size: 1rem;
   font-weight: 400;
   color: var(--subtle-dark-3);
-  margin-top: var(--px20);
+  margin-top: 1.6875rem;
+  padding-left: 0.5rem;
 }
 
 .nav__right {
@@ -624,14 +630,13 @@ pre {
 }
 
 .blog__post-back-btn {
-  background-color: var(--subtle-dark-1);
-  background-color: #d3d3d1;
+  background-color: #fa9884;
 
   border: none;
-  border-radius: var(--px20);
+  border-radius: 0;
 
-  margin: var(--px12);
-  padding: var(--px12);
+  margin: 0;
+  padding: var(--px12) var(--px16);
 
   position: fixed;
   top: var(--px12);
@@ -641,16 +646,39 @@ pre {
   justify-content: center;
   align-items: center;
   align-self: center;
+
+  /* Pixelated effect */
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+
+  box-shadow:
+    0 0 0 2px #000,
+    2px 2px 0 2px rgba(0, 0, 0, 0.3);
+
+  cursor: pointer;
+  z-index: 1001;
 }
 
 .blog__post-back-btn:hover {
-  background: #d1d9b5;
-  transition: box-shadow 200ms ease, transform 200ms ease;
+  background: #ff8a73;
+  transform: translate(1px, 1px);
+  box-shadow:
+    0 0 0 2px #000,
+    1px 1px 0 2px rgba(0, 0, 0, 0.3);
+  transition: all 100ms ease;
 }
 
 .blog__post-back-btn .MuiSvgIcon-root {
   font-size: small;
   margin-right: var(--px6);
+}
+
+.blog__post-back-btn p {
+  font-family: var(--font-family-text);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 .blog__post-content a:hover {
@@ -1128,6 +1156,31 @@ blockquote {
 
   .blog__post-content-center {
     max-width: 24rem;
+  }
+
+  .blog__post-back-btn {
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    left: auto;
+    margin: 0;
+    padding: 8px 10px;
+    z-index: 1001;
+    transform: none;
+  }
+
+  .blog__post-back-btn:hover {
+    transform: none;
+  }
+
+  .blog__post-back-btn p {
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .blog__post-back-btn .MuiSvgIcon-root {
+    font-size: 0.65rem;
+    margin-right: 3px;
   }
 
   .gallery__content {

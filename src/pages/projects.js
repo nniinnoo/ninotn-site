@@ -166,28 +166,37 @@ export default function Projects() {
   const projectCardStyles = {
     container: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(320px, 380px))",
-      gap: "1.5rem",
+      gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 380px))",
+      gap: "2.5rem",
       maxWidth: "1000px",
       margin: "2rem auto",
-      padding: "0 2rem",
+      padding: "0 1rem",
       justifyContent: "center",
+      width: "100%",
+      boxSizing: "border-box",
     },
     card: {
       background: "var(--bg-2)",
-      border: "1px solid var(--subtle-dark-1)",
-      borderRadius: "6px",
-      padding: "1.25rem",
+      backgroundImage: "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
+      backgroundSize: "12px 12px",
+      border: "2px solid var(--dark-1)",
+      borderRadius: "0",
+      padding: "1rem",
       cursor: "pointer",
-      transition: "all 0.3s ease",
-      boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 10px",
+      transition: "all 0.1s ease",
+      boxShadow: "4px 4px 0px 0px rgba(0, 0, 0, 0.3)",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
+      maxWidth: "100%",
+      imageRendering: "pixelated",
     },
     cardHover: {
-      transform: "translateY(-2px)",
       background: "var(--hover-1)",
+      backgroundImage: "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
+      backgroundSize: "12px 12px",
+      transform: "translate(2px, 2px)",
+      boxShadow: "2px 2px 0px 0px rgba(0, 0, 0, 0.3)",
     },
     header: {
       display: "flex",
@@ -195,9 +204,9 @@ export default function Projects() {
       marginBottom: "0.5rem",
     },
     icon: {
-      width: "100px",
-      height: "100px",
-      marginRight: "1rem",
+      width: "80px",
+      height: "80px",
+      marginRight: "0.75rem",
       borderRadius: "6px",
       flexShrink: 0,
       background: "transparent",
@@ -209,6 +218,7 @@ export default function Projects() {
       marginBottom: "0",
       fontFamily: "var(--font-family-title)",
       background: "transparent",
+      lineHeight: "1.2",
     },
     description: {
       color: "var(--subtle-dark-3)",
@@ -226,18 +236,18 @@ export default function Projects() {
     badge: {
       background: "transparent",
       color: "var(--dark-1)",
-      border: "1px solid var(--subtle-dark-1)",
+      border: "2px solid var(--dark-1)",
       padding: "0.2rem 0.4rem",
-      borderRadius: "3px",
+      borderRadius: "0",
       fontSize: "0.75rem",
       fontWeight: "500",
     },
     statusBadge: {
       background: "transparent",
       color: "var(--sort-newest)",
-      border: "1px solid var(--sort-newest)",
+      border: "2px solid var(--sort-newest)",
       padding: "0.2rem 0.4rem",
-      borderRadius: "3px",
+      borderRadius: "0",
       fontSize: "0.75rem",
       fontWeight: "500",
     },
@@ -311,6 +321,9 @@ export default function Projects() {
             justifyContent: "center",
             alignItems: "center",
             minHeight: "60vh",
+            width: "100%",
+            padding: "0 1rem",
+            boxSizing: "border-box",
           }}
         >
           <h1 style={{ fontSize: "50px", marginBottom: "1rem" }}>Projects</h1>
@@ -339,13 +352,19 @@ export default function Projects() {
                 }}
                 onMouseEnter={(e) => {
                   const card = e.currentTarget;
-                  card.style.transform = "translateY(-2px)";
+                  card.style.transform = "translate(2px, 2px)";
+                  card.style.boxShadow = "2px 2px 0px 0px rgba(0, 0, 0, 0.3)";
                   card.style.background = "var(--hover-1)";
+                  card.style.backgroundImage = "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
+                  card.style.backgroundSize = "12px 12px";
                 }}
                 onMouseLeave={(e) => {
                   const card = e.currentTarget;
-                  card.style.transform = "translateY(0)";
+                  card.style.transform = "translate(0, 0)";
+                  card.style.boxShadow = "4px 4px 0px 0px rgba(0, 0, 0, 0.3)";
                   card.style.background = "var(--bg-2)";
+                  card.style.backgroundImage = "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
+                  card.style.backgroundSize = "12px 12px";
                 }}
               >
                 <div style={{
@@ -357,17 +376,19 @@ export default function Projects() {
                     alt={`${project.title} icon`}
                     style={projectCardStyles.icon}
                   />
-                  <div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
                     <h3 style={{
                       ...projectCardStyles.title,
-                      fontSize: "2.2rem",
+                      fontSize: "1.8rem",
                       margin: 0,
-                      marginBottom: "0",
-                      lineHeight: "1",
+                      marginBottom: "0.25rem",
+                      lineHeight: "1.1",
+                      wordBreak: "break-word",
                     }}>{project.title}</h3>
                     <p style={{
                       ...projectCardStyles.description,
                       margin: 0,
+                      fontSize: "0.85rem",
                     }}>
                       {project.description}
                     </p>
