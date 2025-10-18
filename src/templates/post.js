@@ -65,15 +65,15 @@ export default function PostTemplate({ data = [] }) {
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </article>
+          <button
+            type="button"
+            className="blog__post-back-btn"
+            onClick={() => navigate("/")}
+          >
+            <BackIcon />
+            <p>Back</p>
+          </button>
         </div>
-        <button
-          type="button"
-          className="blog__post-back-btn"
-          onClick={() => navigate(-1)}
-        >
-          <BackIcon />
-          <p>Back</p>
-        </button>
       </div>
     </>
   );
