@@ -535,9 +535,25 @@ function About() {
                   <ol>
                     4. To practice listening, podcast is a great start (find a
                     topic that interests you and listen it MANY TIMES). I also
-                    often watch stand-up comedy, as they convey memorable
-                    punchlines and cultural references. And, don't forget about
-                    music, scrutinize the lyrics.
+                    often watch stand-up comedy (e.g.
+                    <a
+                      href="https://www.youtube.com/watch?v=RYjfe8OSRFw"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Paul Mirabel
+                    </a>
+                    {" or "}
+                    <a
+                      href="https://www.youtube.com/watch?v=_b-FN_IT5fU"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Sebastian Marx
+                    </a>
+                    , as they often deliver memorable punchlines and cultural
+                    references. And, don't forget about music, scrutinize the
+                    lyrics.
                   </ol>
                   <ol>
                     5. Write a short diary about your day, invest on it
