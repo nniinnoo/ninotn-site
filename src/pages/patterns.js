@@ -62,9 +62,11 @@ function Patterns() {
       marginBottom: "18px",
       display: "block",
       borderRadius: "0",
-      border: "4px solid #000",
-      boxShadow: "4px 4px 0px 0px rgba(0, 0, 0, 0.3)",
+      border: "1px solid #000",
       transition: "all 0.2s ease",
+      padding: "8px",
+      boxShadow: "none",
+      opacity: 0.95,
     },
   };
 
@@ -83,10 +85,12 @@ function Patterns() {
         >
           <h1
             style={{
-              fontSize: "3.5rem",
-              marginBottom: "1rem",
+              fontSize: "3rem",
+              marginBottom: "-0.15rem",
               fontWeight: "900",
               letterSpacing: "-0.02em",
+              lineHeight: "1.2",
+              fontFeatureSettings: '"liga" 1, "kern" 1',
             }}
           >
             Patterns Gallery
@@ -131,11 +135,9 @@ function Patterns() {
                   style={styles.bookImage}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translate(2px, 2px)";
-                    e.currentTarget.style.boxShadow = "2px 2px 0px 0px rgba(0, 0, 0, 0.3)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = "translate(0, 0)";
-                    e.currentTarget.style.boxShadow = "4px 4px 0px 0px rgba(0, 0, 0, 0.3)";
                   }}
                 />
               </div>

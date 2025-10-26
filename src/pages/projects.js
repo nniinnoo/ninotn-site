@@ -179,7 +179,7 @@ export default function Projects() {
       background: "var(--bg-2)",
       backgroundImage: "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
       backgroundSize: "12px 12px",
-      border: "2px solid var(--dark-1)",
+      border: "1px solid var(--dark-1)",
       borderRadius: "0",
       padding: "1rem",
       cursor: "pointer",
@@ -219,6 +219,8 @@ export default function Projects() {
       fontFamily: "var(--font-family-title)",
       background: "transparent",
       lineHeight: "1.2",
+      letterSpacing: "-0.01em",
+      fontFeatureSettings: '"liga" 1, "kern" 1',
     },
     description: {
       color: "var(--subtle-dark-3)",
@@ -236,18 +238,18 @@ export default function Projects() {
     badge: {
       background: "transparent",
       color: "var(--dark-1)",
-      border: "2px solid var(--dark-1)",
+      border: "1px solid var(--dark-1)",
       padding: "0.2rem 0.4rem",
-      borderRadius: "0",
+      borderRadius: "6px",
       fontSize: "0.75rem",
       fontWeight: "500",
     },
     statusBadge: {
       background: "transparent",
       color: "var(--sort-newest)",
-      border: "2px solid var(--sort-newest)",
+      border: "1px solid var(--sort-newest)",
       padding: "0.2rem 0.4rem",
-      borderRadius: "0",
+      borderRadius: "6px",
       fontSize: "0.75rem",
       fontWeight: "500",
     },
@@ -326,7 +328,7 @@ export default function Projects() {
             boxSizing: "border-box",
           }}
         >
-          <h1 style={{ fontSize: "50px", marginBottom: "1rem" }}>Projects</h1>
+          <h1 style={{ fontSize: "3rem", marginBottom: "-0.15rem", fontWeight: "900", lineHeight: "1.2", letterSpacing: "-0.02em", fontFeatureSettings: '"liga" 1, "kern" 1' }}>Projects</h1>
           <p
             style={{
               fontSize: "1.2rem",
@@ -384,6 +386,8 @@ export default function Projects() {
                       marginBottom: "0.25rem",
                       lineHeight: "1.1",
                       wordBreak: "break-word",
+                      letterSpacing: "-0.015em",
+                      fontFeatureSettings: '"liga" 1, "kern" 1',
                     }}>{project.title}</h3>
                     <p style={{
                       ...projectCardStyles.description,
@@ -483,6 +487,8 @@ export default function Projects() {
                       fontFamily: "var(--font-family-title)",
                       fontSize: "2.6rem",
                       lineHeight: 1.1,
+                      letterSpacing: "-0.015em",
+                      fontFeatureSettings: '"liga" 1, "kern" 1',
                     }}
                   >
                     {selectedProject.title}

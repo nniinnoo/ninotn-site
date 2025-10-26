@@ -13,7 +13,7 @@ function Books() {
       title: "L'étranger",
       author: "Albert Camus",
       image:
-        "https://m.media-amazon.com/images/I/8130inT26AL._AC_UF1000,1000_QL80_.jpg",
+        "https://labourseauxlivres.fr/cdn/shop/files/wSC7b0rzf4OBV0NL0n4RZv3b9WYJgCT9Cvm_U1eBP9WpAN_3U6o3WA-cover-large.jpg",
     },
     {
       title: "Crime and Punishment",
@@ -210,6 +210,11 @@ function Books() {
       author: "David Graeber, David Wengrow",
       image: "https://m.media-amazon.com/images/I/819UL7qQa5L.jpg",
     },
+    {
+      title: "Flowers for Algernon",
+      author: "Daniel Keyes",
+      image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1582937860i/875031.jpg",
+    },
     // Add more books here
   ];
 
@@ -228,10 +233,12 @@ function Books() {
           }}
         >
           <h1 style={{
-            fontSize: "3.5rem",
-            marginBottom: "1rem",
+            fontSize: "3rem",
+            marginBottom: "-0.15rem",
             fontWeight: "900",
             letterSpacing: "-0.02em",
+            lineHeight: "1.2",
+            fontFeatureSettings: '"liga" 1, "kern" 1',
           }}>Library</h1>
           <p style={{
             fontSize: "1.25rem",
@@ -248,12 +255,12 @@ function Books() {
           className="books__container"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 240px))",
-            gap: "3.5rem 2.5rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 140px), 160px))",
+            gap: "3rem 1rem",
             marginLeft: "auto",
             marginRight: "auto",
             maxWidth: "1200px",
-            padding: "0 2rem 4rem",
+            padding: "0 0.5rem 4rem",
             justifyContent: "center",
           }}
         >
@@ -280,7 +287,7 @@ function Books() {
                 className="book__image"
                 style={{
                   width: "100%",
-                  maxWidth: "240px",
+                  maxWidth: "160px",
                   height: "auto",
                   aspectRatio: "2/3",
                   objectFit: "cover",
@@ -290,10 +297,9 @@ function Books() {
                 }}
               />
               <div style={{
-                marginTop: "1.25rem",
                 width: "100%",
-                maxWidth: "240px",
-                margin: "1.25rem auto 0",
+                maxWidth: "160px",
+                margin: "0.4rem auto 0",
                 textAlign: "center",
               }}>
                 <h2
@@ -301,16 +307,19 @@ function Books() {
                   style={{
                     width: "100%",
                     lineHeight: "1.25",
-                    fontSize: "1.15rem",
-                    marginBottom: "0.5rem",
+                    fontSize: "1.35rem",
+                    marginBottom: "0.15rem",
                     fontWeight: "700",
                     fontFamily: "var(--font-family-title)",
+                    letterSpacing: "-0.01em",
+                    fontFeatureSettings: '"liga" 1, "kern" 1',
                   }}
                 >
                   {book.title}
                 </h2>
                 <p className="book__author" style={{
                   marginTop: "0",
+                  marginBottom: "0",
                   fontSize: "0.95rem",
                   fontWeight: "400",
                   color: "var(--subtle-dark-3)",

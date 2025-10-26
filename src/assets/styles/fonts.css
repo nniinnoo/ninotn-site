@@ -1,39 +1,10 @@
 /* Font files are downloaded from Google Fonts */
 
+/* === ATKINSON HYPERLEGIBLE MONO === */
+/* A highly legible monospace font optimized for readability */
+/* ========================================================= */
 
-/* === Atkinson Mono === */
-@font-face {
-  font-family: "Atkinson Hyperlegible Mono";
-  font-display: swap;
-  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-Bold.ttf) format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Atkinson Hyperlegible Mono";
-  font-display: swap;
-  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-BoldItalic.ttf) format("truetype");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Atkinson Hyperlegible Mono";
-  font-display: swap;
-  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-ExtraBold.ttf) format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Atkinson Hyperlegible Mono";
-  font-display: swap;
-  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-ExtraBoldItalic.ttf) format("truetype");
-  font-weight: 800;
-  font-style: italic;
-}
-
+/* Extra Light weight - 200 */
 @font-face {
   font-family: "Atkinson Hyperlegible Mono";
   font-display: swap;
@@ -50,6 +21,7 @@
   font-style: italic;
 }
 
+/* Light weight - 300 */
 @font-face {
   font-family: "Atkinson Hyperlegible Mono";
   font-display: swap;
@@ -66,6 +38,24 @@
   font-style: italic;
 }
 
+/* Regular weight - 400 (default body text) */
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-RegularItalic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium weight - 500 */
 @font-face {
   font-family: "Atkinson Hyperlegible Mono";
   font-display: swap;
@@ -82,19 +72,37 @@
   font-style: italic;
 }
 
+/* Bold weight - 700 */
 @font-face {
   font-family: "Atkinson Hyperlegible Mono";
   font-display: swap;
-  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-Regular.ttf) format("truetype");
-  font-weight: 400;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-Bold.ttf) format("truetype");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Atkinson Hyperlegible Mono";
   font-display: swap;
-  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-RegularItalic.ttf) format("truetype");
-  font-weight: 400;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-BoldItalic.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extra Bold weight - 800 */
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-display: swap;
+  src: url(../font-files/Atkinson/AtkinsonHyperlegibleMono-ExtraBoldItalic.ttf) format("truetype");
+  font-weight: 800;
   font-style: italic;
 }
 
@@ -119,38 +127,7 @@
 
 /* === ADA === */
 /* =========== */
-@font-face {
-  font-family: "Ada";
-  font-display: swap;
-  src: url(../font-files/Ada/Ada-Black-Flat.woff) format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-
-/* @font-face {
-  font-family: "Ada";
-  font-display: swap;
-  src: url(../font-files/Ada/Ada-Black-Rounded.woff) format("woff");
-  font-weight: 900;
-  font-style: normal;
-} */
-
-@font-face {
-  font-family: "Ada";
-  font-display: swap;
-  src: url(../font-files/Ada/Ada-Black.woff) format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Ada";
-  font-display: swap;
-  src: url(../font-files/Ada/Ada-Bold.woff) format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
+/* Extra Light weight */
 @font-face {
   font-family: "Ada";
   font-display: swap;
@@ -159,6 +136,7 @@
   font-style: normal;
 }
 
+/* Light weight */
 @font-face {
   font-family: "Ada";
   font-display: swap;
@@ -167,6 +145,16 @@
   font-style: normal;
 }
 
+/* Regular weight */
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium weight */
 @font-face {
   font-family: "Ada";
   font-display: swap;
@@ -175,11 +163,30 @@
   font-style: normal;
 }
 
+/* Bold weight */
 @font-face {
   font-family: "Ada";
   font-display: swap;
-  src: url(../font-files/Ada/Ada-Regular.woff) format("woff");
-  font-weight: 400;
+  src: url(../font-files/Ada/Ada-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Black weight - standard version */
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Black.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Black weight - flat stylistic variant */
+@font-face {
+  font-family: "Ada";
+  font-display: swap;
+  src: url(../font-files/Ada/Ada-Black-Flat.woff) format("woff");
+  font-weight: 900;
   font-style: normal;
 }
 
