@@ -1256,8 +1256,20 @@ blockquote {
     color: var(--light-1);
   }
 
-  .nav__left h2 {
-    color: rgba(182, 181, 180, 0.7);
+  body.light .nav__right a {
+    color: #e8e8e8;
+  }
+
+  body.dark .nav__right a {
+    color: #e8e8e8;
+  }
+
+  body.light .nav__left a h2 {
+    color: #b8b8b8 !important;
+  }
+
+  body.dark .nav__left a h2 {
+    color: #ffffff !important;
   }
 
   .nav__right a:hover {
