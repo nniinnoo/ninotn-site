@@ -162,13 +162,14 @@ function About() {
                   </div>
                 </div>
                 When I think about the design, I have in mind a kind of
-                aesthetic simplicity that's introduced by Dieter Ram (a
-                legendary German industrial designer). Though he never designed
-                a website, I try to imagine if he did. So, I steal his principle
-                and try to produce it in my own. I must admit, it.. is..
-                really.. hard. I still consider this blog unfinished. After all,
-                I decided to roam around and refine it from time to time, but so
-                far, I'm happy with the result.
+                aesthetic simplicity of Dieter Rams, the legendary German
+                industrial designer who inspired Steve Jobs for the iPod design.
+                Though he never designed a website, I like to imagine what it
+                would be like if he did. So, I stole his recipe—but I must
+                admit, having a sense of style isn’t easy; you really need to
+                work on a different kind operation of way to see things. I still
+                consider this blog unfinished and will continue to refine it
+                from time to time.
               </p>
             </div>
             <div>
@@ -380,17 +381,19 @@ function About() {
                 >
                   Basic (A1 level). I attended public senior high school and
                   learned German for 2 years. If I had to pick one of my
-                  favorite classes throughout my school years, it would be German.
-                  Not because it's easy, German is still impossible, too many
-                  arbitrary and complex grammar rules, but Frau Suzana made the
-                  whole experience really unforgettable. It was not just a
-                  language class, but also psychology. The enthusiasm and open-mindedness, that's the quality that inspires me more from a
-                  teacher. She made us sing, dance, and cry in the class. She
-                  made everyone from the shyest to the most rebellious students express their
-                  feelings towards each other and reconcile differences. Back to
-                  the language, after high school I didn't maintain it for many
-                  years, until about pandemic era, I decided to keep in touch
-                  with German via Duolingo and Youtube channel like{" "}
+                  favorite classes throughout my school years, it would be
+                  German. Not because it's easy, German is still impossible, too
+                  many arbitrary and complex grammar rules, but Frau Suzana made
+                  the whole experience really unforgettable. It was not just a
+                  language class, but also psychology. The enthusiasm and
+                  open-mindedness, that's the quality that inspires me more from
+                  a teacher. She made us sing, dance, and cry in the class. She
+                  made everyone from the shyest to the most rebellious students
+                  express their feelings towards each other and reconcile
+                  differences. Back to the language, after high school I didn't
+                  maintain it for many years, until about pandemic era, I
+                  decided to keep in touch with German via Duolingo and Youtube
+                  channel like{" "}
                   <a href="https://www.youtube.com/@EasyGerman">Easy German</a>.
                   Since I have a few German friends, sometimes it's fun to try
                   to figure out what they're talking about with my limited
@@ -409,8 +412,8 @@ function About() {
                   about Fermat's Last Theorem in a Japanese manga. During high
                   school, I read Albert Camus's <i>The Stranger</i>. In
                   university, I watched many French movies and read more books
-                  by French writers during the pandemic. When I opened my science
-                  and math textbooks, they were filled with French names
+                  by French writers during the pandemic. When I opened my
+                  science and math textbooks, they were filled with French names
                   (Pascal, Laplace, Fourier, Lagrange, Cauchy, Descartes, Fermat
                   and, so on). I even used Laplacian and Fourier transform in my
                   thesis. All of these are potential catalysts, but the final
