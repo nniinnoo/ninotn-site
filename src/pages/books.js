@@ -334,8 +334,18 @@ function Books() {
       image:
         "https://press.uchicago.edu/.imaging/mte/ucp/medium/dam/ucp/books/jacket/978/02/26/45/9780226458113.jpg/jcr:content/9780226458113.jpg",
     },
+    {
+      title: "Prime Obsession",
+      author: "John Derbyshire",
+      image: "https://images.amazon.com/images/P/B004D39PGU.jpg",
+    },
 
     // Tier 4: Very Difficult
+    {
+      title: "The Crime of Galileo",
+      author: "Giorgio de Santillana",
+      image: "https://covers.openlibrary.org/b/id/6484103-L.jpg",
+    },
     {
       title: "The Dawn of Everything",
       author: "David Graeber, David Wengrow",
