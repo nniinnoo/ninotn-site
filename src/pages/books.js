@@ -306,6 +306,11 @@ function Books() {
         "https://m.media-amazon.com/images/I/71QfKRV2jIL._AC_UF1000,1000_QL80_.jpg",
     },
     {
+      title: "An Inquiry Into the Good",
+      author: "Kitaro Nishida",
+      image: "https://m.media-amazon.com/images/I/61RPjKaZNXL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
       title: "Plato Meno",
       author: "translated by Robin Waterfield",
       image:
