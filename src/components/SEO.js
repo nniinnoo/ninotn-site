@@ -68,10 +68,11 @@ function SEO({ postTitle, postSlug, postSEO, customDescription }) {
   }
 
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: "en" }}>
       <title>{postSEO ? `${postTitle} | ${siteTitle}` : siteTitle}</title>
       <meta name="description" content={description} />
       <meta name="image" content={siteLogo} />
+      <meta name="theme-color" content="#9f3466" />
 
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}

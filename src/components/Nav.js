@@ -53,6 +53,7 @@ function Nav({ onUpdateTheme, theme }) {
               }
               src={theme === "dark" ? FireOn : FireOff}
               width={70}
+              height={70}
             />
           </button>
           <Link to="/">

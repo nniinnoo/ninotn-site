@@ -29,6 +29,7 @@
     "gatsby-plugin-local-search": "^2.0.1",
     "gatsby-plugin-manifest": "^4.25.0",
     "gatsby-plugin-netlify": "^4.1.0",
+    "gatsby-plugin-offline": "^6.15.0",
     "gatsby-plugin-react-helmet": "^5.25.0",
     "gatsby-plugin-sharp": "^4.25.0",
     "gatsby-remark-autolink-headers": "^5.25.0",
@@ -49,12 +50,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "yet-another-react-lightbox": "^3.18.0",
     "react-masonry-css": "^1.0.16",
     "react-svg-worldmap": "^2.0.0-alpha.16",
     "react-use-flexsearch": "^0.1.1",
     "rehype-katex": "^6.0.1",
-    "remark-math": "^5.1.0"
+    "remark-math": "^5.1.0",
+    "yet-another-react-lightbox": "^3.18.0"
   },
   "devDependencies": {
     "eslint": "^8.57.1",

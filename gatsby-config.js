@@ -58,9 +58,43 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "Rising Fire",
+        short_name: "Rising Fire",
+        start_url: "/",
+        background_color: "#eae1d0",
+        theme_color: "#9f3466",
+        display: "standalone",
         icon: "src/assets/favicon.png",
+        icons: [
+          {
+            src: "src/assets/favicon.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "src/assets/favicon.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "maskable",
+          },
+          {
+            src: "src/assets/favicon.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+          {
+            src: "src/assets/favicon.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
+          },
+        ],
       },
     },
+
+    // SERVICE WORKER
+    // ==============
+    "gatsby-plugin-offline",
 
     // NETLIFY
     // =======
