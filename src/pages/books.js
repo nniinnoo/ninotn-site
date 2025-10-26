@@ -366,6 +366,11 @@ function Books() {
 
     // Tier 5: Extremely Difficult
     {
+      title: "Critique of Pure Reason",
+      author: "Immanuel Kant",
+      image: "https://m.media-amazon.com/images/I/41LHDo1deiL._UF1000,1000_QL80_.jpg",
+    },
+    {
       title: "Philosophical Investigations",
       author: "Ludwig Wittgenstein",
       image:
