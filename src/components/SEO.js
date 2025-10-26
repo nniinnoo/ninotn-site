@@ -69,6 +69,7 @@ function SEO({ postTitle, postSlug, postSEO, customDescription }) {
 
   return (
     <Helmet>
+      <title>{postSEO ? `${postTitle} | ${siteTitle}` : siteTitle}</title>
       <meta name="description" content={description} />
       <meta name="image" content={siteLogo} />
 
