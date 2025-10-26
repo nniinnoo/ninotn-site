@@ -486,7 +486,7 @@ pre {
 
 .blog__list-title-details span p {
   color: var(--subtle-dark-3);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 
 .blog__list-title-details .MuiSvgIcon-root {
@@ -1225,7 +1225,7 @@ blockquote {
     max-width: 600px;
     margin: 0 auto 2rem;
     text-align: center;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     line-height: 1.5;
     color: rgba(220, 220, 220, 0.85);
     font-style: italic;
@@ -1299,7 +1299,7 @@ blockquote {
   }
 
   .blog__list-title-details > div > span p {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
   }
 
   .blog__list-title-details > div > span .MuiSvgIcon-root {
