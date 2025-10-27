@@ -435,7 +435,7 @@ function Books() {
             marginLeft: "auto",
             marginRight: "auto",
             maxWidth: "1200px",
-            padding: "3rem 0.5rem 0",
+            padding: "1rem 0.5rem 0",
             width: "100%",
           }}
         >
@@ -444,7 +444,7 @@ function Books() {
               fontSize: "2.5rem",
               marginBottom: "1.5rem",
               marginTop: "0",
-              paddingTop: "1.5rem",
+              paddingTop: "0.5rem",
               borderTop: "1px solid var(--dark-1)",
               fontWeight: "900",
               letterSpacing: "-0.02em",
@@ -551,7 +551,7 @@ function Books() {
             marginLeft: "auto",
             marginRight: "auto",
             maxWidth: "1200px",
-            padding: "3rem 0.5rem 0",
+            padding: "1rem 0.5rem 0",
             width: "100%",
           }}
         >
@@ -560,7 +560,7 @@ function Books() {
               fontSize: "2.5rem",
               marginBottom: "1.5rem",
               marginTop: "0",
-              paddingTop: "1.5rem",
+              paddingTop: "0.5rem",
               borderTop: "1px solid var(--dark-1)",
               fontWeight: "900",
               letterSpacing: "-0.02em",
