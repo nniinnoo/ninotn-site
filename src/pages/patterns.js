@@ -93,16 +93,20 @@ function Patterns() {
               fontFeatureSettings: '"liga" 1, "kern" 1',
             }}
           >
-            Patterns Gallery
+            Visual Patterns
           </h1>
-          <p style={{
-            fontSize: "1.25rem",
-            marginTop: "0",
-            color: "var(--subtle-dark-3)",
-            maxWidth: "600px",
-            textAlign: "center",
-            lineHeight: "1.5",
-          }}>A mosaic of captured moments</p>
+          <p
+            style={{
+              fontSize: "1.25rem",
+              marginTop: "0",
+              color: "var(--subtle-dark-3)",
+              maxWidth: "600px",
+              textAlign: "center",
+              lineHeight: "1.5",
+            }}
+          >
+            The beauty of reptition
+          </p>
         </div>
         <div
           style={{

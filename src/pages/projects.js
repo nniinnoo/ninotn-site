@@ -38,8 +38,7 @@ export default function Projects() {
     {
       id: "flashback",
       title: "Flashback",
-      description:
-        "An analog camera app with vintage filters and film grain effects.",
+      description: "TBA",
       icon: flashbackIcon,
       status: "Coming Soon",
       releaseDate: "TBA",
@@ -70,8 +69,10 @@ export default function Projects() {
       ],
       links: {
         privacy: "/fractiles-privacy-policy.html",
-        appStore: "https://apps.apple.com/fr/app/fractiles/id6751944887?l=en-GB",
-        playStore: "https://play.google.com/store/apps/details?id=com.wonderkid.fractiles",
+        appStore:
+          "https://apps.apple.com/fr/app/fractiles/id6751944887?l=en-GB",
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.wonderkid.fractiles",
       },
     },
     {
@@ -83,15 +84,12 @@ export default function Projects() {
       status: "Senior Mobile Dev",
       releaseDate: "02.02.2024",
       technologies: ["iOS", "Android", "Web"],
-      screenshots: [
-        kompitScreenshot1,
-        kompitScreenshot2,
-        kompitScreenshot3,
-      ],
+      screenshots: [kompitScreenshot1, kompitScreenshot2, kompitScreenshot3],
       links: {
         privacy: "",
         appStore: "https://apps.apple.com/id/app/kompit/id6462844908",
-        playStore: "https://play.google.com/store/apps/details?id=com.kompit.android&pcampaignid=web_share",
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.kompit.android&pcampaignid=web_share",
       },
     },
     {
@@ -106,7 +104,7 @@ export default function Projects() {
       screenshots: [],
       videos: [
         "https://drive.google.com/file/d/1cUHW1uqwuc61-D3ZmcrQuqZfznHVMi51/preview",
-        "https://drive.google.com/file/d/1yK8yWbcr9I192H3KUxToa7M0W_N2o6SG/preview"
+        "https://drive.google.com/file/d/1yK8yWbcr9I192H3KUxToa7M0W_N2o6SG/preview",
       ],
       links: {
         privacy: "",
@@ -123,15 +121,12 @@ export default function Projects() {
       status: "Initial Prototype",
       releaseDate: "",
       technologies: ["Kotlin", "Android"],
-      screenshots: [
-        oishiScreenshot1,
-        oishiScreenshot2,
-        oishiScreenshot3,
-      ],
+      screenshots: [oishiScreenshot1, oishiScreenshot2, oishiScreenshot3],
       links: {
         privacy: "",
         appStore: "#",
-        playStore: "https://play.google.com/store/apps/details?id=com.oishikenko.android.kenko",
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.oishikenko.android.kenko",
       },
     },
     {
@@ -147,16 +142,17 @@ export default function Projects() {
       links: {
         privacy: "",
         appStore: "https://apps.apple.com/id/app/fore-coffee/id1438745141?l=id",
-        playStore: "https://play.google.com/store/search?q=fore%20coffee&c=apps&hl=en-ID",
+        playStore:
+          "https://play.google.com/store/search?q=fore%20coffee&c=apps&hl=en-ID",
       },
     },
   ];
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const projectParam = urlParams.get('project');
+    const projectParam = urlParams.get("project");
     if (projectParam) {
-      const project = projects.find(p => p.id === projectParam);
+      const project = projects.find((p) => p.id === projectParam);
       if (project) {
         setSelectedProject(project);
       }
@@ -177,7 +173,8 @@ export default function Projects() {
     },
     card: {
       background: "var(--bg-2)",
-      backgroundImage: "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
+      backgroundImage:
+        "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
       backgroundSize: "12px 12px",
       border: "1px solid var(--dark-1)",
       borderRadius: "0",
@@ -193,7 +190,8 @@ export default function Projects() {
     },
     cardHover: {
       background: "var(--hover-1)",
-      backgroundImage: "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
+      backgroundImage:
+        "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
       backgroundSize: "12px 12px",
       transform: "translate(2px, 2px)",
       boxShadow: "2px 2px 0px 0px rgba(0, 0, 0, 0.3)",
@@ -328,7 +326,18 @@ export default function Projects() {
             boxSizing: "border-box",
           }}
         >
-          <h1 style={{ fontSize: "3rem", marginBottom: "-0.15rem", fontWeight: "900", lineHeight: "1.2", letterSpacing: "-0.02em", fontFeatureSettings: '"liga" 1, "kern" 1' }}>Projects</h1>
+          <h1
+            style={{
+              fontSize: "3rem",
+              marginBottom: "-0.15rem",
+              fontWeight: "900",
+              lineHeight: "1.2",
+              letterSpacing: "-0.02em",
+              fontFeatureSettings: '"liga" 1, "kern" 1',
+            }}
+          >
+            Projects
+          </h1>
           <p
             style={{
               fontSize: "1.2rem",
@@ -336,7 +345,7 @@ export default function Projects() {
               marginBottom: "3rem",
             }}
           >
-            A collection of things I've built
+            List of things I've built or contributed to over the years.
           </p>
 
           <div style={projectCardStyles.container}>
@@ -357,7 +366,8 @@ export default function Projects() {
                   card.style.transform = "translate(2px, 2px)";
                   card.style.boxShadow = "2px 2px 0px 0px rgba(0, 0, 0, 0.3)";
                   card.style.background = "var(--hover-1)";
-                  card.style.backgroundImage = "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
+                  card.style.backgroundImage =
+                    "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
                   card.style.backgroundSize = "12px 12px";
                 }}
                 onMouseLeave={(e) => {
@@ -365,71 +375,96 @@ export default function Projects() {
                   card.style.transform = "translate(0, 0)";
                   card.style.boxShadow = "4px 4px 0px 0px rgba(0, 0, 0, 0.3)";
                   card.style.background = "var(--bg-2)";
-                  card.style.backgroundImage = "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
+                  card.style.backgroundImage =
+                    "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
                   card.style.backgroundSize = "12px 12px";
                 }}
               >
-                <div style={{
-                  ...projectCardStyles.header,
-                  alignItems: "flex-start",
-                }}>
+                <div
+                  style={{
+                    ...projectCardStyles.header,
+                    alignItems: "flex-start",
+                  }}
+                >
                   <img
                     src={project.icon}
                     alt={`${project.title} icon`}
                     style={projectCardStyles.icon}
                   />
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <h3 style={{
-                      ...projectCardStyles.title,
-                      fontSize: "1.8rem",
-                      margin: 0,
-                      marginBottom: "0.25rem",
-                      lineHeight: "1.1",
-                      wordBreak: "break-word",
-                      letterSpacing: "-0.015em",
-                      fontFeatureSettings: '"liga" 1, "kern" 1',
-                    }}>{project.title}</h3>
-                    <p style={{
-                      ...projectCardStyles.description,
-                      margin: 0,
-                      fontSize: "0.85rem",
-                    }}>
+                    <h3
+                      style={{
+                        ...projectCardStyles.title,
+                        fontSize: "1.8rem",
+                        margin: 0,
+                        marginBottom: "0.25rem",
+                        lineHeight: "1.1",
+                        wordBreak: "break-word",
+                        letterSpacing: "-0.015em",
+                        fontFeatureSettings: '"liga" 1, "kern" 1',
+                      }}
+                    >
+                      {project.title}
+                    </h3>
+                    <p
+                      style={{
+                        ...projectCardStyles.description,
+                        margin: 0,
+                        fontSize: "0.85rem",
+                      }}
+                    >
                       {project.description}
                     </p>
                   </div>
                 </div>
-                <div style={{...projectCardStyles.meta, marginTop: "auto", paddingTop: "1rem"}}>
+                <div
+                  style={{
+                    ...projectCardStyles.meta,
+                    marginTop: "auto",
+                    paddingTop: "1rem",
+                  }}
+                >
                   {project.id === "virvoile" ? (
                     <>
                       <span style={projectCardStyles.badge}>Desktop</span>
                       <span style={projectCardStyles.badge}>Unity</span>
-                      <span style={projectCardStyles.badge}>{project.status}</span>
+                      <span style={projectCardStyles.badge}>
+                        {project.status}
+                      </span>
                     </>
                   ) : project.id === "oishi-kenko" ? (
                     <>
                       <span style={projectCardStyles.badge}>Android</span>
                       <span style={projectCardStyles.badge}>Kotlin</span>
-                      <span style={projectCardStyles.badge}>{project.status}</span>
+                      <span style={projectCardStyles.badge}>
+                        {project.status}
+                      </span>
                     </>
                   ) : project.id === "fore-coffee" ? (
                     <>
                       <span style={projectCardStyles.badge}>iOS</span>
                       <span style={projectCardStyles.badge}>Android</span>
-                      <span style={projectCardStyles.badge}>Released {project.releaseDate}</span>
+                      <span style={projectCardStyles.badge}>
+                        Released {project.releaseDate}
+                      </span>
                     </>
                   ) : project.id === "kompit" ? (
                     <>
                       <span style={projectCardStyles.badge}>iOS</span>
                       <span style={projectCardStyles.badge}>Android</span>
                       <span style={projectCardStyles.badge}>Web</span>
-                      <span style={projectCardStyles.badge}>Released {project.releaseDate}</span>
+                      <span style={projectCardStyles.badge}>
+                        Released {project.releaseDate}
+                      </span>
                     </>
                   ) : (
                     <>
                       <span style={projectCardStyles.badge}>iOS</span>
                       <span style={projectCardStyles.badge}>Android</span>
                       {project.releaseDate && (
-                        <span style={projectCardStyles.badge}>Released {project.releaseDate}</span>
+                        <span style={projectCardStyles.badge}>
+                          Released {project.releaseDate}
+                        </span>
                       )}
                     </>
                   )}
@@ -501,7 +536,9 @@ export default function Projects() {
                       lineHeight: 1.1,
                     }}
                   >
-                    {selectedProject.id === "virvoile" ? "Desktop App" : "Mobile App"}
+                    {selectedProject.id === "virvoile"
+                      ? "Desktop App"
+                      : "Mobile App"}
                   </p>
                 </div>
               </div>
@@ -525,29 +562,45 @@ export default function Projects() {
                 >
                   {selectedProject.id === "virvoile" ? (
                     <>
-                      <strong>Team Developer:</strong> Nino Tannio | <strong>Client:</strong> G.Lepinard | <strong>License:</strong> Closed Source
+                      <strong>Team Developer:</strong> Nino Tannio |{" "}
+                      <strong>Client:</strong> G.Lepinard |{" "}
+                      <strong>License:</strong> Closed Source
                     </>
                   ) : selectedProject.id === "oishi-kenko" ? (
                     <>
-                      <strong>Contributor:</strong> Nino Tannio | <strong>Year:</strong> 2020 | <strong>License:</strong> Closed Source
+                      <strong>Contributor:</strong> Nino Tannio |{" "}
+                      <strong>Year:</strong> 2020 | <strong>License:</strong>{" "}
+                      Closed Source
                     </>
                   ) : selectedProject.id === "fore-coffee" ? (
                     <>
-                      <strong>Developer:</strong> Nino Tannio (First Dev | Senior Dev | 2018-2020) | <strong>First Released:</strong> 12.10.2018
+                      <strong>Developer:</strong> Nino Tannio (First Dev |
+                      Senior Dev | 2018-2020) | <strong>First Released:</strong>{" "}
+                      12.10.2018
                     </>
                   ) : selectedProject.id === "kompit" ? (
                     <>
-                      <strong>Developer:</strong> Nino Tannio (Senior Mobile Dev | Early Programmer) | <strong>First Released:</strong> 02.02.2024
+                      <strong>Developer:</strong> Nino Tannio (Senior Mobile Dev
+                      | Early Programmer) | <strong>First Released:</strong>{" "}
+                      02.02.2024
                     </>
                   ) : (
                     <>
-                      <strong>Developer:</strong> Nino Tannio (Solo Dev) | <strong>First Released:</strong> 17.09.2025
+                      <strong>Developer:</strong> Nino Tannio (Solo Dev) |{" "}
+                      <strong>First Released:</strong> 17.09.2025
                     </>
                   )}
                 </p>
               </div>
 
-              <div style={{ display: "flex", gap: "2rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "2rem",
+                  marginBottom: "1.5rem",
+                  flexWrap: "wrap",
+                }}
+              >
                 <div style={{ flex: "1", minWidth: "200px" }}>
                   <h4
                     style={{
@@ -591,7 +644,13 @@ export default function Projects() {
                     >
                       Download:
                     </h4>
-                    <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "0.75rem",
+                        flexWrap: "wrap",
+                      }}
+                    >
                       {selectedProject.links.appStore !== "#" && (
                         <a
                           href={selectedProject.links.appStore}
@@ -629,7 +688,6 @@ export default function Projects() {
                 )}
               </div>
 
-
               {selectedProject.videos && selectedProject.videos.length > 0 && (
                 <div style={{ marginBottom: "1.5rem" }}>
                   <h4
@@ -640,7 +698,14 @@ export default function Projects() {
                   >
                     Demo Videos:
                   </h4>
-                  <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "1rem",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                    }}
+                  >
                     {selectedProject.videos.map((videoUrl, index) => (
                       <iframe
                         key={index}
@@ -661,50 +726,60 @@ export default function Projects() {
                 </div>
               )}
 
-              {selectedProject.screenshots && selectedProject.screenshots.length > 0 && (
-                <div style={{ marginBottom: "1.5rem" }}>
-                  <h4
-                    style={{
-                      color: "var(--dark-1)",
-                      marginBottom: "1rem",
-                    }}
-                  >
-                    Screenshots:
-                  </h4>
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
-                      gap: "0.75rem",
-                      maxHeight: "300px",
-                      overflowY: "auto",
-                    }}
-                  >
-                    {selectedProject.screenshots.map((screenshot, index) => (
-                      <img
-                        key={index}
-                        src={screenshot}
-                        alt={`${selectedProject.title} screenshot ${index + 1}`}
-                        style={{
-                          width: "100%",
-                          height: selectedProject.id === "oishi-kenko" || selectedProject.id === "kompit" ? "300px" : "auto",
-                          objectFit: selectedProject.id === "oishi-kenko" || selectedProject.id === "kompit" ? "contain" : "cover",
-                          borderRadius: "8px",
-                          border: "1px solid var(--subtle-dark-1)",
-                          cursor: "pointer",
-                          transition: "transform 0.2s ease",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.target.style.transform = "scale(1.05)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.target.style.transform = "scale(1)";
-                        }}
-                      />
-                    ))}
+              {selectedProject.screenshots &&
+                selectedProject.screenshots.length > 0 && (
+                  <div style={{ marginBottom: "1.5rem" }}>
+                    <h4
+                      style={{
+                        color: "var(--dark-1)",
+                        marginBottom: "1rem",
+                      }}
+                    >
+                      Screenshots:
+                    </h4>
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns:
+                          "repeat(auto-fit, minmax(150px, 1fr))",
+                        gap: "0.75rem",
+                        maxHeight: "300px",
+                        overflowY: "auto",
+                      }}
+                    >
+                      {selectedProject.screenshots.map((screenshot, index) => (
+                        <img
+                          key={index}
+                          src={screenshot}
+                          alt={`${selectedProject.title} screenshot ${index + 1}`}
+                          style={{
+                            width: "100%",
+                            height:
+                              selectedProject.id === "oishi-kenko" ||
+                              selectedProject.id === "kompit"
+                                ? "300px"
+                                : "auto",
+                            objectFit:
+                              selectedProject.id === "oishi-kenko" ||
+                              selectedProject.id === "kompit"
+                                ? "contain"
+                                : "cover",
+                            borderRadius: "8px",
+                            border: "1px solid var(--subtle-dark-1)",
+                            cursor: "pointer",
+                            transition: "transform 0.2s ease",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.target.style.transform = "scale(1.05)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.target.style.transform = "scale(1)";
+                          }}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
               {selectedProject.id !== "virvoile" && (
                 <div>

@@ -607,7 +607,8 @@ function About() {
                   href="https://www.sennheiser-hearing.com/fr-FR/p/cx-true-wireless/ckyadwwbs0eut0b446x5vb8yw/"
                   rel="noreferrer"
                 >
-                  <s>Senheiser CX True (broken)</s>, Nothing Ear (a)
+                  <s>Senheiser CX True (broken)</s>, <s>Nothing Ear (return)</s>
+                  , Bose QC Earbuds II
                 </a>{" "}
                 <br />
                 Camera :{" "}
@@ -625,7 +626,7 @@ function About() {
                   href="https://www.canon.fr/lenses/ef-75-300mm-f-4-5-6-iii-lens/"
                   rel="noreferrer"
                 >
-                  Canon EF 75-300mm f/4-5.6 III
+                  <s>Canon EF 75-300mm f/4-5.6 III (sold)</s>
                 </a>{" "}
                 <br />
                 Game Console :{" "}

@@ -17,16 +17,20 @@ function Books() {
       image: "https://m.media-amazon.com/images/I/81qY-07K6AL.jpg",
     },
     {
-      title: "Homunculus",
-      author: "Hideo Yamamoto",
-      image:
-        "https://m.media-amazon.com/images/I/81VkApOiIdL._AC_UF1000,1000_QL80_.jpg",
+      title: "One Piece",
+      author: "Eiichiro Oda",
+      image: "https://m.media-amazon.com/images/I/91ozTpYorxL.jpg",
     },
     {
-      title: "Kung Fu Boy",
-      author: "Takeshi Maekawa",
+      title: "Arzak",
+      author: "Moebius",
+      image: "https://images.epagine.fr/585/9782908766585_1_75.jpg",
+    },
+    {
+      title: "Naruto",
+      author: "Masashi Kishimoto",
       image:
-        "https://imgv2-2-f.scribdassets.com/img/document/49702757/original/38010820dc/1?v=1",
+        "https://m.media-amazon.com/images/I/91RpwagB7uL._AC_UF1000,1000_QL80_.jpg",
     },
     {
       title: "Dragon Ball",
@@ -188,12 +192,6 @@ function Books() {
         "https://m.media-amazon.com/images/I/91xbVxFyL5L._AC_UF1000,1000_QL80_.jpg",
     },
     {
-      title: "Le Problème à Trois Corps (The Three-Body Problem)",
-      author: "Liu Cixin",
-      image:
-        "https://www.actes-sud.fr/sites/default/files/couvertures/9782330181055.jpg",
-    },
-    {
       title: "Permutation City",
       author: "Greg Egan",
       image:
@@ -231,15 +229,20 @@ function Books() {
         "https://m.media-amazon.com/images/I/91-O6LnH1ML._AC_UF1000,1000_QL80_.jpg",
     },
     {
-      title: "Crime and Punishment",
-      author: "Fyodor Dostoevsky",
-      image: "https://m.media-amazon.com/images/I/81j330zioGL._SL1500_.jpg",
-    },
-    {
       title: "The Brothers Karamazov",
       author: "Fyodor Dostoevsky",
       image:
         "https://m.media-amazon.com/images/I/91VvGmWHcSL._AC_UF1000,1000_QL80_.jpg",
+    },
+    {
+      title: "The Idiot",
+      author: "Fyodor Dostoevsky",
+      image: "https://m.media-amazon.com/images/I/81R0hEWva1L.jpg",
+    },
+    {
+      title: "Crime and Punishment",
+      author: "Fyodor Dostoevsky",
+      image: "https://m.media-amazon.com/images/I/81j330zioGL._SL1500_.jpg",
     },
   ];
 
@@ -272,6 +275,12 @@ function Books() {
       author: "Peter L. Bernstein",
       image:
         "https://m.media-amazon.com/images/I/71MykJzsAaL._AC_UF894,1000_QL80_.jpg",
+    },
+    {
+      title: " The Fabric of Reality",
+      author: "David Deutsch",
+      image:
+        "https://m.media-amazon.com/images/I/A1D-ToX8Y-L._AC_UF1000,1000_QL80_.jpg",
     },
     {
       title: "Physics and Philosophy",
@@ -308,7 +317,8 @@ function Books() {
     {
       title: "An Inquiry Into the Good",
       author: "Kitaro Nishida",
-      image: "https://m.media-amazon.com/images/I/61RPjKaZNXL._AC_UF1000,1000_QL80_.jpg",
+      image:
+        "https://m.media-amazon.com/images/I/61RPjKaZNXL._AC_UF1000,1000_QL80_.jpg",
     },
     {
       title: "Plato Meno",
@@ -368,7 +378,8 @@ function Books() {
     {
       title: "Critique of Pure Reason",
       author: "Immanuel Kant",
-      image: "https://m.media-amazon.com/images/I/41LHDo1deiL._UF1000,1000_QL80_.jpg",
+      image:
+        "https://m.media-amazon.com/images/I/41LHDo1deiL._UF1000,1000_QL80_.jpg",
     },
     {
       title: "Philosophical Investigations",
@@ -464,7 +475,7 @@ function Books() {
             display: "grid",
             gridTemplateColumns:
               "repeat(auto-fit, minmax(min(100%, 140px), 160px))",
-            gap: "3rem 1rem",
+            gap: "4rem 2rem",
             marginLeft: "auto",
             marginRight: "auto",
             maxWidth: "1200px",
@@ -580,7 +591,7 @@ function Books() {
             display: "grid",
             gridTemplateColumns:
               "repeat(auto-fit, minmax(min(100%, 140px), 160px))",
-            gap: "3rem 1rem",
+            gap: "4rem 2rem",
             marginLeft: "auto",
             marginRight: "auto",
             maxWidth: "1200px",

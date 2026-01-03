@@ -87,7 +87,7 @@ body.dark {
   --bg-2: rgba(50, 50, 50, 0.5);
 
   --light-1: #f9f9f9;
-  --dark-1: rgb(100, 100, 100);
+  --dark-1: #b8b8b8;
 
   --subtle-dark-1: rgba(160, 140, 100, 0.3);
   --subtle-dark-2: rgba(120, 100, 80, 0.3);
@@ -1299,11 +1299,11 @@ blockquote {
   }
 
   .blog__list-title-details > div > span p {
-    font-size: 0.9375rem;
+    font-size: 0.75rem;
   }
 
   .blog__list-title-details > div > span .MuiSvgIcon-root {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
   }
 
   
