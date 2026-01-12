@@ -405,6 +405,61 @@
 }
 
 
+/* === HERMES CONDENSED === */
+/* ======================== */
+
+/* Light weight - 300 */
+@font-face {
+  font-family: "Hermes Condensed";
+  font-display: swap;
+  src: url(../font-files/Hermes/Hermes\ Condensed\ Light.otf) format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hermes Condensed";
+  font-display: swap;
+  src: url(../font-files/Hermes/Hermes\ Condensed\ Light\ Italic.otf) format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular weight - 400 */
+@font-face {
+  font-family: "Hermes Condensed";
+  font-display: swap;
+  src: url(../font-files/Hermes/Hermes\ Condensed\ Regular.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hermes Condensed";
+  font-display: swap;
+  src: url(../font-files/Hermes/Hermes\ Condensed\ Regular\ Italic.otf) format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Bold weight - 700 */
+@font-face {
+  font-family: "Hermes Condensed";
+  font-display: swap;
+  src: url(../font-files/Hermes/Hermes\ Condensed\ Bold.otf) format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hermes Condensed";
+  font-display: swap;
+  src: url(../font-files/Hermes/Hermes\ Condensed\ Bold\ Italic.otf) format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
 /* === ATLAS GROTESK === */
 /* ===================== */
 

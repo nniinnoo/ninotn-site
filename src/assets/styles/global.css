@@ -3,7 +3,7 @@
 @import url(katex/katex.min.css);
 
 :root {
-  --font-family-text: "Atkinson Hyperlegible Mono", sans-serif;
+  --font-family-text: "Hermes Condensed", sans-serif;
   --font-family-title: "Ada", sans-serif;
 
   --px1: 0.0625rem;
