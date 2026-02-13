@@ -1676,3 +1676,209 @@ body.dark .patterns-gallery__bar--active:hover {
     height: 14px;
   }
 }
+
+
+/* ============================================================
+   Scroll Ruler  (matches makingsoftware.com exactly)
+   ============================================================ */
+
+/* Outer fixed container — sits in the right 20vw */
+.scroll-ruler {
+  position: fixed;
+  top: 80px;
+  /* top-20 = 5rem = 80px */
+  right: 0;
+  bottom: 40px;
+  /* bottom-10 = 2.5rem = 40px */
+  width: 20vw;
+  max-width: 20vw;
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* Inner container — fills height */
+.scroll-ruler__container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Group wrapper — hovering this reveals labels, hides the number */
+.scroll-ruler__group {
+  position: relative;
+  z-index: 50;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  pointer-events: auto;
+}
+
+/* Inner absolute positioning context */
+.scroll-ruler__inner {
+  position: absolute;
+  inset: 0;
+}
+
+/* ---- Tick marks ---- */
+/* Each tick: absolute at --position, right-4 (16px), grid to right-align */
+.scroll-ruler__tick-wrap {
+  position: absolute;
+  top: var(--position);
+  right: 16px;
+  display: grid;
+  width: 96px;
+  /* w-24 = 6rem = 96px */
+  align-items: center;
+  justify-content: end;
+}
+
+/* The tick line: 8px wide, 1px tall, very faint */
+.scroll-ruler__tick {
+  height: 1px;
+  width: 8px;
+  /* w-2 = 0.5rem = 8px */
+  transition: all 0.1s ease;
+}
+
+body.light .scroll-ruler__tick {
+  background: rgba(0, 0, 0, 0.1);
+  /* bg-black/10 */
+}
+
+body.dark .scroll-ruler__tick {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Individual tick hover: expand to 16px, solid color */
+.scroll-ruler__tick-wrap:hover .scroll-ruler__tick {
+  width: 16px;
+  /* w-4 = 1rem = 16px */
+}
+
+body.light .scroll-ruler__tick-wrap:hover .scroll-ruler__tick {
+  background: rgba(0, 0, 0, 1);
+  /* bg-black */
+}
+
+body.dark .scroll-ruler__tick-wrap:hover .scroll-ruler__tick {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Transparent hit area for easier hover */
+.scroll-ruler__tick-hitarea {
+  position: absolute;
+  inset: 0 0;
+  height: 8px;
+  /* h-2 */
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* ---- Section labels (hidden, visible on group hover) ---- */
+.scroll-ruler__section-label-wrap {
+  position: absolute;
+  top: var(--yPosition);
+  right: var(--indent);
+  display: flex;
+  height: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  /* right-align label text toward ticks */
+  font-family: 'Departure Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.15s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* On group hover, labels appear */
+.scroll-ruler__group:hover .scroll-ruler__section-label-wrap {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-ruler__section-link {
+  cursor: pointer;
+  text-align: right;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+body.light .scroll-ruler__section-link {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+body.dark .scroll-ruler__section-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.light .scroll-ruler__section-link:hover {
+  color: #3363d4;
+  /* cobalt-600 */
+}
+
+body.dark .scroll-ruler__section-link:hover {
+  color: #5b8de8;
+}
+
+/* ---- Section marker ticks (solid black, always visible) ---- */
+.scroll-ruler__section-tick {
+  position: absolute;
+  top: var(--yPosition);
+  right: 16px;
+  height: 1px;
+  width: var(--indent);
+}
+
+body.light .scroll-ruler__section-tick {
+  background: rgba(0, 0, 0, 1);
+  /* bg-black */
+}
+
+body.dark .scroll-ruler__section-tick {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* ---- Blue indicator (number + tick) ---- */
+/* In reference: absolute right-4, no width/flex — just a positioned block */
+.scroll-ruler__indicator {
+  position: absolute;
+  right: 16px;
+  /* right-4, same as all ticks */
+  z-index: 20;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-ruler__indicator-tick {
+  height: 1px;
+  width: 16px;
+  /* w-4 = 16px */
+  background: #3363d4;
+}
+
+.scroll-ruler__progress {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  /* -left-10 = -2.5rem = -40px (from the LEFT edge of the indicator) */
+  transform: translateY(-50%);
+  font-family: 'Departure Mono', monospace;
+  font-size: 12px;
+  line-height: 1;
+  color: #3363d4;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+/* On group hover: hide the blue number */
+.scroll-ruler__group:hover .scroll-ruler__progress {
+  opacity: 0;
+}
+
+/* ---- Hide on small screens ---- */
+@media (max-width: 1024px) {
+  .scroll-ruler {
+    display: none;
+  }
+}

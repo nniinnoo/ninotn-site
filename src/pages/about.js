@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import WorldMap from "react-svg-worldmap";
+import ScrollRuler from "@components/ScrollRuler";
 
 import SEO from "@components/SEO";
 
@@ -47,64 +48,66 @@ function About() {
       <Layout pageTitle="about">
         <div className="about__container">
           <div className="about__center">
-            <h1>In the beginning.. </h1>
-            <div>
-              <img
-                src={forbiddenFruit}
-                alt="profile-pic"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  borderRadius: "8px",
-                }}
-              />
-              <p style={{ textAlign: "center" }}>
-                <small>"La Chute" (1479) by Hugo Van der Goes</small>
-              </p>
-              <p style={{ textAlign: "justify" }}>
-                As a kid, the story of Genesis always fascinated me. I first
-                heard it from my grandmother, "In the beginning.." she said,
-                then repeated by people around with the same enthusiasm that the
-                fruit eaten by Adam and Eve was an actual forbidden fruit,
-                guarded by an evil snake in a place called the Garden of Eden.
-                It gave the impression as if it really existed somewhere up
-                there, beyond the sky, and one day we could visit it during
-                holiday. I found it strange and beautiful as a bedtime story to
-                cover something we didn't have an explanation for. It made me
-                imagine how the fruit might look, how it tasted, and wonder if
-                there could be any other kind of fruit. As I grew up, I buried
-                most of those childhood fairytales, but I chose to spare this
-                one, as a souvenir, to remind me of that innocent time. So, in
-                order to not let it die uncovered, I try to give it a new
-                uniform and see it far from different dimensions.
-                <br />
-                <br />
-                <p>
-                  <blockquote
-                    style={{
-                      marginLeft: "20px",
-                      borderLeft: "4px solid #ccc",
-                      paddingLeft: "16px",
-                      textAlign: "justify",
-                    }}
-                  >
-                    Sitting by the campfire, I listen to the snake’s voice
-                    again. It is old and raspy without temptation; it feels like
-                    a call that once told us to discover ancient flame, to
-                    unveil something powerful in every breath that obeys the
-                    order and laws of number, to kiss the sun and steal the ring
-                    of Saturn, to fill the cosmos with our everlasting dreams,
-                    until we were lost again in search of ourselves. "Eat the
-                    fruit slowly, bit by bit and you will understand," said the
-                    snake. Then I fall, flooded with pain and suffering. "Cross
-                    that border, go away to a place beyond your intuition, and
-                    never give up," the snake repeated. "Who are you?" I asked.
-                    "I am, your curiosity".
-                  </blockquote>
+            <div id="section-beginning">
+              <h1>In the beginning.. </h1>
+              <div>
+                <img
+                  src={forbiddenFruit}
+                  alt="profile-pic"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "8px",
+                  }}
+                />
+                <p style={{ textAlign: "center" }}>
+                  <small>"La Chute" (1479) by Hugo Van der Goes</small>
                 </p>
-              </p>
+                <p style={{ textAlign: "justify" }}>
+                  As a kid, the story of Genesis always fascinated me. I first
+                  heard it from my grandmother, "In the beginning.." she said,
+                  then repeated by people around with the same enthusiasm that the
+                  fruit eaten by Adam and Eve was an actual forbidden fruit,
+                  guarded by an evil snake in a place called the Garden of Eden.
+                  It gave the impression as if it really existed somewhere up
+                  there, beyond the sky, and one day we could visit it during
+                  holiday. I found it strange and beautiful as a bedtime story to
+                  cover something we didn't have an explanation for. It made me
+                  imagine how the fruit might look, how it tasted, and wonder if
+                  there could be any other kind of fruit. As I grew up, I buried
+                  most of those childhood fairytales, but I chose to spare this
+                  one, as a souvenir, to remind me of that innocent time. So, in
+                  order to not let it die uncovered, I try to give it a new
+                  uniform and see it far from different dimensions.
+                  <br />
+                  <br />
+                  <p>
+                    <blockquote
+                      style={{
+                        marginLeft: "20px",
+                        borderLeft: "4px solid #ccc",
+                        paddingLeft: "16px",
+                        textAlign: "justify",
+                      }}
+                    >
+                      Sitting by the campfire, I listen to the snake's voice
+                      again. It is old and raspy without temptation; it feels like
+                      a call that once told us to discover ancient flame, to
+                      unveil something powerful in every breath that obeys the
+                      order and laws of number, to kiss the sun and steal the ring
+                      of Saturn, to fill the cosmos with our everlasting dreams,
+                      until we were lost again in search of ourselves. "Eat the
+                      fruit slowly, bit by bit and you will understand," said the
+                      snake. Then I fall, flooded with pain and suffering. "Cross
+                      that border, go away to a place beyond your intuition, and
+                      never give up," the snake repeated. "Who are you?" I asked.
+                      "I am, your curiosity".
+                    </blockquote>
+                  </p>
+                </p>
+              </div>
             </div>
-            <div>
+            <div id="section-idea">
               <h1>The Idea</h1>
               <p style={{ textAlign: "justify" }}>
                 I imagine this blog as a cave which animates primitive
@@ -166,13 +169,13 @@ function About() {
                 industrial designer who inspired Steve Jobs for the iPod design.
                 Though he never designed a website, I like to imagine what it
                 would be like if he did. So, I stole his recipe—but I must
-                admit, having a sense of style isn’t easy; you really need to
+                admit, having a sense of style isn't easy; you really need to
                 work on a different kind operation of way to see things. I still
                 consider this blog unfinished and will continue to refine it
                 from time to time.
               </p>
             </div>
-            <div>
+            <div id="section-what">
               <h1>What is this?</h1>
               <p style={{ textAlign: "justify" }}>
                 This blog is an attempt to project and organize my thoughts; a
@@ -184,7 +187,7 @@ function About() {
                 and to share a sleepless dialogue within.
               </p>
             </div>
-            <div>
+            <div id="section-aboutme">
               <h1>About Me</h1>
               <div className="about__me">
                 <img
@@ -204,7 +207,7 @@ function About() {
                 <p style={{ textAlign: "justify" }}>
                   I grew up in a sleepy little town in North Sumatra, it's
                   surrounded by the mountains and sea-facing the Indian Ocean.
-                  So, the hobbies that you’re likely to develop in a place like
+                  So, the hobbies that you're likely to develop in a place like
                   that are hiking, swimming, fishing and wondering what lies
                   beyond the sea and the mountain. After high school, I took my
                   first sail to study computer science and mathematics. Later, I
@@ -225,7 +228,7 @@ function About() {
                 time.
               </p>
             </div>
-            <div>
+            <div id="section-travel">
               <h1>Travel</h1>
               <p>
                 I made this visual map to keep track of the countries I've been
@@ -256,7 +259,7 @@ function About() {
                 />
               </div>
             </div>
-            <div>
+            <div id="section-languages">
               <h1>Languages</h1>
               <blockquote
                 style={{
@@ -586,7 +589,7 @@ function About() {
                 </div>
               </ol>
             </div>
-            <div>
+            <div id="section-gadgetery">
               <h1>Gadgetery</h1>
               <p>
                 Laptop : Macbook Pro M3 Pro 2023, 14" <br />
@@ -647,7 +650,7 @@ function About() {
                 borderTop: "1px solid #b9b4b4",
               }}
             />
-            <div>
+            <div id="section-programmer">
               <h1>Note for programmer</h1>
               <p>
                 This blog is built mainly using{" "}
@@ -691,7 +694,7 @@ function About() {
                   borderTop: "1px solid #b9b4b4",
                 }}
               /> */}
-            <div>
+            <div id="section-credit">
               <h1>Credit</h1>
               <div>
                 <p>
@@ -751,6 +754,19 @@ function About() {
             </div>
           </div>
         </div>
+        <ScrollRuler
+          sections={[
+            { id: "section-beginning", label: "Beginning" },
+            { id: "section-idea", label: "The Idea" },
+            { id: "section-what", label: "What is this" },
+            { id: "section-aboutme", label: "About Me" },
+            { id: "section-travel", label: "Travel" },
+            { id: "section-languages", label: "Languages" },
+            { id: "section-gadgetery", label: "Gadgetery" },
+            { id: "section-programmer", label: "Programmer" },
+            { id: "section-credit", label: "Credit" },
+          ]}
+        />
       </Layout>
     </>
   );
