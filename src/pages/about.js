@@ -64,21 +64,8 @@ function About() {
                   <small>"La Chute" (1479) by Hugo Van der Goes</small>
                 </p>
                 <p style={{ textAlign: "justify" }}>
-                  As a kid, the story of Genesis always fascinated me. I first
-                  heard it from my grandmother, "In the beginning.." she said,
-                  then repeated by people around with the same enthusiasm that the
-                  fruit eaten by Adam and Eve was an actual forbidden fruit,
-                  guarded by an evil snake in a place called the Garden of Eden.
-                  It gave the impression as if it really existed somewhere up
-                  there, beyond the sky, and one day we could visit it during
-                  holiday. I found it strange and beautiful as a bedtime story to
-                  cover something we didn't have an explanation for. It made me
-                  imagine how the fruit might look, how it tasted, and wonder if
-                  there could be any other kind of fruit. As I grew up, I buried
-                  most of those childhood fairytales, but I chose to spare this
-                  one, as a souvenir, to remind me of that innocent time. So, in
-                  order to not let it die uncovered, I try to give it a new
-                  uniform and see it far from different dimensions.
+
+                  I was five or six when my grandmother first told me the story of Genesis. "In the beginning…" she said, then repeated by people around with the same enthusiasm as if there is actually a real garden somewhere up there, past the clouds, guarded by an evil serpent, and one day we could visit it during the holiday. I was fascinated. I found it strange and beautiful as a bedtime story. It made me imagine how the fruit might look, how it tasted, how many of them, and wonder if there could be any other kind of fruit. As I grew up, I buried most of those fairytales, but I chose to spare this one, as a souvenir, to remind me of that innocent time.
                   <br />
                   <br />
                   <p>
@@ -90,18 +77,7 @@ function About() {
                         textAlign: "justify",
                       }}
                     >
-                      Sitting by the campfire, I listen to the snake's voice
-                      again. It is old and raspy without temptation; it feels like
-                      a call that once told us to discover ancient flame, to
-                      unveil something powerful in every breath that obeys the
-                      order and laws of number, to kiss the sun and steal the ring
-                      of Saturn, to fill the cosmos with our everlasting dreams,
-                      until we were lost again in search of ourselves. "Eat the
-                      fruit slowly, bit by bit and you will understand," said the
-                      snake. Then I fall, flooded with pain and suffering. "Cross
-                      that border, go away to a place beyond your intuition, and
-                      never give up," the snake repeated. "Who are you?" I asked.
-                      "I am, your curiosity".
+                      Sitting by the campfire, I listen to that old and raspy voice again — an echo that once whispered me to make fire, to unveil a breath that obeys the law of number, to kiss the sun and steal the ring of Saturn, to fill the universe with our everlasting dreams, until we were lost, until we meet, until we find ourselves once again. "Eat and you will understand." Then I fall into the sea of suffering. "Run away ! " "Run to the edge of reason," the snake repeated. "Who are you?" I asked. "I am your curiosity."
                     </blockquote>
                   </p>
                 </p>

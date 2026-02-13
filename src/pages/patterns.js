@@ -79,12 +79,6 @@ function Patterns() {
       <Layout pageTitle="patterns">
         <div className="patterns-gallery" id="patterns-gallery">
 
-          {/* Per-image title */}
-          <div className="patterns-gallery__header">
-            <h2 className="patterns-gallery__title">{active.title}</h2>
-            <p className="patterns-gallery__subtitle">{active.subtitle}</p>
-          </div>
-
           {/* Carousel track */}
           <div className="patterns-gallery__track">
             {patterns.map((pattern, index) => {
@@ -149,6 +143,12 @@ function Patterns() {
                 </div>
               );
             })}
+          </div>
+
+          {/* Per-image title — right below the photo */}
+          <div className="patterns-gallery__header">
+            <h2 className="patterns-gallery__title">{active.title}</h2>
+            <p className="patterns-gallery__subtitle">{active.subtitle}</p>
           </div>
 
           {/* Pagination bars */}

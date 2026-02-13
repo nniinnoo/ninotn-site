@@ -176,12 +176,12 @@ export default function Projects() {
       backgroundImage:
         "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
       backgroundSize: "12px 12px",
-      border: "1px solid var(--dark-1)",
+      border: "none",
       borderRadius: "0",
       padding: "1rem",
       cursor: "pointer",
       transition: "all 0.1s ease",
-      boxShadow: "4px 4px 0px 0px rgba(0, 0, 0, 0.3)",
+      boxShadow: "none",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
@@ -194,7 +194,7 @@ export default function Projects() {
         "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
       backgroundSize: "12px 12px",
       transform: "translate(2px, 2px)",
-      boxShadow: "2px 2px 0px 0px rgba(0, 0, 0, 0.3)",
+      boxShadow: "none",
     },
     header: {
       display: "flex",
@@ -236,20 +236,24 @@ export default function Projects() {
     badge: {
       background: "transparent",
       color: "var(--dark-1)",
-      border: "1px solid var(--dark-1)",
+      border: "none",
+      borderBottom: "1px dashed var(--subtle-dark-1)",
       padding: "0.2rem 0.4rem",
       borderRadius: "6px",
       fontSize: "0.75rem",
       fontWeight: "500",
+      fontFamily: "'Departure Mono', monospace",
     },
     statusBadge: {
       background: "transparent",
       color: "var(--sort-newest)",
-      border: "1px solid var(--sort-newest)",
+      border: "none",
+      borderBottom: "1px dashed var(--subtle-dark-1)",
       padding: "0.2rem 0.4rem",
       borderRadius: "6px",
       fontSize: "0.75rem",
       fontWeight: "500",
+      fontFamily: "'Departure Mono', monospace",
     },
   };
 
@@ -364,7 +368,7 @@ export default function Projects() {
                 onMouseEnter={(e) => {
                   const card = e.currentTarget;
                   card.style.transform = "translate(2px, 2px)";
-                  card.style.boxShadow = "2px 2px 0px 0px rgba(0, 0, 0, 0.3)";
+                  card.style.boxShadow = "none";
                   card.style.background = "var(--hover-1)";
                   card.style.backgroundImage =
                     "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
@@ -373,7 +377,7 @@ export default function Projects() {
                 onMouseLeave={(e) => {
                   const card = e.currentTarget;
                   card.style.transform = "translate(0, 0)";
-                  card.style.boxShadow = "4px 4px 0px 0px rgba(0, 0, 0, 0.3)";
+                  card.style.boxShadow = "none";
                   card.style.background = "var(--bg-2)";
                   card.style.backgroundImage =
                     "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
@@ -756,12 +760,12 @@ export default function Projects() {
                             width: "100%",
                             height:
                               selectedProject.id === "oishi-kenko" ||
-                              selectedProject.id === "kompit"
+                                selectedProject.id === "kompit"
                                 ? "300px"
                                 : "auto",
                             objectFit:
                               selectedProject.id === "oishi-kenko" ||
-                              selectedProject.id === "kompit"
+                                selectedProject.id === "kompit"
                                 ? "contain"
                                 : "cover",
                             borderRadius: "8px",

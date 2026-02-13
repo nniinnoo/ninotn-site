@@ -2,10 +2,8 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
-import DateIcon from "@mui/icons-material/TodayOutlined";
-import ReadingTimeIcon from "@mui/icons-material/TimerOutlined";
-import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
-// import CategoryIcon from "@mui/icons-material/CategoryOutlined";
+import { Calendar, Timer, Coffee } from "lucide-react";
+// import { LayoutGrid } from "lucide-react"; // CategoryIcon equivalent
 
 import Layout from "@components/Layout";
 import Pagination from "@components/Pagination";
@@ -43,19 +41,19 @@ function BlogIndex({ data, pageContext }) {
                           <p>{post.frontmatter.description}</p>
                           <div>
                             <span>
-                              <DateIcon />
+                              <Calendar size={14} />
                               <p>{post.frontmatter.date}</p>
                             </span>
                             <span>
-                              <CoffeeMakerIcon />
+                              <Coffee size={14} />
                               <p>{post.wordCount.words} words</p>
                             </span>
                             <span>
-                              <ReadingTimeIcon />
+                              <Timer size={14} />
                               <p>~{post.timeToRead} min</p>
                             </span>
                             {/* <span>
-                              <CategoryIcon />
+                              <LayoutGrid size={14} />
                               <p>{post.frontmatter.categories}</p>
                             </span> */}
 

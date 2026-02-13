@@ -3,16 +3,49 @@ import { graphql, navigate } from "gatsby";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
-import BackIcon from "@mui/icons-material/ArrowBackIosNewRounded";
-import DateIcon from "@mui/icons-material/TodayOutlined";
-import ReadingTimeIcon from "@mui/icons-material/TimerOutlined";
-import CoffeeMakerIcon from "@mui/icons-material/CoffeeOutlined";
-// import CategoryIcon from "@mui/icons-material/CategoryOutlined";
+import { ArrowLeft, Calendar, Timer, Coffee } from "lucide-react";
+// import { LayoutGrid } from "lucide-react"; // CategoryIcon equivalent
 
 import SEO from "@components/SEO";
 
+import { useState, useEffect } from "react";
+import ScrollRuler from "@components/ScrollRuler";
+
 export default function PostTemplate({ data = [] }) {
   const post = data.markdownRemark;
+  const [sections, setSections] = useState([]);
+
+  // Extract headings for ScrollRuler
+  useEffect(() => {
+    // Wait for content to render
+    const timer = setTimeout(() => {
+      const content = document.querySelector(".blog__post-body");
+      if (!content) return;
+
+      const headings = Array.from(content.querySelectorAll("h1, h2, h3"));
+      const newSections = headings.map((heading) => {
+        let id = heading.id;
+        if (!id) {
+          // Generate ID from text if missing
+          id = heading.innerText
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/(^-|-$)+/g, "");
+          heading.id = id;
+        }
+        return {
+          id,
+          label: heading.innerText,
+        };
+      });
+
+      // Filter out empty labels or IDs
+      const validSections = newSections.filter(s => s.id && s.label);
+      setSections(validSections);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [post.html]); // Re-run if post content changes
 
   const languageIcons = {
     en: "🇬🇧",
@@ -29,25 +62,26 @@ export default function PostTemplate({ data = [] }) {
         postUrl={post.frontmatter.slug}
         postSEO
       />
+      <ScrollRuler sections={sections} />
       <div className="blog__post-container">
         <div className="blog__post-content-center">
           <article>
             <h1 className="blog__post-title">{post.frontmatter.title}</h1>
             <div className="blog__post-title-details">
               <span>
-                <DateIcon />
+                <Calendar size={14} />
                 <p>{post.frontmatter.date}</p>
               </span>
               <span>
-                <CoffeeMakerIcon />
+                <Coffee size={14} />
                 <p>{post.wordCount.words} words</p>
               </span>
               <span>
-                <ReadingTimeIcon />
+                <Timer size={14} />
                 <p>~{post.timeToRead} min</p>
               </span>
               {/* <span>
-                <CategoryIcon />
+                <LayoutGrid size={14} />
                 <p>{post.frontmatter.categories}</p>
               </span> */}
               {post.frontmatter.language.split(",").map((lang) => (
@@ -70,7 +104,7 @@ export default function PostTemplate({ data = [] }) {
             className="blog__post-back-btn"
             onClick={() => navigate("/")}
           >
-            <BackIcon />
+            <ArrowLeft size={16} />
             <p>Back</p>
           </button>
         </div>

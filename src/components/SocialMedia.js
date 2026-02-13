@@ -1,21 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import CasinoIcon from "@mui/icons-material/CasinoOutlined";
+import { Github, Instagram } from "lucide-react";
 
 function SocialMedia({ size }) {
+  const sizeMap = { small: 14, medium: 18, large: 24 };
+  const px = sizeMap[size] || 18;
+
   return (
     <div className="socmed">
       <a href="https://github.com/nniinnoo" aria-label="GitHub">
-        <GitHubIcon fontSize={size} />
+        <Github size={px} />
       </a>
       <a href="https://www.instagram.com/ninotannio/" aria-label="Instagram">
-        <InstagramIcon fontSize={size} />
-      </a>
-      <a href="https://www.chess.com/member/nino_saurus" aria-label="Chess">
-        <CasinoIcon fontSize={size} />
+        <Instagram size={px} />
       </a>
     </div>
   );
@@ -30,3 +28,4 @@ SocialMedia.propTypes = {
 };
 
 export default SocialMedia;
+

@@ -13,7 +13,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
  *  - Blue indicator: 16px tick + number (e.g. "0.40")
  *    — number hides on group hover, labels appear instead
  */
-function ScrollRuler({ sections = [] }) {
+function ScrollRuler({ sections = [], defaultLabel, alwaysShowLabels, hideIndicatorLabel }) {
     const [scrollProgress, setScrollProgress] = useState(0);
     const [containerHeight, setContainerHeight] = useState(0);
     const [sectionPixelPositions, setSectionPixelPositions] = useState([]);
@@ -44,7 +44,9 @@ function ScrollRuler({ sections = [] }) {
             const ratio = Math.min(1, Math.max(0, el.offsetTop / scrollableHeight));
 
             // Return pixel position in container height
-            return Math.round(ratio * h);
+            const rawPos = ratio * h;
+            // Snap to nearest tick (TICK_SPACING = 10) to align with background grid
+            return Math.round(rawPos / TICK_SPACING) * TICK_SPACING;
         });
         setSectionPixelPositions(positions);
     }, [sections, containerHeight]);
@@ -55,7 +57,7 @@ function ScrollRuler({ sections = [] }) {
         const h = rect.height;
         setContainerHeight(h);
         calcSectionPositions(h); // Pass new height directly
-    }, [calcSectionPositions]); // Add calcSectionPositions to dependencies
+    }, [calcSectionPositions]);
 
     const updateScroll = useCallback(() => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -91,17 +93,32 @@ function ScrollRuler({ sections = [] }) {
     };
 
     const scrollToSection = (id) => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        const index = sections.findIndex((s) => s.id === id);
+        if (index === -1) return;
+
+        // Snapped Y position of the section tick
+        const yPos = sectionPixelPositions[index];
+        if (yPos === undefined || yPos === null) return;
+
+        // Convert back to scroll position:
+        // yPos / containerHeight = scrollTop / scrollableHeight
+        const docHeight = document.documentElement.scrollHeight;
+        const scrollableHeight = docHeight - window.innerHeight;
+        const ratio = yPos / containerHeight;
+
+        window.scrollTo({
+            top: ratio * scrollableHeight,
+            behavior: "smooth",
+        });
     };
 
     const totalTicks = Math.floor(containerHeight / TICK_SPACING);
     const indicatorPx = Math.round(scrollProgress * containerHeight);
 
     return (
-        <div className="scroll-ruler" aria-hidden="true">
+        <div className={`scroll-ruler ${alwaysShowLabels ? 'scroll-ruler--always-labels' : ''} ${hideIndicatorLabel ? 'scroll-ruler--hide-indicator' : ''}`} aria-hidden="true">
             <div className="scroll-ruler__container" ref={containerRef}>
-                {/* The group wrapper — hovering it reveals labels, hides number */}
+                {/* The group wrapper — hovering it reveals labels, hides number (unless always-labels is active) */}
                 <div className="scroll-ruler__group">
                     <div className="scroll-ruler__inner">
                         {/* Regular tick marks */}
@@ -129,8 +146,8 @@ function ScrollRuler({ sections = [] }) {
                                     key={`label-${section.id}`}
                                     className="scroll-ruler__section-label-wrap"
                                     style={{
-                                        "--yPosition": `${yPos - 6}px`,
-                                        "--indent": "32px",
+                                        "--yPosition": `${yPos - 5}px`,
+                                        "--indent": "28px",
                                         transitionDelay: `${i * 50}ms`,
                                     }}
                                 >
@@ -158,7 +175,7 @@ function ScrollRuler({ sections = [] }) {
                                     className="scroll-ruler__section-tick"
                                     style={{
                                         "--yPosition": `${yPos}px`,
-                                        "--indent": "12px",
+                                        "--indent": "8px",
                                     }}
                                 />
                             );
@@ -171,7 +188,7 @@ function ScrollRuler({ sections = [] }) {
                         >
                             <div className="scroll-ruler__indicator-tick" />
                             <span className="scroll-ruler__progress">
-                                {scrollProgress.toFixed(2)}
+                                {defaultLabel && scrollProgress < 0.005 ? defaultLabel : scrollProgress.toFixed(2)}
                             </span>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { ChevronDown } from "lucide-react";
 
 function Filter() {
   const [sortIndex, setSortindex] = useState(0);
@@ -33,7 +33,7 @@ function Filter() {
       <div className="blog__dropdown">
         <button type="button" className="blog__dropdown-btn">
           Category
-          <DropDownIcon />
+          <ChevronDown size={20} />
         </button>
         <div className="blog__dropdown-list">
           <p>under reconstruction</p>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "@components/Layout";
-import ArrowRightIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 import imgList from "@assets/general-files/image-list";
 import SEO from "@components/SEO";
@@ -65,7 +64,7 @@ function Gallery() {
                     cursor: imgIndex > 1 ? "pointer" : "not-allowed",
                   }}
                 >
-                  <ArrowLeftIcon />
+                  <ChevronLeft size={24} />
                 </button>
                 <p>
                   {imgIndex} | {imgTotal}
@@ -86,7 +85,7 @@ function Gallery() {
                     cursor: imgIndex < imgTotal ? "pointer" : "not-allowed",
                   }}
                 >
-                  <ArrowRightIcon />
+                  <ChevronRight size={24} />
                 </button>
               </div>
             </div>

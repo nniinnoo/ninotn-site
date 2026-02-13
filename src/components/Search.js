@@ -3,7 +3,7 @@ import { useFlexSearch } from "react-use-flexsearch";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Corpus from "@components/Corpus";
-import SearchIcon from "@mui/icons-material/SailingRounded";
+import { Sailboat } from "lucide-react";
 
 function Search() {
   // const { location } = useLocation();
@@ -55,7 +55,7 @@ function Search() {
           }}
           placeholder="Search articles by title or specific context..."
         />
-        <SearchIcon />
+        <Sailboat size={24} />
       </div>
       <div className="search__result">
         {query ? (

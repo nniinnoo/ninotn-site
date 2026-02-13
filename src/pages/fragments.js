@@ -3,6 +3,7 @@ import Layout from "@components/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 
 import SEO from "@components/SEO";
+import ScrollRuler from "@components/ScrollRuler";
 
 function Fragments() {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,10 @@ function Fragments() {
   `);
 
   const fragments = data.allMarkdownRemark;
+  const sections = fragments.nodes.map(node => ({
+    id: node.frontmatter.slug,
+    label: node.frontmatter.title || `Fragment ${node.frontmatter.no}`
+  }));
 
   return (
     <>
@@ -32,7 +37,7 @@ function Fragments() {
       <Layout>
         <div className="fragment__container">
           {fragments.nodes.map((node) => (
-            <div className="fragment__content">
+            <div className="fragment__content" id={node.frontmatter.slug} key={node.id}>
               <h2>Fragments {node.frontmatter.title}</h2>
               <div
                 className="grid"
@@ -41,6 +46,7 @@ function Fragments() {
             </div>
           ))}
         </div>
+        <ScrollRuler sections={sections} alwaysShowLabels hideIndicatorLabel />
       </Layout>
     </>
   );

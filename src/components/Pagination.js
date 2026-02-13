@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import ArrowRightIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import ArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 function Pagination({ currentPage, pageCount }) {
   return (
@@ -16,7 +15,7 @@ function Pagination({ currentPage, pageCount }) {
           title="Previous page"
           to={currentPage === 2 ? "/" : `/page/${currentPage - 1}`}
         >
-          <ArrowLeftIcon />
+          <ChevronLeft size={24} />
         </Link>
       </div>
       <div className="pagination__number">
@@ -33,7 +32,7 @@ function Pagination({ currentPage, pageCount }) {
           title="Next page"
           to={`/page/${currentPage + 1}`}
         >
-          <ArrowRightIcon />
+          <ChevronRight size={24} />
         </Link>
       </div>
     </div>
