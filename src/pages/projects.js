@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Apple, Play } from "lucide-react";
 import Layout from "@components/Layout";
 import SEO from "@components/SEO";
 import fractilesIcon from "../assets/project-icons/fractiles-icon.png";
@@ -257,6 +258,21 @@ export default function Projects() {
     },
   };
 
+  const getProjectMeta = (project) => {
+    switch (project.id) {
+      case "virvoile":
+        return { developer: "Team Developer: Nino Tannio", released: "", extra: "Client: G.Lepinard | Closed Source" };
+      case "oishi-kenko":
+        return { developer: "Contributor: Nino Tannio", released: "Year: 2020", extra: "Closed Source" };
+      case "fore-coffee":
+        return { developer: "Developer: Nino Tannio (First Dev | Senior Dev | 2018-2020)", released: "First Released: 12.10.2018", extra: "" };
+      case "kompit":
+        return { developer: "Developer: Nino Tannio (Senior Mobile Dev | Early Programmer)", released: "First Released: 02.02.2024", extra: "" };
+      default:
+        return { developer: "Developer: Nino Tannio (Solo Dev)", released: project.releaseDate ? `First Released: ${project.releaseDate}` : "", extra: "" };
+    }
+  };
+
   const modalStyles = {
     overlay: {
       position: "fixed",
@@ -265,52 +281,38 @@ export default function Projects() {
       right: 0,
       bottom: 0,
       background: "rgba(0, 0, 0, 0.7)",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
       zIndex: 1000,
-      padding: "2rem",
     },
     modal: {
       background: "var(--bg)",
-      borderRadius: "12px",
-      padding: "2rem",
-      maxWidth: "1200px",
+      borderRadius: "0",
+      padding: "clamp(1.5rem, 4vw, 3rem)",
+      maxWidth: "900px",
       width: "100%",
       maxHeight: "90vh",
       overflow: "auto",
       scrollbarWidth: "none",
       msOverflowStyle: "none",
       border: "1px solid var(--subtle-dark-1)",
-      boxShadow: "rgba(0, 0, 0, 0.3) 0px 8px 32px",
-    },
-    header: {
-      display: "flex",
-      alignItems: "center",
-      gap: "1rem",
-      marginBottom: "1.5rem",
+      boxShadow: "rgba(0, 0, 0, 0.4) 0px 16px 64px",
     },
     closeButton: {
       position: "absolute",
-      top: "1rem",
-      right: "1rem",
+      top: "1.25rem",
+      right: "1.25rem",
       background: "none",
       border: "none",
-      fontSize: "1.5rem",
+      fontSize: "1.25rem",
       cursor: "pointer",
-      color: "var(--dark-1)",
+      color: "var(--subtle-dark-3)",
       padding: "0.5rem",
+      fontFamily: "'Departure Mono', monospace",
+      lineHeight: 1,
     },
-    linkButton: {
-      display: "inline-block",
-      background: "var(--sort-to)",
-      color: "white",
-      padding: "0.75rem 1.5rem",
-      borderRadius: "6px",
-      textDecoration: "none",
-      fontWeight: "500",
-      margin: "0.5rem 0.5rem 0.5rem 0",
-      transition: "background 0.3s ease",
+    separator: {
+      border: "none",
+      borderTop: "1px dashed var(--subtle-dark-1)",
+      margin: "1.5rem 0",
     },
   };
 
@@ -479,342 +481,262 @@ export default function Projects() {
         </div>
 
         {/* Modal */}
-        {selectedProject && (
-          <>
-            <div
-              style={modalStyles.overlay}
-              onClick={() => setSelectedProject(null)}
-            />
-            <div
-              role="dialog"
-              aria-modal="true"
-              style={{
-                ...modalStyles.modal,
-                position: "fixed",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                zIndex: 1001,
-                WebkitScrollbar: { display: "none" },
-              }}
-              className="modal-no-scrollbar"
-            >
-              <button
-                type="button"
-                style={modalStyles.closeButton}
+        {selectedProject && (() => {
+          const meta = getProjectMeta(selectedProject);
+          return (
+            <>
+              <div
+                style={modalStyles.overlay}
                 onClick={() => setSelectedProject(null)}
-                aria-label="Close modal"
+              />
+              <div
+                role="dialog"
+                aria-modal="true"
+                style={{
+                  ...modalStyles.modal,
+                  position: "fixed",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: 1001,
+                }}
+                className="modal-no-scrollbar"
               >
-                ×
-              </button>
+                {/* Close */}
+                <button
+                  type="button"
+                  style={modalStyles.closeButton}
+                  onClick={() => setSelectedProject(null)}
+                  aria-label="Close modal"
+                >
+                  [x]
+                </button>
 
-              <div style={modalStyles.header}>
-                <img
-                  src={selectedProject.icon}
-                  alt={`${selectedProject.title} icon`}
-                  style={{
-                    width: "64px",
-                    height: "64px",
-                    borderRadius: "10px",
-                  }}
-                />
-                <div>
-                  <h2
+                {/* Icon + Title */}
+                <div style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                  marginBottom: "1.25rem",
+                }}>
+                  <img
+                    src={selectedProject.icon}
+                    alt={`${selectedProject.title} icon`}
                     style={{
-                      margin: 0,
-                      color: "var(--dark-1)",
-                      fontFamily: "var(--font-family-title)",
-                      fontSize: "2.6rem",
-                      lineHeight: 1.1,
-                      letterSpacing: "-0.015em",
-                      fontFeatureSettings: '"liga" 1, "kern" 1',
+                      width: "64px",
+                      height: "64px",
+                      borderRadius: "6px",
+                      flexShrink: 0,
                     }}
-                  >
+                  />
+                  <h2 style={{
+                    margin: 0,
+                    color: "var(--dark-1)",
+                    fontFamily: "var(--font-family-title)",
+                    fontSize: "clamp(2rem, 4vw, 2.8rem)",
+                    lineHeight: 1.1,
+                    letterSpacing: "-0.03em",
+                    textTransform: "uppercase",
+                    fontFeatureSettings: '"liga" 1, "kern" 1',
+                  }}>
                     {selectedProject.title}
                   </h2>
-                  <p
-                    style={{
-                      margin: "0.05rem 0 0 0",
-                      color: "var(--subtle-dark-3)",
-                      fontSize: "1.15rem",
-                      lineHeight: 1.1,
-                    }}
-                  >
-                    {selectedProject.id === "virvoile"
-                      ? "Desktop App"
-                      : "Mobile App"}
-                  </p>
                 </div>
-              </div>
 
-              <p
-                style={{
-                  color: "var(--dark-1)",
-                  lineHeight: "1.6",
-                  marginBottom: "1.5rem",
-                }}
-              >
-                {selectedProject.description}
-              </p>
-
-              <div style={{ marginBottom: "1.5rem" }}>
-                <p
-                  style={{
-                    color: "var(--dark-1)",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  {selectedProject.id === "virvoile" ? (
-                    <>
-                      <strong>Team Developer:</strong> Nino Tannio |{" "}
-                      <strong>Client:</strong> G.Lepinard |{" "}
-                      <strong>License:</strong> Closed Source
-                    </>
-                  ) : selectedProject.id === "oishi-kenko" ? (
-                    <>
-                      <strong>Contributor:</strong> Nino Tannio |{" "}
-                      <strong>Year:</strong> 2020 | <strong>License:</strong>{" "}
-                      Closed Source
-                    </>
-                  ) : selectedProject.id === "fore-coffee" ? (
-                    <>
-                      <strong>Developer:</strong> Nino Tannio (First Dev |
-                      Senior Dev | 2018-2020) | <strong>First Released:</strong>{" "}
-                      12.10.2018
-                    </>
-                  ) : selectedProject.id === "kompit" ? (
-                    <>
-                      <strong>Developer:</strong> Nino Tannio (Senior Mobile Dev
-                      | Early Programmer) | <strong>First Released:</strong>{" "}
-                      02.02.2024
-                    </>
-                  ) : (
-                    <>
-                      <strong>Developer:</strong> Nino Tannio (Solo Dev) |{" "}
-                      <strong>First Released:</strong> 17.09.2025
-                    </>
+                {/* Developer / Released / Tech meta */}
+                <div style={{
+                  fontFamily: "'Departure Mono', monospace",
+                  fontSize: "0.9rem",
+                  color: "var(--subtle-dark-3)",
+                  lineHeight: 1.8,
+                  marginBottom: "1rem",
+                }}>
+                  <div>{meta.developer}</div>
+                  {meta.released && <div>{meta.released}</div>}
+                  {meta.extra && <div>{meta.extra}</div>}
+                  {selectedProject.technologies.length > 0 && (
+                    <div>Tech Stack: {selectedProject.technologies.join(", ")}</div>
                   )}
-                </p>
-              </div>
+                </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  gap: "2rem",
-                  marginBottom: "1.5rem",
-                  flexWrap: "wrap",
-                }}
-              >
-                <div style={{ flex: "1", minWidth: "200px" }}>
-                  <h4
-                    style={{
-                      color: "var(--dark-1)",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    Technologies:
-                  </h4>
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: "0.5rem",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    {selectedProject.technologies.map((tech) => (
-                      <span
-                        key={tech}
+                {/* Description */}
+                <p style={{
+                  color: "var(--dark-1)",
+                  lineHeight: 1.6,
+                  fontSize: "1.05rem",
+                  margin: "0 0 0.5rem 0",
+                  maxWidth: "520px",
+                }}>
+                  {selectedProject.description}
+                </p>
+
+                {/* Separator */}
+                <hr style={modalStyles.separator} />
+
+                {/* Download buttons */}
+                {selectedProject.id !== "virvoile" && (
+                  selectedProject.links.appStore !== "#" ||
+                  selectedProject.links.playStore !== "#"
+                ) && (
+                  <div style={{
+                    display: "flex",
+                    gap: "0.75rem",
+                    flexWrap: "wrap",
+                    marginBottom: "1.25rem",
+                  }}>
+                    {selectedProject.links.appStore !== "#" && (
+                      <a
+                        href={selectedProject.links.appStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         style={{
-                          background: "var(--subtle-dark-1)",
-                          padding: "0.25rem 0.5rem",
-                          borderRadius: "4px",
-                          fontSize: "0.9rem",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "0.5rem",
                           color: "var(--dark-1)",
+                          textDecoration: "none",
+                          fontSize: "0.85rem",
+                          fontFamily: "'Departure Mono', monospace",
+                          padding: "0.6rem 1.2rem",
+                          border: "1px solid var(--subtle-dark-1)",
+                          background: "transparent",
+                          transition: "background 0.2s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = "var(--hover-1)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = "transparent";
                         }}
                       >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {selectedProject.id !== "virvoile" && (
-                  <div style={{ flex: "1", minWidth: "200px" }}>
-                    <h4
-                      style={{
-                        color: "var(--dark-1)",
-                        marginBottom: "0.5rem",
-                      }}
-                    >
-                      Download:
-                    </h4>
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: "0.75rem",
-                        flexWrap: "wrap",
-                      }}
-                    >
-                      {selectedProject.links.appStore !== "#" && (
-                        <a
-                          href={selectedProject.links.appStore}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            ...modalStyles.linkButton,
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "0.5rem",
-                          }}
-                        >
-                          <span style={{ fontSize: "1.2rem" }}>🍎</span>
-                          iOS - App Store
-                        </a>
-                      )}
-                      {selectedProject.links.playStore !== "#" && (
-                        <a
-                          href={selectedProject.links.playStore}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            ...modalStyles.linkButton,
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "0.5rem",
-                          }}
-                        >
-                          <span style={{ fontSize: "1.2rem" }}>🤖</span>
-                          Android - Play Store
-                        </a>
-                      )}
-                    </div>
+                        <Apple size={14} /> App Store
+                      </a>
+                    )}
+                    {selectedProject.links.playStore !== "#" && (
+                      <a
+                        href={selectedProject.links.playStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "0.5rem",
+                          color: "var(--dark-1)",
+                          textDecoration: "none",
+                          fontSize: "0.85rem",
+                          fontFamily: "'Departure Mono', monospace",
+                          padding: "0.6rem 1.2rem",
+                          border: "1px solid var(--subtle-dark-1)",
+                          background: "transparent",
+                          transition: "background 0.2s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = "var(--hover-1)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = "transparent";
+                        }}
+                      >
+                        <Play size={14} /> Play Store
+                      </a>
+                    )}
                   </div>
                 )}
-              </div>
 
-              {selectedProject.videos && selectedProject.videos.length > 0 && (
-                <div style={{ marginBottom: "1.5rem" }}>
-                  <h4
-                    style={{
-                      color: "var(--dark-1)",
-                      marginBottom: "1rem",
-                    }}
-                  >
-                    Demo Videos:
-                  </h4>
-                  <div
-                    style={{
+                {/* Videos */}
+                {selectedProject.videos && selectedProject.videos.length > 0 && (
+                  <>
+                    <hr style={modalStyles.separator} />
+                    <div style={{
                       display: "flex",
                       gap: "1rem",
-                      justifyContent: "center",
                       flexWrap: "wrap",
-                    }}
-                  >
-                    {selectedProject.videos.map((videoUrl, index) => (
-                      <iframe
-                        key={index}
-                        src={videoUrl}
-                        width="48%"
-                        height="300"
-                        style={{
-                          border: "none",
-                          borderRadius: "8px",
-                          minWidth: "400px",
-                          maxWidth: "500px",
-                        }}
-                        allow="autoplay"
-                        title={`${selectedProject.title} demo video ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-                </div>
-              )}
+                      justifyContent: "center",
+                    }}>
+                      {selectedProject.videos.map((videoUrl, index) => (
+                        <div key={index} style={{
+                          position: "relative",
+                          width: "calc(50% - 0.5rem)",
+                          minWidth: "280px",
+                          paddingBottom: "28%",
+                          flex: "1 1 calc(50% - 0.5rem)",
+                        }}>
+                          <iframe
+                            src={videoUrl}
+                            style={{
+                              position: "absolute",
+                              top: 0,
+                              left: 0,
+                              width: "100%",
+                              height: "100%",
+                              border: "none",
+                            }}
+                            allow="autoplay"
+                            title={`${selectedProject.title} demo video ${index + 1}`}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
 
-              {selectedProject.screenshots &&
-                selectedProject.screenshots.length > 0 && (
-                  <div style={{ marginBottom: "1.5rem" }}>
-                    <h4
-                      style={{
-                        color: "var(--dark-1)",
-                        marginBottom: "1rem",
-                      }}
-                    >
-                      Screenshots:
-                    </h4>
-                    <div
-                      style={{
-                        display: "grid",
-                        gridTemplateColumns:
-                          "repeat(auto-fit, minmax(150px, 1fr))",
-                        gap: "0.75rem",
-                        maxHeight: "300px",
-                        overflowY: "auto",
-                      }}
-                    >
+                {/* Screenshots — horizontal scroll strip */}
+                {selectedProject.screenshots &&
+                  selectedProject.screenshots.length > 0 && (
+                  <>
+                    <hr style={modalStyles.separator} />
+                    <div style={{
+                      display: "flex",
+                      gap: "0.75rem",
+                      overflowX: "auto",
+                      scrollbarWidth: "none",
+                      msOverflowStyle: "none",
+                      paddingBottom: "0.5rem",
+                    }}>
                       {selectedProject.screenshots.map((screenshot, index) => (
                         <img
                           key={index}
                           src={screenshot}
                           alt={`${selectedProject.title} screenshot ${index + 1}`}
                           style={{
-                            width: "100%",
-                            height:
-                              selectedProject.id === "oishi-kenko" ||
-                                selectedProject.id === "kompit"
-                                ? "300px"
-                                : "auto",
-                            objectFit:
-                              selectedProject.id === "oishi-kenko" ||
-                                selectedProject.id === "kompit"
-                                ? "contain"
-                                : "cover",
-                            borderRadius: "8px",
+                            height: "280px",
+                            width: "auto",
+                            objectFit: "contain",
                             border: "1px solid var(--subtle-dark-1)",
-                            cursor: "pointer",
-                            transition: "transform 0.2s ease",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.target.style.transform = "scale(1.05)";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.target.style.transform = "scale(1)";
+                            flexShrink: 0,
                           }}
                         />
                       ))}
                     </div>
-                  </div>
+                  </>
                 )}
 
-              {selectedProject.id !== "virvoile" && (
-                <div>
-                  <h4
-                    style={{
-                      color: "var(--dark-1)",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    Legal:
-                  </h4>
-                  <a
-                    href={selectedProject.links.privacy}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      ...modalStyles.linkButton,
-                      background: "transparent",
-                      color: "var(--dark-1)",
-                      border: "1px solid var(--subtle-dark-1)",
-                      padding: "0.5rem 1rem",
-                      fontSize: "0.9rem",
-                    }}
-                  >
-                    Privacy Policy
-                  </a>
-                </div>
-              )}
-            </div>
-          </>
-        )}
+                {/* Privacy link — right-aligned, subtle */}
+                {selectedProject.id !== "virvoile" &&
+                  selectedProject.links.privacy && (
+                  <div style={{
+                    textAlign: "right",
+                    marginTop: "1.5rem",
+                  }}>
+                    <a
+                      href={selectedProject.links.privacy}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "var(--subtle-dark-3)",
+                        textDecoration: "none",
+                        fontSize: "0.8rem",
+                        fontFamily: "'Departure Mono', monospace",
+                      }}
+                    >
+                      Privacy Policy &rarr;
+                    </a>
+                  </div>
+                )}
+              </div>
+            </>
+          );
+        })()}
       </Layout>
     </>
   );

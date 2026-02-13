@@ -831,27 +831,40 @@ blockquote {
 .pagination {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 24px;
+  gap: 4px;
 }
 
 .pagination__prev>a,
 .pagination__next>a {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   background-color: var(--subtle-dark-1);
-  border-radius: 100%;
+  border-radius: 50%;
   color: var(--dark-1);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.pagination__prev>a:hover,
+.pagination__next>a:hover {
+  background-color: var(--hover-2, var(--subtle-dark-2));
+  transform: scale(1.08);
 }
 
 .pagination__prev-inactive,
 .pagination__next-inactive {
   color: rgba(105, 105, 105, 0.884) !important;
   background-color: rgba(153, 151, 151, 0.247) !important;
+  transform: none !important;
 }
 
 .pagination svg {
-  width: 25px;
-  height: 25px;
+  width: 18px;
+  height: 18px;
 }
 
 .pagination__number {

@@ -7,7 +7,7 @@ module.exports = async (graphql, actions) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(filter: { frontmatter: { template: { eq: "post" } } }) {
+      allMarkdownRemark(filter: { frontmatter: { template: { eq: "post" }, published: { eq: true } } }) {
         nodes {
           frontmatter {
             date(formatString: "MMMM D, YYYY")

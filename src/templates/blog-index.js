@@ -30,48 +30,47 @@ function BlogIndex({ data, pageContext }) {
           <div className="blog__content-center">
             <div className="blog__list-container">
               {posts.nodes.map(
-                (post) =>
-                  post.frontmatter.published && (
-                    <div className="blog__list" key={post.id}>
-                      <Link to={`/${post.frontmatter.slug}`}>
-                        <h1 className="blog__list-title">
-                          {post.frontmatter.title}
-                        </h1>
-                        <div className="blog__list-title-details">
-                          <p>{post.frontmatter.description}</p>
-                          <div>
-                            <span>
-                              <Calendar size={14} />
-                              <p>{post.frontmatter.date}</p>
-                            </span>
-                            <span>
-                              <Coffee size={14} />
-                              <p>{post.wordCount.words} words</p>
-                            </span>
-                            <span>
-                              <Timer size={14} />
-                              <p>~{post.timeToRead} min</p>
-                            </span>
-                            {/* <span>
+                (post) => (
+                  <div className="blog__list" key={post.id}>
+                    <Link to={`/${post.frontmatter.slug}`}>
+                      <h1 className="blog__list-title">
+                        {post.frontmatter.title}
+                      </h1>
+                      <div className="blog__list-title-details">
+                        <p>{post.frontmatter.description}</p>
+                        <div>
+                          <span>
+                            <Calendar size={14} />
+                            <p>{post.frontmatter.date}</p>
+                          </span>
+                          <span>
+                            <Coffee size={14} />
+                            <p>{post.wordCount.words} words</p>
+                          </span>
+                          <span>
+                            <Timer size={14} />
+                            <p>~{post.timeToRead} min</p>
+                          </span>
+                          {/* <span>
                               <LayoutGrid size={14} />
                               <p>{post.frontmatter.categories}</p>
                             </span> */}
 
-                            {post.frontmatter.language
-                              .split(",")
-                              .map((lang) => (
-                                <span
-                                  key={lang.trim()}
-                                  style={{ fontSize: 14, marginRight: 5 }}
-                                >
-                                  {languageIcons[lang.trim()]}
-                                </span>
-                              ))}
-                          </div>
+                          {post.frontmatter.language
+                            .split(",")
+                            .map((lang) => (
+                              <span
+                                key={lang.trim()}
+                                style={{ fontSize: 14, marginRight: 5 }}
+                              >
+                                {languageIcons[lang.trim()]}
+                              </span>
+                            ))}
                         </div>
-                      </Link>
-                    </div>
-                  ),
+                      </div>
+                    </Link>
+                  </div>
+                ),
               )}
             </div>
             <Pagination pageCount={pageCount} currentPage={currentPage} />
@@ -103,7 +102,7 @@ export const query = graphql`
       limit: $postLimit
       skip: $postsOffset
       sort: { fields: frontmatter___date, order: DESC }
-      filter: { frontmatter: { template: { eq: "post" } } }
+      filter: { frontmatter: { template: { eq: "post" }, published: { eq: true } } }
     ) {
       nodes {
         frontmatter {
