@@ -75,11 +75,6 @@ function Nav({ onUpdateTheme, theme }) {
           <Link to="/contact">Contact</Link>
         </div>
       </div>
-      <div className="navbar__quote">
-        "As for me, I am tormented with an everlasting itch for things remote. I love to sail forbidden seas, and land on barbarous coasts."
-        <br />
-        ― Moby-Dick
-      </div>
     </div>
   );
 }
