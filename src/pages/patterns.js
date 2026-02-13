@@ -87,54 +87,68 @@ function Patterns() {
 
           {/* Carousel track */}
           <div className="patterns-gallery__track">
-            {/* Previous slide */}
-            <div
-              className="patterns-gallery__slide patterns-gallery__slide--prev"
-              onClick={goPrev}
-              onKeyDown={(e) => e.key === "Enter" && goPrev()}
-              role="button"
-              tabIndex={0}
-              aria-label="Previous image"
-            >
-              <img
-                src={patterns[prevIndex].image}
-                alt={patterns[prevIndex].title}
-                draggable={false}
-              />
-            </div>
+            {patterns.map((pattern, index) => {
+              const offset = index - activeIndex;
+              // Wrap around for circular navigation
+              const wrappedOffset =
+                offset > total / 2 ? offset - total
+                  : offset < -total / 2 ? offset + total
+                    : offset;
 
-            {/* Active slide */}
-            <div
-              className="patterns-gallery__slide patterns-gallery__slide--active"
-              onClick={() => setIsLightboxOpen(true)}
-              onKeyDown={(e) => e.key === "Enter" && setIsLightboxOpen(true)}
-              role="button"
-              tabIndex={0}
-              aria-label="View full size"
-              style={{ cursor: "zoom-in" }}
-            >
-              <img
-                src={active.image}
-                alt={active.title}
-                draggable={false}
-              />
-            </div>
+              let slideStyle = {};
+              let className = "patterns-gallery__slide";
 
-            {/* Next slide */}
-            <div
-              className="patterns-gallery__slide patterns-gallery__slide--next"
-              onClick={goNext}
-              onKeyDown={(e) => e.key === "Enter" && goNext()}
-              role="button"
-              tabIndex={0}
-              aria-label="Next image"
-            >
-              <img
-                src={patterns[nextIndex].image}
-                alt={patterns[nextIndex].title}
-                draggable={false}
-              />
-            </div>
+              if (wrappedOffset === 0) {
+                className += " patterns-gallery__slide--active";
+                slideStyle = { cursor: "zoom-in" };
+              } else if (wrappedOffset === -1) {
+                className += " patterns-gallery__slide--prev";
+              } else if (wrappedOffset === 1) {
+                className += " patterns-gallery__slide--next";
+              } else {
+                // Position hidden slides off-screen in the correct direction
+                className += " patterns-gallery__slide--hidden";
+                slideStyle = {
+                  transform: wrappedOffset < 0
+                    ? "translateX(-60vw) scale(0.5)"
+                    : "translateX(60vw) scale(0.5)",
+                };
+              }
+
+              return (
+                <div
+                  key={pattern.title}
+                  className={className}
+                  onClick={() => {
+                    if (wrappedOffset === 0) setIsLightboxOpen(true);
+                    else if (wrappedOffset === -1) goPrev();
+                    else if (wrappedOffset === 1) goNext();
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key !== "Enter") return;
+                    if (wrappedOffset === 0) setIsLightboxOpen(true);
+                    else if (wrappedOffset === -1) goPrev();
+                    else if (wrappedOffset === 1) goNext();
+                  }}
+                  role="button"
+                  tabIndex={Math.abs(wrappedOffset) <= 1 ? 0 : -1}
+                  aria-label={
+                    wrappedOffset === 0
+                      ? "View full size"
+                      : wrappedOffset === -1
+                        ? "Previous image"
+                        : "Next image"
+                  }
+                  style={slideStyle}
+                >
+                  <img
+                    src={pattern.image}
+                    alt={pattern.title}
+                    draggable={false}
+                  />
+                </div>
+              );
+            })}
           </div>
 
           {/* Pagination bars */}

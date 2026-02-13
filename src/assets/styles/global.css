@@ -1411,7 +1411,6 @@ blockquote {
   justify-content: center;
   padding: 2rem 0 3rem;
   overflow: hidden;
-  perspective: 1200px;
 }
 
 body.light .patterns-gallery {
@@ -1525,38 +1524,25 @@ body.dark .patterns-gallery__subtitle {
   max-height: 55vh;
   max-width: 100%;
   object-fit: contain;
-  border-radius: 6px;
   user-select: none;
   -webkit-user-drag: none;
-}
-
-body.light .patterns-gallery__slide img {
-  box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.08),
-    0 1px 4px rgba(0, 0, 0, 0.04);
-}
-
-body.dark .patterns-gallery__slide img {
-  box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.3),
-    0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Active slide */
 .patterns-gallery__slide--active {
   position: relative;
   z-index: 5;
-  transform: translateX(0) scale(1) rotateY(0deg);
+  transform: translateX(0);
   opacity: 1;
 }
 
 /* Previous slide */
 .patterns-gallery__slide--prev {
   z-index: 2;
-  transform: translateX(-75%) scale(0.7) rotateY(25deg);
+  transform: translateX(-35vw) scale(0.75);
   opacity: 0.35;
   cursor: pointer;
-  filter: saturate(0.3);
+  filter: saturate(0.3) blur(2px);
 }
 
 .patterns-gallery__slide--prev:hover {
@@ -1567,15 +1553,24 @@ body.dark .patterns-gallery__slide img {
 /* Next slide */
 .patterns-gallery__slide--next {
   z-index: 2;
-  transform: translateX(75%) scale(0.7) rotateY(-25deg);
+  transform: translateX(35vw) scale(0.75);
   opacity: 0.35;
   cursor: pointer;
-  filter: saturate(0.3);
+  filter: saturate(0.3) blur(2px);
 }
 
 .patterns-gallery__slide--next:hover {
   opacity: 0.55;
   filter: saturate(0.5);
+}
+
+/* Hidden slides (more than 1 away from active) */
+.patterns-gallery__slide--hidden {
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(0);
+  transition: none;
 }
 
 /* Pagination bars */
@@ -1662,11 +1657,11 @@ body.dark .patterns-gallery__bar--active:hover {
   }
 
   .patterns-gallery__slide--prev {
-    transform: translateX(-65%) scale(0.55) rotateY(20deg);
+    transform: translateX(-70%);
   }
 
   .patterns-gallery__slide--next {
-    transform: translateX(65%) scale(0.55) rotateY(-20deg);
+    transform: translateX(70%);
   }
 
   .patterns-gallery__bar {
