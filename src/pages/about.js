@@ -305,7 +305,7 @@ function About() {
                 </p>
                 <h2 style={{ marginBottom: "-5px" }}>2. English</h2>
                 <p style={{ textAlign: "justify" }}>
-                  Advanced (B2 - C1 level). The origin started around the age of
+                  Advanced (B2 - C1 level). It started around the age of
                   9 because of an RPG game, "Final Fantasy VIII". I had to look
                   up a thick dictionary every time the dialogues popped up and
                   write them down on a piece of paper. Back then, it's almost
