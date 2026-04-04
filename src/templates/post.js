@@ -3,7 +3,7 @@ import { graphql, navigate } from "gatsby";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
-import { ArrowLeft, Calendar, Timer, Coffee } from "lucide-react";
+import { ArrowBigLeft, Calendar, Timer, Coffee } from "lucide-react";
 // import { LayoutGrid } from "lucide-react"; // CategoryIcon equivalent
 
 import SEO from "@components/SEO";
@@ -104,7 +104,7 @@ export default function PostTemplate({ data = [] }) {
             className="blog__post-back-btn"
             onClick={() => navigate("/")}
           >
-            <ArrowLeft size={16} />
+            <ArrowBigLeft size={18} strokeWidth={1.5} />
             <p>Back</p>
           </button>
         </div>
