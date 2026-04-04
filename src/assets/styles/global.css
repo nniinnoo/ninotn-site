@@ -75,7 +75,7 @@ body.light {
   --hover-2: #d1d9b5;
   --footer: rgba(255, 255, 255, 0.137);
 
-  --sort-newest: #9c9c9c;
+  --sort-newest: #73a50f;
   --sort-to: #c09c6f;
   --sort-oldest: #bf7c2a;
 
@@ -84,23 +84,30 @@ body.light {
 }
 
 body.dark {
-  --bg: #2a2a2a;
-  --bg-2: rgba(50, 50, 50, 0.5);
+  --bg: #1c1b18;
+  /* Maggie Official Ink Charcoal */
+  --bg-2: rgba(37, 36, 32, 0.6);
 
-  --light-1: #f9f9f9;
-  --dark-1: #b8b8b8;
+  --light-1: #fbfbfb;
+  /* Headline Off-White */
+  --dark-1: #a6a39d;
+  /* Muted Warm Gray (Ocular Comfort Optimized) */
 
-  --subtle-dark-1: rgba(160, 140, 100, 0.3);
-  --subtle-dark-2: rgba(120, 100, 80, 0.3);
-  --subtle-dark-3: rgba(199, 199, 199, 0.7);
+  --subtle-dark-1: rgba(78, 137, 254, 0.15);
+  /* Lapis Blue Tint */
+  --subtle-dark-2: rgba(78, 137, 254, 0.3);
+  --subtle-dark-3: rgba(166, 163, 157, 0.5);
 
-  --hover-1: rgba(10, 57, 55, 0.9);
-  --hover-2: rgba(10, 57, 55, 0.9);
-  --footer: rgba(59, 59, 59, 0.137);
+  --hover-1: rgba(37, 36, 32, 0.8);
+  --hover-2: #252420;
+  /* Maggie Official Light Charcoal */
+  --footer: rgba(28, 27, 24, 0.5);
 
-  --sort-newest: #CC5500;
-  --sort-to: #2B4A6B;
-  --sort-oldest: #8B4A6B;
+  --sort-newest: #4e89fe;
+  /* Lapis Blue Accent */
+  --sort-to: #2bc4da;
+  /* Maggie Official Cyber Sea Blue */
+  --sort-oldest: #2bc4da;
 
   color: var(--dark-1);
   background: var(--bg);
@@ -112,6 +119,8 @@ p {
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  line-height: 1.75;
+  letter-spacing: 0.01rem;
 }
 
 i,
@@ -127,9 +136,16 @@ cite {
 
 a {
   color: #9f3466;
+  /* Magenta for light mode */
   text-decoration: underline;
   text-decoration-style: dashed;
   text-decoration-color: #b7aaaf;
+}
+
+body.dark a {
+  color: #4e89fe;
+  /* Lapis Blue Links */
+  text-decoration-color: rgba(78, 137, 254, 0.4);
 }
 
 a:hover {
@@ -147,6 +163,14 @@ input:focus-visible,
   outline: 2px solid #9f3466;
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+body.dark a:focus-visible,
+body.dark button:focus-visible,
+body.dark input:focus-visible,
+body.dark [tabindex]:focus-visible {
+  outline-color: #4e89fe;
+  /* Lapis Blue focus */
 }
 
 /* Remove default outline for mouse clicks */
@@ -191,7 +215,8 @@ body.dark h1,
 body.dark h2,
 body.dark h3,
 body.dark h4 {
-  color: #B8752E;
+  color: #f0dc82;
+  /* Champagne Gold Titles */
 }
 
 table {
@@ -709,11 +734,14 @@ pre {
 .blog__post-body h1 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
+  color: var(--dark-1);
 }
 
 .blog__post-body h2 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  color: #d4d1cc;
+  /* Maggie light silver h2 */
 }
 
 .gatsby-resp-image-wrapper {
@@ -738,8 +766,8 @@ body.dark .blog__post-body img {
   background-color: transparent;
   border: none;
   position: fixed;
-  right: calc(50% - 27rem);
-  top: 100px;
+  left: calc(50% - 27rem);
+  top: 50%;
   width: 48px;
   height: 48px;
   display: flex;
@@ -747,12 +775,15 @@ body.dark .blog__post-body img {
   align-items: center;
   cursor: pointer;
   z-index: 100;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.2s ease;
-  opacity: 0.6;
+  transform: translateY(-50%);
+  color: #4d4a46; /* Deep Muted Gray to blend with background */
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.2s ease, color 0.2s ease;
+  opacity: 0.5;
 }
 
 .blog__post-back-btn:hover {
-  transform: rotate(90deg) scale(1.1);
+  transform: translateY(-50%) rotate(90deg) scale(1.1);
+  color: var(--dark-1); /* Restore Silver on hover */
   opacity: 1;
 }
 
@@ -835,13 +866,14 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 @media (max-width: 1150px) {
+
   .sidenote,
   .margin-note {
     display: none;
   }
 
-  .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .margin-note {
+  .margin-toggle:checked+.sidenote,
+  .margin-toggle:checked+.margin-note {
     display: block;
     position: relative;
     right: 0;
@@ -1822,7 +1854,8 @@ body.light .scroll-ruler__tick {
 }
 
 body.dark .scroll-ruler__tick {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(194, 191, 186, 0.2);
+  /* Muted Silver Ticks */
 }
 
 /* Individual tick hover: expand to 16px, solid color */
@@ -1837,7 +1870,8 @@ body.light .scroll-ruler__tick-wrap:hover .scroll-ruler__tick {
 }
 
 body.dark .scroll-ruler__tick-wrap:hover .scroll-ruler__tick {
-  background: rgba(255, 255, 255, 1);
+  background: #4e89fe;
+  /* Lapis Blue */
 }
 
 /* Transparent hit area for easier hover */
@@ -1888,7 +1922,7 @@ body.light .scroll-ruler__section-link {
 }
 
 body.dark .scroll-ruler__section-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(194, 191, 186, 0.6);
 }
 
 body.light .scroll-ruler__section-link:hover {
@@ -1897,7 +1931,7 @@ body.light .scroll-ruler__section-link:hover {
 }
 
 body.dark .scroll-ruler__section-link:hover {
-  color: #5b8de8;
+  color: #4e89fe;
 }
 
 /* ---- Section marker ticks (solid black, always visible) ---- */
@@ -1915,7 +1949,7 @@ body.light .scroll-ruler__section-tick {
 }
 
 body.dark .scroll-ruler__section-tick {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(194, 191, 186, 0.4);
 }
 
 /* ---- Blue indicator (number + tick) ---- */
@@ -1932,7 +1966,8 @@ body.dark .scroll-ruler__section-tick {
   height: 1px;
   width: 16px;
   /* w-4 = 16px */
-  background: #6b8e23;
+  background: var(--sort-newest);
+  /* Official Dark Magenta */
 }
 
 .scroll-ruler__progress {
@@ -1944,7 +1979,8 @@ body.dark .scroll-ruler__section-tick {
   font-family: 'Departure Mono', monospace;
   font-size: 12px;
   line-height: 1;
-  color: #6b8e23;
+  color: var(--sort-newest);
+  /* Official Crimson */
   white-space: nowrap;
   transition: opacity 0.3s ease;
 }
@@ -2003,3 +2039,4 @@ body.dark .scroll-ruler__section-tick {
   font-size: 1.075rem;
   color: var(--dark-1);
 }
+

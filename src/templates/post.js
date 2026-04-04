@@ -105,7 +105,7 @@ export default function PostTemplate({ data = [] }) {
             onClick={() => navigate("/")}
             aria-label="Close article"
           >
-            <CircleX size={30} strokeWidth={1.5} />
+            <CircleX size={30} strokeWidth={0.75} />
           </button>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Apple, Play } from "lucide-react";
+import { Apple, Play, Terminal, Package, CircleX, Sparkles, Globe } from "lucide-react";
 import Layout from "@components/Layout";
 import SEO from "@components/SEO";
 import fractilesIcon from "../assets/project-icons/fractiles-icon.png";
@@ -20,6 +20,9 @@ import oishiScreenshot3 from "../assets/project-icons/oishi-3.png";
 import kompitScreenshot1 from "../assets/project-icons/kompit-1.png";
 import kompitScreenshot2 from "../assets/project-icons/kompit-2.png";
 import kompitScreenshot3 from "../assets/project-icons/kompit-3.png";
+import tokenwiseDemo from "../assets/project-icons/tokenwise-demo.gif";
+import tokenwiseDemo2 from "../assets/project-icons/tokenwise-demo-2.gif";
+import claudeIcon from "../assets/project-icons/claude-icon.svg";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -37,6 +40,23 @@ export default function Projects() {
 
   const projects = [
     {
+      id: "wonderkid",
+      title: "Wonderkid",
+      description:
+        "Creative Intelligence AI Research Studio",
+      icon: null,
+      status: "Coming Soon",
+      releaseDate: "TBA",
+      technologies: ["AI Research", "Creative Intelligence"],
+      screenshots: [],
+      links: {
+        privacy: "",
+        appStore: "#",
+        playStore: "#",
+        website: "https://wonderkid.fun/",
+      },
+    },
+    {
       id: "flashback",
       title: "Flashback",
       description: "TBA",
@@ -49,6 +69,23 @@ export default function Projects() {
         privacy: "",
         appStore: "#",
         playStore: "#",
+      },
+    },
+    {
+      id: "claude-tokenwise-cli",
+      title: "claude-tokenwise-cli",
+      description:
+        "Interactive wrapper for Claude Code with a mode picker, session manager, and real-time token tracker to keep usage visible as you work.",
+      icon: claudeIcon,
+      status: "NPM Package Live",
+      releaseDate: "08.03.2026",
+      technologies: ["Node.js", "TypeScript", "Claude API"],
+      screenshots: [tokenwiseDemo, tokenwiseDemo2],
+      links: {
+        privacy: "",
+        appStore: "#",
+        playStore: "#",
+        npm: "https://www.npmjs.com/package/claude-tokenwise-cli",
       },
     },
     {
@@ -120,7 +157,7 @@ export default function Projects() {
         "A health-focused meal planning app with personalized recipes for managing dietary conditions.",
       icon: oishiKenkoIcon,
       status: "Initial Prototype",
-      releaseDate: "",
+      releaseDate: "02.02.2024",
       technologies: ["Kotlin", "Android"],
       screenshots: [oishiScreenshot1, oishiScreenshot2, oishiScreenshot3],
       links: {
@@ -148,6 +185,7 @@ export default function Projects() {
       },
     },
   ];
+
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -178,7 +216,7 @@ export default function Projects() {
         "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
       backgroundSize: "12px 12px",
       border: "none",
-      borderRadius: "0",
+      borderRadius: "6px",
       padding: "1rem",
       cursor: "pointer",
       transition: "all 0.1s ease",
@@ -239,9 +277,9 @@ export default function Projects() {
       color: "var(--dark-1)",
       border: "none",
       borderBottom: "1px dashed var(--subtle-dark-1)",
-      padding: "0.2rem 0.4rem",
-      borderRadius: "6px",
-      fontSize: "0.75rem",
+      padding: "0.2rem 0.25rem",
+      borderRadius: "0",
+      fontSize: "0.65rem",
       fontWeight: "500",
       fontFamily: "'Departure Mono', monospace",
     },
@@ -260,6 +298,12 @@ export default function Projects() {
 
   const getProjectMeta = (project) => {
     switch (project.id) {
+      case "claude-tokenwise-cli":
+        return {
+          developer: "Developer: Nino Tannio, Claude AI",
+          released: `First Released: ${project.releaseDate}`,
+          extra: "",
+        };
       case "virvoile":
         return { developer: "Team Developer: Nino Tannio", released: "", extra: "Client: G.Lepinard | Closed Source" };
       case "oishi-kenko":
@@ -285,7 +329,7 @@ export default function Projects() {
     },
     modal: {
       background: "var(--bg)",
-      borderRadius: "0",
+      borderRadius: "8px",
       padding: "clamp(1.5rem, 4vw, 3rem)",
       maxWidth: "900px",
       width: "100%",
@@ -302,12 +346,14 @@ export default function Projects() {
       right: "1.25rem",
       background: "none",
       border: "none",
-      fontSize: "1.25rem",
       cursor: "pointer",
       color: "var(--subtle-dark-3)",
       padding: "0.5rem",
-      fontFamily: "'Departure Mono', monospace",
-      lineHeight: 1,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      transition: "transform 0.2s ease, opacity 0.2s ease",
+      opacity: 0.6,
     },
     separator: {
       border: "none",
@@ -356,48 +402,81 @@ export default function Projects() {
 
           <div style={projectCardStyles.container}>
             {projects.map((project) => (
-              <div
-                key={project.id}
-                role="button"
-                tabIndex={0}
-                style={projectCardStyles.card}
-                onClick={() => setSelectedProject(project)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    setSelectedProject(project);
-                  }
-                }}
-                onMouseEnter={(e) => {
-                  const card = e.currentTarget;
-                  card.style.transform = "translate(2px, 2px)";
-                  card.style.boxShadow = "none";
-                  card.style.background = "var(--hover-1)";
-                  card.style.backgroundImage =
-                    "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
-                  card.style.backgroundSize = "12px 12px";
-                }}
-                onMouseLeave={(e) => {
-                  const card = e.currentTarget;
-                  card.style.transform = "translate(0, 0)";
-                  card.style.boxShadow = "none";
-                  card.style.background = "var(--bg-2)";
-                  card.style.backgroundImage =
-                    "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
-                  card.style.backgroundSize = "12px 12px";
-                }}
-              >
                 <div
+                  key={project.id}
+                  role="button"
+                  tabIndex={0}
                   style={{
-                    ...projectCardStyles.header,
-                    alignItems: "flex-start",
+                    ...projectCardStyles.card,
+                    padding: 0,
+                    overflow: "hidden",
+                    flexDirection: "row",
+                  }}
+                  onClick={() => setSelectedProject(project)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      setSelectedProject(project);
+                    }
+                  }}
+                  onMouseEnter={(e) => {
+                    const card = e.currentTarget;
+                    card.style.transform = "translate(2px, 2px)";
+                    card.style.boxShadow = "none";
+                    card.style.background = "var(--hover-1)";
+                    card.style.backgroundImage =
+                      "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
+                    card.style.backgroundSize = "12px 12px";
+                  }}
+                  onMouseLeave={(e) => {
+                    const card = e.currentTarget;
+                    card.style.transform = "translate(0, 0)";
+                    card.style.boxShadow = "none";
+                    card.style.background = "var(--bg-2)";
+                    card.style.backgroundImage =
+                      "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
+                    card.style.backgroundSize = "12px 12px";
                   }}
                 >
-                  <img
-                    src={project.icon}
-                    alt={`${project.title} icon`}
-                    style={projectCardStyles.icon}
-                  />
-                  <div style={{ flex: 1, minWidth: 0 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    padding: "1rem",
+                    flex: 1,
+                  }}
+                >
+                  <div style={{
+                    width: "80px",
+                    flexShrink: 0,
+                    marginRight: "1rem",
+                  }}>
+                    {project.icon ? (
+                      <img
+                        src={project.icon}
+                        alt={`${project.title} icon`}
+                        style={{ width: "80px", height: "80px", borderRadius: "6px", objectFit: "cover" }}
+                      />
+                    ) : (
+                      <div style={{
+                        width: "80px",
+                        height: "80px",
+                        borderRadius: "6px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        background: "var(--bg)",
+                        border: "1px solid var(--subtle-dark-1)",
+                      }}>
+                        {project.id === "wonderkid" ? (
+                          <Sparkles size={32} color="var(--sort-newest)" />
+                        ) : (
+                          <Terminal size={32} color="var(--sort-newest)" />
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}>
                     <h3
                       style={{
                         ...projectCardStyles.title,
@@ -416,35 +495,37 @@ export default function Projects() {
                       style={{
                         ...projectCardStyles.description,
                         margin: 0,
-                        fontSize: "0.85rem",
+                        fontSize: "0.75rem",
                       }}
                     >
                       {project.description}
                     </p>
                   </div>
                 </div>
-                <div
-                  style={{
-                    ...projectCardStyles.meta,
-                    marginTop: "auto",
-                    paddingTop: "1rem",
-                  }}
-                >
+
+                <div style={{
+                  width: "70px",
+                  background: "transparent",
+                  borderLeft: "1px dashed var(--subtle-dark-1)",
+                  padding: "1rem 0.5rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                  alignItems: "stretch",
+                  justifyContent: "center",
+                  flexShrink: 0,
+                }}>
                   {project.id === "virvoile" ? (
                     <>
                       <span style={projectCardStyles.badge}>Desktop</span>
                       <span style={projectCardStyles.badge}>Unity</span>
-                      <span style={projectCardStyles.badge}>
-                        {project.status}
-                      </span>
+                      <span style={projectCardStyles.badge}>{project.status}</span>
                     </>
                   ) : project.id === "oishi-kenko" ? (
                     <>
                       <span style={projectCardStyles.badge}>Android</span>
                       <span style={projectCardStyles.badge}>Kotlin</span>
-                      <span style={projectCardStyles.badge}>
-                        {project.status}
-                      </span>
+                      <span style={projectCardStyles.badge}>{project.status}</span>
                     </>
                   ) : project.id === "fore-coffee" ? (
                     <>
@@ -476,7 +557,7 @@ export default function Projects() {
                   )}
                 </div>
               </div>
-            ))}
+              ))}
           </div>
         </div>
 
@@ -508,8 +589,16 @@ export default function Projects() {
                   style={modalStyles.closeButton}
                   onClick={() => setSelectedProject(null)}
                   aria-label="Close modal"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "rotate(90deg) scale(1.1)";
+                    e.currentTarget.style.opacity = "1";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "rotate(0deg) scale(1)";
+                    e.currentTarget.style.opacity = "0.6";
+                  }}
                 >
-                  [x]
+                  <CircleX size={32} strokeWidth={1} />
                 </button>
 
                 {/* Icon + Title */}
@@ -519,16 +608,32 @@ export default function Projects() {
                   gap: "1rem",
                   marginBottom: "1.25rem",
                 }}>
-                  <img
-                    src={selectedProject.icon}
-                    alt={`${selectedProject.title} icon`}
-                    style={{
-                      width: "64px",
-                      height: "64px",
-                      borderRadius: "6px",
-                      flexShrink: 0,
-                    }}
-                  />
+                    {selectedProject.icon ? (
+                      <img
+                        src={selectedProject.icon}
+                        alt={`${selectedProject.title} icon`}
+                        style={{
+                          width: "64px",
+                          height: "64px",
+                          borderRadius: "6px",
+                          flexShrink: 0,
+                        }}
+                      />
+                    ) : (
+                      <div style={{
+                        width: "64px",
+                        height: "64px",
+                        borderRadius: "6px",
+                        flexShrink: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        background: "var(--bg)",
+                        border: "1px solid var(--subtle-dark-1)",
+                      }}>
+                        <Terminal size={32} color="var(--sort-newest)" />
+                      </div>
+                    )}
                   <h2 style={{
                     margin: 0,
                     color: "var(--dark-1)",
@@ -576,7 +681,9 @@ export default function Projects() {
                 {/* Download buttons */}
                 {selectedProject.id !== "virvoile" && (
                   selectedProject.links.appStore !== "#" ||
-                  selectedProject.links.playStore !== "#"
+                  selectedProject.links.playStore !== "#" ||
+                  selectedProject.links.npm ||
+                  selectedProject.links.website
                 ) && (
                   <div style={{
                     display: "flex",
@@ -638,6 +745,62 @@ export default function Projects() {
                         }}
                       >
                         <Play size={14} /> Play Store
+                      </a>
+                    )}
+                    {selectedProject.links.npm && (
+                      <a
+                        href={selectedProject.links.npm}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "0.5rem",
+                          color: "var(--dark-1)",
+                          textDecoration: "none",
+                          fontSize: "0.85rem",
+                          fontFamily: "'Departure Mono', monospace",
+                          padding: "0.6rem 1.2rem",
+                          border: "1px solid var(--subtle-dark-1)",
+                          background: "transparent",
+                          transition: "background 0.2s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = "var(--hover-1)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = "transparent";
+                        }}
+                      >
+                        <Package size={14} /> NPM Package
+                      </a>
+                    )}
+                    {selectedProject.links.website && (
+                      <a
+                        href={selectedProject.links.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "0.5rem",
+                          color: "var(--dark-1)",
+                          textDecoration: "none",
+                          fontSize: "0.85rem",
+                          fontFamily: "'Departure Mono', monospace",
+                          padding: "0.6rem 1.2rem",
+                          border: "1px solid var(--subtle-dark-1)",
+                          background: "transparent",
+                          transition: "background 0.2s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = "var(--hover-1)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = "transparent";
+                        }}
+                      >
+                        <Globe size={14} /> Website
                       </a>
                     )}
                   </div>
