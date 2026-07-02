@@ -382,10 +382,10 @@ function Books() {
         "https://m.media-amazon.com/images/I/41LHDo1deiL._UF1000,1000_QL80_.jpg",
     },
     {
-      title: "Philosophical Investigations",
+      title: "On Certainty",
       author: "Ludwig Wittgenstein",
       image:
-        "https://m.media-amazon.com/images/I/61bfzvHWSvL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/51hCqpoJRbL._AC_UF1000,1000_QL80_.jpg",
     },
     {
       title: "Beyond Good and Evil",

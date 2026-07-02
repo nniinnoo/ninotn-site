@@ -64,8 +64,17 @@ function About() {
                   <small>"La Chute" (1479) by Hugo Van der Goes</small>
                 </p>
                 <p style={{ textAlign: "justify" }}>
-
-                  I was five or six when my grandmother first told me the story of Genesis. "In the beginning…" she said, then repeated by people around with the same enthusiasm as if there is actually a real garden somewhere up there, past the clouds, guarded by an evil serpent, and one day we could visit it during the holiday. I was fascinated. I found it strange and beautiful as a bedtime story. It made me imagine how the fruit might look, how it tasted, how many of them, and wonder if there could be any other kind of fruit. As I grew up, I buried most of those fairytales, but I chose to spare this one, as a souvenir, to remind me of that innocent time.
+                  I was five or six when my grandmother first told me the story
+                  of Genesis. "In the beginning…" she said, then repeated by
+                  people around with the same enthusiasm as if there is actually
+                  a real garden somewhere up there, past the clouds, guarded by
+                  an evil serpent, and one day we could visit it during the
+                  holiday. I was fascinated. I found it strange and beautiful as
+                  a bedtime story. It made me imagine how the fruit might look,
+                  how it tasted, how many of them, and wonder if there could be
+                  any other kind of fruit. As I grew up, I buried most of those
+                  fairytales, but I chose to spare this one, as a souvenir, to
+                  remind me of that innocent time.
                   <br />
                   <br />
                   <p>
@@ -77,7 +86,15 @@ function About() {
                         textAlign: "justify",
                       }}
                     >
-                      Sitting by the campfire, I listen to that old and raspy voice again — an echo that once whispered me to make fire, to unveil a breath that obeys the law of number, to kiss the sun and steal the ring of Saturn, to fill the universe with our everlasting dreams, until we were lost, until we meet, until we find ourselves once again. "Eat and you will understand." Then I fall into the sea of suffering. "Run away ! " "Run to the edge of reason," the snake repeated. "Who are you?" I asked. "I am your curiosity."
+                      Sitting by the campfire, I listen to that old and raspy
+                      voice again — an echo that once whispered me to make fire,
+                      to unveil a breath that obeys the law of number, to kiss
+                      the sun and steal the ring of Saturn, to fill the universe
+                      with our everlasting dreams, until we were lost, until we
+                      meet, until we find ourselves once again. "Eat and you
+                      will understand." Then I fall into the sea of suffering.
+                      "Run away ! " "Run to the edge of reason," the snake
+                      repeated. "Who are you?" I asked. "I am your curiosity."
                     </blockquote>
                   </p>
                 </p>
@@ -182,26 +199,22 @@ function About() {
                 />
                 <p style={{ textAlign: "justify" }}>
                   I grew up in a sleepy little town in North Sumatra, it's
-                  surrounded by the mountains and sea-facing the Indian Ocean.
-                  So, the hobbies that you're likely to develop in a place like
-                  that are hiking, swimming, fishing and wondering what lies
-                  beyond the sea and the mountain. After high school, I took my
-                  first sail to study computer science and mathematics. Later, I
-                  began my professional career as a software engineer in
-                  Jakarta, mostly write code around C++, Java, JavaScript and
-                  TypeScript for work.
+                  between mountains and sea-facing the Indian Ocean. The hobbies
+                  that you're likely to develop in a place like that are hiking,
+                  swimming, fishing and wondering what lies beyond the sea and
+                  the mountain. After high school, I took my first sail to study
+                  computer science and some maths. Later, I began my
+                  professional career as a software engineer in Jakarta,
                 </p>
               </div>
               <p style={{ textAlign: "justify" }}>
-                In the meantime, I decided to learn French. Then, after the
-                pandemic, I took another voyage and somehow ended up in Southern
-                France. I am currently a master's student at the Université de
-                Toulouse. Here, I find myself drowning in the rigorous study of
-                theorems and formal proofs in mathematics. I have many interests
-                that I still regularly do to this day: I enjoy cycling,
-                climbing, reading, juggling trick, chess, guitar/piano, drawing,
-                capturing moments, meditating, and searching for nature in spare
-                time.
+                After the pandemic, I took another big voyage and somehow ended
+                up in Southern France. I am currently a master's student at the
+                Université de Toulouse. Here, I find myself drowning in the
+                study of theorems and formal proofs. I have many interests that
+                I still regularly do to this day: I enjoy cycling, climbing,
+                reading, playing guitar/piano, drawing, capturing moments, meditating,
+                and searching for nature in spare time.
               </p>
             </div>
             <div id="section-travel">
@@ -305,9 +318,9 @@ function About() {
                 </p>
                 <h2 style={{ marginBottom: "-5px" }}>2. English</h2>
                 <p style={{ textAlign: "justify" }}>
-                  Advanced (B2 - C1 level). It started around the age of
-                  9 because of an RPG game, "Final Fantasy VIII". I had to look
-                  up a thick dictionary every time the dialogues popped up and
+                  Advanced (B2 - C1 level). It started around the age of 9
+                  because of an RPG game, "Final Fantasy VIII". I had to look up
+                  a thick dictionary every time the dialogues popped up and
                   write them down on a piece of paper. Back then, it's almost
                   impossible to find a game in Bahasa. The same habit continued
                   with mostly video games and songs, but I never watched films

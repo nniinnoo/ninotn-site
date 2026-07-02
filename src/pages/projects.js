@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Apple, Play, Terminal, Package, CircleX, Sparkles, Globe } from "lucide-react";
+import {
+  Apple,
+  Play,
+  Terminal,
+  Package,
+  CircleX,
+  Sparkles,
+  Globe,
+} from "lucide-react";
 import Layout from "@components/Layout";
 import SEO from "@components/SEO";
 import fractilesIcon from "../assets/project-icons/fractiles-icon.png";
@@ -42,8 +50,7 @@ export default function Projects() {
     {
       id: "wonderkid",
       title: "Wonderkid",
-      description:
-        "Creative Intelligence AI Research Studio",
+      description: "TBA",
       icon: null,
       status: "Coming Soon",
       releaseDate: "TBA",
@@ -186,7 +193,6 @@ export default function Projects() {
     },
   ];
 
-
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const projectParam = urlParams.get("project");
@@ -212,28 +218,15 @@ export default function Projects() {
     },
     card: {
       background: "var(--bg-2)",
-      backgroundImage:
-        "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
-      backgroundSize: "12px 12px",
       border: "none",
-      borderRadius: "6px",
-      padding: "1rem",
+      borderRadius: "16px",
+      padding: "1.25rem",
       cursor: "pointer",
-      transition: "all 0.1s ease",
-      boxShadow: "none",
+      transition: "background-color 0.15s ease",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
       maxWidth: "100%",
-      imageRendering: "pixelated",
-    },
-    cardHover: {
-      background: "var(--hover-1)",
-      backgroundImage:
-        "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
-      backgroundSize: "12px 12px",
-      transform: "translate(2px, 2px)",
-      boxShadow: "none",
     },
     header: {
       display: "flex",
@@ -250,10 +243,10 @@ export default function Projects() {
     },
     title: {
       fontSize: "1.5rem",
-      fontWeight: "700",
+      fontWeight: "640",
       color: "var(--dark-1)",
       marginBottom: "0",
-      fontFamily: "var(--font-family-title)",
+      fontFamily: "'LoveFrom Serif', serif",
       background: "transparent",
       lineHeight: "1.2",
       letterSpacing: "-0.01em",
@@ -261,38 +254,10 @@ export default function Projects() {
     },
     description: {
       color: "var(--subtle-dark-3)",
-      lineHeight: "1.5",
+      lineHeight: "1.55",
       marginBottom: "1rem",
       fontSize: "0.9rem",
-    },
-    meta: {
-      display: "flex",
-      gap: "0.5rem",
-      flexWrap: "wrap",
-      marginBottom: "0.5rem",
-      justifyContent: "flex-end",
-    },
-    badge: {
-      background: "transparent",
-      color: "var(--dark-1)",
-      border: "none",
-      borderBottom: "1px dashed var(--subtle-dark-1)",
-      padding: "0.2rem 0.25rem",
-      borderRadius: "0",
-      fontSize: "0.65rem",
-      fontWeight: "500",
-      fontFamily: "'Departure Mono', monospace",
-    },
-    statusBadge: {
-      background: "transparent",
-      color: "var(--sort-newest)",
-      border: "none",
-      borderBottom: "1px dashed var(--subtle-dark-1)",
-      padding: "0.2rem 0.4rem",
-      borderRadius: "6px",
-      fontSize: "0.75rem",
-      fontWeight: "500",
-      fontFamily: "'Departure Mono', monospace",
+      fontFamily: "'Neue Haas Unica', sans-serif",
     },
   };
 
@@ -305,15 +270,39 @@ export default function Projects() {
           extra: "",
         };
       case "virvoile":
-        return { developer: "Team Developer: Nino Tannio", released: "", extra: "Client: G.Lepinard | Closed Source" };
+        return {
+          developer: "Team Developer: Nino Tannio",
+          released: "",
+          extra: "Client: G.Lepinard | Closed Source",
+        };
       case "oishi-kenko":
-        return { developer: "Contributor: Nino Tannio", released: "Year: 2020", extra: "Closed Source" };
+        return {
+          developer: "Contributor: Nino Tannio",
+          released: "Year: 2020",
+          extra: "Closed Source",
+        };
       case "fore-coffee":
-        return { developer: "Developer: Nino Tannio (First Dev | Senior Dev | 2018-2020)", released: "First Released: 12.10.2018", extra: "" };
+        return {
+          developer:
+            "Developer: Nino Tannio (First Dev | Senior Dev | 2018-2020)",
+          released: "First Released: 12.10.2018",
+          extra: "",
+        };
       case "kompit":
-        return { developer: "Developer: Nino Tannio (Senior Mobile Dev | Early Programmer)", released: "First Released: 02.02.2024", extra: "" };
+        return {
+          developer:
+            "Developer: Nino Tannio (Senior Mobile Dev | Early Programmer)",
+          released: "First Released: 02.02.2024",
+          extra: "",
+        };
       default:
-        return { developer: "Developer: Nino Tannio (Solo Dev)", released: project.releaseDate ? `First Released: ${project.releaseDate}` : "", extra: "" };
+        return {
+          developer: "Developer: Nino Tannio (Solo Dev)",
+          released: project.releaseDate
+            ? `First Released: ${project.releaseDate}`
+            : "",
+          extra: "",
+        };
     }
   };
 
@@ -329,7 +318,7 @@ export default function Projects() {
     },
     modal: {
       background: "var(--bg)",
-      borderRadius: "8px",
+      borderRadius: "20px",
       padding: "clamp(1.5rem, 4vw, 3rem)",
       maxWidth: "900px",
       width: "100%",
@@ -352,7 +341,7 @@ export default function Projects() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      transition: "transform 0.2s ease, opacity 0.2s ease",
+      transition: "opacity 0.2s ease",
       opacity: 0.6,
     },
     separator: {
@@ -380,9 +369,10 @@ export default function Projects() {
         >
           <h1
             style={{
+              fontFamily: "'LoveFrom Serif', serif",
               fontSize: "3rem",
               marginBottom: "-0.15rem",
-              fontWeight: "900",
+              fontWeight: "700",
               lineHeight: "1.2",
               letterSpacing: "-0.02em",
               fontFeatureSettings: '"liga" 1, "kern" 1',
@@ -392,7 +382,8 @@ export default function Projects() {
           </h1>
           <p
             style={{
-              fontSize: "1.2rem",
+              fontFamily: "'Neue Haas Unica', sans-serif",
+              fontSize: "1.15rem",
               color: "var(--subtle-dark-3)",
               marginBottom: "3rem",
             }}
@@ -402,71 +393,62 @@ export default function Projects() {
 
           <div style={projectCardStyles.container}>
             {projects.map((project) => (
-                <div
-                  key={project.id}
-                  role="button"
-                  tabIndex={0}
-                  style={{
-                    ...projectCardStyles.card,
-                    padding: 0,
-                    overflow: "hidden",
-                    flexDirection: "row",
-                  }}
-                  onClick={() => setSelectedProject(project)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      setSelectedProject(project);
-                    }
-                  }}
-                  onMouseEnter={(e) => {
-                    const card = e.currentTarget;
-                    card.style.transform = "translate(2px, 2px)";
-                    card.style.boxShadow = "none";
-                    card.style.background = "var(--hover-1)";
-                    card.style.backgroundImage =
-                      "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
-                    card.style.backgroundSize = "12px 12px";
-                  }}
-                  onMouseLeave={(e) => {
-                    const card = e.currentTarget;
-                    card.style.transform = "translate(0, 0)";
-                    card.style.boxShadow = "none";
-                    card.style.background = "var(--bg-2)";
-                    card.style.backgroundImage =
-                      "radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px)";
-                    card.style.backgroundSize = "12px 12px";
-                  }}
-                >
+              <div
+                key={project.id}
+                role="button"
+                tabIndex={0}
+                style={projectCardStyles.card}
+                onClick={() => setSelectedProject(project)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    setSelectedProject(project);
+                  }
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--hover-1)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "var(--bg-2)";
+                }}
+              >
                 <div
                   style={{
                     display: "flex",
                     alignItems: "flex-start",
-                    padding: "1rem",
                     flex: 1,
                   }}
                 >
-                  <div style={{
-                    width: "80px",
-                    flexShrink: 0,
-                    marginRight: "1rem",
-                  }}>
+                  <div
+                    style={{
+                      width: "80px",
+                      flexShrink: 0,
+                      marginRight: "1rem",
+                    }}
+                  >
                     {project.icon ? (
                       <img
                         src={project.icon}
                         alt={`${project.title} icon`}
-                        style={{ width: "80px", height: "80px", borderRadius: "6px", objectFit: "cover" }}
+                        style={{
+                          width: "80px",
+                          height: "80px",
+                          borderRadius: "18px",
+                          objectFit: "cover",
+                        }}
                       />
                     ) : (
-                      <div style={{
-                        width: "80px",
-                        height: "80px",
-                        borderRadius: "6px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        background: "var(--bg)",
-                        border: "1px solid var(--subtle-dark-1)",
-                      }}>
+                      <div
+                        style={{
+                          width: "80px",
+                          height: "80px",
+                          borderRadius: "18px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          background: "var(--bg)",
+                          border: "1px solid var(--subtle-dark-1)",
+                        }}
+                      >
                         {project.id === "wonderkid" ? (
                           <Sparkles size={32} color="var(--sort-newest)" />
                         ) : (
@@ -475,18 +457,22 @@ export default function Projects() {
                       </div>
                     )}
                   </div>
-                  
-                  <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}>
+
+                  <div
+                    style={{
+                      flex: 1,
+                      minWidth: 0,
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
                     <h3
                       style={{
                         ...projectCardStyles.title,
-                        fontSize: "1.8rem",
                         margin: 0,
-                        marginBottom: "0.25rem",
-                        lineHeight: "1.1",
+                        marginBottom: "0.35rem",
+                        lineHeight: "1.15",
                         wordBreak: "break-word",
-                        letterSpacing: "-0.015em",
-                        fontFeatureSettings: '"liga" 1, "kern" 1',
                       }}
                     >
                       {project.title}
@@ -495,119 +481,67 @@ export default function Projects() {
                       style={{
                         ...projectCardStyles.description,
                         margin: 0,
-                        fontSize: "0.75rem",
+                        fontSize: "0.85rem",
                       }}
                     >
                       {project.description}
                     </p>
                   </div>
                 </div>
-
-                <div style={{
-                  width: "70px",
-                  background: "transparent",
-                  borderLeft: "1px dashed var(--subtle-dark-1)",
-                  padding: "1rem 0.5rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.5rem",
-                  alignItems: "stretch",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                }}>
-                  {project.id === "virvoile" ? (
-                    <>
-                      <span style={projectCardStyles.badge}>Desktop</span>
-                      <span style={projectCardStyles.badge}>Unity</span>
-                      <span style={projectCardStyles.badge}>{project.status}</span>
-                    </>
-                  ) : project.id === "oishi-kenko" ? (
-                    <>
-                      <span style={projectCardStyles.badge}>Android</span>
-                      <span style={projectCardStyles.badge}>Kotlin</span>
-                      <span style={projectCardStyles.badge}>{project.status}</span>
-                    </>
-                  ) : project.id === "fore-coffee" ? (
-                    <>
-                      <span style={projectCardStyles.badge}>iOS</span>
-                      <span style={projectCardStyles.badge}>Android</span>
-                      <span style={projectCardStyles.badge}>
-                        Released {project.releaseDate}
-                      </span>
-                    </>
-                  ) : project.id === "kompit" ? (
-                    <>
-                      <span style={projectCardStyles.badge}>iOS</span>
-                      <span style={projectCardStyles.badge}>Android</span>
-                      <span style={projectCardStyles.badge}>Web</span>
-                      <span style={projectCardStyles.badge}>
-                        Released {project.releaseDate}
-                      </span>
-                    </>
-                  ) : (
-                    <>
-                      <span style={projectCardStyles.badge}>iOS</span>
-                      <span style={projectCardStyles.badge}>Android</span>
-                      {project.releaseDate && (
-                        <span style={projectCardStyles.badge}>
-                          Released {project.releaseDate}
-                        </span>
-                      )}
-                    </>
-                  )}
-                </div>
               </div>
-              ))}
+            ))}
           </div>
         </div>
 
         {/* Modal */}
-        {selectedProject && (() => {
-          const meta = getProjectMeta(selectedProject);
-          return (
-            <>
-              <div
-                style={modalStyles.overlay}
-                onClick={() => setSelectedProject(null)}
-              />
-              <div
-                role="dialog"
-                aria-modal="true"
-                style={{
-                  ...modalStyles.modal,
-                  position: "fixed",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  zIndex: 1001,
-                }}
-                className="modal-no-scrollbar"
-              >
-                {/* Close */}
-                <button
-                  type="button"
-                  style={modalStyles.closeButton}
+        {selectedProject &&
+          (() => {
+            const meta = getProjectMeta(selectedProject);
+            return (
+              <>
+                <div
+                  role="presentation"
+                  style={modalStyles.overlay}
                   onClick={() => setSelectedProject(null)}
-                  aria-label="Close modal"
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "rotate(90deg) scale(1.1)";
-                    e.currentTarget.style.opacity = "1";
+                />
+                <div
+                  role="dialog"
+                  aria-modal="true"
+                  style={{
+                    ...modalStyles.modal,
+                    position: "fixed",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    zIndex: 1001,
                   }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "rotate(0deg) scale(1)";
-                    e.currentTarget.style.opacity = "0.6";
-                  }}
+                  className="modal-no-scrollbar"
                 >
-                  <CircleX size={32} strokeWidth={1} />
-                </button>
+                  {/* Close */}
+                  <button
+                    type="button"
+                    style={modalStyles.closeButton}
+                    onClick={() => setSelectedProject(null)}
+                    aria-label="Close modal"
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.opacity = "1";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.opacity = "0.6";
+                    }}
+                  >
+                    <CircleX size={28} strokeWidth={1.25} />
+                  </button>
 
-                {/* Icon + Title */}
-                <div style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1rem",
-                  marginBottom: "1.25rem",
-                }}>
+                  {/* Icon + Title */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1rem",
+                      marginBottom: "1.25rem",
+                    }}
+                  >
                     {selectedProject.icon ? (
                       <img
                         src={selectedProject.icon}
@@ -615,291 +549,315 @@ export default function Projects() {
                         style={{
                           width: "64px",
                           height: "64px",
-                          borderRadius: "6px",
+                          borderRadius: "14px",
                           flexShrink: 0,
                         }}
                       />
                     ) : (
-                      <div style={{
-                        width: "64px",
-                        height: "64px",
-                        borderRadius: "6px",
-                        flexShrink: 0,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        background: "var(--bg)",
-                        border: "1px solid var(--subtle-dark-1)",
-                      }}>
+                      <div
+                        style={{
+                          width: "64px",
+                          height: "64px",
+                          borderRadius: "14px",
+                          flexShrink: 0,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          background: "var(--bg)",
+                          border: "1px solid var(--subtle-dark-1)",
+                        }}
+                      >
                         <Terminal size={32} color="var(--sort-newest)" />
                       </div>
                     )}
-                  <h2 style={{
-                    margin: 0,
-                    color: "var(--dark-1)",
-                    fontFamily: "var(--font-family-title)",
-                    fontSize: "clamp(2rem, 4vw, 2.8rem)",
-                    lineHeight: 1.1,
-                    letterSpacing: "-0.03em",
-                    textTransform: "uppercase",
-                    fontFeatureSettings: '"liga" 1, "kern" 1',
-                  }}>
-                    {selectedProject.title}
-                  </h2>
-                </div>
-
-                {/* Developer / Released / Tech meta */}
-                <div style={{
-                  fontFamily: "'Departure Mono', monospace",
-                  fontSize: "0.9rem",
-                  color: "var(--subtle-dark-3)",
-                  lineHeight: 1.8,
-                  marginBottom: "1rem",
-                }}>
-                  <div>{meta.developer}</div>
-                  {meta.released && <div>{meta.released}</div>}
-                  {meta.extra && <div>{meta.extra}</div>}
-                  {selectedProject.technologies.length > 0 && (
-                    <div>Tech Stack: {selectedProject.technologies.join(", ")}</div>
-                  )}
-                </div>
-
-                {/* Description */}
-                <p style={{
-                  color: "var(--dark-1)",
-                  lineHeight: 1.6,
-                  fontSize: "1.05rem",
-                  margin: "0 0 0.5rem 0",
-                  maxWidth: "520px",
-                }}>
-                  {selectedProject.description}
-                </p>
-
-                {/* Separator */}
-                <hr style={modalStyles.separator} />
-
-                {/* Download buttons */}
-                {selectedProject.id !== "virvoile" && (
-                  selectedProject.links.appStore !== "#" ||
-                  selectedProject.links.playStore !== "#" ||
-                  selectedProject.links.npm ||
-                  selectedProject.links.website
-                ) && (
-                  <div style={{
-                    display: "flex",
-                    gap: "0.75rem",
-                    flexWrap: "wrap",
-                    marginBottom: "1.25rem",
-                  }}>
-                    {selectedProject.links.appStore !== "#" && (
-                      <a
-                        href={selectedProject.links.appStore}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "0.5rem",
-                          color: "var(--dark-1)",
-                          textDecoration: "none",
-                          fontSize: "0.85rem",
-                          fontFamily: "'Departure Mono', monospace",
-                          padding: "0.6rem 1.2rem",
-                          border: "1px solid var(--subtle-dark-1)",
-                          background: "transparent",
-                          transition: "background 0.2s ease",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = "var(--hover-1)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = "transparent";
-                        }}
-                      >
-                        <Apple size={14} /> App Store
-                      </a>
-                    )}
-                    {selectedProject.links.playStore !== "#" && (
-                      <a
-                        href={selectedProject.links.playStore}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "0.5rem",
-                          color: "var(--dark-1)",
-                          textDecoration: "none",
-                          fontSize: "0.85rem",
-                          fontFamily: "'Departure Mono', monospace",
-                          padding: "0.6rem 1.2rem",
-                          border: "1px solid var(--subtle-dark-1)",
-                          background: "transparent",
-                          transition: "background 0.2s ease",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = "var(--hover-1)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = "transparent";
-                        }}
-                      >
-                        <Play size={14} /> Play Store
-                      </a>
-                    )}
-                    {selectedProject.links.npm && (
-                      <a
-                        href={selectedProject.links.npm}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "0.5rem",
-                          color: "var(--dark-1)",
-                          textDecoration: "none",
-                          fontSize: "0.85rem",
-                          fontFamily: "'Departure Mono', monospace",
-                          padding: "0.6rem 1.2rem",
-                          border: "1px solid var(--subtle-dark-1)",
-                          background: "transparent",
-                          transition: "background 0.2s ease",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = "var(--hover-1)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = "transparent";
-                        }}
-                      >
-                        <Package size={14} /> NPM Package
-                      </a>
-                    )}
-                    {selectedProject.links.website && (
-                      <a
-                        href={selectedProject.links.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "0.5rem",
-                          color: "var(--dark-1)",
-                          textDecoration: "none",
-                          fontSize: "0.85rem",
-                          fontFamily: "'Departure Mono', monospace",
-                          padding: "0.6rem 1.2rem",
-                          border: "1px solid var(--subtle-dark-1)",
-                          background: "transparent",
-                          transition: "background 0.2s ease",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = "var(--hover-1)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = "transparent";
-                        }}
-                      >
-                        <Globe size={14} /> Website
-                      </a>
-                    )}
-                  </div>
-                )}
-
-                {/* Videos */}
-                {selectedProject.videos && selectedProject.videos.length > 0 && (
-                  <>
-                    <hr style={modalStyles.separator} />
-                    <div style={{
-                      display: "flex",
-                      gap: "1rem",
-                      flexWrap: "wrap",
-                      justifyContent: "center",
-                    }}>
-                      {selectedProject.videos.map((videoUrl, index) => (
-                        <div key={index} style={{
-                          position: "relative",
-                          width: "calc(50% - 0.5rem)",
-                          minWidth: "280px",
-                          paddingBottom: "28%",
-                          flex: "1 1 calc(50% - 0.5rem)",
-                        }}>
-                          <iframe
-                            src={videoUrl}
-                            style={{
-                              position: "absolute",
-                              top: 0,
-                              left: 0,
-                              width: "100%",
-                              height: "100%",
-                              border: "none",
-                            }}
-                            allow="autoplay"
-                            title={`${selectedProject.title} demo video ${index + 1}`}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </>
-                )}
-
-                {/* Screenshots — horizontal scroll strip */}
-                {selectedProject.screenshots &&
-                  selectedProject.screenshots.length > 0 && (
-                  <>
-                    <hr style={modalStyles.separator} />
-                    <div style={{
-                      display: "flex",
-                      gap: "0.75rem",
-                      overflowX: "auto",
-                      scrollbarWidth: "none",
-                      msOverflowStyle: "none",
-                      paddingBottom: "0.5rem",
-                    }}>
-                      {selectedProject.screenshots.map((screenshot, index) => (
-                        <img
-                          key={index}
-                          src={screenshot}
-                          alt={`${selectedProject.title} screenshot ${index + 1}`}
-                          style={{
-                            height: "280px",
-                            width: "auto",
-                            objectFit: "contain",
-                            border: "1px solid var(--subtle-dark-1)",
-                            flexShrink: 0,
-                          }}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-
-                {/* Privacy link — right-aligned, subtle */}
-                {selectedProject.id !== "virvoile" &&
-                  selectedProject.links.privacy && (
-                  <div style={{
-                    textAlign: "right",
-                    marginTop: "1.5rem",
-                  }}>
-                    <a
-                      href={selectedProject.links.privacy}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <h2
                       style={{
-                        color: "var(--subtle-dark-3)",
-                        textDecoration: "none",
-                        fontSize: "0.8rem",
-                        fontFamily: "'Departure Mono', monospace",
+                        margin: 0,
+                        color: "var(--dark-1)",
+                        fontFamily: "'LoveFrom Serif', serif",
+                        fontSize: "clamp(1.8rem, 4vw, 2.4rem)",
+                        fontWeight: 700,
+                        lineHeight: 1.1,
+                        letterSpacing: "-0.02em",
+                        fontFeatureSettings: '"liga" 1, "kern" 1',
                       }}
                     >
-                      Privacy Policy &rarr;
-                    </a>
+                      {selectedProject.title}
+                    </h2>
                   </div>
-                )}
-              </div>
-            </>
-          );
-        })()}
+
+                  {/* Developer / Released / Tech meta */}
+                  <div
+                    style={{
+                      fontFamily: "'Departure Mono', monospace",
+                      fontSize: "0.9rem",
+                      color: "var(--subtle-dark-3)",
+                      lineHeight: 1.8,
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    <div>{meta.developer}</div>
+                    {meta.released && <div>{meta.released}</div>}
+                    {meta.extra && <div>{meta.extra}</div>}
+                    {selectedProject.technologies.length > 0 && (
+                      <div>
+                        Tech Stack: {selectedProject.technologies.join(", ")}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Description */}
+                  <p
+                    style={{
+                      fontFamily: "'Neue Haas Unica', sans-serif",
+                      color: "var(--dark-1)",
+                      lineHeight: 1.6,
+                      fontSize: "1.05rem",
+                      margin: "0 0 0.5rem 0",
+                      maxWidth: "520px",
+                    }}
+                  >
+                    {selectedProject.description}
+                  </p>
+
+                  {/* Separator */}
+                  <hr style={modalStyles.separator} />
+
+                  {/* Download buttons */}
+                  {selectedProject.id !== "virvoile" &&
+                    (selectedProject.links.appStore !== "#" ||
+                      selectedProject.links.playStore !== "#" ||
+                      selectedProject.links.npm ||
+                      selectedProject.links.website) && (
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: "0.75rem",
+                          flexWrap: "wrap",
+                          marginBottom: "1.25rem",
+                        }}
+                      >
+                        {selectedProject.links.appStore !== "#" && (
+                          <a
+                            href={selectedProject.links.appStore}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "0.5rem",
+                              color: "var(--dark-1)",
+                              textDecoration: "none",
+                              fontSize: "0.85rem",
+                              fontFamily: "'Departure Mono', monospace",
+                              padding: "0.6rem 1.2rem",
+                              border: "1px solid var(--subtle-dark-1)",
+                              background: "transparent",
+                              transition: "background 0.2s ease",
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background =
+                                "var(--hover-1)";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = "transparent";
+                            }}
+                          >
+                            <Apple size={14} /> App Store
+                          </a>
+                        )}
+                        {selectedProject.links.playStore !== "#" && (
+                          <a
+                            href={selectedProject.links.playStore}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "0.5rem",
+                              color: "var(--dark-1)",
+                              textDecoration: "none",
+                              fontSize: "0.85rem",
+                              fontFamily: "'Departure Mono', monospace",
+                              padding: "0.6rem 1.2rem",
+                              border: "1px solid var(--subtle-dark-1)",
+                              background: "transparent",
+                              transition: "background 0.2s ease",
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background =
+                                "var(--hover-1)";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = "transparent";
+                            }}
+                          >
+                            <Play size={14} /> Play Store
+                          </a>
+                        )}
+                        {selectedProject.links.npm && (
+                          <a
+                            href={selectedProject.links.npm}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "0.5rem",
+                              color: "var(--dark-1)",
+                              textDecoration: "none",
+                              fontSize: "0.85rem",
+                              fontFamily: "'Departure Mono', monospace",
+                              padding: "0.6rem 1.2rem",
+                              border: "1px solid var(--subtle-dark-1)",
+                              background: "transparent",
+                              transition: "background 0.2s ease",
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background =
+                                "var(--hover-1)";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = "transparent";
+                            }}
+                          >
+                            <Package size={14} /> NPM Package
+                          </a>
+                        )}
+                        {selectedProject.links.website && (
+                          <a
+                            href={selectedProject.links.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "0.5rem",
+                              color: "var(--dark-1)",
+                              textDecoration: "none",
+                              fontSize: "0.85rem",
+                              fontFamily: "'Departure Mono', monospace",
+                              padding: "0.6rem 1.2rem",
+                              border: "1px solid var(--subtle-dark-1)",
+                              background: "transparent",
+                              transition: "background 0.2s ease",
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background =
+                                "var(--hover-1)";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = "transparent";
+                            }}
+                          >
+                            <Globe size={14} /> Website
+                          </a>
+                        )}
+                      </div>
+                    )}
+
+                  {/* Videos */}
+                  {selectedProject.videos &&
+                    selectedProject.videos.length > 0 && (
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: "1rem",
+                          flexWrap: "wrap",
+                          justifyContent: "center",
+                          marginTop: "1.5rem",
+                        }}
+                      >
+                        {selectedProject.videos.map((videoUrl, index) => (
+                          <div
+                            key={videoUrl}
+                            style={{
+                              position: "relative",
+                              width: "calc(50% - 0.5rem)",
+                              minWidth: "280px",
+                              paddingBottom: "28%",
+                              flex: "1 1 calc(50% - 0.5rem)",
+                            }}
+                          >
+                            <iframe
+                              src={videoUrl}
+                              style={{
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%",
+                                border: "none",
+                              }}
+                              allow="autoplay"
+                              title={`${selectedProject.title} demo video ${index + 1}`}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                  {/* Screenshots — horizontal scroll strip */}
+                  {selectedProject.screenshots &&
+                    selectedProject.screenshots.length > 0 && (
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: "0.75rem",
+                          overflowX: "auto",
+                          scrollbarWidth: "none",
+                          msOverflowStyle: "none",
+                          marginTop: "1.5rem",
+                          paddingBottom: "0.5rem",
+                        }}
+                      >
+                        {selectedProject.screenshots.map(
+                          (screenshot, index) => (
+                            <img
+                              key={screenshot}
+                              src={screenshot}
+                              alt={`${selectedProject.title} screenshot ${index + 1}`}
+                              style={{
+                                height: "280px",
+                                width: "auto",
+                                objectFit: "contain",
+                                border: "1px solid var(--subtle-dark-1)",
+                                flexShrink: 0,
+                              }}
+                            />
+                          ),
+                        )}
+                      </div>
+                    )}
+
+                  {/* Privacy link — right-aligned, subtle */}
+                  {selectedProject.id !== "virvoile" &&
+                    selectedProject.links.privacy && (
+                      <div
+                        style={{
+                          textAlign: "right",
+                          marginTop: "1.5rem",
+                        }}
+                      >
+                        <a
+                          href={selectedProject.links.privacy}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "var(--subtle-dark-3)",
+                            textDecoration: "none",
+                            fontSize: "0.8rem",
+                            fontFamily: "'Departure Mono', monospace",
+                          }}
+                        >
+                          Privacy Policy &rarr;
+                        </a>
+                      </div>
+                    )}
+                </div>
+              </>
+            );
+          })()}
       </Layout>
     </>
   );
