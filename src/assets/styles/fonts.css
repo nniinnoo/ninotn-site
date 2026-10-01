@@ -723,6 +723,40 @@
   font-style: italic;
 }
 
+/* === TT JENEVERS === */
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Light Italic.ttf') format('truetype'); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Medium Italic.ttf') format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Bold Italic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial ExtraBold Italic.ttf') format('truetype'); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Jenevers'; src: url('../font-files/tt-jenevers/TT Jenevers Trial Black Italic.ttf') format('truetype'); font-weight: 900; font-style: italic; font-display: swap; }
+
+/* === TT NORMS PRO === */
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-ThinItalic.woff2') format('woff2'); font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-ExtraLightItalic.woff2') format('woff2'); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-LightItalic.woff2') format('woff2'); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-MediumItalic.woff2') format('woff2'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-BoldItalic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-ExtraBoldItalic.woff2') format('woff2'); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro'; src: url('../font-files/tt-norms-pro/TTNormsPro-BlackItalic.woff2') format('woff2'); font-weight: 900; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro ExtraBlack'; src: url('../font-files/tt-norms-pro/TTNormsPro-ExtraBlack.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TT Norms Pro ExtraBlack'; src: url('../font-files/tt-norms-pro/TTNormsPro-ExtraBlackItalic.woff2') format('woff2'); font-weight: 900; font-style: italic; font-display: swap; }
+
 /* === LOVEFROM SERIF === */
 @font-face {
   font-family: 'LoveFrom Serif';

@@ -3,7 +3,7 @@
 @import url(katex/katex.min.css);
 
 :root {
-  --font-family-text: "Atkinson Hyperlegible Mono", sans-serif;
+  --font-family-text: "TT Norms Pro", sans-serif;
   --font-family-title: "Ada", sans-serif;
 
   --px1: 0.0625rem;
@@ -60,9 +60,11 @@ body {
 }
 
 body.light {
-  --bg: #efe5d2;
+  --bg: #fefbec; /* efe5d2; */
   /* Default: #efe5d2 alt: #FAF4E6 or #EDE4D5*/
   --bg-2: rgba(255, 255, 255, 0.418);
+  --project-card-bg: var(--bg-2);
+  --project-card-border: rgba(64, 64, 64, 0.12);
 
   --light-1: #b9b4b4;
   --dark-1: #404040;
@@ -84,18 +86,20 @@ body.light {
 }
 
 body.dark {
-  --bg: #1c1b18;
+  --bg: #242424;
   /* Maggie Official Ink Charcoal */
   --bg-2: rgba(37, 36, 32, 0.6);
+  --project-card-bg: var(--bg-2);
+  --project-card-border: rgba(166, 163, 157, 0.14);
 
   --light-1: #fbfbfb;
   /* Headline Off-White */
   --dark-1: #a6a39d;
   /* Muted Warm Gray (Ocular Comfort Optimized) */
 
-  --subtle-dark-1: rgba(78, 137, 254, 0.15);
-  /* Lapis Blue Tint */
-  --subtle-dark-2: rgba(78, 137, 254, 0.3);
+  --subtle-dark-1: rgba(74, 148, 124, 0.15);
+  /* Verdigris Patina Tint */
+  --subtle-dark-2: rgba(74, 148, 124, 0.3);
   --subtle-dark-3: rgba(166, 163, 157, 0.5);
 
   --hover-1: rgba(37, 36, 32, 0.8);
@@ -103,8 +107,8 @@ body.dark {
   /* Maggie Official Light Charcoal */
   --footer: rgba(28, 27, 24, 0.5);
 
-  --sort-newest: #4e89fe;
-  /* Lapis Blue Accent */
+  --sort-newest: #4a947c;
+  /* Verdigris Patina Accent */
   --sort-to: #2bc4da;
   /* Maggie Official Cyber Sea Blue */
   --sort-oldest: #2bc4da;
@@ -143,9 +147,9 @@ a {
 }
 
 body.dark a {
-  color: #4e89fe;
-  /* Lapis Blue Links */
-  text-decoration-color: rgba(78, 137, 254, 0.4);
+  color: #4a947c;
+  /* Verdigris Patina Links */
+  text-decoration-color: rgba(74, 148, 124, 0.4);
 }
 
 a:hover {
@@ -169,8 +173,8 @@ body.dark a:focus-visible,
 body.dark button:focus-visible,
 body.dark input:focus-visible,
 body.dark [tabindex]:focus-visible {
-  outline-color: #4e89fe;
-  /* Lapis Blue focus */
+  outline-color: #4a947c;
+  /* Verdigris Patina focus */
 }
 
 /* Remove default outline for mouse clicks */
@@ -215,8 +219,8 @@ body.dark h1,
 body.dark h2,
 body.dark h3,
 body.dark h4 {
-  color: #f0dc82;
-  /* Champagne Gold Titles */
+  color: #efe5d2;
+  /* Warm Parchment Titles */
 }
 
 table {
@@ -305,7 +309,7 @@ tbody tr:nth-child(odd) {
 
 .nav__left h2 {
   font-family: 'Departure Mono', monospace;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 400;
   color: #ffffff;
   margin: 0;
@@ -330,8 +334,8 @@ body.dark .nav__left h2 {
 }
 
 .nav__right a {
-  font-family: 'Departure Mono', monospace;
-  font-size: 0.9375rem;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--dark-1);
   text-decoration: none;
@@ -340,7 +344,7 @@ body.dark .nav__left h2 {
 
   background-color: transparent;
   border: 1px solid var(--subtle-dark-1);
-  border-radius: 3px;
+  border-radius: 7px;
 
   margin: var(--px8);
   padding: var(--px6) var(--px12);
@@ -363,8 +367,45 @@ body.dark .nav__right a {
 .nav__right a:hover:active,
 .nav__right a:hover:focus {
   background: var(--hover-2);
-  /* box-shadow: 4px 4px #d1d9b5; */
   transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+/* ===== Projects ===== */
+.project-row--divider {
+  background-image: repeating-linear-gradient(to right, var(--project-card-border) 0, var(--project-card-border) 6px, transparent 6px, transparent 14px);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 14px 2px;
+}
+
+.project-row--left {
+  padding-right: 1.5rem !important;
+  background-image: repeating-linear-gradient(to bottom, var(--project-card-border) 0, var(--project-card-border) 6px, transparent 6px, transparent 14px);
+  background-position: right;
+  background-repeat: repeat-y;
+  background-size: 2px 14px;
+}
+
+.project-row--divider.project-row--left {
+  background-image:
+    repeating-linear-gradient(to right, var(--project-card-border) 0, var(--project-card-border) 6px, transparent 6px, transparent 14px),
+    repeating-linear-gradient(to bottom, var(--project-card-border) 0, var(--project-card-border) 6px, transparent 6px, transparent 14px);
+  background-position: bottom, right;
+  background-repeat: repeat-x, repeat-y;
+  background-size: 14px 2px, 2px 14px;
+}
+
+.project-row--left + .project-row {
+  padding-left: 1.5rem !important;
+}
+
+/* ===== About: Credit ===== */
+#section-credit p {
+  margin: 0.4rem 0;
+}
+
+#section-credit ul {
+  margin: 0.25rem 0 0.5rem;
 }
 
 /* ===== About & Contact ===== */
@@ -457,8 +498,10 @@ pre {
 
 .blog__list {
   padding: var(--px18);
-  border-bottom: 1px solid var(--subtle-dark-1);
-  border-bottom-style: dashed;
+  background-image: repeating-linear-gradient(to right, var(--subtle-dark-1) 0, var(--subtle-dark-1) 6px, transparent 6px, transparent 14px);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 14px 1px;
   line-height: 1.65;
 }
 
@@ -467,15 +510,18 @@ pre {
 }
 
 .blog__list:hover {
-  background-color: var(--hover-1);
-  /*#bdbf73;*/
+  background-color: rgba(64, 64, 64, 0.055);
   transition: 0.5s;
 }
 
+body.dark .blog__list:hover {
+  background-color: rgba(255, 255, 255, 0.055);
+}
+
 .blog__list-title {
-  font-family: "Ada";
-  font-weight: 900;
-  font-size: 2.55rem;
+  font-family: 'TT Jenevers', sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
   color: var(--dark-1);
   margin-block-start: 0;
   margin-block-end: 0;
@@ -486,9 +532,12 @@ pre {
 }
 
 .blog__list-title-details>p {
-  font-size: var(--px18);
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  font-size: 1.15rem;
   font-weight: 400;
+  letter-spacing: 0;
   color: var(--subtle-dark-3);
+  opacity: 0.8;
   margin-top: -0.15rem;
   margin-bottom: var(--px6);
 }
@@ -527,6 +576,16 @@ pre {
   font-family: 'Departure Mono', monospace;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+body.dark .blog__list-title-details>p {
+  color: #9c9992;
+  opacity: 1;
+}
+
+body.dark .blog__list-title-details span,
+body.dark .blog__list-title-details span p {
+  color: #85827d;
 }
 
 .blog__list-title-details svg {
@@ -672,9 +731,9 @@ pre {
 }
 
 .blog__post-title {
-  font-family: var(--font-family-title);
-  font-weight: 900;
-  font-size: 3rem;
+  font-family: 'TT Jenevers', sans-serif;
+  font-weight: 700;
+  font-size: 1.85rem;
   color: var(--dark-1);
   margin-bottom: var(--px3);
   line-height: 1.2;
@@ -721,10 +780,10 @@ pre {
 
 .blog__post-body {
   font-family: var(--font-family-text);
-  font-size: 1.075rem;
+  font-size: 1.15rem;
+  line-height: 1.65;
   margin-top: var(--px42);
-  text-align: justify;
-  text-justify: distribute;
+  text-align: left;
 }
 
 .blog__post-body p {
@@ -1115,8 +1174,10 @@ blockquote {
 
 .search__result h1 {
   font-size: var(--px30);
-  border-bottom: 2px solid var(--subtle-dark-1);
-  border-bottom-style: dashed;
+  background-image: repeating-linear-gradient(to right, var(--subtle-dark-1) 0, var(--subtle-dark-1) 6px, transparent 6px, transparent 14px);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 14px 2px;
 }
 
 .search__result p {
@@ -1397,7 +1458,7 @@ blockquote {
   }
 
   .blog__list-title {
-    font-size: var(--px36);
+    font-size: 1.8rem;
     line-height: 1.15;
     letter-spacing: -0.01em;
   }
@@ -1435,7 +1496,7 @@ blockquote {
   }
 
   .blog__post-body p {
-    font-size: var(--px14);
+    font-size: 1rem;
   }
 
   .blog__post-body iframe {
@@ -1870,8 +1931,8 @@ body.light .scroll-ruler__tick-wrap:hover .scroll-ruler__tick {
 }
 
 body.dark .scroll-ruler__tick-wrap:hover .scroll-ruler__tick {
-  background: #4e89fe;
-  /* Lapis Blue */
+  background: #4a947c;
+  /* Verdigris Patina */
 }
 
 /* Transparent hit area for easier hover */
@@ -1931,7 +1992,7 @@ body.light .scroll-ruler__section-link:hover {
 }
 
 body.dark .scroll-ruler__section-link:hover {
-  color: #4e89fe;
+  color: #4a947c;
 }
 
 /* ---- Section marker ticks (solid black, always visible) ---- */
@@ -2039,4 +2100,3 @@ body.dark .scroll-ruler__section-tick {
   font-size: 1.075rem;
   color: var(--dark-1);
 }
-
