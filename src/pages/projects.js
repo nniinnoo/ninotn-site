@@ -31,6 +31,7 @@ import kompitScreenshot3 from "../assets/project-icons/kompit-3.png";
 import tokenwiseDemo from "../assets/project-icons/tokenwise-demo.gif";
 import tokenwiseDemo2 from "../assets/project-icons/tokenwise-demo-2.gif";
 import claudeIcon from "../assets/project-icons/claude-icon.svg";
+import wonderkidTemporaryIcon from "../assets/project-icons/wonderkid-temporary.png";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -51,7 +52,7 @@ export default function Projects() {
       id: "wonderkid",
       title: "Wonderkid",
       description: "TBA",
-      icon: null,
+      icon: wonderkidTemporaryIcon,
       status: "Coming Soon",
       releaseDate: "TBA",
       technologies: ["AI Research", "Creative Intelligence"],
@@ -82,7 +83,7 @@ export default function Projects() {
       id: "claude-tokenwise-cli",
       title: "claude-tokenwise-cli",
       description:
-        "Interactive wrapper for Claude Code with a mode picker, session manager, and real-time token tracker to keep usage visible as you work.",
+        "Interactive wrapper for Claude Code with a mode picker, session manager, and real-time token tracker.",
       icon: claudeIcon,
       status: "NPM Package Live",
       releaseDate: "08.03.2026",
@@ -207,26 +208,24 @@ export default function Projects() {
   const projectCardStyles = {
     container: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 380px))",
-      gap: "2.5rem",
-      maxWidth: "1000px",
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+      maxWidth: "920px",
       margin: "2rem auto",
       padding: "0 1rem",
-      justifyContent: "center",
       width: "100%",
       boxSizing: "border-box",
     },
     card: {
-      background: "var(--bg-2)",
       border: "none",
-      borderRadius: "16px",
-      padding: "1.25rem",
+      padding: "1.5rem 0",
       cursor: "pointer",
-      transition: "background-color 0.15s ease",
+      transition: "opacity 0.15s ease",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
       maxWidth: "100%",
+      width: "100%",
+      boxSizing: "border-box",
     },
     header: {
       display: "flex",
@@ -242,11 +241,11 @@ export default function Projects() {
       background: "transparent",
     },
     title: {
-      fontSize: "1.5rem",
-      fontWeight: "640",
+      fontSize: "1.35rem",
+      fontWeight: "700",
       color: "var(--dark-1)",
       marginBottom: "0",
-      fontFamily: "'LoveFrom Serif', serif",
+      fontFamily: "'TT Jenevers', sans-serif",
       background: "transparent",
       lineHeight: "1.2",
       letterSpacing: "-0.01em",
@@ -257,7 +256,7 @@ export default function Projects() {
       lineHeight: "1.55",
       marginBottom: "1rem",
       fontSize: "0.9rem",
-      fontFamily: "'Neue Haas Unica', sans-serif",
+      fontFamily: "'TT Norms Pro', sans-serif",
     },
   };
 
@@ -369,7 +368,7 @@ export default function Projects() {
         >
           <h1
             style={{
-              fontFamily: "'LoveFrom Serif', serif",
+              fontFamily: "'Ada', sans-serif",
               fontSize: "3rem",
               marginBottom: "-0.15rem",
               fontWeight: "700",
@@ -392,9 +391,16 @@ export default function Projects() {
           </p>
 
           <div style={projectCardStyles.container}>
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <div
                 key={project.id}
+                className={`project-row${
+                  index < projects.length - 2 ? " project-row--divider" : ""
+                }${
+                  index % 2 === 0 && index < projects.length - 1
+                    ? " project-row--left"
+                    : ""
+                }`}
                 role="button"
                 tabIndex={0}
                 style={projectCardStyles.card}
@@ -405,10 +411,10 @@ export default function Projects() {
                   }
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--hover-1)";
+                  e.currentTarget.style.opacity = "0.72";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "var(--bg-2)";
+                  e.currentTarget.style.opacity = "1";
                 }}
               >
                 <div
@@ -420,7 +426,7 @@ export default function Projects() {
                 >
                   <div
                     style={{
-                      width: "80px",
+                      width: "68px",
                       flexShrink: 0,
                       marginRight: "1rem",
                     }}
@@ -430,18 +436,18 @@ export default function Projects() {
                         src={project.icon}
                         alt={`${project.title} icon`}
                         style={{
-                          width: "80px",
-                          height: "80px",
-                          borderRadius: "18px",
+                          width: "68px",
+                          height: "68px",
+                          borderRadius: "8px",
                           objectFit: "cover",
                         }}
                       />
                     ) : (
                       <div
                         style={{
-                          width: "80px",
-                          height: "80px",
-                          borderRadius: "18px",
+                          width: "68px",
+                          height: "68px",
+                          borderRadius: "8px",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -481,7 +487,7 @@ export default function Projects() {
                       style={{
                         ...projectCardStyles.description,
                         margin: 0,
-                        fontSize: "0.85rem",
+                        fontSize: "1rem",
                       }}
                     >
                       {project.description}

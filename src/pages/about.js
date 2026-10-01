@@ -686,31 +686,41 @@ function About() {
             <div id="section-credit">
               <h1>Credit</h1>
               <div>
+                <p>Display fonts:</p>
+                <ul>
+                  <li>
+                    29LT Ada by{" "}
+                    <a
+                      target="_blank"
+                      href="https://tosche.net/fonts"
+                      rel="noreferrer"
+                    >
+                      Toshi Omagari
+                    </a>
+                  </li>
+                  <li>
+                    TT Jenevers by{" "}
+                    <a
+                      target="_blank"
+                      href="https://typetype.org/fonts/tt-jenevers/"
+                      rel="noreferrer"
+                    >
+                      TypeType
+                    </a>
+                  </li>
+                </ul>
                 <p>
-                  Title font :
-                  <ul>
-                    <li>
-                      Fira Sans-serif by{" "}
-                      <a
-                        target="_blank"
-                        href="https://en.wikipedia.org/wiki/Erik_Spiekermann"
-                        rel="noreferrer"
-                      >
-                        Erik Spiekermann
-                      </a>
-                    </li>
-                    <li>
-                      29LT Ada by{" "}
-                      <a
-                        target="_blank"
-                        href="https://tosche.net/fonts"
-                        rel="noreferrer"
-                      >
-                        Toshi Omagari
-                      </a>
-                    </li>
-                  </ul>
-                  Text font : Atkinson Mono by{" "}
+                  Text font: TT Norms Pro by{" "}
+                  <a
+                    target="_blank"
+                    href="https://typetype.org/fonts/tt-norms-pro/"
+                    rel="noreferrer"
+                  >
+                    TypeType
+                  </a>
+                </p>
+                <p>
+                  Interface and metadata font: Atkinson Hyperlegible Mono by{" "}
                   <a
                     target="_blank"
                     href="https://www.brailleinstitute.org/freefont/"
@@ -718,27 +728,26 @@ function About() {
                   >
                     Braille Institute
                   </a>
-                  <br />
-                  <p>
-                    Mini-screen background: Moonlit Night 1878 by{" "}
-                    <a
-                      target="_blank"
-                      href="https://en.wikipedia.org/wiki/Ivan_Aivazovsky"
-                      rel="noreferrer"
-                    >
-                      Ivan Aivazovsky
-                    </a>
-                  </p>
-                  <StaticImage
-                    alt="Moonlit Night 1878 painting by Ivan Aivazovsky"
-                    quality={100}
-                    src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                    }}
-                  />
                 </p>
+                <p>
+                  Mini-screen background: Moonlit Night 1878 by{" "}
+                  <a
+                    target="_blank"
+                    href="https://en.wikipedia.org/wiki/Ivan_Aivazovsky"
+                    rel="noreferrer"
+                  >
+                    Ivan Aivazovsky
+                  </a>
+                </p>
+                <StaticImage
+                  alt="Moonlit Night 1878 painting by Ivan Aivazovsky"
+                  quality={100}
+                  src="../assets/moonlit-1878-by-ivan-aivazovsky.jpg"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                />
               </div>
             </div>
           </div>
