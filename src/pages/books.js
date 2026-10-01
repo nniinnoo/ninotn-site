@@ -406,6 +406,7 @@ function Books() {
       <SEO />
       <Layout pageTitle="books">
         <div
+          className="books__header"
           style={{
             display: "flex",
             flexDirection: "column",
@@ -442,6 +443,7 @@ function Books() {
         </div>
         {/* FICTION SECTION */}
         <div
+          className="books__section"
           style={{
             marginLeft: "auto",
             marginRight: "auto",
@@ -562,6 +564,7 @@ function Books() {
 
         {/* NON-FICTION SECTION */}
         <div
+          className="books__section"
           style={{
             marginLeft: "auto",
             marginRight: "auto",

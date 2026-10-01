@@ -390,7 +390,7 @@ export default function Projects() {
             List of things I've built or contributed to over the years.
           </p>
 
-          <div style={projectCardStyles.container}>
+          <div className="projects-grid" style={projectCardStyles.container}>
             {projects.map((project, index) => (
               <div
                 key={project.id}

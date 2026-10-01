@@ -1371,6 +1371,62 @@ blockquote {
 /* ================= */
 
 @media (max-width: 800px) {
+  .books__header {
+    box-sizing: border-box;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .books__section {
+    box-sizing: border-box;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .books__container {
+    box-sizing: border-box;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .fragment__content {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .archive__container {
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+  }
+
+  .archive__container .search__container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .archive__container .search__bar input,
+  .archive__container .search__result {
+    width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    margin: 1rem auto !important;
+  }
+
+  .projects-grid .project-row,
+  .projects-grid .project-row--left + .project-row {
+    padding: 1.25rem 0 !important;
+    background-image: none;
+  }
+
+  .projects-grid .project-row:not(:last-child) {
+    background-image: repeating-linear-gradient(to right, var(--project-card-border) 0, var(--project-card-border) 6px, transparent 6px, transparent 14px);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 14px 2px;
+  }
+
   .navbar {
     background-image: linear-gradient(rgba(129, 128, 128, 0.036),
         rgba(0, 0, 0, 0.023)),
@@ -1524,9 +1580,19 @@ blockquote {
 
   .blog__post-back-btn {
     position: fixed;
+    left: auto;
     right: var(--px16);
-    top: 80px;
-    padding: 8px 10px;
+    top: var(--px16);
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    transform: none;
+    background: var(--bg);
+    border: 1px solid var(--subtle-dark-1);
+    border-radius: 50%;
+    color: var(--dark-1);
+    opacity: 1;
+    z-index: 1000;
   }
 
   .blog__post-back-btn p {
@@ -1535,8 +1601,9 @@ blockquote {
   }
 
   .blog__post-back-btn svg {
-    font-size: 0.65rem;
-    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
   }
 
   .gallery__content {
@@ -1807,7 +1874,8 @@ body.dark .patterns-gallery__bar--active:hover {
 @media (max-width: 768px) {
   .patterns-gallery {
     min-height: 60vh;
-    padding: 1.5rem 0 2rem;
+    box-sizing: border-box;
+    padding: 1.5rem 1.5rem 2rem;
   }
 
   .patterns-gallery__title {
@@ -2099,4 +2167,46 @@ body.dark .scroll-ruler__section-tick {
   font-family: var(--font-family-text);
   font-size: 1.075rem;
   color: var(--dark-1);
+}
+
+@media (max-width: 800px) {
+  .blog__list-title {
+    font-size: 1.45rem;
+  }
+
+  .blog__list-title-details > p {
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .blog__list-title-details > div {
+    gap: 0;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .blog__list-title-details span {
+    background: transparent;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .blog__list-title-details span:not(:last-child)::after {
+    content: "·";
+    margin: 0 0.35rem;
+    color: var(--subtle-dark-3);
+  }
+
+  .blog__list-title-details span p {
+    font-size: 0.7rem;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .blog__list-title-details span svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+  }
 }
