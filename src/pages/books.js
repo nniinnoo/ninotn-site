@@ -433,7 +433,7 @@ function Books() {
               marginTop: "0",
               color: "var(--subtle-dark-3)",
               maxWidth: "600px",
-              textAlign: "left",
+              textAlign: "center",
               lineHeight: "1.5",
             }}
           >
@@ -452,20 +452,16 @@ function Books() {
         >
           <h2
             style={{
-              fontSize: "1.65rem",
+              fontSize: "2.5rem",
               marginBottom: "1.5rem",
               marginTop: "0",
-              paddingBottom: "0.5rem",
-              backgroundImage:
-                "repeating-linear-gradient(to right, var(--subtle-dark-1) 0, var(--subtle-dark-1) 6px, transparent 6px, transparent 14px)",
-              backgroundPosition: "bottom",
-              backgroundRepeat: "repeat-x",
-              backgroundSize: "14px 2px",
-              fontWeight: "500",
+              paddingTop: "0.5rem",
+              borderTop: "1px dashed var(--subtle-dark-1)",
+              fontWeight: "900",
               letterSpacing: "-0.02em",
               lineHeight: "1.1",
               fontFeatureSettings: '"liga" 1, "kern" 1',
-              fontFamily: "'TT Jenevers', sans-serif",
+              fontFamily: "var(--font-family-title)",
               width: "calc(100% - 1rem)",
               textAlign: "left",
             }}
@@ -532,10 +528,10 @@ function Books() {
                   style={{
                     width: "100%",
                     lineHeight: "1.25",
-                    fontSize: "1.15rem",
+                    fontSize: "1.35rem",
                     marginBottom: "0.15rem",
                     fontWeight: "700",
-                    fontFamily: "'TT Jenevers', sans-serif",
+                    fontFamily: "var(--font-family-title)",
                     letterSpacing: "-0.01em",
                     fontFeatureSettings: '"liga" 1, "kern" 1',
                   }}
@@ -572,20 +568,16 @@ function Books() {
         >
           <h2
             style={{
-              fontSize: "1.65rem",
+              fontSize: "2.5rem",
               marginBottom: "1.5rem",
               marginTop: "0",
-              paddingBottom: "0.5rem",
-              backgroundImage:
-                "repeating-linear-gradient(to right, var(--subtle-dark-1) 0, var(--subtle-dark-1) 6px, transparent 6px, transparent 14px)",
-              backgroundPosition: "bottom",
-              backgroundRepeat: "repeat-x",
-              backgroundSize: "14px 2px",
-              fontWeight: "500",
+              paddingTop: "0.5rem",
+              borderTop: "1px dashed var(--subtle-dark-1)",
+              fontWeight: "900",
               letterSpacing: "-0.02em",
               lineHeight: "1.1",
               fontFeatureSettings: '"liga" 1, "kern" 1',
-              fontFamily: "'TT Jenevers', sans-serif",
+              fontFamily: "var(--font-family-title)",
               width: "calc(100% - 1rem)",
               textAlign: "left",
             }}
@@ -652,10 +644,10 @@ function Books() {
                   style={{
                     width: "100%",
                     lineHeight: "1.25",
-                    fontSize: "1.15rem",
+                    fontSize: "1.35rem",
                     marginBottom: "0.15rem",
                     fontWeight: "700",
-                    fontFamily: "'TT Jenevers', sans-serif",
+                    fontFamily: "var(--font-family-title)",
                     letterSpacing: "-0.01em",
                     fontFeatureSettings: '"liga" 1, "kern" 1',
                   }}

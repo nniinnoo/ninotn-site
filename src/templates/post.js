@@ -3,7 +3,7 @@ import { graphql, navigate } from "gatsby";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
-import { CircleX, Calendar, Timer, Coffee, BookType } from "lucide-react";
+import { CircleX, Calendar, Timer, Coffee } from "lucide-react";
 // import { LayoutGrid } from "lucide-react"; // CategoryIcon equivalent
 
 import SEO from "@components/SEO";
@@ -47,6 +47,12 @@ export default function PostTemplate({ data = [] }) {
     return () => clearTimeout(timer);
   }, [post.html]); // Re-run if post content changes
 
+  const languageIcons = {
+    en: "🇬🇧",
+    id: "🇮🇩",
+    fr: "🇫🇷",
+  };
+
   return (
     <>
       <Helmet title={post.frontmatter.title} />
@@ -78,19 +84,14 @@ export default function PostTemplate({ data = [] }) {
                 <LayoutGrid size={14} />
                 <p>{post.frontmatter.categories}</p>
               </span> */}
-              {post.frontmatter.language.split(",").map((lang) => {
-                const languageCode = lang.trim().toUpperCase();
-
-                return (
-                  <span
-                    key={languageCode}
-                    aria-label={`Language: ${languageCode}`}
-                  >
-                    <BookType size={14} />
-                    <p>{languageCode}</p>
-                  </span>
-                );
-              })}
+              {post.frontmatter.language.split(",").map((lang) => (
+                <span
+                  key={lang.trim()}
+                  style={{ fontSize: 14, marginRight: 5 }}
+                >
+                  {languageIcons[lang.trim()]}
+                </span>
+              ))}
             </div>
             <div
               className="blog__post-body"

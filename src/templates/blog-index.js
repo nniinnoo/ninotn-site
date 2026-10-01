@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
-import { Calendar, Timer, Coffee, BookType } from "lucide-react";
+import { Calendar, Timer, Coffee } from "lucide-react";
 // import { LayoutGrid } from "lucide-react"; // CategoryIcon equivalent
 
 import Layout from "@components/Layout";
@@ -14,6 +14,12 @@ function BlogIndex({ data, pageContext }) {
   const posts = data.allMarkdownRemark;
 
   const { currentPage, pageCount } = pageContext;
+
+  const languageIcons = {
+    en: "🇬🇧",
+    id: "🇮🇩",
+    fr: "🇫🇷",
+  };
 
   return (
     <>
@@ -50,19 +56,16 @@ function BlogIndex({ data, pageContext }) {
                               <p>{post.frontmatter.categories}</p>
                             </span> */}
 
-                          {post.frontmatter.language.split(",").map((lang) => {
-                            const languageCode = lang.trim().toUpperCase();
-
-                            return (
+                          {post.frontmatter.language
+                            .split(",")
+                            .map((lang) => (
                               <span
-                                key={languageCode}
-                                aria-label={`Language: ${languageCode}`}
+                                key={lang.trim()}
+                                style={{ fontSize: 14, marginRight: 5 }}
                               >
-                                <BookType size={14} />
-                                <p>{languageCode}</p>
+                                {languageIcons[lang.trim()]}
                               </span>
-                            );
-                          })}
+                            ))}
                         </div>
                       </div>
                     </Link>

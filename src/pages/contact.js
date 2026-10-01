@@ -20,7 +20,8 @@ function Contact() {
                 <a href="mailto:me@ninotn.com"> me@ninotn.com</a>
                 <br />
                 <br />
-                For end-to-end encrypted email you can use:
+                Additionally, for end-to-end encrypted email you can contact me
+                with:
                 <br />
                 <pre style={{ fontFamily: "'Departure Mono', monospace", fontSize: "0.85rem" }}>
                   <code>
