@@ -69,12 +69,12 @@ function About() {
                   people around with the same enthusiasm as if there is actually
                   a real garden somewhere up there, past the clouds, guarded by
                   an evil serpent, and one day we could visit it during the
-                  holiday. I was fascinated. I found it strange and beautiful as
-                  a bedtime story. It made me imagine how the fruit might look,
-                  how it tasted, how many of them, and wonder if there could be
-                  any other kind of fruit. As I grew up, I buried most of those
-                  fairytales, but I chose to spare this one, as a souvenir, to
-                  remind me of that innocent time.
+                  holiday. I found it strange and beautiful as a bedtime story.
+                  It made me imagine how the fruit might look, how it tasted,
+                  how many of them, and wonder if there could be any other kind
+                  of fruit. As I grew up, I buried most of those fairytales, but
+                  I chose to spare this one, as a souvenir, to remind me of that
+                  innocent time.
                   <br />
                   <br />
                   <p>
@@ -86,15 +86,13 @@ function About() {
                         textAlign: "justify",
                       }}
                     >
-                      Sitting by the campfire, I listen to that old and raspy
-                      voice again — an echo that once whispered me to make fire,
-                      to unveil a breath that obeys the law of number, to kiss
-                      the sun and steal the ring of Saturn, to fill the universe
-                      with our everlasting dreams, until we were lost, until we
-                      meet, until we find ourselves once again. "Eat and you
-                      will understand." Then I fall into the sea of suffering.
-                      "Run away ! " "Run to the edge of reason," the snake
-                      repeated. "Who are you?" I asked. "I am your curiosity."
+                      Sitting by the campfire, I heard that old and raspy voice
+                      again — an echo that once whispered me to light fire, to
+                      draw a breath that obeys numerical laws, to kiss the sun,
+                      to steal the ring of Saturn, to fill the universe with our
+                      everlasting dreams, until we suffer, until we understand".
+                      At the edge of reason, I asked, "Who are you?". "I am your
+                      curiosity."
                     </blockquote>
                   </p>
                 </p>
@@ -104,10 +102,9 @@ function About() {
               <h1>The Idea</h1>
               <p style={{ textAlign: "justify" }}>
                 I imagine this blog as a cave which animates primitive
-                ingredients to capture the hunter-gatherer lifestyle, like the
-                excitement of discovering fire, drawing on the walls, looking
-                for constellations of stars, or the joy of sharing stories
-                around the campfire. <br />
+                hunter-gatherer lifestyle, like the excitement of discovering
+                fire, drawing on the walls, looking for constellations of stars,
+                or the joy of sharing stories around the fire. <br />
                 <br />
                 <div>
                   <div
@@ -161,11 +158,11 @@ function About() {
                 aesthetic simplicity of Dieter Rams, the legendary German
                 industrial designer who inspired Steve Jobs for the iPod design.
                 Though he never designed a website, I like to imagine what it
-                would be like if he did. So, I stole his recipe—but I must
+                would be like if he did. So, I stole his recipe, but I must
                 admit, having a sense of style isn't easy; you really need to
-                work on a different kind operation of way to see things. I still
-                consider this blog unfinished and will continue to refine it
-                from time to time.
+                work on a different kind operation of way to see things. By far
+                this is unfinished and will continue to refine it from time to
+                time.
               </p>
             </div>
             <div id="section-what">
@@ -203,17 +200,17 @@ function About() {
                   that you're likely to develop in a place like that are hiking,
                   swimming, fishing and wondering what lies beyond the sea and
                   the mountain. After high school, I took my first sail to study
-                  computer science and some maths. Later, I began my
-                  professional career as a software engineer in Jakarta,
+                  cs and maths. Later, I began my professional career as a
+                  software engineer in Jakarta,
                 </p>
               </div>
               <p style={{ textAlign: "justify" }}>
                 After the pandemic, I took another big voyage and somehow ended
-                up in Southern France. I am currently a master's student at the
-                Université de Toulouse. Here, I find myself drowning in the
-                study of theorems and formal proofs. I have many interests that
-                I still regularly do to this day: I enjoy cycling, climbing,
-                reading, playing guitar/piano, drawing, capturing moments, meditating,
+                up in Southern France. I pursue a master's degree at the
+                Université de Toulouse. Now I'm mostly drowning in the study of
+                theorems and formal proofs. I have many interests that I still
+                regularly do to this day: I enjoy cycling, climbing, reading,
+                playing guitar/piano, drawing, capturing moments, meditating,
                 and searching for nature in spare time.
               </p>
             </div>
