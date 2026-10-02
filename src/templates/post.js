@@ -11,9 +11,10 @@ import SEO from "@components/SEO";
 import { useState, useEffect } from "react";
 import ScrollRuler from "@components/ScrollRuler";
 
-export default function PostTemplate({ data = [] }) {
+export default function PostTemplate({ data = [], location }) {
   const post = data.markdownRemark;
   const [sections, setSections] = useState([]);
+  const returnPath = location?.state?.returnPath || "/";
 
   // Extract headings for ScrollRuler
   useEffect(() => {
@@ -101,7 +102,7 @@ export default function PostTemplate({ data = [] }) {
           <button
             type="button"
             className="blog__post-back-btn"
-            onClick={() => navigate("/")}
+            onClick={() => navigate(returnPath)}
             aria-label="Close article"
           >
             <CircleX size={30} strokeWidth={0.75} />
@@ -137,8 +138,14 @@ export const query = graphql`
 
 PostTemplate.propTypes = {
   data: PropTypes.node,
+  location: PropTypes.shape({
+    state: PropTypes.shape({
+      returnPath: PropTypes.string,
+    }),
+  }),
 };
 
 PostTemplate.defaultProps = {
   data: undefined,
+  location: undefined,
 };

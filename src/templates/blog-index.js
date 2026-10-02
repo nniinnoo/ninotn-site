@@ -26,7 +26,13 @@ function BlogIndex({ data, pageContext }) {
               {posts.nodes.map(
                 (post) => (
                   <div className="blog__list" key={post.id}>
-                    <Link to={`/${post.frontmatter.slug}`}>
+                    <Link
+                      to={`/${post.frontmatter.slug}`}
+                      state={{
+                        returnPath:
+                          currentPage === 1 ? "/" : `/page/${currentPage}`,
+                      }}
+                    >
                       <h1 className="blog__list-title">
                         {post.frontmatter.title}
                       </h1>
