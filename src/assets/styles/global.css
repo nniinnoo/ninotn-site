@@ -467,6 +467,14 @@ pre {
   font-size: 0.85rem;
 }
 
+/* ===== Travel Map ===== */
+/* ====================== */
+
+body.dark .travel__map .worldmap__figure-container path {
+  stroke: #6d6a64 !important;
+  stroke-opacity: 0.72 !important;
+}
+
 /* ===== Blog: Post-List ===== */
 /* =========================== */
 

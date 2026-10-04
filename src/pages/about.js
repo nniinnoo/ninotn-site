@@ -227,6 +227,7 @@ function About() {
                 Europe (3): 🇫🇷, 🇪🇸, 🇮🇹
               </p>
               <div
+                className="travel__map"
                 style={{
                   width: "100%",
                   border: "1px solid #b9b4b4",
