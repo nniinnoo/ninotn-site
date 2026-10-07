@@ -86,13 +86,12 @@ function About() {
                         textAlign: "justify",
                       }}
                     >
-                      Sitting by the campfire, I heard that old and raspy voice
-                      again — an echo that once whispered me to light fire, to
-                      draw a breath that obeys numerical laws, to kiss the sun,
-                      to steal the ring of Saturn, to fill the universe with our
-                      everlasting dreams, until we suffer, until we understand".
-                      At the edge of reason, I asked, "Who are you?". "I am your
-                      curiosity."
+                      Sitting by the campfire, I listen to the hiss of that
+                      ancient voice again — echo that once whispered to make
+                      fire, to rebuild ruins, to kiss the sun, to steal the ring
+                      of Saturn, and to sleep the universe with dreams. "Eat..
+                      you will understand." "Run", "where to?", "the edge of
+                      reason," "Who are you?" "I am your curiosity."
                     </blockquote>
                   </p>
                 </p>
@@ -697,13 +696,13 @@ function About() {
                     </a>
                   </li>
                   <li>
-                    TT Jenevers by{" "}
+                    Piazzolla by{" "}
                     <a
                       target="_blank"
-                      href="https://typetype.org/fonts/tt-jenevers/"
+                      href="https://www.huertatipografica.com/en/fonts/piazzolla"
                       rel="noreferrer"
                     >
-                      TypeType
+                      Huerta Tipográfica
                     </a>
                   </li>
                 </ul>

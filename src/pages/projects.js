@@ -242,10 +242,10 @@ export default function Projects() {
     },
     title: {
       fontSize: "1.35rem",
-      fontWeight: "700",
+      fontWeight: "800",
       color: "var(--dark-1)",
       marginBottom: "0",
-      fontFamily: "'TT Jenevers', sans-serif",
+      fontFamily: "'Piazzolla', serif",
       background: "transparent",
       lineHeight: "1.2",
       letterSpacing: "-0.01em",
