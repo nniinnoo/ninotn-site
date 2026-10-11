@@ -788,3 +788,34 @@
   font-style: italic;
   font-display: swap;
 }
+
+/* === KITSCH === */
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Extralight-trial.ttf') format('truetype'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Extralight-Italic-trial.ttf') format('truetype'); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Light-trial.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Light-Italic-trial.ttf') format('truetype'); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Regular-trial.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Italic-trial.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Medium-trial.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Medium-Italic-trial.ttf') format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Semibold-trial.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Semibold-Italic-trial.ttf') format('truetype'); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Bold-trial.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Bold-Italic-trial.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Extrabold-trial.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Black-trial.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch'; src: url('../font-files/Kitsch/Kitsch-Black-Italic-trial.ttf') format('truetype'); font-weight: 900; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Extralight-Italic-trial.ttf') format('truetype'); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Light-trial.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Light-Italic-trial.ttf') format('truetype'); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Regular-trial.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Italic-trial.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Medium-trial.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Medium-Italic-trial.ttf') format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Bold-trial.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Bold-Italic-trial.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Extrabold-trial.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Extrabold-Italic-trial.ttf') format('truetype'); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Black-trial.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Kitsch Text'; src: url('../font-files/Kitsch/Kitsch-Text-Black-Italic-trial.ttf') format('truetype'); font-weight: 900; font-style: italic; font-display: swap; }

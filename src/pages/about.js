@@ -699,7 +699,7 @@ function About() {
                     Piazzolla by{" "}
                     <a
                       target="_blank"
-                      href="https://www.huertatipografica.com/en/fonts/piazzolla"
+                      href="https://piazzolla.huertatipografica.com/"
                       rel="noreferrer"
                     >
                       Huerta Tipográfica
